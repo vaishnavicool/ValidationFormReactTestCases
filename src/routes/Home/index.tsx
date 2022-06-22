@@ -1,22 +1,26 @@
 import "./style.scss"
+
+import TablePanel from "./components/TablePanel";
 import TopSection from "../../layout/breadcrumb/index";
-import LeftPanel from "./components/LeftPanel"
-import RightPanel from "./components/RightPanel";
 import useEnhancer from "./enhancer"
 
 function Dashboard(props: any) {
   let extraProps = useEnhancer();
 
   return (
+    <>
+    <TopSection {...extraProps}/>
+    <div className='filterchip-container'>FIlter chips</div>
+        
     <div className="container-fluid p-0">
-      <TopSection {...extraProps}/>
       <div className="profile-container pt-3 ">
-        <div className="row">
-          <LeftPanel {...extraProps} />
-          <RightPanel {...extraProps} />
+        <div className="table-container">
+          {/* <LeftPanel {...extraProps} /> */}
+          <TablePanel {...extraProps} />
         </div>
       </div>
     </div>
+    </>
   )
 }
 export default Dashboard

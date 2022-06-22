@@ -30,9 +30,7 @@ function MainWrapper(props) {
       <div className='col-2 left-container'><Menubar /></div>
       <div className='col-10 g-0'>
         
-        <div className='breadcrum-container'>{`Customer Processing > Workorder`}</div>
-        <div className='filterchip-container'>FIlter chips</div>
-        <div className='table-container'>DatTable</div>
+        <div className=''><Routes /></div>
         <div className='footer-container'><Footer /><PreLoad /></div>
       </div>
       </div>

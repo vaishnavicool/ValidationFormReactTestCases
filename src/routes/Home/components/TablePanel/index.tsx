@@ -1,10 +1,11 @@
-import React from "react"
-import { Dropdown } from "react-bootstrap"
 import "../style.scss"
+
 import DataTable from "react-data-table-component"
-import Image from "shared/Image"
+import { Dropdown } from "react-bootstrap"
 import { FormattedMessage } from "react-intl"
+import Image from "shared/Image"
 import Loading from "shared/Loading"
+import React from "react"
 
 function workOrder(props: any) {
   let {
@@ -23,7 +24,7 @@ function workOrder(props: any) {
       className={`main-wrapper table-responsive col`}
     >
       <div className="right-panel">
-        <div className="detailbar row col-12">
+        {/* <div className="detailbar row col-12">
           <div className="row">
             <div className="row col-auto me-auto">
               <Dropdown className="col-auto action-drop">
@@ -87,7 +88,7 @@ function workOrder(props: any) {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="table-section">
           <Loading id="tableData">
             <DataTable
