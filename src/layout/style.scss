@@ -1,3 +1,57 @@
 .page{
     overflow-x: hidden;
 }
+.left-container{
+    border-right: 1px solid #DCDCDC;
+    padding: 23px 12px;
+    min-height: 100vh;
+}
+html,body,.layout {
+    height:100%;
+}
+
+.header-container{
+    height: 72px;
+    border-bottom: 1px solid #DCDCDC;
+    padding-left: 1.5rem;
+    padding-top: 13px;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+
+}
+.breadcrum-container{
+    height: 72px;
+    padding-left: 1.5rem;
+    padding-top: 13px;
+    padding-bottom: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.filterchip-container{
+    background-color: #78BE20;
+    opacity: 0.1;
+    margin-left: 1.5rem;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 1.5rem;
+    border: 1px solid #E2E2E2;
+    border-radius: 4px
+}
+.table-container{
+    border: 1px solid #E4E4E4;
+    min-height:  25rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 3.5rem;
+    -webkit-box-shadow: -2px 4px 7px 0px rgba(228,228,228,1);
+    -moz-box-shadow: -2px 4px 7px 0px rgba(228,228,228,1);
+    box-shadow: -2px 4px 7px 0px rgba(228,228,228,1);
+}
+.footer-container{
+    font-size: 10px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+
+}
