@@ -1,0 +1,226 @@
+.App {
+  text-align: center;
+  display: inline-block;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.profile-container {
+  background-color: #f0f1f2;
+  min-height: 500px;
+}
+.sidebar-wrapper {
+  margin-top: 10px;
+}
+
+.main-wrapper {
+  padding-left: 0px !important;
+  margin-left: 15px;
+  margin-right: 38px;
+}
+
+.pl-0 {
+  padding-left: 0px !important;
+}
+
+.pt-3 {
+  padding-top: 3rem !important;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.inactive-state {
+  width: 80px !important;
+}
+.active-state {
+  width: 232px !important;
+}
+.btn.search-reset {
+  float: right;
+}
+
+.input-field {
+  width: 100%;
+  border: 1px solid #bbbbbb;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  height: 24px;
+  padding: 5px;
+  color: #d0d0d0;
+  border-radius: 5px;
+}
+
+.filter-row {
+  margin-bottom: 26px;
+}
+
+.label-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+}
+
+.main-filter-container {
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 21px;
+  border-radius: 10px;
+}
+
+.footer-button {
+  text-align: end;
+}
+
+.search-button {
+  background: #74bc1f;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  border: 0;
+  margin-left: 20px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 13px;
+  width: 76px;
+  line-height: 18px;
+  color: #fff;
+}
+
+.reset-button {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 5px;
+  width: 76px;
+  color: #808080;
+}
+
+.left-dropdown {
+  border: 1px solid #bbbbbb;
+  font-weight: 400;
+  font-size: 10px !important;
+  line-height: 14px !important;
+  height: 24px;
+  padding: 5px;
+  color: #d0d0d0;
+  background: white;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+}
+
+.right-dropdown {
+  border: 1px solid #bbbbbb;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  height: 24px;
+  padding: 5px;
+  color: #d0d0d0;
+  background: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.basic-single {
+  div[class$="singleValue"] {
+    max-width: 90%;
+  }
+
+  span[class$="indicatorSeparator"],
+  div[class$="indicatorContainer"] {
+    display: none;
+  }
+
+  div[class$="control"] {
+    border: none;
+    box-shadow: none;
+    min-height: 26px;
+    margin: 0;
+    padding: 0;
+    max-height: 26px;
+    margin-top: -5px;
+    background: transparent;
+    width: 133px;
+    .input :focus-visible {
+      outline: none;
+      border: none !important;
+    }
+  }
+  div[class$="IndicatorsContainer"] {
+    display: none;
+  }
+  div[class$="singleValue"] {
+    text-align: left;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  div[class$="-menu"] {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    width: 75% !important;
+    margin-top: 1px !important;
+    text-align: left;
+    color: #000;
+    background: #ffffff;
+    border: 1px solid #bbbbbb;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 7px 7px;
+  }
+  div[class$="-option"] {
+    background-color: transparent !important;
+    color: #000 !important;
+    padding: 2px 10px;
+    line-height: 14px;
+    border-bottom: 0.5px solid gray;
+
+    :hover {
+      background-color: transparent !important;
+    }
+  }
+}

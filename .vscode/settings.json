@@ -1,0 +1,6 @@
+{
+  // The following will hide the js and map files in the editor
+  "files.exclude": {
+    "{build,node_modules,.vscode,package-lock.json,backend/node_modules,cloud_functions/node_modules,backend/package-lock.json,backend/build,backend/yarn.lock,yarn.lock,app.json,jsconfig.json,Procfile}": true
+  }
+}
