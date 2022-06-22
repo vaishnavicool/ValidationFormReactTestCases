@@ -36,6 +36,13 @@
 //     background-color: #78BE20 !important
 //   }
 // }
+.menu-item:hover{
+  background: #78BE20;
+    border-radius: 40px;
+    .menubar-name{
+      color: white;
+    }
+}
 #dropdown-basic {
   padding: 16px 0px;
   font-size: 16px;
