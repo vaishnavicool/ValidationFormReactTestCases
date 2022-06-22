@@ -13,7 +13,7 @@ const Menubar = () => {
         <div className="menubar">
           {menuConfig.map((d, index) =>
             !d.children ? (
-              <div className="col" key={index}>
+              <div className="col menu-item" key={index}>
                 <div className="custom-dropdown">
                   <button
                     type="button"
@@ -27,7 +27,7 @@ const Menubar = () => {
                 </div>
               </div>
             ) : (
-              <div className="col">
+              <div className="col menu-item">
                 <Dropdown drop="end">
                   <Dropdown.Toggle
                     variant="light"
