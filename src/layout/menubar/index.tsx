@@ -2,6 +2,7 @@ import "./style.scss"
 
 import { Dropdown } from "react-bootstrap"
 import { FormattedMessage } from "react-intl"
+import Image from "shared/Image"
 import menuConfig from "./config"
 
 const Menubar = () => {
@@ -20,6 +21,7 @@ const Menubar = () => {
                     aria-expanded="false"
                     className="bg-transparent border-0 custom-dropdown btn btn-light"
                   >
+                    <Image src={`${d.icon}_grey.png`} className="menubar-icon"/>
                     <FormattedMessage id={d.title} />
                   </button>
                 </div>
@@ -32,7 +34,7 @@ const Menubar = () => {
                     id="dropdown-basic"
                     className="bg-transparent border-0 custom-dropdown"
                   >
-                    <FormattedMessage id={d.title} />
+                    <Image src={`${d.icon}_grey.png`} className="menubar-icon"/><span className="menubar-name"><FormattedMessage id={d.title} /></span>
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="menu">
                     {d.children.map((child) => (
