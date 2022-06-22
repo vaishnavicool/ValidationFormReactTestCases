@@ -2,17 +2,12 @@ import "./style.scss"
 
 import { Dropdown } from "react-bootstrap"
 import { FormattedMessage } from "react-intl"
-import Image from "shared/Image"
-import React from "react"
 import menuConfig from "./config"
 
 const Menubar = () => {
   return (
     <>
-      <div>
-        <Image className="menu-icon" src="menu-icon.png" alt="sortIcon" />
-        <Image src="Logo.png" alt="coreLogo" className="logo-img" />
-      </div>
+      
       <div className="menu-list">
         <div className="menubar">
           {menuConfig.map((d, index) =>

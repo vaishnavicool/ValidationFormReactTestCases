@@ -24,12 +24,13 @@ function MainWrapper(props) {
     //     <PreLoad />
     //   </div>
     // </div>
-    <div className="container-fluid layout">
-      <div className='row'>
+    <div className="container-fluid layout p-0">
+      <div className='header-container'><Header /></div>
+      <div className='row no-gutters'>
       <div className='col-2 left-container'><Menubar /></div>
       <div className='col-10 g-0'>
-        <div className='header-container'><Header /></div>
-        <div className='breadcrum-container'>Breadcrumb</div>
+        
+        <div className='breadcrum-container'>{`Customer Processing > Workorder`}</div>
         <div className='filterchip-container'>FIlter chips</div>
         <div className='table-container'>DatTable</div>
         <div className='footer-container'><Footer /><PreLoad /></div>
