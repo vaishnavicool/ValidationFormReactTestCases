@@ -2,10 +2,12 @@ const menuConfig = [
   {
     title: "menubar.dashboard",
     path: "/dashboard",
+    icon: "ic_dashboard_grey",
   },
   {
     title: "menubar.customer_processing",
     path: "/",
+    icon: "ic_customer processing_grey",
     children: [
       {
         title: "menubar.customer_processing_profiles",
@@ -49,6 +51,8 @@ const menuConfig = [
   {
     title: "menubar.plant_processing",
     path: "/",
+    icon: "ic_plant processing_grey",
+
     children: [
       {
         title: "One",
@@ -67,6 +71,7 @@ const menuConfig = [
   {
     title: "menubar.compliance",
     path: "/",
+    icon: "ic_compliance_grey",
     children: [
       {
         title: "One",
@@ -85,6 +90,7 @@ const menuConfig = [
   {
     title: "menubar.schedule",
     path: "/",
+    icon: "ic_schedule_grey",
     children: [
       {
         title: "One",
@@ -103,6 +109,7 @@ const menuConfig = [
   {
     title: "menubar.reporting",
     path: "/",
+    icon:"ic_reporting_grey",
     children: [
       {
         title: "One",
@@ -121,6 +128,7 @@ const menuConfig = [
   {
     title: "menubar.printing",
     path: "/",
+    icon:"ic_printing_grey",
     children: [
       {
         title: "One",
@@ -139,6 +147,7 @@ const menuConfig = [
   {
     title: "menubar.manage",
     path: "/",
+    icon:"ic_manage_grey",
     children: [
       {
         title: "One",
