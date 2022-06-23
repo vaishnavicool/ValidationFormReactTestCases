@@ -11,7 +11,7 @@ function Dashboard(props: any) {
   return (
     <>
     <TopSection {...extraProps}/>
-    <div className='filterchip-container'><FilterChipPanel /></div>
+    <div className='filterchip-container'><FilterChipPanel {...extraProps}/></div>
         
     <div className="container-fluid p-0">
       <div className="profile-container pt-3 ">

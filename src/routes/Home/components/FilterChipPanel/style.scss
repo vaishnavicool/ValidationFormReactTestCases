@@ -15,3 +15,36 @@
         box-shadow: none;
     }
 }
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: auto !important;
+    right: 0 !important;
+    z-index: 1055;
+    display: none;
+    width: auto !important;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+
+    .modal-header{
+        background: #78BE20;
+        height: 40px;
+        .modal-title{
+            font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+        }
+        .btn-close{
+            color: white;
+            border: 1px solid white;
+            opacity: 1;
+            border-radius: 100px !important;
+        }
+    }
+    
+
+}

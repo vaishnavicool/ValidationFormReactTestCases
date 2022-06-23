@@ -1,9 +1,11 @@
 import "../style.scss"
-import Image from "shared/Image"
-import { FormattedMessage } from "react-intl"
-import classnames from "classnames"
+
 import { Collapse } from "react-bootstrap"
+import { FormattedMessage } from "react-intl"
+import Image from "shared/Image"
 import Select from "react-select"
+import classnames from "classnames"
+import enhancer from "../../enhancer"
 
 function Field(props: any) {
   const {
@@ -49,7 +51,7 @@ function Field(props: any) {
   )
 }
 
-function LeftPanel(props: any) {
+function FilterPanel(props: any) {
   let {
     inactive,
     handleFilterCollapse,
@@ -153,4 +155,4 @@ function LeftPanel(props: any) {
     </div>
   )
 }
-export default LeftPanel
+export default FilterPanel
