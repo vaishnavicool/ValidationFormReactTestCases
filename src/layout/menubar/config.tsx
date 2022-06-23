@@ -110,58 +110,16 @@ const menuConfig = [
     title: "menubar.reporting",
     path: "/",
     icon:"ic_reporting",
-    children: [
-      {
-        title: "One",
-        path: "/one",
-      },
-      {
-        title: "Two",
-        path: "/two",
-      },
-      {
-        title: "Three",
-        path: "/three",
-      },
-    ],
   },
   {
     title: "menubar.printing",
     path: "/",
     icon:"ic_printing",
-    children: [
-      {
-        title: "One",
-        path: "/one",
-      },
-      {
-        title: "Two",
-        path: "/two",
-      },
-      {
-        title: "Three",
-        path: "/three",
-      },
-    ],
   },
   {
     title: "menubar.manage",
     path: "/",
     icon:"ic_manage",
-    children: [
-      {
-        title: "One",
-        path: "/one",
-      },
-      {
-        title: "Two",
-        path: "/two",
-      },
-      {
-        title: "Three",
-        path: "/three",
-      },
-    ],
   },
 ]
 
