@@ -215,6 +215,10 @@ div.input {
   background: #ffffff;
   box-sizing: border-box;
 }
+.button-container{
+  display: flex;
+  justify-content: space-around;
+}
 .btn-search {
   font-family: "Open Sans", sans-serif;
   border-radius: 10px !important;
@@ -224,8 +228,8 @@ div.input {
   margin-top: 20px;
   background: #ffffff;
   border: 1px solid #bbbbbb !important;
-  box-shadow: -2px -2px 2px rgba(174, 174, 174, 0.2),
-    2px 2px 2px rgba(0, 0, 0, 0.2);
+  // box-shadow: -2px -2px 2px rgba(174, 174, 174, 0.2),
+  //   2px 2px 2px rgba(0, 0, 0, 0.2);
   padding-left: 30px !important;
   padding-right: 34px !important;
 }

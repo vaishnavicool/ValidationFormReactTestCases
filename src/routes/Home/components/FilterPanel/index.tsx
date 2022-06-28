@@ -18,11 +18,11 @@ function Field(props: any) {
   } = props
   if (type == "dropdown") {
     return (
-      <div className="mb-3 custom-group">
+      <div className="mb-3 custom-group col-6">
         <label htmlFor="disabledTextInput" className="label">
           <FormattedMessage id={`leftpanel.${name}`} />
         </label>
-        <Select 
+        <Select
           onChange={updateFilters(name)}
           value={allDropdownOpts[name]?.find((d) => d.value == filters[name])}
           className=" basic-single input"
@@ -34,7 +34,7 @@ function Field(props: any) {
   }
 
   return (
-    <div className="mb-3 custom-group">
+    <div className="mb-3 custom-group col-6">
       <label htmlFor="disabledTextInput" className="label">
         <FormattedMessage id={`leftpanel.${name}`} />
       </label>
@@ -68,90 +68,48 @@ function FilterPanel(props: any) {
   let { basic, advanced } = pageOpts.filters
 
   return (
-    <div
-      className={`filter-container p-0 ${
-        inactive ? "active-state" : "inactive-state"
-      }`}
-    >
-      <div className="filter-titlebar-wrapper">
-        {inactive && (
-          <>
-            <div className="filter-title">
-              <Image className="filter-icon" src="filter-icon.png" />
-              <FormattedMessage id="leftpanel.filter" />
-            </div>
-            <button
-              className="btn btn-clear-all btn-success"
-              onClick={clearFilters}
-            >
-              <Image className="clear-filter-icon" src="clear-filters.png" />
-              <FormattedMessage id="leftpanel.clearall" />
-            </button>
-          </>
-        )}
-        <div className="" onClick={() => handleFilterCollapse()}>
-          <Image
-            className={classnames("arrow-icon", { invert: !inactive })}
-            src="Drawer_Symbol.svg"
-          />
-        </div>
-      </div>
-      {inactive && (
-        <>
-          <div className="filter-body">
-            <div className="inputs">
-              {basic.map((d: any, index) => {
-                return (
-                  <Field
-                    key={index}
-                    name={d.name}
-                    {...{ updateFilters, filters, allDropdownOpts, ...d }}
-                  />
-                )
-              })}
-
-              <button
-                className={`btn btn-success ${
-                  collapse ? "advanced-dropdown" : "advanced-dropdown-complete"
-                } `}
-                onClick={() => setCollapse(!collapse)}
-              >
-                <FormattedMessage id="leftpanel.advanced search" />
-                <Image
-                  className={classnames("down-arrow-icon", {
-                    invertDown: collapse,
-                  })}
-                  src="bottom.png"
+    <div>
+      <>
+        <div className="filter-body">
+          <div className="inputs row">
+            {basic.map((d: any, index) => {
+              return (
+                <Field
+                  key={index}
+                  name={d.name}
+                  {...{ updateFilters, filters, allDropdownOpts, ...d }}
                 />
-              </button>
+              )
+            })}
 
-              <Collapse in={collapse}>
-                <div className="ml-2">
-                  {advanced.map((d: any, index) => {
-                    return (
-                      <Field
-                        key={d.name}
-                        name={d.name}
-                        {...{ updateFilters, filters, allDropdownOpts, ...d }}
-                      />
-                    )
-                  })}
-                </div>
-              </Collapse>
-            </div>
+            {advanced.map((d: any, index) => {
+              return (
+                <Field
+                  key={d.name}
+                  name={d.name}
+                  {...{ updateFilters, filters, allDropdownOpts, ...d }}
+                />
+              )
+            })}
           </div>
-          <div className="text-center py-3">
-            <button
-              type="button"
-              onClick={gettableData}
-              className="btn btn-light btn-search"
-            >
-              <Image className="icon-search" src="search-icon.png" />
-              <FormattedMessage id="leftpanel.btn_search" />
-            </button>
-          </div>
-        </>
-      )}
+        </div>
+        <div className="button-container py-3">
+          <button
+            type="button"
+            // onClick={gettableData}
+            className="btn btn-light btn-search"
+          >
+            Reset
+          </button>
+          <button
+            type="button"
+            // onClick={gettableData}
+            className="btn btn-light btn-search"
+          >
+            Add to Filters
+          </button>
+        </div>
+      </>
     </div>
   )
 }
