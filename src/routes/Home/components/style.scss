@@ -56,8 +56,8 @@
 }
 
 .rdt_TableHeadRow {
-  background: #a4dbe8 !important;
-  border: 1px solid #bbbbbb;
+  background: rgba(164, 219, 232, 0.5) !important;
+  border: 1px solid #E4E4E4;
   box-sizing: border-box;
   border-radius: 0px;
   font-weight: 600;
@@ -93,7 +93,7 @@
 }
 .label {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   float: left;
@@ -424,4 +424,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   // width: 20px;
   // height: 20px;
   border-width: thin;
+}
+.btn-reset{
+  background: #FFFFFF;
+  border: 1px solid #DCDCDC !important;
+  border-radius: 40px !important;
+  padding: 11px 37px;
+  font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+
+/* Dark/1-Dark */
+
+color: #202020;;
+}
+.btn-apply{
+  background: #78BE20;
+  border : 0;
+  box-shadow: none;
+  border-radius: 30px !important;
+  padding: 11px 16px;
+  font-weight: 500;
+font-size: 16px; 
+line-height: 19px;
+color: #fff;
+
 }

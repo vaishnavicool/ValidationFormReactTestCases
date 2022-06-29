@@ -95,20 +95,19 @@ function FilterPanel(props: any) {
           </div>
         </div>
         <div className="button-container py-3">
-          <button
+          <input
             type="button"
-            // onClick={gettableData}
-            className="btn btn-light btn-search"
-          >
-            Reset
-          </button>
-          <button
+            onClick={clearFilters}
+            className=" btn-reset"
+            value={"Reset"}
+          />
+          <input
             type="button"
-            // onClick={gettableData}
-            className="btn btn-light btn-search"
-          >
-            Add to Filters
-          </button>
+            onClick={gettableData}
+            className=" btn-apply"
+            value={"Apply Filters"}
+          />
+         
         </div>
       </>
     </div>
