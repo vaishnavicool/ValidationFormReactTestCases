@@ -24,7 +24,8 @@ function Field(props: any) {
         </label>
         <Select
           onChange={updateFilters(name)}
-          value={allDropdownOpts[name]?.find((d) => d.value == filters[name])}
+          placeholder="Select value"
+          value={allDropdownOpts[name]?.find((d) => {d.value == filters[name]})}
           className=" basic-single input"
           options={allDropdownOpts[name]}
           isLoading={!allDropdownOpts[name]?.[0]}

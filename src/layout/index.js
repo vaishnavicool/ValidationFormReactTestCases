@@ -4,7 +4,6 @@ import Footer from "./footer"
 import Header from "./header"
 import Menubar from "./menubar"
 import { PreLoad } from "shared/Image"
-import React from "react"
 import Routes from "routes"
 
 function MainWrapper(props) {

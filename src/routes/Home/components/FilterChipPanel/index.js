@@ -15,12 +15,11 @@ const FilterChipPanel = (props) => {
     <Button variant="link" className='filter-btn'>Clear All</Button>
     <Modal
         show={show}
-        
         onHide={() => setShow(false)}
         dialogClassName="modal-90w"
         aria-labelledby="example-custom-modal-styling-title"
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton closeVariant='white'>
           <Modal.Title id="example-custom-modal-styling-title">
             Edit EPA Codes
           </Modal.Title>

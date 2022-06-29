@@ -25,7 +25,7 @@ const pageOptions = {
         returnMessage: "string",
       },
       basic: [
-        { name: "workOrderId", numeric: true },
+        { name: "workOrderId", numeric: true,placeholder:"Enter workorder #" },
         {
           name: "jobId",
           numeric: true,
@@ -53,7 +53,7 @@ const pageOptions = {
             },
           },
         },
-        { name: "generatorId", numeric: true },
+        { name: "generatorId", numeric: true, placeholder:"Enter generator #" },
         {
           name: "customerId",
           numeric: true,
@@ -213,9 +213,9 @@ export const getDropdownOpts = async (pageKey) => {
       dropdownOpts[d.name] = d.dropdownOpts
   })
 
-  Object.keys(dropdownOpts).forEach((d) => {
-    dropdownOpts[d] = [{ label: "Select", value: "" }, ...dropdownOpts[d]]
-  })
+  // Object.keys(dropdownOpts).forEach((d) => {
+  //   dropdownOpts[d] = [...dropdownOpts[d]]
+  // })
 
   return dropdownOpts
 }
