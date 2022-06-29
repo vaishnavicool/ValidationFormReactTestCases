@@ -21,7 +21,7 @@ const FilterChipPanel = (props) => {
       >
         <Modal.Header closeButton closeVariant='white'>
           <Modal.Title id="example-custom-modal-styling-title">
-            Edit EPA Codes
+            Add Filters
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
