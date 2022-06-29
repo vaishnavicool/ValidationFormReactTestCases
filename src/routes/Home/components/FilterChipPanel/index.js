@@ -4,18 +4,17 @@ import {Button, Modal} from "react-bootstrap"
 import React,{useState} from 'react'
 
 import FilterPanel from "../FilterPanel"
-
+import useEnhancer from 'routes/Home/enhancer'
 const FilterChipPanel = (props) => {
-  const [show, setShow] = useState(false);
-
+let {show,setShow} = props
   return (
     <>
     <div className="filter-input" >&nbsp;</div>
-    <Button variant="link" className='filter-btn' onClick={() => setShow(true)}>+Add Filters</Button>
+    <Button variant="link" className='filter-btn' onClick={() => props.setShow(true)}>+Add Filters</Button>
     <Button variant="link" className='filter-btn'>Clear All</Button>
     <Modal
-        show={show}
-        onHide={() => setShow(false)}
+        show={props.show}
+        onHide={() => props.setShow(false)}
         dialogClassName="modal-90w"
         aria-labelledby="example-custom-modal-styling-title"
       >

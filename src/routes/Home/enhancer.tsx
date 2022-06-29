@@ -18,6 +18,7 @@ const useEnhancer = () => {
   const [defaultSortFieldId, setDefaultSortFieldId] = useState(1)
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [selectedData, setSelectedData] = useState([])
+  const [show, setShow] = useState(false)
 
   const updateFilters = (name: string) => (evt: any) => {
     let filters2: any = { ...filters }
@@ -34,6 +35,7 @@ const useEnhancer = () => {
     if (element instanceof HTMLElement) {
       element.click()
     }
+    setShow(false)
   }
 
   useEffect(() => {
@@ -73,6 +75,7 @@ const useEnhancer = () => {
         data[i1] = _.pick(data[i1], keepKeys)
       })
       setTableData(data)
+      setShow(false)
     }
   }
 
@@ -108,6 +111,8 @@ const useEnhancer = () => {
     allDropdownOpts,
     updateSelectedData,
     download,
+    show,
+    setShow
   }
 }
 
