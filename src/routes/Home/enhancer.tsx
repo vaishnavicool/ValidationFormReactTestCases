@@ -22,6 +22,7 @@ const useEnhancer = () => {
 
   const [modalType, setModalType] = useState()
 
+  
   const updateFilters = (name: string) => (evt: any) => {
     let filters2: any = { ...filters }
     if (evt.label) filters2[name] = evt.value
@@ -84,6 +85,22 @@ const useEnhancer = () => {
   const updateSelectedData = (eve) => {
     setSelectedData(eve.selectedRows)
   }
+  let pageConfig={
+    filter:{
+      submitButtonTitle:'Apply Filters',
+      title:'Add Filters',
+      submitAction:gettableData,
+      cancelButtonTitle:"Reset",
+      cancelAction:clearFilters
+    },
+    add:{
+      submitButtonTitle:'Add',
+      title:'Add WorkOrder',
+      submitAction:"",
+      cancelButtonTitle:"Cancel",
+      cancelAction:"cancelAdd"
+    }
+  }
 
   const download = () => {
     let headerKeys = {}
@@ -116,7 +133,8 @@ const useEnhancer = () => {
     show,
     setShow,
     modalType,
-    setModalType
+    setModalType,
+    pageConfig
   }
 }
 

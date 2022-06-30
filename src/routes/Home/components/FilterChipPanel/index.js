@@ -1,18 +1,25 @@
-import './style.scss'
+import "./style.scss"
 
-import {Button, Modal} from "react-bootstrap"
-import React,{useState} from 'react'
+import { Button } from "react-bootstrap"
 
-import FilterPanel from "../FilterPanel"
-import useEnhancer from 'routes/Home/enhancer'
 const FilterChipPanel = (props) => {
-let {setShow,setModalType} = props
+  let { setShow, setModalType } = props
   return (
     <>
-    <div className="filter-input" >&nbsp;</div>
-    <Button variant="link" className='filter-btn' onClick={() => {setModalType("filter");setShow(true)}}>+Add Filters</Button>
-    <Button variant="link" className='filter-btn'>Clear All</Button>
-    
+      <div className="filter-input">&nbsp;</div>
+      <Button
+        variant="link"
+        className="filter-btn"
+        onClick={() => {
+          setModalType("filter")
+          setShow(true)
+        }}
+      >
+        +Add Filters
+      </Button>
+      <Button variant="link" className="filter-btn">
+        Clear All
+      </Button>
     </>
   )
 }

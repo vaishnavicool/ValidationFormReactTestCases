@@ -63,11 +63,13 @@ function FilterPanel(props: any) {
     setCollapse,
     collapse,
     clearFilters,
+    pageConfig,
+    modalType,
     pageOpts,
   } = props
 
   let { basic, advanced } = pageOpts.filters
-
+  let dataConfig = pageConfig[modalType]
   return (
     <div>
       <>
@@ -97,15 +99,15 @@ function FilterPanel(props: any) {
         <div className="button-container py-3">
           <input
             type="button"
-            onClick={clearFilters}
+            onClick={dataConfig?.cancelAction}
             className=" btn-reset"
-            value={"Reset"}
+            value={dataConfig?.cancelButtonTitle}
           />
           <input
             type="button"
-            onClick={gettableData}
+            onClick={dataConfig?.submitAction}
             className=" btn-apply"
-            value={"Apply Filters"}
+            value={dataConfig?.submitButtonTitle}
           />
          
         </div>
