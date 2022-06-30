@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
 import "./style.scss"
 import { FormattedMessage } from "react-intl"
-
+import Image from "shared/Image"
 function TopSection(props: any) {
   let {setModalType,setShow} = props
   return (
@@ -11,6 +11,13 @@ function TopSection(props: any) {
           <FormattedMessage id="breadcrumb" />
         </div>
         <div className="button-container">
+        <button className="btn btn-grp " type="reset">
+          <Image src="icon-columns.png" className="btn-icon" /> Columns
+        </button>
+        <button className="btn btn-grp " type="reset">
+          <Image src="icon-reload.png" className="btn-icon"/> Reload
+        </button>
+         
           <input
             className="btn-addworkorder"
             value="+ Add Workorder"
