@@ -4,6 +4,7 @@ import FilterChipPanel from "./components/FilterChipPanel";
 import TablePanel from "./components/TablePanel";
 import TopSection from "./components/breadcrumb/index";
 import useEnhancer from "./enhancer"
+import ModalForm from "./components/ModalForm";
 
 function Dashboard(props: any) {
   let extraProps = useEnhancer();
@@ -21,6 +22,7 @@ function Dashboard(props: any) {
         </div>
       </div>
     </div>
+    <ModalForm {...extraProps}/>
     </>
   )
 }
