@@ -3,6 +3,7 @@ import "./style.scss"
 import { FormattedMessage } from "react-intl"
 
 function TopSection(props: any) {
+  let {setModalType,setShow} = props
   return (
     <Fragment>
       <div className="mainContainer">
@@ -14,6 +15,7 @@ function TopSection(props: any) {
             className="btn-addworkorder"
             value="+ Add Workorder"
             type="button"
+            onClick={() => {setModalType("add");setShow(true)}}
           />
         </div>
       </div>

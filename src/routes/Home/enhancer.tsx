@@ -20,6 +20,8 @@ const useEnhancer = () => {
   const [selectedData, setSelectedData] = useState([])
   const [show, setShow] = useState(false)
 
+  const [modalType, setModalType] = useState()
+
   const updateFilters = (name: string) => (evt: any) => {
     let filters2: any = { ...filters }
     if (evt.label) filters2[name] = evt.value
@@ -112,7 +114,9 @@ const useEnhancer = () => {
     updateSelectedData,
     download,
     show,
-    setShow
+    setShow,
+    modalType,
+    setModalType
   }
 }
 

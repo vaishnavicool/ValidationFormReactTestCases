@@ -1,8 +1,8 @@
 import FilterPanel from "../FilterPanel"
 import {Button, Modal} from "react-bootstrap"
-
+import AddWorkOrder from "../AddWorkOrder"
 const ModalForm = (props) => {
-    let {show,setShow} = props
+    let {show,setShow,modalType} = props
 
   return (
     <Modal
@@ -13,11 +13,11 @@ const ModalForm = (props) => {
       >
         <Modal.Header closeButton closeVariant='white'>
           <Modal.Title id="example-custom-modal-styling-title">
-            Add Filters
+            {modalType === 'add' ? "Add Work Order":"Add Filters"}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-         <FilterPanel {...props} />
+            {modalType === 'add' ? <AddWorkOrder {...props} /> : <FilterPanel {...props} />}
         </Modal.Body>
       </Modal>
   )

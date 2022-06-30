@@ -22,7 +22,7 @@ function Dashboard(props: any) {
         </div>
       </div>
     </div>
-    <ModalForm {...extraProps}/>
+    <ModalForm {...extraProps}  />
     </>
   )
 }
