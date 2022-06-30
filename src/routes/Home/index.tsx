@@ -2,7 +2,7 @@ import "./style.scss"
 
 import FilterChipPanel from "./components/FilterChipPanel";
 import TablePanel from "./components/TablePanel";
-import TopSection from "../../layout/breadcrumb/index";
+import TopSection from "./components/breadcrumb/index";
 import useEnhancer from "./enhancer"
 
 function Dashboard(props: any) {
