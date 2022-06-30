@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
-import { getPageOpts, getDropdownOpts } from "./config"
-import { formattedDate } from "shared"
+import { getDropdownOpts, getPageOpts } from "./config"
+
+import _ from "lodash"
 import api from "api"
 import exportAsXls from "./excel"
-import _ from "lodash"
+import { formattedDate } from "shared"
 import { toast } from "react-toastify"
 
 const useEnhancer = () => {
@@ -19,6 +20,7 @@ const useEnhancer = () => {
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [selectedData, setSelectedData] = useState([])
   const [show, setShow] = useState(false)
+  const [showActivity, setShowActivity] = useState(false)
 
   const [modalType, setModalType] = useState()
 
@@ -110,6 +112,7 @@ const useEnhancer = () => {
     if (selectedData[0])
       exportAsXls(pageOpts.pageTitle, selectedData, headerKeys)
     else toast("Please select some rows to download the report")
+    setShowActivity(false)
   }
 
   return {
@@ -134,7 +137,9 @@ const useEnhancer = () => {
     setShow,
     modalType,
     setModalType,
-    pageConfig
+    pageConfig,
+    showActivity,
+    setShowActivity
   }
 }
 

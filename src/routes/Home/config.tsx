@@ -1,6 +1,7 @@
 import Image from "shared/Image"
 import api from "api"
 import { formattedDate } from "shared"
+import useEnhancer from "./enhancer"
 const pageOptions = {
   workOrders: {
     api_key: "p_workOrders",
@@ -142,6 +143,7 @@ const pageOptions = {
 }
 
 export const getPageOpts = (pageKey) => {
+
   let newPageOpts = {
     columns: [],
     api_key: 0,
@@ -152,7 +154,7 @@ export const getPageOpts = (pageKey) => {
   }
 
   newPageOpts.columns = pageOptions[pageKey].tableColumns.map((d) => ({
-    name: d.name=== "h" ? <Image src="dots.png" className="dotImg"/>: d.name,
+    name: d.name=== "h" ? <Image src="dots.png" className="dotImg" />: d.name,
     sortable: d.name=='h'? false:true,
     compact:d.name=='h'? true:false,
     key: d.selector,
@@ -181,7 +183,6 @@ export const getPageOpts = (pageKey) => {
   return newPageOpts
 }
 
-const CustomHeader = () => {return <Image src="dots.png" />}
 export const getDropdownOpts = async (pageKey) => {
   let dropdownOpts = {}
 

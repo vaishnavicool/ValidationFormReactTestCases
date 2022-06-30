@@ -15,8 +15,10 @@ function workOrder(props: any) {
     tableData,
     updateSelectedData,
     download,
-    gettableData
+    gettableData,
+    showActivity
   } = props
+  {console.log("here",showActivity)}
 
   return (
     <div
@@ -90,7 +92,11 @@ function workOrder(props: any) {
           </div>
         </div> */}
         <div className="table-section">
+          
           <Loading id="tableData">
+          {showActivity && <div className="activity-div">
+            <div className="activity-item" onClick={download}><Image src="exportToExcel.png" /><span className="activity-txt">Export to Excel</span></div>
+          </div>}
             <DataTable
               columns={pageOpts.columns}
               data={tableData}
@@ -102,6 +108,7 @@ function workOrder(props: any) {
               onSelectedRowsChange={updateSelectedData}
             />
           </Loading>
+         
         </div>
       </div>
     </div>
