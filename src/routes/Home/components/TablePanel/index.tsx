@@ -18,7 +18,6 @@ function workOrder(props: any) {
     gettableData,
     showActivity
   } = props
-  {console.log("here",showActivity)}
 
   return (
     <div

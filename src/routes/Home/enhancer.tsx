@@ -20,7 +20,7 @@ const useEnhancer = () => {
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [selectedData, setSelectedData] = useState([])
   const [show, setShow] = useState(false)
-  const [showActivity, setShowActivity] = useState(false)
+  const [showActivity, setShowActivity] = useState(true)
 
   const [modalType, setModalType] = useState()
 
