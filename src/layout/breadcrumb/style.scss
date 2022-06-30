@@ -1,10 +1,29 @@
-.mainContainer{
-    margin-top: 38px;
-    margin-left: 35px;
-    margin-bottom: 17px;
+.mainContainer {
+  margin-top: 24px;
+  margin-left: 35px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  .button-container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 3rem;
+  }
+  .btn-addworkorder {
+    padding: 10px 13px;
+    border-radius: 35px;
+    border: none;
+    background-color: #78be20;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #ffffff;
+    letter-spacing: 0.6px;
+  }
 }
-.content{
-    // font-weight: 600;
-    font-size: 1rem;
-    // font-family:"OpenSansSemiBold",sans-serif
+.content {
+  // font-weight: 600;
+  font-size: 1rem;
+  // font-family:"OpenSansSemiBold",sans-serif
 }
