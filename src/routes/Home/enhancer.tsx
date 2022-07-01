@@ -21,6 +21,7 @@ const useEnhancer = () => {
   const [selectedData, setSelectedData] = useState([])
   const [show, setShow] = useState(false)
   const [showActivity, setShowActivity] = useState(true)
+  const [showColumn, setShowColumn] = useState(false)
 
   const [modalType, setModalType] = useState()
 
@@ -139,7 +140,9 @@ const useEnhancer = () => {
     setModalType,
     pageConfig,
     showActivity,
-    setShowActivity
+    setShowActivity,
+    setShowColumn,
+    showColumn
   }
 }
 
