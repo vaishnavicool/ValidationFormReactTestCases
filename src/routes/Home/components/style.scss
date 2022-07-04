@@ -484,3 +484,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
   }
 }
+.dot-img{
+  position: absolute;
+  right: 0.5rem;
+  background: #d2edf4 !important;
+  top: 12px;
+  z-index: 9999;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  cursor: pointer;
+}

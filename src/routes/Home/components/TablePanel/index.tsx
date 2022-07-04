@@ -17,8 +17,10 @@ function workOrder(props: any) {
     download,
     gettableData,
     showActivity,
-    columnsVisible
+    columnsVisible,
+    setShowActivity
   } = props
+  {console.log(showActivity)}
 
   return (
     <div
@@ -26,6 +28,7 @@ function workOrder(props: any) {
       className={`main-wrapper table-responsive col`}
     >
       <div className="right-panel">
+        
         {/* <div className="detailbar row col-12">
           <div className="row">
             <div className="row col-auto me-auto">
@@ -92,11 +95,12 @@ function workOrder(props: any) {
           </div>
         </div> */}
         <div className="table-section">
-          
           <Loading id="tableData">
+
           {showActivity && <div className="activity-div">
             <div className="activity-item" onClick={download}><Image src="exportToExcel.png" /><span className="activity-txt">Export to Excel</span></div>
           </div>}
+          <div>
             <DataTable
               columns={columnsVisible}
               data={tableData}
@@ -107,6 +111,8 @@ function workOrder(props: any) {
               defaultSortFieldId={defaultSortFieldId}
               onSelectedRowsChange={updateSelectedData}
             />
+            </div>
+            {tableData?.length>0 && <div className="dot-img" onClick={()=>setShowActivity(!showActivity)}><Image src="dots.png" /></div>}
           </Loading>
         </div>
       </div>

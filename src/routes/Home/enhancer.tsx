@@ -20,7 +20,7 @@ const useEnhancer = () => {
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [selectedData, setSelectedData] = useState([])
   const [show, setShow] = useState(false)
-  const [showActivity, setShowActivity] = useState(true)
+  const [showActivity, setShowActivity] = useState(false)
   const [showColumn, setShowColumn] = useState(false)
   const [columnsVisible, setColumnsVisible] = useState([...pageOpts.columns])
   const [columnsData, setColumnsData] = useState([...pageOpts.columns])

@@ -135,7 +135,7 @@ const pageOptions = {
       { name: "Sales Person", selector: "salesrepName",visible:true },
       { name: "Job Desc.", selector: "description",visible:true },
       { name: "Generator Name", selector: "generatorName",visible:true },
-      {name:"h",selector:undefined,visible:true}
+      // {name:"h",selector:undefined,visible:true}
     ],
   },
 }
