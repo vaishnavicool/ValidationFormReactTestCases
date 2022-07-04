@@ -16,7 +16,8 @@ function workOrder(props: any) {
     updateSelectedData,
     download,
     gettableData,
-    showActivity
+    showActivity,
+    columnsVisible
   } = props
 
   return (
@@ -97,7 +98,7 @@ function workOrder(props: any) {
             <div className="activity-item" onClick={download}><Image src="exportToExcel.png" /><span className="activity-txt">Export to Excel</span></div>
           </div>}
             <DataTable
-              columns={pageOpts.columns}
+              columns={columnsVisible}
               data={tableData}
               pagination
               fixedHeader
@@ -107,7 +108,6 @@ function workOrder(props: any) {
               onSelectedRowsChange={updateSelectedData}
             />
           </Loading>
-         
         </div>
       </div>
     </div>

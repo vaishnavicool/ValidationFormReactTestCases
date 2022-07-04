@@ -9,7 +9,7 @@ import { toast } from "react-toastify"
 
 const useEnhancer = () => {
   let pageKey = "workOrders"
-  let pageOpts = getPageOpts(pageKey)
+  let pageOpts: any = getPageOpts(pageKey)
   let { defaultState } = pageOpts
   const [inactive, setInactive] = useState(true)
   const [tableData, setTableData] = useState([])
@@ -22,10 +22,10 @@ const useEnhancer = () => {
   const [show, setShow] = useState(false)
   const [showActivity, setShowActivity] = useState(true)
   const [showColumn, setShowColumn] = useState(false)
-
+  const [columnsVisible, setColumnsVisible] = useState([...pageOpts.columns])
+  const [columnsData, setColumnsData] = useState([...pageOpts.columns])
   const [modalType, setModalType] = useState()
 
-  
   const updateFilters = (name: string) => (evt: any) => {
     let filters2: any = { ...filters }
     if (evt.label) filters2[name] = evt.value
@@ -59,6 +59,14 @@ const useEnhancer = () => {
     setFilters({ ...defaultState })
   }
 
+  const handleChange = async (d: any) => {
+    let index = columnsData.findIndex((object: any) => object.name === d.name)
+    columnsData[index].visible = !columnsData[index].visible
+    let visibleColumns = columnsData.filter((x: any) => x.visible)
+    setColumnsVisible(visibleColumns)
+    setColumnsData(columnsData)
+    gettableData()
+  }
   const gettableData = async () => {
     Object.keys(filters).forEach((d) => {
       if (pageOpts.numerics[d]) {
@@ -70,7 +78,7 @@ const useEnhancer = () => {
       ...filters,
     })
 
-    let keepKeys = pageOpts.columns.map((d: any) => d.key)
+    let keepKeys = columnsVisible.map((d: any) => d.key)
 
     if (data[0]) {
       data.forEach((d1, i1) => {
@@ -88,21 +96,21 @@ const useEnhancer = () => {
   const updateSelectedData = (eve) => {
     setSelectedData(eve.selectedRows)
   }
-  let pageConfig={
-    filter:{
-      submitButtonTitle:'Apply Filters',
-      title:'Add Filters',
-      submitAction:gettableData,
-      cancelButtonTitle:"Reset",
-      cancelAction:clearFilters
+  let pageConfig = {
+    filter: {
+      submitButtonTitle: "Apply Filters",
+      title: "Add Filters",
+      submitAction: gettableData,
+      cancelButtonTitle: "Reset",
+      cancelAction: clearFilters,
     },
-    add:{
-      submitButtonTitle:'Add',
-      title:'Add WorkOrder',
-      submitAction:"",
-      cancelButtonTitle:"Cancel",
-      cancelAction:"cancelAdd"
-    }
+    add: {
+      submitButtonTitle: "Add",
+      title: "Add WorkOrder",
+      submitAction: "",
+      cancelButtonTitle: "Cancel",
+      cancelAction: "cancelAdd",
+    },
   }
 
   const download = () => {
@@ -142,7 +150,12 @@ const useEnhancer = () => {
     showActivity,
     setShowActivity,
     setShowColumn,
-    showColumn
+    showColumn,
+    handleChange,
+    columnsVisible,
+    setColumnsVisible,
+    columnsData,
+    setColumnsData,
   }
 }
 

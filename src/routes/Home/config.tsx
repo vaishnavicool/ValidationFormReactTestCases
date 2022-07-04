@@ -1,7 +1,5 @@
 import Image from "shared/Image"
 import api from "api"
-import { formattedDate } from "shared"
-import useEnhancer from "./enhancer"
 const pageOptions = {
   workOrders: {
     api_key: "p_workOrders",
@@ -121,23 +119,23 @@ const pageOptions = {
       ],
     },
     tableColumns: [
-      { name: "Work Order", selector: "workorderID" },
-      { name: "Generator", selector: "generatorName" },
-      { name: "Manifest", selector: "manifestTrackingNumber" },
-      { name: "Status", selector: "tableDatatatus" },
-      { name: "Type", selector: "workorderType" },
-      { name: "Ready to Bill", selector: "ic_billed" },
-      { name: "Invoiced", selector: "invoiced_yn" },
-      { name: "Final Inv.", selector: "invoiced_final_yn" },
-      { name: "Invoice", selector: "invoiceID" },
-      { name: "CSR", selector: "internalCoordinatorNameLast" },
-      { name: "CustomerName", selector: "customerName" },
-      { name: "Order Date", selector: "orderDate", type: "date" },
-      { name: "Job", selector: "jobName" },
-      { name: "Sales Person", selector: "salesrepName" },
-      { name: "Job Desc.", selector: "description" },
-      { name: "Generator Name", selector: "generatorName" },
-      {name:"h",selector:undefined}
+      { name: "Work Order", selector: "workorderID",visible:true},
+      { name: "Generator", selector: "generatorName" ,visible:true},
+      { name: "Manifest", selector: "manifestTrackingNumber",visible:true },
+      { name: "Status", selector: "workorderStatus" ,visible:true},
+      { name: "Type", selector: "workorderType",visible:true },
+      { name: "Ready to Bill", selector: "ic_billed",visible:true },
+      { name: "Invoiced", selector: "invoiced_yn",visible:true },
+      { name: "Final Inv.", selector: "invoiced_final_yn",visible:true },
+      { name: "Invoice", selector: "invoiceID",visible:true },
+      { name: "CSR", selector: "internalCoordinatorNameLast" ,visible:true},
+      { name: "CustomerName", selector: "customerName",visible:true },
+      { name: "Order Date", selector: "orderDate", type: "date",visible:true },
+      { name: "Job", selector: "jobName",visible:true },
+      { name: "Sales Person", selector: "salesrepName",visible:true },
+      { name: "Job Desc.", selector: "description",visible:true },
+      { name: "Generator Name", selector: "generatorName",visible:true },
+      {name:"h",selector:undefined,visible:true}
     ],
   },
 }
@@ -158,6 +156,7 @@ export const getPageOpts = (pageKey) => {
     sortable: d.name=='h'? false:true,
     compact:d.name=='h'? true:false,
     key: d.selector,
+    visible:d.visible,
     cell: (row: any) => {
       if (d.name==='h') return ""
       else if (!row[d.selector]) return "-"
