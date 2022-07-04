@@ -1,5 +1,5 @@
 import "./style.scss"
-
+import { useDetectClickOutside } from "react-detect-click-outside"
 import FilterChipPanel from "./components/FilterChipPanel"
 import Image from "shared/Image"
 import ModalForm from "./components/ModalForm"
@@ -9,7 +9,12 @@ import useEnhancer from "./enhancer"
 
 function Dashboard(props: any) {
   let extraProps = useEnhancer()
-  let { showColumn, setShowColumn, handleChange, pageOpts } = extraProps
+  let { showColumn, setShowColumn, switchVisibleColumns, pageOpts, columns } =
+    extraProps
+  const columnsBtn = useDetectClickOutside({
+    onTriggered: () => setShowColumn(false),
+  })
+
   return (
     <>
       <TopSection {...extraProps} />
@@ -17,38 +22,37 @@ function Dashboard(props: any) {
         <FilterChipPanel {...extraProps} />
       </div>
 
+      {console.log(columns)}
       <div className="container-fluid p-0">
         <div className="profile-container pt-1 ">
           <div className="main-button-container">
-            <button
-              className="btn btn-grp  mx-4"
-              type="reset"
-              onClick={() => setShowColumn(!showColumn)}
-            >
-              <Image src="icon-columns.png" className="btn-icon" /> Columns
-            </button>
-            {showColumn && (
-              <div className="columns-div">
-                {pageOpts.columns.map((d: any) => {
-                  return (
-                    <>
-                      {typeof d.name !== "object" && (
-                        <div className="column-data">
-                          <span>
-                            <input
-                              type="checkbox"
-                              checked={d.visible}
-                              onChange={() => handleChange(d)}
-                            />
-                          </span>
-                          <span className="col-name">{d.name}</span>
-                        </div>
-                      )}
-                    </>
-                  )
-                })}
-              </div>
-            )}
+            <div ref={columnsBtn}>
+              <button
+                className="btn btn-grp  mx-4"
+                type="reset"
+                onClick={() => setShowColumn(!showColumn)}
+              >
+                <Image src="icon-columns.png" className="btn-icon" /> Columns
+              </button>
+              {showColumn && (
+                <div className="columns-div">
+                  {columns.map((d: any, index) => {
+                    return (
+                      <div className="column-data" key={d.name}>
+                        <span>
+                          <input
+                            type="checkbox"
+                            checked={d.visible}
+                            onChange={() => switchVisibleColumns(index)}
+                          />
+                        </span>
+                        <span className="col-name">{d.name}</span>
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
             <button className="btn btn-grp " type="reset">
               <Image src="icon-reload.png" className="btn-icon" /> Reload
             </button>

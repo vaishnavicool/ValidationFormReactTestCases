@@ -10,15 +10,13 @@ import React from "react"
 function workOrder(props: any) {
   let {
     defaultSortFieldId,
-    resetSort,
-    pageOpts,
     tableData,
     updateSelectedData,
     download,
-    gettableData,
     showActivity,
     columns,
-    setShowActivity
+    setShowActivity,
+    visibleColumns,
   } = props
 
   return (
@@ -27,7 +25,6 @@ function workOrder(props: any) {
       className={`main-wrapper table-responsive col`}
     >
       <div className="right-panel">
-        
         {/* <div className="detailbar row col-12">
           <div className="row">
             <div className="row col-auto me-auto">
@@ -95,23 +92,34 @@ function workOrder(props: any) {
         </div> */}
         <div className="table-section">
           <Loading id="tableData">
-
-          {showActivity && <div className="activity-div">
-            <div className="activity-item" onClick={download}><Image src="exportToExcel.png" /><span className="activity-txt">Export to Excel</span></div>
-          </div>}
-          <div>
-            <DataTable
-              columns={columns}
-              data={tableData}
-              pagination
-              fixedHeader
-              selectableRows
-              fixedHeaderScrollHeight="500px"
-              defaultSortFieldId={defaultSortFieldId}
-              onSelectedRowsChange={updateSelectedData}
-            />
+            {showActivity && (
+              <div className="activity-div">
+                <div className="activity-item" onClick={download}>
+                  <Image src="exportToExcel.png" />
+                  <span className="activity-txt">Export to Excel</span>
+                </div>
+              </div>
+            )}
+            <div>
+              <DataTable
+                columns={visibleColumns()}
+                data={tableData}
+                pagination
+                fixedHeader
+                selectableRows
+                fixedHeaderScrollHeight="500px"
+                defaultSortFieldId={defaultSortFieldId}
+                onSelectedRowsChange={updateSelectedData}
+              />
             </div>
-            {tableData?.length>0 && <div className="dot-img" onClick={()=>setShowActivity(!showActivity)}><Image src="dots.png" /></div>}
+            {tableData?.length > 0 && (
+              <div
+                className="dot-img"
+                onClick={() => setShowActivity(!showActivity)}
+              >
+                <Image src="dots.png" />
+              </div>
+            )}
           </Loading>
         </div>
       </div>

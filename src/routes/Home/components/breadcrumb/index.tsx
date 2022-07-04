@@ -6,7 +6,15 @@ import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
 
 function TopSection(props: any) {
-  let { setModalType, setShow, pageOpts,setShowColumn,showColumn ,handleChange,columns} = props
+  let {
+    setModalType,
+    setShow,
+    pageOpts,
+    setShowColumn,
+    showColumn,
+    switchVisibleColumns,
+    columns,
+  } = props
   return (
     <>
       <div className="mainContainer">
@@ -25,7 +33,7 @@ function TopSection(props: any) {
                     {typeof(d.name) !== "object" && (
                       <div className="column-data">
                         <span>
-                          <input type="checkbox" checked={d.visible} onChange= {()=>handleChange(d)} />
+                          <input type="checkbox" checked={d.visible} onChange= {()=>switchVisibleColumns(d)} />
                         </span>
                         <span className="col-name">{d.name}</span>
                       </div>

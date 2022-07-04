@@ -58,13 +58,18 @@ const useEnhancer = () => {
     setFilters({ ...defaultState })
   }
 
-  const handleChange = async (index: any) => {
-    // let index = columns.findIndex((object: any) => object.name === d.name)
-    columns[index].visible = !columns[index].visible
-    // let visibleColumns = columns.filter((x: any) => x.visible)
-    setColumns(columns)
-    // gettableData()
+  const switchVisibleColumns = async (index: any) => {
+    let vColumns = [...columns]
+    vColumns[index].visible = !vColumns[index].visible
+    setColumns(vColumns)
   }
+
+  const visibleColumns = () => {
+    let vColumns = columns.filter((d) => d.visible)
+    if (vColumns[0]) return vColumns
+    else return columns
+  }
+
   const gettableData = async () => {
     Object.keys(filters).forEach((d) => {
       if (pageOpts.numerics[d]) {
@@ -113,8 +118,8 @@ const useEnhancer = () => {
 
   const download = () => {
     let headerKeys = {}
-    pageOpts.columns.forEach((d: any) => {
-      headerKeys[d.key] = d.name
+    columns.forEach((d: any) => {
+      if (d.visible) headerKeys[d.key] = d.name
     })
     if (selectedData[0])
       exportAsXls(pageOpts.pageTitle, selectedData, headerKeys)
@@ -149,9 +154,9 @@ const useEnhancer = () => {
     setShowActivity,
     setShowColumn,
     showColumn,
-    handleChange,
+    switchVisibleColumns,
     columns,
-    setColumns
+    visibleColumns,
   }
 }
 
