@@ -14,7 +14,7 @@ function TopSection(props: any) {
           <FormattedMessage id="breadcrumb" />
         </div>
         <div className="button-container">
-          <button className="btn btn-grp " type="reset" onClick={()=>setShowColumn(!showColumn)} >
+          {/* <button className="btn btn-grp " type="reset" onClick={()=>setShowColumn(!showColumn)} >
             <Image src="icon-columns.png" className="btn-icon" /> Columns
           </button>
           {showColumn && <div className="columns-div">
@@ -36,7 +36,7 @@ function TopSection(props: any) {
             </div>}
           <button className="btn btn-grp " type="reset">
             <Image src="icon-reload.png" className="btn-icon" /> Reload
-          </button>
+          </button> */}
 
           <input
             className="btn-addworkorder"

@@ -4,13 +4,21 @@
     background: #FFFFFF;
     border: 1px solid #CCCBCB;
     border-radius: 33px;
+    margin-right: 1rem;
 }
 
 .filter-btn {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #063AF0;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 19px !important; 
+    // color: #063AF0;
+    width: 40px;
+    background: #0092BC !important;
+    height: 40px;
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center;
+    border-radius: 20px !important;
     :focus {
         box-shadow: none;
     }

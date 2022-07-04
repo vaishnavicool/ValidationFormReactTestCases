@@ -226,6 +226,13 @@ div.input {
   display: flex;
   justify-content: space-around;
 }
+.main-button-container{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  position: relative;
+  padding: 1.5rem 0;
+}
 .btn-search {
   // font-family: "Open Sans", sans-serif;
   border-radius: 10px !important;

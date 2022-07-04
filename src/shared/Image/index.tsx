@@ -11,7 +11,7 @@ const images = importAll(
 )
 
 const Image = ({ src, mouseOver , ...props }: any) => {
-  return <img src={images[src]} onMouseOver={e => e.currentTarget.src = `${images[mouseOver]}` } onMouseOut={e => e.currentTarget.src = `${images[src]}` } {...props} />
+  return <img src={images[src]} onMouseOver={e => e.currentTarget.src = `${images[mouseOver] ?? images[src]}` } onMouseOut={e => e.currentTarget.src = `${images[src]}` } {...props} />
 }
 
 export const PreLoad = () => (

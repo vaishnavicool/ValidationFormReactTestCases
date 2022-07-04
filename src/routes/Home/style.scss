@@ -58,6 +58,10 @@
   padding-top: 3rem !important;
 }
 
+.pt-1 {
+  padding-top: 1rem !important;
+}
+
 .float-left {
   float: left !important;
 }
@@ -235,4 +239,7 @@
 .btn:focus, .btn:focus-visible {
   outline: none !important;
   box-shadow: none !important;
+}
+.btn-icon {
+  margin-right: 9px;
 }

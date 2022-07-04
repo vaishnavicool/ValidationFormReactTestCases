@@ -1,6 +1,7 @@
 import "./style.scss"
 
 import { Button } from "react-bootstrap"
+import Image from "shared/Image"
 
 const FilterChipPanel = (props) => {
   let { setShow, setModalType } = props
@@ -15,11 +16,12 @@ const FilterChipPanel = (props) => {
           setShow(true)
         }}
       >
-        +Add Filters
+        <Image src="filter.png" />
       </Button>
-      <Button variant="link" className="filter-btn">
+      {/* <Button variant="link" className="filter-btn">
         Clear All
-      </Button>
+      </Button> */}
+      
     </>
   )
 }

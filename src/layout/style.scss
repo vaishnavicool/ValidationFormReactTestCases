@@ -36,11 +36,12 @@ body,
 .filterchip-container {
     background-color:rgba(120, 190, 32, 0.1);
     margin-left: 1.5rem;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 8px;
     margin-right: 1.5rem;
     border: 1px solid #E2E2E2;
-    border-radius: 4px
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
 }
 
 .table-container {
