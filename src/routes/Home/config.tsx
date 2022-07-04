@@ -152,9 +152,9 @@ export const getPageOpts = (pageKey) => {
   }
 
   newPageOpts.columns = pageOptions[pageKey].tableColumns.map((d) => ({
-    name: d.name=== "h" ? <Image src="dots.png" className="dotImg" />: d.name,
-    sortable: d.name=='h'? false:true,
-    compact:d.name=='h'? true:false,
+    name: d.name,
+    sortable:true,
+    compact:false,
     key: d.selector,
     visible:d.visible,
     cell: (row: any) => {
@@ -162,7 +162,7 @@ export const getPageOpts = (pageKey) => {
       else if (!row[d.selector]) return "-"
       return row[d.selector]
     },
-    width: d.name=='h' ? `15px`:`${Math.max(d.name.length * 10 + 20, 100)}px`,
+    width: d.name=='h' ? `15px`:`${Math.min(d.name.length * 10 + 70, 200)}px`,
     
   }))
   newPageOpts.api_key = pageOptions[pageKey].api_key
