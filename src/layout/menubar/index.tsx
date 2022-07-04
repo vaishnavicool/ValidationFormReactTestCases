@@ -5,9 +5,12 @@ import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
 import menuConfig from "./config"
 import { useState } from "react"
+import { useLocation } from "react-router-dom"
 
 const Menubar = () => {
   const [hover, setHover] = useState(false)
+  const location = useLocation()
+  console.log(location.pathname)
   return (
     <>
       
@@ -29,7 +32,7 @@ const Menubar = () => {
                 </div>
               </div>
             ) : (
-              <div className="col menu-item">
+              <div className={`col menu-item ${location.pathname == d.path ? "active": ""}`}>
                 <Dropdown drop="end">
                   <Dropdown.Toggle
                     variant="light"
