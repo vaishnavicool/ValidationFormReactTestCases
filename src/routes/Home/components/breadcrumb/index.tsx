@@ -1,11 +1,14 @@
-import React, { Fragment } from "react"
 import "./style.scss"
+
+import React, { Fragment } from "react"
+
 import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
+
 function TopSection(props: any) {
   let { setModalType, setShow, pageOpts,setShowColumn,showColumn } = props
   return (
-    <Fragment>
+    <>
       <div className="mainContainer">
         <div className="content">
           <FormattedMessage id="breadcrumb" />
@@ -13,7 +16,8 @@ function TopSection(props: any) {
         <div className="button-container">
           <button className="btn btn-grp " type="reset" onClick={()=>setShowColumn(!showColumn)} >
             <Image src="icon-columns.png" className="btn-icon" /> Columns
-            {showColumn && <div className="columns-div">
+          </button>
+          {showColumn && <div className="columns-div">
               {pageOpts.columns.map((d: any) => {
                 return (
                   <>
@@ -29,7 +33,6 @@ function TopSection(props: any) {
                 )
               })}
             </div>}
-          </button>
           <button className="btn btn-grp " type="reset">
             <Image src="icon-reload.png" className="btn-icon" /> Reload
           </button>
@@ -45,7 +48,7 @@ function TopSection(props: any) {
           />
         </div>
       </div>
-    </Fragment>
+    </>
   )
 }
 export default TopSection
