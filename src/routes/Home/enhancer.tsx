@@ -22,8 +22,7 @@ const useEnhancer = () => {
   const [show, setShow] = useState(false)
   const [showActivity, setShowActivity] = useState(false)
   const [showColumn, setShowColumn] = useState(false)
-  const [columnsVisible, setColumnsVisible] = useState([...pageOpts.columns])
-  const [columnsData, setColumnsData] = useState([...pageOpts.columns])
+  const [columns, setColumns] = useState([...pageOpts.columns])
   const [modalType, setModalType] = useState()
 
   const updateFilters = (name: string) => (evt: any) => {
@@ -59,13 +58,12 @@ const useEnhancer = () => {
     setFilters({ ...defaultState })
   }
 
-  const handleChange = async (d: any) => {
-    let index = columnsData.findIndex((object: any) => object.name === d.name)
-    columnsData[index].visible = !columnsData[index].visible
-    let visibleColumns = columnsData.filter((x: any) => x.visible)
-    setColumnsVisible(visibleColumns)
-    setColumnsData(columnsData)
-    gettableData()
+  const handleChange = async (index: any) => {
+    // let index = columns.findIndex((object: any) => object.name === d.name)
+    columns[index].visible = !columns[index].visible
+    // let visibleColumns = columns.filter((x: any) => x.visible)
+    setColumns(columns)
+    // gettableData()
   }
   const gettableData = async () => {
     Object.keys(filters).forEach((d) => {
@@ -78,7 +76,7 @@ const useEnhancer = () => {
       ...filters,
     })
 
-    let keepKeys = columnsVisible.map((d: any) => d.key)
+    let keepKeys = columns.map((d: any) => d.key)
 
     if (data[0]) {
       data.forEach((d1, i1) => {
@@ -152,10 +150,8 @@ const useEnhancer = () => {
     setShowColumn,
     showColumn,
     handleChange,
-    columnsVisible,
-    setColumnsVisible,
-    columnsData,
-    setColumnsData,
+    columns,
+    setColumns
   }
 }
 

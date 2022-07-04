@@ -10,8 +10,8 @@ const images = importAll(
   require.context("assets/icon", false, /\.(png|jpe?g|svg|jfif)$/)
 )
 
-const Image = ({ src, ...props }: any) => {
-  return <img src={images[src]} {...props} />
+const Image = ({ src, mouseOver , ...props }: any) => {
+  return <img src={images[src]} onMouseOver={e => e.currentTarget.src = `${images[mouseOver]}` } onMouseOut={e => e.currentTarget.src = `${images[src]}` } {...props} />
 }
 
 export const PreLoad = () => (

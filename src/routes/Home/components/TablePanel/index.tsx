@@ -17,10 +17,9 @@ function workOrder(props: any) {
     download,
     gettableData,
     showActivity,
-    columnsVisible,
+    columns,
     setShowActivity
   } = props
-  {console.log(showActivity)}
 
   return (
     <div
@@ -102,7 +101,7 @@ function workOrder(props: any) {
           </div>}
           <div>
             <DataTable
-              columns={columnsVisible}
+              columns={columns}
               data={tableData}
               pagination
               fixedHeader

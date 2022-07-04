@@ -26,8 +26,8 @@ function MainWrapper(props) {
     <div className="container-fluid layout p-0">
       <div className='header-container'><Header /></div>
       <div className='row no-gutters'>
-      <div className='col-2 left-container'><Menubar /></div>
-      <div className='col-10 g-0'>
+      <div className='col-1 left-container'><Menubar /></div>
+      <div className='col-11 g-0'>
         
         <div className=''><Routes /></div>
         <div className='footer-container'><Footer /><PreLoad /></div>

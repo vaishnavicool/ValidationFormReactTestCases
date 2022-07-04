@@ -4,13 +4,12 @@ import { Dropdown } from "react-bootstrap"
 import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
 import menuConfig from "./config"
-import { useState } from "react"
 import { useLocation } from "react-router-dom"
+import { useState } from "react"
 
 const Menubar = () => {
   const [hover, setHover] = useState(false)
   const location = useLocation()
-  console.log(location.pathname)
   return (
     <>
       
@@ -26,7 +25,7 @@ const Menubar = () => {
                     aria-expanded="false"
                     className="bg-transparent border-0 custom-dropdown btn btn-light"
                   >
-                    <Image src={`${d.icon}_grey.png`} className="menubar-icon"/>
+                    <Image src={`${d.icon}_grey.png`} className="menubar-icon" mouseOver={`${d.icon}_white.png`}/>
                     <span className="menubar-name"><FormattedMessage id={d.title} /></span>
                   </button>
                 </div>
@@ -39,7 +38,7 @@ const Menubar = () => {
                     id="dropdown-basic"
                     className="bg-transparent border-0 custom-dropdown"
                   >
-                    <Image src={`${d.icon}_grey.png`} className="menubar-icon" /><span className="menubar-name"><FormattedMessage id={d.title} /></span>
+                    <Image src={`${d.icon}_grey.png`} className="menubar-icon" mouseOver={`${d.icon}_white.png`}/><span className="menubar-name"><FormattedMessage id={d.title} /></span>
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="menu">
                     {d.children.map((child) => (

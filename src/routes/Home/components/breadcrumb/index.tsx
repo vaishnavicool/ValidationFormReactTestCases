@@ -6,7 +6,7 @@ import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
 
 function TopSection(props: any) {
-  let { setModalType, setShow, pageOpts,setShowColumn,showColumn ,handleChange,columnsData} = props
+  let { setModalType, setShow, pageOpts,setShowColumn,showColumn ,handleChange,columns} = props
   return (
     <>
       <div className="mainContainer">
@@ -18,7 +18,7 @@ function TopSection(props: any) {
             <Image src="icon-columns.png" className="btn-icon" /> Columns
           </button>
           {showColumn && <div className="columns-div">
-              {columnsData.map((d: any) => {
+              {pageOpts.columns.map((d: any) => {
                 
                 return (
                   <>

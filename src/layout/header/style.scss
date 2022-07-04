@@ -49,14 +49,13 @@
 }
 .details{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-end;
 
   .question-icon{
     // width: 20px;
     height: 20px;
-    margin-right: 22px;
+    // margin-right: 22px;
   }
   .bell-icon{
     // width: 20px;
@@ -71,13 +70,13 @@
       .username{
         font-size: 14px;
       line-height: 16.5px;
-      color: #202020;
+      color: white;
       font-weight: 500;
       }
       .role{
         font-size: 12px;
         line-height: 15px;
-        color: #898989;
+        color: white;
       }
     }
     
