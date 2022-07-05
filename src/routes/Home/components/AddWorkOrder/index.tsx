@@ -25,7 +25,7 @@ function Field(props: any) {
         <Select
           onChange={updateFilters(name)}
           placeholder="Select value"
-          value={allDropdownOpts[name]?.find((d) => {d.value == filters[name]})}
+          value={allDropdownOpts[name]?.find((d) => d.value == filters[name])}
           className=" basic-single input"
           options={allDropdownOpts[name]}
           isLoading={!allDropdownOpts[name]?.[0]}
@@ -56,7 +56,6 @@ function AddWorkOrder(props: any) {
   let {
     inactive,
     handleFilterCollapse,
-    gettableData,
     updateFilters,
     filters,
     allDropdownOpts,
@@ -66,27 +65,15 @@ function AddWorkOrder(props: any) {
     pageOpts,
   } = props
 
-  let { basic, advanced } = pageOpts.filters
-
   return (
     <div>
       <>
         <div className="filter-body">
           <div className="inputs row">
-            {basic.map((d: any, index) => {
+            {pageOpts.filters.map((d: any, index) => {
               return (
                 <Field
                   key={index}
-                  name={d.name}
-                  {...{ updateFilters, filters, allDropdownOpts, ...d }}
-                />
-              )
-            })}
-
-            {advanced.map((d: any, index) => {
-              return (
-                <Field
-                  key={d.name}
                   name={d.name}
                   {...{ updateFilters, filters, allDropdownOpts, ...d }}
                 />
@@ -101,13 +88,7 @@ function AddWorkOrder(props: any) {
             className=" btn-reset"
             value={"Cancel"}
           />
-          <input
-            type="button"
-            // onClick={gettableData}
-            className=" btn-apply"
-            value={"Add"}
-          />
-         
+          <input type="button" className=" btn-apply" value={"Add"} />
         </div>
       </>
     </div>

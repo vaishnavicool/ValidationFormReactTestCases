@@ -52,7 +52,7 @@
   margin-right: 30px;
 }
 .rdt_TableHeadRow {
-  background-color: #E0E0E0 !important;
+  background-color: #e0e0e0 !important;
   border: 1px solid #e4e4e4;
   box-sizing: border-box;
   border-radius: 0px;
@@ -74,7 +74,7 @@
 }
 .dropdown-menu {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
-  border: 1px solid #E6E5E5;
+  border: 1px solid #e6e5e5;
   padding: 0 !important;
   width: 15rem;
 }
@@ -226,7 +226,7 @@ div.input {
   display: flex;
   justify-content: space-around;
 }
-.main-button-container{
+.main-button-container {
   display: flex;
   justify-content: flex-end;
   margin-right: 1rem;
@@ -492,12 +492,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
   }
 }
-.dot-img{
+.dot-img {
   position: absolute;
   right: 0.5rem;
-  background: #E0E0E0 !important;
+  background: #e0e0e0 !important;
   top: 12px;
-  z-index: 9999;
+  z-index: 100;
   width: 35px;
   display: flex;
   align-items: center;

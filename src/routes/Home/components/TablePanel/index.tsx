@@ -79,7 +79,6 @@ function workOrder(props: any) {
               <button
                 className="btn btn-light square-refresh-btn"
                 type="button"
-                onClick={gettableData}
               >
                 <Image
                   className="refresh-icon"

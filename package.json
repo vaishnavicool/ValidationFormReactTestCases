@@ -77,6 +77,11 @@
     "plugins": [
       "react"
     ],
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:react/recommended"
+    ],
     "rules": {
       "eqeqeq": "off",
       "no-useless-escape": "off",

@@ -15,7 +15,8 @@ const useEnhancer = () => {
   const [tableData, setTableData] = useState([])
   const [startDate, setStartDate] = useState(new Date())
   const [collapse, setCollapse] = useState(false)
-  const [filters, setFilters] = useState(defaultState)
+  const [filters, setFilters] = useState({})
+  const [aFilters, setAFilters] = useState({})
   const [defaultSortFieldId, setDefaultSortFieldId] = useState(1)
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [selectedData, setSelectedData] = useState([])
@@ -32,6 +33,7 @@ const useEnhancer = () => {
       let { type, checked, value } = evt.target
       filters2[name] = type === "checkbox" ? checked : value
     }
+
     setFilters(filters2)
   }
 
@@ -70,15 +72,34 @@ const useEnhancer = () => {
     else return columns
   }
 
-  const gettableData = async () => {
-    Object.keys(filters).forEach((d) => {
+  const applyFilters = async () => {
+    let filters2 = { ...filters }
+    Object.keys(filters2).forEach((d) => {
+      if (filters2[d].trim() == "") delete filters2[d]
+    })
+    setAFilters(filters2)
+    updateTable(filters2)
+  }
+
+  const removeAFilter = async (key) => {
+    let filters2 = { ...aFilters }
+    delete filters2[key]
+    setAFilters(filters2)
+    setFilters(filters2)
+    updateTable(filters2)
+  }
+
+  const updateTable = async (filters) => {
+    let nfilters = { ...defaultState, ...filters }
+    Object.keys(nfilters).forEach((d) => {
       if (pageOpts.numerics[d]) {
-        filters[d] = filters[d] - 0
+        nfilters[d] = nfilters[d] - 0
       }
     })
+
     let data = await api[pageOpts.api_key]({
       loading_key: "tableData",
-      ...filters,
+      ...nfilters,
     })
 
     let keepKeys = columns.map((d: any) => d.key)
@@ -103,7 +124,7 @@ const useEnhancer = () => {
     filter: {
       submitButtonTitle: "Apply Filters",
       title: "Add Filters",
-      submitAction: gettableData,
+      submitAction: applyFilters,
       cancelButtonTitle: "Reset",
       cancelAction: clearFilters,
     },
@@ -138,7 +159,6 @@ const useEnhancer = () => {
     startDate,
     collapse,
     setCollapse,
-    gettableData,
     clearFilters,
     defaultSortFieldId,
     resetSort,
@@ -157,6 +177,8 @@ const useEnhancer = () => {
     switchVisibleColumns,
     columns,
     visibleColumns,
+    removeAFilter,
+    aFilters,
   }
 }
 

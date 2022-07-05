@@ -4,120 +4,116 @@ const pageOptions = {
   workOrders: {
     api_key: "p_workOrders",
     pageTitle: "Workorder",
-    filters: {
-      defaultState: {
-        startDate: "2022-04-07",
-        endDate: "2022-05-29",
+    defaultState: {
+      startDate: "2022-04-07",
+      endDate: "2022-05-29",
 
-        workOrderId: "",
-        generatorId: "",
-        customerId: "",
-        salesrepId: "",
-        icId: "",
-        readyToBill: "",
-        facilityId: "",
-        jobId: "",
+      workOrderId: "",
+      generatorId: "",
+      customerId: "",
+      salesrepId: "",
+      icId: "",
+      readyToBill: "",
+      facilityId: "",
+      jobId: "",
 
-        searchType: 1,
-        profileNumber: "0",
-        dbLoginId: 804,
-        returnMessage: "string",
-      },
-      basic: [
-        {
-          name: "workOrderId",
-          numeric: true,
-          placeholder: "Enter workorder #",
-        },
-        {
-          name: "jobId",
-          numeric: true,
-          type: "dropdown",
-          dropdownOpts: {
-            api_key: "p_getJobs",
-            labelKey: "jobName",
-            valueKey: "jobId",
-            body: {
-              isOutBoundOnly: true,
-              searchValue: 0,
-            },
-          },
-        },
-        {
-          name: "salesrepId",
-          numeric: true,
-          type: "dropdown",
-          dropdownOpts: {
-            api_key: "p_getSalesRep",
-            labelKey: "name",
-            valueKey: "salesRepid",
-            body: {
-              modeId: true,
-            },
-          },
-        },
-        {
-          name: "generatorId",
-          numeric: true,
-          placeholder: "Enter generator #",
-        },
-        {
-          name: "customerId",
-          numeric: true,
-          type: "dropdown",
-          dropdownOpts: {
-            api_key: "p_getCustomers",
-            labelKey: "customerName",
-            valueKey: "customerId",
-            body: {
-              optionalParam: "string",
-              isShowAll: true,
-            },
-          },
-        },
-        { name: "profileNumber" },
-      ],
-      advanced: [
-        // { name: "navisionId" },
-        { name: "startDate", type: "date" },
-        { name: "endDate", type: "date" },
-        {
-          name: "readyToBill",
-          numeric: true,
-          type: "dropdown",
-          dropdownOpts: [
-            { label: "Yes", value: "0" },
-            { label: "No", value: "1" },
-          ],
-        },
-        {
-          name: "icId",
-          type: "dropdown",
-          numeric: true,
-          dropdownOpts: {
-            api_key: "p_getCSR",
-            labelKey: "name",
-            valueKey: "id",
-            body: {
-              optionalParam: "1",
-            },
-          },
-        },
-        {
-          name: "facilityId",
-          numeric: true,
-          type: "dropdown",
-          dropdownOpts: {
-            api_key: "p_getFacilities",
-            labelKey: "name",
-            valueKey: "id",
-            body: {
-              optionalParam: "0",
-            },
-          },
-        },
-      ],
+      searchType: 1,
+      profileNumber: "0",
+      dbLoginId: 804,
+      returnMessage: "string",
     },
+    filters: [
+      {
+        name: "workOrderId",
+        numeric: true,
+        placeholder: "Enter workorder #",
+      },
+      {
+        name: "jobId",
+        numeric: true,
+        type: "dropdown",
+        dropdownOpts: {
+          api_key: "p_getJobs",
+          labelKey: "jobName",
+          valueKey: "jobId",
+          body: {
+            isOutBoundOnly: true,
+            searchValue: 0,
+          },
+        },
+      },
+      {
+        name: "salesrepId",
+        numeric: true,
+        type: "dropdown",
+        dropdownOpts: {
+          api_key: "p_getSalesRep",
+          labelKey: "name",
+          valueKey: "salesRepid",
+          body: {
+            modeId: true,
+          },
+        },
+      },
+      {
+        name: "generatorId",
+        numeric: true,
+        placeholder: "Enter generator #",
+      },
+      {
+        name: "customerId",
+        numeric: true,
+        type: "dropdown",
+        dropdownOpts: {
+          api_key: "p_getCustomers",
+          labelKey: "customerName",
+          valueKey: "customerId",
+          body: {
+            optionalParam: "string",
+            isShowAll: true,
+          },
+        },
+      },
+      { name: "profileNumber" },
+      // { name: "navisionId" },
+      { name: "startDate", type: "date" },
+      { name: "endDate", type: "date" },
+      {
+        name: "readyToBill",
+        numeric: true,
+        type: "dropdown",
+        dropdownOpts: [
+          { label: "Yes", value: "0" },
+          { label: "No", value: "1" },
+        ],
+      },
+      {
+        name: "icId",
+        type: "dropdown",
+        numeric: true,
+        dropdownOpts: {
+          api_key: "p_getCSR",
+          labelKey: "name",
+          valueKey: "id",
+          body: {
+            optionalParam: "1",
+          },
+        },
+      },
+      {
+        name: "facilityId",
+        numeric: true,
+        type: "dropdown",
+        dropdownOpts: {
+          api_key: "p_getFacilities",
+          labelKey: "name",
+          valueKey: "id",
+          body: {
+            optionalParam: "0",
+          },
+        },
+      },
+    ],
     tableColumns: [
       { name: "Work Order", selector: "workorderID" },
       { name: "Generator", selector: "generatorName" },
@@ -167,15 +163,11 @@ export const getPageOpts = (pageKey) => {
   newPageOpts.filters = pageOptions[pageKey].filters
   newPageOpts.pageTitle = pageOptions[pageKey].pageTitle
 
-  pageOptions[pageKey].filters.basic.forEach((d) => {
+  pageOptions[pageKey].filters.forEach((d) => {
     if (d.numeric) newPageOpts.numerics[d.name] = true
   })
 
-  pageOptions[pageKey].filters.advanced.forEach((d) => {
-    if (d.numeric) newPageOpts.numerics[d.name] = true
-  })
-
-  newPageOpts.defaultState = pageOptions[pageKey].filters.defaultState
+  newPageOpts.defaultState = pageOptions[pageKey].defaultState
 
   return newPageOpts
 }
@@ -183,20 +175,17 @@ export const getPageOpts = (pageKey) => {
 export const getDropdownOpts = async (pageKey) => {
   let dropdownOpts = {}
 
-  let basic = pageOptions[pageKey].filters.basic.filter(
-    (d) => d.type == "dropdown" && d.dropdownOpts.api_key
-  )
-  let advanced = pageOptions[pageKey].filters.advanced.filter(
+  let basic = pageOptions[pageKey].filters.filter(
     (d) => d.type == "dropdown" && d.dropdownOpts.api_key
   )
 
-  let allOptsMeta = [...basic, ...advanced].map((d) => ({
+  let allOptsMeta = [...basic].map((d) => ({
     name: d.name,
     label: d.dropdownOpts.labelKey,
     value: d.dropdownOpts.valueKey,
   }))
 
-  let allOpts = [...basic, ...advanced].map((d) =>
+  let allOpts = [...basic].map((d) =>
     api[d.dropdownOpts.api_key]({
       loading_key: d.name,
       ...d.dropdownOpts.body,
@@ -214,12 +203,7 @@ export const getDropdownOpts = async (pageKey) => {
       .sort((a, b) => a.label.localeCompare(b.label))
   })
 
-  pageOptions[pageKey].filters.basic.forEach((d) => {
-    if (d.type == "dropdown" && !d.dropdownOpts.api_key)
-      dropdownOpts[d.name] = d.dropdownOpts
-  })
-
-  pageOptions[pageKey].filters.advanced.forEach((d) => {
+  pageOptions[pageKey].filters.forEach((d) => {
     if (d.type == "dropdown" && !d.dropdownOpts.api_key)
       dropdownOpts[d.name] = d.dropdownOpts
   })
