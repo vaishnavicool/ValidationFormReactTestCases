@@ -42,7 +42,6 @@ const useEnhancer = () => {
     if (element instanceof HTMLElement) {
       element.click()
     }
-    setShow(false)
   }
 
   useEffect(() => {
@@ -57,7 +56,7 @@ const useEnhancer = () => {
   }
 
   const clearFilters = () => {
-    setFilters({ ...defaultState })
+    setFilters({})
   }
 
   const switchVisibleColumns = async (index: any) => {
@@ -74,9 +73,11 @@ const useEnhancer = () => {
 
   const applyFilters = async () => {
     let filters2 = { ...filters }
+    console.log(filters2)
     Object.keys(filters2).forEach((d) => {
-      if (filters2[d].trim() == "") delete filters2[d]
+      if (filters2?.[d]?.trim() == "") delete filters2[d]
     })
+    setShow(false)
     setAFilters(filters2)
     updateTable(filters2)
   }

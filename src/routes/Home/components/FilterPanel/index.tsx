@@ -16,7 +16,10 @@ function Field(props: any) {
     filters,
     allDropdownOpts,
   } = props
+  let value = ""
   if (type == "dropdown") {
+    value = allDropdownOpts[name]?.find((d) => d.value == filters[name])
+    if (!value) value = ""
     return (
       <div className="mb-3 custom-group col-6">
         <label htmlFor="disabledTextInput" className="label">
@@ -25,7 +28,7 @@ function Field(props: any) {
         <Select
           onChange={updateFilters(name)}
           placeholder="Select value"
-          value={allDropdownOpts[name]?.find((d) => d.value == filters[name])}
+          value={value}
           className=" basic-single input"
           options={allDropdownOpts[name]}
           isLoading={!allDropdownOpts[name]?.[0]}
@@ -34,6 +37,8 @@ function Field(props: any) {
     )
   }
 
+  value = filters[name]
+  if (!value) value = ""
   return (
     <div className="mb-3 custom-group col-6">
       <label htmlFor="disabledTextInput" className="label">
@@ -46,7 +51,7 @@ function Field(props: any) {
         placeholder={placeholder}
         name={name}
         onChange={updateFilters(name)}
-        value={filters[name]}
+        value={value}
       />
     </div>
   )
