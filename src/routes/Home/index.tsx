@@ -1,16 +1,17 @@
 import "./style.scss"
-import { useDetectClickOutside } from "react-detect-click-outside"
+
 import FilterChipPanel from "./components/FilterChipPanel"
 import Image from "shared/Image"
 import ModalForm from "./components/ModalForm"
 import TablePanel from "./components/TablePanel"
 import TopSection from "./components/breadcrumb/index"
+import { useDetectClickOutside } from "react-detect-click-outside"
 import useEnhancer from "./enhancer"
 
 function Dashboard(props: any) {
   let extraProps = useEnhancer()
-  let { showColumn, setShowColumn, switchVisibleColumns, pageOpts, columns } =
-    extraProps
+  let { showColumn, setShowColumn, switchVisibleColumns, columns } = extraProps
+  
   const columnsBtn = useDetectClickOutside({
     onTriggered: () => setShowColumn(false),
   })
@@ -22,7 +23,6 @@ function Dashboard(props: any) {
         <FilterChipPanel {...extraProps} />
       </div>
 
-      {console.log(columns)}
       <div className="container-fluid p-0">
         <div className="profile-container pt-1 ">
           <div className="main-button-container">
