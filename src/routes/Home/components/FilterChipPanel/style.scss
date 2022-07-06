@@ -1,61 +1,80 @@
 .filter-input {
-    min-height: 40px;
-    width: 100%;
-    background: #FFFFFF;
-    border: 1px solid #CCCBCB;
-    border-radius: 33px;
-    margin-right: 1rem;
+  min-height: 40px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #cccbcb;
+  border-radius: 33px;
+  margin-right: 1rem;
+  align-items: center;
+  display: flex;
+  padding: 0px 12px;
 }
 
 .filter-btn {
-    font-weight: 400 !important;
-    font-size: 16px !important;
-    line-height: 19px !important; 
-    // color: #063AF0;
-    width: 40px;
-    background: #0092BC !important;
-    height: 40px;
-    align-items: center !important;
-    display: flex !important;
-    justify-content: center;
-    border-radius: 20px !important;
-    :focus {
-        box-shadow: none;
-    }
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
+  // color: #063AF0;
+  width: 40px;
+  background: #0092bc !important;
+  height: 40px;
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center;
+  border-radius: 20px !important;
+  :focus {
+    box-shadow: none;
+  }
+}
+.filter-chip {
+  border-radius: 27px !important;
+  padding: 4px 11px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 17px !important;
+  background-color: #0092bc;
+  margin-right: 8px;
+  color: #e3f4f7 !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  .filter-remove {
+    margin-left: 4px;
+    cursor: pointer;
+  }
 }
 
-.modal{
-    position: fixed;
-    top: 0;
-    left: auto !important;
-    right: 0 !important;
-    z-index: 1055;
-    display: none;
-    width: auto !important;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    outline: 0;
-    .modal-body{
-        width: 441px;
+.modal {
+//   position: fixed;
+//   top: 0;
+//   left: auto !important;
+//   right: 0 !important;
+//   z-index: 1055;
+//   display: none;
+//   width: auto !important;
+//   height: 100%;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   outline: 0;
+// width: auto !important;
+  .modal-body {
+    // width: 441px;
+  }
+  .modal-header {
+    background: #78be20;
+    height: 45px;
+    .modal-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: white;
     }
-    .modal-header{
-        background: #78BE20;
-        height: 45px;
-        .modal-title{
-            font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    color: white;
-        }
-        .btn-close{
-            color: white;
-            border: 3px solid black;
-            opacity: 1;
-            border-radius: 100px !important;
-            padding: 5px;
-        }
+    .btn-close {
+      color: white;
+      border: 3px solid black;
+      opacity: 1;
+      border-radius: 100px !important;
+      padding: 5px;
     }
-    
-
+  }
 }

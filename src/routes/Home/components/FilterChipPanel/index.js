@@ -10,14 +10,10 @@ const FilterChipPanel = (props) => {
     <>
       <div className="filter-input">
         {Object.keys(aFilters).map((d) => (
-          <span key={d} className="badge bg-secondary">
+          <span key={d} className="badge filter-chip">
             <FormattedMessage id={`leftpanel.${d}`} />:{aFilters[d]}
-            <button
-              className="text-bg-secondary"
-              onClick={() => removeAFilter(d)}
-            >
-              x
-            </button>
+            
+              <Image src="cross.png" className="filter-remove" onClick={() => removeAFilter(d)} />
           </span>
         ))}
       </div>
