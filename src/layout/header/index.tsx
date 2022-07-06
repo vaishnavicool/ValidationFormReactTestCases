@@ -1,7 +1,4 @@
 import "./style.scss"
-
-import { Form, FormControl, InputGroup } from "react-bootstrap"
-
 import Image from "shared/Image"
 import enhancer from "./enhancer"
 

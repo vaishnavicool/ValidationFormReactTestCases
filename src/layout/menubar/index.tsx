@@ -8,7 +8,6 @@ import { useLocation } from "react-router-dom"
 import { useState } from "react"
 
 const Menubar = () => {
-  const [hover, setHover] = useState(false)
   const location = useLocation()
   return (
     <>
