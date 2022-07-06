@@ -5,7 +5,6 @@ import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
 import menuConfig from "./config"
 import { useLocation } from "react-router-dom"
-import { useState } from "react"
 
 const Menubar = () => {
   const location = useLocation()
