@@ -1,11 +1,8 @@
 import "../style.scss"
 
 import DataTable from "react-data-table-component"
-import { Dropdown } from "react-bootstrap"
-import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
 import Loading from "shared/Loading"
-import React from "react"
 
 function workOrder(props: any) {
   let {
@@ -14,7 +11,6 @@ function workOrder(props: any) {
     updateSelectedData,
     download,
     showActivity,
-    columns,
     setShowActivity,
     visibleColumns,
   } = props

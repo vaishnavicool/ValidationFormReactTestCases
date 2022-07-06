@@ -1,19 +1,10 @@
 import "./style.scss"
-
-import React, { Fragment } from "react"
-
 import { FormattedMessage } from "react-intl"
-import Image from "shared/Image"
 
 function TopSection(props: any) {
   let {
     setModalType,
     setShow,
-    pageOpts,
-    setShowColumn,
-    showColumn,
-    switchVisibleColumns,
-    columns,
   } = props
   return (
     <>

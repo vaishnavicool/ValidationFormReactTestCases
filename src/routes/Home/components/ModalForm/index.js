@@ -1,6 +1,5 @@
 import FilterPanel from "../FilterPanel"
-import { Button, Modal } from "react-bootstrap"
-import AddWorkOrder from "../AddWorkOrder"
+import { Modal } from "react-bootstrap"
 const ModalForm = (props) => {
   let { show, setShow, modalType, pageConfig } = props
 

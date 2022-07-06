@@ -1,11 +1,6 @@
 import "../style.scss"
-
-import { Collapse } from "react-bootstrap"
 import { FormattedMessage } from "react-intl"
-import Image from "shared/Image"
 import Select from "react-select"
-import classnames from "classnames"
-import enhancer from "../../enhancer"
 
 function Field(props: any) {
   const {

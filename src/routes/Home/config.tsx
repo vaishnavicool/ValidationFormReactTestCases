@@ -1,4 +1,3 @@
-import Image from "shared/Image"
 import api from "api"
 const pageOptions = {
   workOrders: {
