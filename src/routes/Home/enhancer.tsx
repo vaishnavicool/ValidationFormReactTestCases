@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import { getDropdownOpts, getPageOpts } from "./config"
 
 import _ from "lodash"
@@ -17,7 +17,7 @@ const useEnhancer = () => {
   const [collapse, setCollapse] = useState(false)
   const [filters, setFilters] = useState({})
   const [aFilters, setAFilters] = useState({})
-  const [defaultSortFieldId] = useState(1)
+  const [defaultSortFieldId, setDefaultSortFieldId] = useState(1)
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [selectedData, setSelectedData] = useState([])
   const [show, setShow] = useState(false)
@@ -73,6 +73,7 @@ const useEnhancer = () => {
 
   const applyFilters = async () => {
     let filters2 = { ...filters }
+    console.log(filters2)
     Object.keys(filters2).forEach((d) => {
       if (filters2?.[d]?.trim() == "") delete filters2[d]
     })
