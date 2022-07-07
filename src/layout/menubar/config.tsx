@@ -50,7 +50,7 @@ const menuConfig = [
   },
   {
     title: "menubar.plant_processing",
-    path: "/",
+    path: "/plant-processing",
     icon: "ic_plant_processing",
 
     children: [
@@ -70,7 +70,7 @@ const menuConfig = [
   },
   {
     title: "menubar.compliance",
-    path: "/",
+    path: "/compliance",
     icon: "ic_compliance",
     children: [
       {
@@ -89,7 +89,7 @@ const menuConfig = [
   },
   {
     title: "menubar.schedule",
-    path: "/",
+    path: "/schedule",
     icon: "ic_schedule",
     children: [
       {
@@ -108,17 +108,17 @@ const menuConfig = [
   },
   {
     title: "menubar.reporting",
-    path: "/",
+    path: "/reporting",
     icon:"ic_reporting",
   },
   {
     title: "menubar.printing",
-    path: "/",
+    path: "/printing",
     icon:"ic_printing",
   },
   {
     title: "menubar.manage",
-    path: "/",
+    path: "/manage",
     icon:"ic_manage",
   },
 ]
