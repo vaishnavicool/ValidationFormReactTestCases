@@ -3,8 +3,10 @@ import "../style.scss"
 import DataTable from "react-data-table-component"
 import Image from "shared/Image"
 import Loading from "shared/Loading"
+import { useDetectClickOutside } from "react-detect-click-outside"
 
-function workOrder(props: any) {
+
+function WorkOrder(props: any) {
   let {
     defaultSortFieldId,
     tableData,
@@ -14,7 +16,9 @@ function workOrder(props: any) {
     setShowActivity,
     visibleColumns,
   } = props
-
+  const activityMenuClick = useDetectClickOutside({
+    onTriggered: () => setShowActivity(false),
+  })
   return (
     <div
       id="page-content-wrapper"
@@ -108,7 +112,7 @@ function workOrder(props: any) {
               />
             </div>
             {tableData?.length > 0 && (
-              <div
+              <div ref={activityMenuClick}
                 className="dot-img"
                 onClick={() => setShowActivity(!showActivity)}
               >
@@ -121,4 +125,4 @@ function workOrder(props: any) {
     </div>
   )
 }
-export default workOrder
+export default WorkOrder
