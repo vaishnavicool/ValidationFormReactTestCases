@@ -5,7 +5,12 @@
 .left-container {
     border-right: 1px solid #DCDCDC;
     padding: 23px 12px;
-    min-height: 100vh;
+    // min-height: 100vh;
+    display: flex;
+    flex: 1;
+    background: linear-gradient(90deg, #FFFFFF 93.75%, #E0E0E0 100%);
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.08);
+    flex-direction: column;
 }
 
 html,
@@ -46,7 +51,7 @@ body,
 
 .table-container {
     border: 1px solid #E4E4E4;
-    min-height: 25rem;
+    min-height: 35rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     border-radius: 4px;

@@ -51,6 +51,8 @@ const Menubar = () => {
           )}
         </div>
       </div>
+
+      <div className="menu-footer-icon"><Image src="ce_logo.png" /></div>
     </>
   )
 }

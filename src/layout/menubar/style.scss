@@ -9,6 +9,11 @@
 
 .menu-list {
   padding: 0px 12px;
+  display: flex;
+  flex:1;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 5rem;
 }
 
 .menu-item {
@@ -26,7 +31,7 @@
 }
 
 .menubar-icon{
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 4px;
 }
 .menu-item:hover {
@@ -63,4 +68,12 @@
   .dropdown-item {
     background-color: red;
   }
+}
+.menu-footer-icon{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: center;
 }
