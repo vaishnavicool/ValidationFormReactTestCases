@@ -54,8 +54,13 @@ const useEnhancer = () => {
   const handleFilterCollapse = () => {
     setInactive(!inactive)
   }
+ const clearFilters =()=>{
+  setFilters({})
+  setAFilters({})
+  updateTable({})
 
-  const clearFilters = () => {
+ }
+  const resetFilterPanel = () => {
     setFilters({})
   }
 
@@ -126,7 +131,7 @@ const useEnhancer = () => {
       title: "Add Filters",
       submitAction: applyFilters,
       cancelButtonTitle: "Reset",
-      cancelAction: clearFilters,
+      cancelAction: resetFilterPanel,
     },
     add: {
       submitButtonTitle: "Add",
