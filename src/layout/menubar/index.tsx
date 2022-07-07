@@ -39,6 +39,7 @@ const Menubar = () => {
                     <Image src={location.pathname === d.path ? `${d.icon}_white.png`:`${d.icon}_grey.png`} className="menubar-icon" mouseOver={`${d.icon}_white.png`}/><span className="menubar-name"><FormattedMessage id={d.title} /></span>
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="menu">
+                  <div className="arrow-left" />
                     {d.children.map((child) => (
                       <Dropdown.Item key={child.path} href={child.path}>
                         <FormattedMessage id={child.title} />
