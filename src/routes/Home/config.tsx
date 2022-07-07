@@ -150,6 +150,7 @@ export const getPageOpts = (pageKey) => {
     compact: false,
     key: d.selector,
     visible: true,
+    striped: '#FAFAFA',
     cell: (row: any) => {
       if (d.name === "h") return ""
       else if (!row[d.selector]) return "-"
