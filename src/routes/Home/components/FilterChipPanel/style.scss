@@ -44,22 +44,13 @@
   }
 }
 
+.clear-filter{
+  display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
 .modal {
-//   position: fixed;
-//   top: 0;
-//   left: auto !important;
-//   right: 0 !important;
-//   z-index: 1055;
-//   display: none;
-//   width: auto !important;
-//   height: 100%;
-//   overflow-x: hidden;
-//   overflow-y: auto;
-//   outline: 0;
-// width: auto !important;
-  .modal-body {
-    // width: 441px;
-  }
   .modal-header {
     background: #78be20;
     height: 45px;

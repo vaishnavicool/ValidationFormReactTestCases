@@ -7,7 +7,7 @@ const Footer: React.FunctionComponent = (props: any) => {
   return (
     <Fragment>
       <footer className="row">
-        <p className=" col-auto ">
+        <p className=" col-auto " style={{marginRight:"50px",marginLeft:"6px"}}>
          <FormattedMessage id="footer.message" />
         </p>
         <a className="text-decoration-none footer-link col-auto p-0" href="#a">

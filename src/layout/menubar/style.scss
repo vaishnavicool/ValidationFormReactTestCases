@@ -9,6 +9,11 @@
 
 .menu-list {
   padding: 0px 12px;
+  display: flex;
+  flex:1;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 5rem;
 }
 
 .menu-item {
@@ -32,7 +37,7 @@
 }
 
 .menubar-icon{
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 4px;
 }
 .menu-item:hover {
@@ -46,6 +51,16 @@
   // }
 }
 
+.menu-item.active {
+  .menubar-icon{
+    background: #78BE20;
+    border-radius: 40px;
+    // padding: 15px;
+  }
+  // .menubar-name {
+  //   color: white;
+  // }
+}
 #dropdown-basic {
   padding: 8px 0px;
   font-size: 12px;
@@ -69,4 +84,12 @@
   .dropdown-item {
     background-color: red;
   }
+}
+.menu-footer-icon{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: center;
 }
