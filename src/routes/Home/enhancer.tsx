@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { getDropdownOpts, getPageOpts } from "./config"
 
 import _ from "lodash"
@@ -54,12 +54,11 @@ const useEnhancer = () => {
   const handleFilterCollapse = () => {
     setInactive(!inactive)
   }
- const clearFilters =()=>{
-  setFilters({})
-  setAFilters({})
-  updateTable({})
-
- }
+  const clearFilters = () => {
+    setFilters({})
+    setAFilters({})
+    updateTable({})
+  }
   const resetFilterPanel = () => {
     setFilters({})
   }
@@ -79,7 +78,7 @@ const useEnhancer = () => {
   const applyFilters = async () => {
     let filters2 = { ...filters }
     Object.keys(filters2).forEach((d) => {
-      if (filters2?.[d]?.trim() == "") delete filters2[d]
+      if (`${filters2[d]}`.trim() == "") delete filters2[d]
     })
     setShow(false)
     setAFilters(filters2)
