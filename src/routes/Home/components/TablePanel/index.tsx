@@ -22,7 +22,7 @@ function WorkOrder(props: any) {
   return (
     <div
       id="page-content-wrapper"
-      className={`main-wrapper table-responsive col table-bordered`}
+      className={`main-wrapper table-responsive col`}
     >
       <div className="right-panel">
         {/* <div className="detailbar row col-12">
@@ -106,7 +106,6 @@ function WorkOrder(props: any) {
                 pagination
                 fixedHeader
                 selectableRows
-                className="table-bordered"
                 fixedHeaderScrollHeight="500px"
                 defaultSortFieldId={defaultSortFieldId}
                 onSelectedRowsChange={updateSelectedData}
