@@ -31,8 +31,8 @@
 .filter-body {
   padding: 22px 17px 0px;
   text-align: center;
-  // max-height: 60vh;
-  // overflow-y: auto;
+  max-height: 60vh;
+  overflow-y: auto;
 }
 .detailbar {
   background: #a4dbe8;
@@ -362,6 +362,7 @@ div.input {
 .custom-group {
   flex-direction: column;
   display: flex;
+  position: relative;
 }
 
 #dropdown-action {
