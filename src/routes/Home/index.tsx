@@ -28,11 +28,11 @@ function Dashboard(props: any) {
           <div className="main-button-container">
             <div ref={columnsBtn}>
               <button
-                className="btn btn-grp mr-4"
+                className="btn btn-grp mr-3"
                 type="reset"
                 onClick={() => setShowColumn(!showColumn)}
               >
-                <Image src="icon-columns.png" className="btn-icon" /> Columns
+                <Image src="icon-columns.png" className="btn-icon" /> <span className="btn-txt"> Columns</span>
               </button>
               {showColumn && (
                 <div className="columns-div">
@@ -54,7 +54,7 @@ function Dashboard(props: any) {
               )}
             </div>
             <button className="btn btn-grp " type="reset">
-              <Image src="icon-reload.png" className="btn-icon" /> Reload
+              <Image src="icon-reload.png" className="btn-icon" /><span className="btn-txt"> Reload</span> 
             </button>
           </div>
           <div className="table-container">
