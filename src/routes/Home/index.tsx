@@ -28,7 +28,7 @@ function Dashboard(props: any) {
           <div className="main-button-container">
             <div ref={columnsBtn}>
               <button
-                className="btn btn-grp  mx-4"
+                className="btn btn-grp mr-4"
                 type="reset"
                 onClick={() => setShowColumn(!showColumn)}
               >
