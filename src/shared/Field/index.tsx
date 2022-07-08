@@ -1,4 +1,4 @@
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage,useIntl } from "react-intl"
 import Select from "react-select"
 
 function Field(props: any) {
@@ -9,7 +9,9 @@ function Field(props: any) {
       updateFilters,
       filters,
       allDropdownOpts,
-    } = props
+    } = props 
+    let intl= useIntl()
+    let aName= intl.formatMessage({defaultMessage:`leftpanel.${name}`,id:`leftpanel.${name}`})
     let value = ""
     if (type == "dropdown") {
       value = allDropdownOpts[name]?.find((d) => d.value == filters[name])
@@ -21,7 +23,7 @@ function Field(props: any) {
           </label>
           <Select
             onChange={updateFilters(name)}
-            placeholder="Select value"
+            placeholder={`Select ${aName}`}
             value={value}
             className="basic-single input"
             options={allDropdownOpts[name]}
@@ -42,7 +44,7 @@ function Field(props: any) {
           type={type}
           id="disabledTextInput"
           className="input"
-          placeholder={placeholder}
+          placeholder={`Enter ${aName}`}
           name={name}
           onChange={updateFilters(name)}
           value={value}

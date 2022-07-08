@@ -25,7 +25,6 @@ const pageOptions = {
       {
         name: "workOrderId",
         numeric: true,
-        placeholder: "Enter workorder #",
       },
       {
         name: "jobId",
@@ -56,8 +55,7 @@ const pageOptions = {
       },
       {
         name: "generatorId",
-        numeric: true,
-        placeholder: "Enter generator #",
+        numeric: true
       },
       {
         name: "customerId",
