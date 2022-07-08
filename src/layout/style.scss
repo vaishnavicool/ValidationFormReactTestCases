@@ -1,80 +1,78 @@
 .page {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .left-container {
-    border-right: 1px solid #DCDCDC;
-    padding: 23px 12px;
-    // min-height: 100vh;
-    display: flex;
-    flex: 1;
-    background: linear-gradient(90deg, #FFFFFF 93.75%, #E0E0E0 100%);
-    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.08);
-    flex-direction: column;
+  border-right: 1px solid #dcdcdc;
+  padding: 23px 12px;
+  display: flex;
+  flex: 1;
+  background: linear-gradient(90deg, #ffffff 93.75%, #e0e0e0 100%);
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.08);
+  flex-direction: column;
 }
 
 html,
 body,
 .layout {
-    height: 100%;
-    overflow-x: hidden;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .header-container {
-    height: 72px;
-    border-bottom: 1px solid #DCDCDC;
-    padding-left: 1rem;
-    padding-top: 13px;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
-    background: #65B230;
+  height: 72px;
+  border-bottom: 1px solid #dcdcdc;
+  padding-left: 1rem;
+  padding-top: 13px;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  background: #65b230;
 }
 
 .breadcrum-container {
-    height: 72px;
-    padding-left: 1.5rem;
-    padding-top: 13px;
-    padding-bottom: 1.5rem;
-    padding-right: 1.5rem;
+  height: 72px;
+  padding-left: 1.5rem;
+  padding-top: 13px;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .filterchip-container {
-    background-color:rgba(120, 190, 32, 0.1);
-    margin-left: 1.5rem;
-    padding: 8px;
-    margin-right: 1.5rem;
-    border: 1px solid #E2E2E2;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
+  background-color: rgba(120, 190, 32, 0.1);
+  margin-left: 1.5rem;
+  padding: 8px;
+  margin-right: 1.5rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
 }
 
 .table-container {
-    border: 1px solid #E4E4E4;
-    min-height: 35rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    border-radius: 4px;
-    margin-bottom: 3.5rem;
-    -webkit-box-shadow: -2px 4px 7px 0px rgba(228, 228, 228, 1);
-    -moz-box-shadow: -2px 4px 7px 0px rgba(228, 228, 228, 1);
-    box-shadow: -2px 4px 7px 0px rgba(228, 228, 228, 1);
+  border: 1px solid #e4e4e4;
+  min-height: 35rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 3.5rem;
+  -webkit-box-shadow: -2px 4px 7px 0px rgba(228, 228, 228, 1);
+  -moz-box-shadow: -2px 4px 7px 0px rgba(228, 228, 228, 1);
+  box-shadow: -2px 4px 7px 0px rgba(228, 228, 228, 1);
 }
 
 .footer-container {
-    font-size: 10px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
-    margin-top: 5rem;
-
+  font-size: 10px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 5rem;
 }
 
 .layout .col-2 {
-    width: 20% !important;
-    padding-right: 0px;
+  width: 20% !important;
+  padding-right: 0px;
 }
 
 .layout .col-10 {
-    width: 80% !important;
+  width: 80% !important;
 }

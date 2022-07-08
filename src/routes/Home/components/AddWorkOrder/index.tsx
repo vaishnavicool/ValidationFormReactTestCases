@@ -79,7 +79,6 @@ function AddWorkOrder(props: any) {
         <div className="button-container py-3">
           <input
             type="button"
-            // onClick={clearFilters}
             className=" btn-reset"
             value={"Cancel"}
           />

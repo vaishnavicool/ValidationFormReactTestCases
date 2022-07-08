@@ -6,7 +6,7 @@ import { FormattedMessage } from "react-intl"
 
 const FilterChipPanel = (props) => {
   let { setShow, setModalType, aFilters, removeAFilter, clearFilters } = props
-  
+
   return (
     <>
       <div className="filter-input">
@@ -40,9 +40,6 @@ const FilterChipPanel = (props) => {
       >
         <Image src="filter.png" />
       </Button>
-      {/* <Button variant="link" className="filter-btn">
-        Clear All
-      </Button> */}
     </>
   )
 }

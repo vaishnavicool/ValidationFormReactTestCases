@@ -55,7 +55,7 @@ const pageOptions = {
       },
       {
         name: "generatorId",
-        numeric: true
+        numeric: true,
       },
       {
         name: "customerId",
@@ -72,7 +72,6 @@ const pageOptions = {
         },
       },
       { name: "profileNumber" },
-      // { name: "navisionId" },
       { name: "startDate", type: "date" },
       { name: "endDate", type: "date" },
       {
@@ -152,7 +151,7 @@ export const getPageOpts = (pageKey) => {
       if (!row[d.selector]) return "-"
       return row[d.selector]
     },
-    width:`${Math.min(d.name.length * 10 + 70, 200)}px`,
+    width: `${Math.min(d.name.length * 10 + 70, 200)}px`,
   }))
   newPageOpts.api_key = pageOptions[pageKey].api_key
   newPageOpts.filters = pageOptions[pageKey].filters
@@ -202,10 +201,5 @@ export const getDropdownOpts = async (pageKey) => {
     if (d.type == "dropdown" && !d.dropdownOpts.api_key)
       dropdownOpts[d.name] = d.dropdownOpts
   })
-
-  // Object.keys(dropdownOpts).forEach((d) => {
-  //   dropdownOpts[d] = [...dropdownOpts[d]]
-  // })
-
   return dropdownOpts
 }

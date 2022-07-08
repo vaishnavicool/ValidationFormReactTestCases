@@ -19,13 +19,9 @@ let logger = createLogger({ collapsed: true })
 
 const config = {
   // TOGGLE_TODO will not be triggered in other tabs
-  // blacklist: ["SET_LOADING_STATUS"],
   whitelist: ["SET_USER"],
 }
 const middlewares = [createStateSyncMiddleware(config), logger]
-
-// if (window.__REDUX_DEVTOOLS_EXTENSION__)
-// middlewares.push ( window.__REDUX_DEVTOOLS_EXTENSION__())
 
 let store = createStore(persistedReducer, applyMiddleware(...middlewares))
 

@@ -11,7 +11,7 @@ import useEnhancer from "./enhancer"
 function Dashboard(props: any) {
   let extraProps = useEnhancer()
   let { showColumn, setShowColumn, switchVisibleColumns, columns } = extraProps
-  
+
   const columnsBtn = useDetectClickOutside({
     onTriggered: () => setShowColumn(false),
   })
@@ -32,7 +32,8 @@ function Dashboard(props: any) {
                 type="reset"
                 onClick={() => setShowColumn(!showColumn)}
               >
-                <Image src="icon-columns.png" className="btn-icon" /> <span className="btn-txt"> Columns</span>
+                <Image src="icon-columns.png" className="btn-icon" />{" "}
+                <span className="btn-txt"> Columns</span>
               </button>
               {showColumn && (
                 <div className="columns-div">
@@ -54,11 +55,11 @@ function Dashboard(props: any) {
               )}
             </div>
             <button className="btn btn-grp " type="reset">
-              <Image src="icon-reload.png" className="btn-icon" /><span className="btn-txt"> Reload</span> 
+              <Image src="icon-reload.png" className="btn-icon" />
+              <span className="btn-txt"> Reload</span>
             </button>
           </div>
           <div className="table-container">
-            {/* <LeftPanel {...extraProps} /> */}
             <TablePanel {...extraProps} />
           </div>
         </div>

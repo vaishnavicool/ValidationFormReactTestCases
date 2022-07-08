@@ -8,21 +8,6 @@ import Routes from "routes"
 
 function MainWrapper(props) {
   return (
-    // <div>
-    //   <div className="header container-fluid">
-    //     <Header />
-    //   </div>
-    //   <div className="header container-fluid">
-    //     <Menubar />
-    //   </div>
-    //   <div className="page">
-    //     <Routes />
-    //   </div>
-    //   <div className="footer">
-    //     <Footer />
-    //     <PreLoad />
-    //   </div>
-    // </div>
     <div className="container-fluid layout p-0">
       <div className='header-container'><Header /></div>
       <div className='row no-gutters'>

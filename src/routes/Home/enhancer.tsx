@@ -17,7 +17,6 @@ const useEnhancer = () => {
   const [collapse, setCollapse] = useState(false)
   const [filters, setFilters] = useState({})
   const [aFilters, setAFilters] = useState({})
-  // const [defaultSortFieldId] = useState(1)
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [selectedData, setSelectedData] = useState([])
   const [show, setShow] = useState(false)
@@ -164,7 +163,6 @@ const useEnhancer = () => {
     collapse,
     setCollapse,
     clearFilters,
-    // defaultSortFieldId,
     resetSort,
     allDropdownOpts,
     updateSelectedData,

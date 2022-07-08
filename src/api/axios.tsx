@@ -63,7 +63,6 @@ axios.interceptors.response.use(
     if (error?.response?.status === 401) {
       let { user } = store.getState()
       let u2: any = _.cloneDeep(user)
-      // let { account } = u2
 
       try {
         let response: any = {} // await acquireToken(account)
@@ -89,7 +88,6 @@ axios.interceptors.response.use(
     if (message.includes("cancel;")) {
       loading_key = message.split(";")[1]
     } else {
-      // let en_msg = formatMessage(`global.error.${loading_key}`)
       let en_msg = ""
       let sorry = "Sorry something went wrong."
       let msg = `${sorry} \n ${en_msg}`

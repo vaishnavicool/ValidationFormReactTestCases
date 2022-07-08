@@ -6,7 +6,6 @@ function Header(props: any) {
   return (
     <div className="row">
       <div className="col-2">
-        {/* <Image className="menu-icon" src="menu-icon.png" alt="sortIcon" /> */}
         <Image src="Logo.png" alt="coreLogo" className="logo-img" />
       </div>
       <div className="col-10 row ">

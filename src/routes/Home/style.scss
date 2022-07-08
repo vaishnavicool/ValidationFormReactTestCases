@@ -38,7 +38,6 @@
   }
 }
 .profile-container {
-  // background-color: #f0f1f2;
   min-height: 500px;
 }
 .sidebar-wrapper {
@@ -47,7 +46,6 @@
 
 .main-wrapper {
   padding-left: 0px !important;
- 
 }
 
 .pl-0 {
@@ -172,7 +170,7 @@
     max-width: 90%;
   }
 
-  div[class$="ValueContainer"]{
+  div[class$="ValueContainer"] {
     padding: 0;
     border: none;
   }
@@ -190,7 +188,7 @@
     max-height: 29px;
     margin-top: -5px;
     background: transparent;
-    
+
     .input :focus-visible {
       outline: none;
       border: none !important;
@@ -203,14 +201,12 @@
     text-align: left;
     margin-left: 0px;
     margin-right: 0px;
-    // padding-bottom: 8px;
   }
   div[class$="-Input"] {
-   display: block;
-   width: 102%;
+    display: block;
+    width: 102%;
   }
   div[class$="-menu"] {
-    // font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -222,24 +218,21 @@
     background: #ffffff;
     z-index: 9999;
     overflow-x: hidden;
-    left:0;
-    // border: 1px solid #bbbbbb;
-    // box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    // border-radius: 0px 0px 7px 7px;
+    left: 0;
   }
   div[class$="-option"] {
     background-color: transparent !important;
     color: #000 !important;
     padding: 7px 10px;
     overflow-x: hidden;
-    // border-bottom: 0.5px solid gray;
 
     :hover {
       background-color: transparent !important;
     }
   }
 }
-.btn:focus, .btn:focus-visible {
+.btn:focus,
+.btn:focus-visible {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -247,12 +240,12 @@
   margin-right: 9px;
   width: 12px;
 }
-.mr-3{
+.mr-3 {
   margin-right: 1rem;
 }
-.btn-txt{
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 14px;
+.btn-txt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
 }

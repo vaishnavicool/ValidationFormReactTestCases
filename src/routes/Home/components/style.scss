@@ -3,7 +3,6 @@
   box-shadow: 4px 1px 4px rgba(0, 0, 0, 0.15);
   border-radius: 0px 10px 0px 0px;
   min-height: 600px;
-  // font-family: "Open Sans", sans-serif;
 }
 .filter-titlebar-wrapper {
   background: #a4dbe8;
@@ -115,7 +114,6 @@ div.input {
     calc(100% - 8px) calc(0.8em + 4px), 100% 0;
   background-size: 5px 5px, 5px 5px, 2.5em 23.5em;
   background-repeat: no-repeat;
-  // padding: 0.5em 3.5em 0.8em 1em;
   -webkit-appearance: none;
   ::-ms-expand {
     display: none;
@@ -145,10 +143,6 @@ div.input {
     content: attr(data-value) " ";
     visibility: hidden;
     white-space: pre;
-    // grid-area: 1/2;
-    // font: inherit;
-    // min-width: 48px;
-    // border: 0;
     margin: 0px;
     outline: none;
     padding: 0;
@@ -206,7 +200,6 @@ div.input {
   color: #000000;
 }
 .form-check-label-customer {
-  // font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
@@ -234,7 +227,6 @@ div.input {
   padding: 1.5rem 0;
 }
 .btn-search {
-  // font-family: "Open Sans", sans-serif;
   border-radius: 10px !important;
   font-weight: 600 !important;
   font-size: 12px !important;
@@ -242,8 +234,6 @@ div.input {
   margin-top: 20px;
   background: #ffffff;
   border: 1px solid #bbbbbb !important;
-  // box-shadow: -2px -2px 2px rgba(174, 174, 174, 0.2),
-  //   2px 2px 2px rgba(0, 0, 0, 0.2);
   padding-left: 30px !important;
   padding-right: 34px !important;
 }
@@ -277,7 +267,6 @@ div.input {
   width: 171px !important;
   height: 30px !important;
   text-align: left !important;
-  // font-family: "Open Sans", sans-serif;
   padding-left: 9px !important;
   padding-right: 9px !important;
   display: flex;
@@ -294,7 +283,6 @@ div.input {
   width: 171px !important;
   height: 30px !important;
   text-align: left !important;
-  // font-family: "Open Sans", sans-serif;
   padding-left: 9px !important;
   padding-right: 9px !important;
   display: flex;
@@ -369,12 +357,6 @@ div.input {
   font-weight: 500;
   margin-right: 30px;
 }
-// #dropdown-action.dropdown-toggle::after {
-//   margin-left: 1.255em !important;
-//   vertical-align: 0.1em !important;
-//   color: #74bc1f !important;
-//   font-size: 1.3rem !important;
-// }
 
 .auto-width {
   min-width: 102px !important;
@@ -433,8 +415,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 1;
   display: block;
   background: url("/assets/icon/datePicker.png") no-repeat;
-  // width: 20px;
-  // height: 20px;
   border-width: thin;
 }
 .btn-reset {
@@ -507,17 +487,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .pagination-link {
   font-weight: 600 !important;
-  // font-size: 16px !important;
-  // width: 26px;
   color: black;
-  // height: 26px;
-  // align-items: center !important;
-  // display: flex !important;
-  // justify-content: center;
   text-decoration: none;
-  // &:hover {
-    // color: #000;
-  // }
 }
 .pagination-active {
   font-weight: 600 !important;
