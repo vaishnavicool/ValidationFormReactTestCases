@@ -58,13 +58,13 @@ const Pagination = ({
 
   return (
     <div className={"row justify-content-between mt-3 mx-5"}>
-      <div className={`float-left col-4 `}>
+      <div className={`float-left col-4 entries-txt`}>
         {`Showing ${
           (pageNo - 1) * rowsPerPage + 1
         }  to ${toSize}  of ${total} entries`}
       </div>
       <div className="col-4">
-       <span className="drop-down-text">show</span>      
+       <span className="drop-down-text">Show</span>      
         <select 
         className="drop-down-margin
         vv"
@@ -77,10 +77,10 @@ const Pagination = ({
       </div>
       {total >= rowsPerPage + 1 && (
         <div className="float-right col-4">
-          <ul className="pagination justify-content-end">
+          <ul className="pagination justify-content-end align-items-center">
             <li
               onClick={handleFirstPageButtonClick}
-              className={classnames("page-itam", {
+              className={classnames("page-item", {
                 disabled: hasPreviousPage,
               })}
             >
@@ -88,11 +88,11 @@ const Pagination = ({
             </li>
             <li
               onClick={handleBackButtonClick}
-              className={classnames("page-itam", {
+              className={classnames("page-item ", {
                 disabled: hasPreviousPage,
               })}
             >
-              <span className="mx-2">Previous</span>
+              <span className="mx-3">Previous</span>
             </li>
             {pages.map((d) => (
               <li
@@ -107,7 +107,7 @@ const Pagination = ({
               onClick={handleNextButtonClick}
               className={classnames("page-item", { disabled: hasNextPage })}
             >
-               <span className="mx-2">Next</span>
+               <span className="mx-3">Next</span>
             </li>
 
             <li 
