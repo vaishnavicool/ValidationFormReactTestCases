@@ -7,7 +7,7 @@ const ModalForm = (props) => {
     <Modal
       show={show}
       onHide={() => setShow(false)}
-      dialogClassName="modal-90w"
+      dialogClassName="modal-90w modal-dialog-centered"
       aria-labelledby="example-custom-modal-styling-title"
     >
       <Modal.Header closeButton closeVariant="white">

@@ -4,7 +4,6 @@ import Select from "react-select"
 function Field(props: any) {
     const {
       name,
-      placeholder,
       type = "text",
       updateFilters,
       filters,
