@@ -17,7 +17,7 @@ const Pagination = ({
   }
 
   const handleBackButtonClick = () => {
-    onChangePage(pageNo)
+    onChangePage(pageNo - 1)
   }
 
   const handleNextButtonClick = () => {
