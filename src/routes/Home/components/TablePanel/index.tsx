@@ -3,6 +3,7 @@ import "../style.scss"
 import DataTable from "react-data-table-component"
 import Image from "shared/Image"
 import Loading from "shared/Loading"
+import Pagination from "./pagination"
 
 function workOrder(props: any) {
   let {
@@ -100,13 +101,15 @@ function workOrder(props: any) {
                 columns={visibleColumns()}
                 data={tableData}
                 pagination
+                paginationComponent={Pagination}
                 fixedHeader
                 selectableRows
                 fixedHeaderScrollHeight="500px"
                 defaultSortFieldId={defaultSortFieldId}
                 onSelectedRowsChange={updateSelectedData}
-              />
+              />             
             </div>
+
             {tableData?.length > 0 && (
               <div
                 className="dot-img"

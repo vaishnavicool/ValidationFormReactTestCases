@@ -505,3 +505,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 26px;
   cursor: pointer;
 }
+.k{
+  //border-radius: 50%;
+  background: #65B230;
+  font-weight: 400 !important;
+    font-size: 16px !important;
+    //line-height: 19px !important;
+    width: 26px;
+    color: white;
+    //background: #0092bc !important;
+    height: 26px;
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center;
+    border-radius: 20px !important;
+}
+// .text-size{
+//  // position: absolute;
+// left: 73.65%;
+// right: 24.47%;
+// top: 87.6%;
+// bottom: 11.04%;
+// font-family: 'Roboto';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 20px;
+// line-height: 14px;
+// }
+.drop-down-margin{
+  margin-left: 0.423rem;
+  margin-right:0.238rem
+}
