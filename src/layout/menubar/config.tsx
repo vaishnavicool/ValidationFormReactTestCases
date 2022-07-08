@@ -15,7 +15,7 @@ const menuConfig = [
       },
       {
         title: "menubar.customer_processing_workOrders",
-        path: "/work-orders",
+        path: "/",
       },
 
       {
