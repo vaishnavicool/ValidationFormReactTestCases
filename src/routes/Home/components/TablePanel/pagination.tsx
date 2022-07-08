@@ -58,21 +58,22 @@ const Pagination = ({
 
   return (
     <div className={"row justify-content-between mt-3 mx-5"}>
-      <div className={`float-left col-4`}>
+      <div className={`float-left col-4 `}>
         {`Showing ${
           (pageNo - 1) * rowsPerPage + 1
         }  to ${toSize}  of ${total} entries`}
       </div>
       <div className="col-4">
-        show       
+       <span className="drop-down-text">show</span>      
         <select 
-        className="drop-down-margin"
+        className="drop-down-margin
+        vv"
         onClick={onChangeRowsPerPageT}>
           {paginationRowsPerPageOptions.map((d) => (
             <option key={d}>{d}</option>
           ))}
         </select>
-        entries       
+        <span className="drop-down-text">entries</span>       
       </div>
       {total >= rowsPerPage + 1 && (
         <div className="float-right col-4">
@@ -97,9 +98,9 @@ const Pagination = ({
               <li
                 key={d}
                 onClick={handleNextButtonClick}
-                className={classnames("page-item")}
+                className={classnames("pagination-active", { active: d == pageNo })}
               >
-                <a className="k"> {d} </a>
+                <a className="pagination-link"> {d} </a>
               </li>
             ))}
             <li

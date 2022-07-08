@@ -59,13 +59,11 @@
   font-weight: 600;
   font-size: 13px;
   line-height: 15px;
-  border-bottom: 1px solid #65B230 !important;
 }
 
 .rdt_TableCell {
   font-weight: 400;
   font-size: 11px;
-  border-right:1px solid #ADABAB;
 }
 
 .dropdown-item {
@@ -79,7 +77,6 @@
   border: 1px solid #e6e5e5;
   padding: 0 !important;
   width: 15rem;
-  margin-left: 1rem !important;
 }
 .clear-icon {
   height: 20px;
@@ -99,19 +96,13 @@
 }
 .label {
   font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
   float: left;
   align-self: flex-start;
-  color: #49454F;
+  color: #000000;
   margin-bottom: 4px;
-  position: absolute;
-  margin-left: 16px;
- margin-top: -8px;
- background-color: #ffffff;
- z-index: 8000;
 }
 .inputs {
   align-items: center;
@@ -120,7 +111,8 @@ div.input {
   background-image: linear-gradient(45deg, transparent 50%, #999 50%),
     linear-gradient(135deg, #999 50%, transparent 50%),
     linear-gradient(to right, #fff, #fff);
-  background-position: calc(100% - 13px) calc(1em + 10px), calc(100% - 8px) calc(0.8em + 13px), 100% 0;
+  background-position: calc(100% - 13px) calc(1em + 1px),
+    calc(100% - 8px) calc(0.8em + 4px), 100% 0;
   background-size: 5px 5px, 5px 5px, 2.5em 23.5em;
   background-repeat: no-repeat;
   // padding: 0.5em 3.5em 0.8em 1em;
@@ -128,24 +120,26 @@ div.input {
   ::-ms-expand {
     display: none;
   }
-  padding-top: 12px;
+  padding-top: 0px;
   padding-left: 10px;
   text-align: left;
 }
 .input {
-  color: #616161;
+  color: #000;
   background: #ffffff;
   border: 1px solid #bbbbbb;
   box-sizing: border-box;
   border-radius: 4px;
-  padding: 16px 10px 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
   display: flex;
   align-items: center;
-  letter-spacing: 0.5px;
 
   :after {
     content: attr(data-value) " ";
@@ -160,12 +154,10 @@ div.input {
     padding: 0;
     border: none;
     font-style: normal;
-    z-index: 9999;
-    
   }
-  // :active {
-  //   border: 1px solid #bbbbbb;
-  // }
+  :active {
+    border: 1px solid #bbbbbb;
+  }
 }
 .input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -363,7 +355,6 @@ div.input {
 .custom-group {
   flex-direction: column;
   display: flex;
-  position: relative;
 }
 
 #dropdown-action {
@@ -514,34 +505,57 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 26px;
   cursor: pointer;
 }
-.k{
-  //border-radius: 50%;
-  background: #65B230;
+.pagination-link {
+  background: white;
   font-weight: 400 !important;
-    font-size: 16px !important;
-    //line-height: 19px !important;
-    width: 26px;
-    color: white;
-    //background: #0092bc !important;
-    height: 26px;
-    align-items: center !important;
-    display: flex !important;
-    justify-content: center;
-    border-radius: 20px !important;
+  font-size: 16px !important;
+  width: 26px;
+  color: black;
+  height: 26px;
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center;
+  border-radius: 20px !important;
+  text-decoration: none;
+  &:hover {
+    color: #000;
+  }
 }
-// .text-size{
-//  // position: absolute;
-// left: 73.65%;
-// right: 24.47%;
-// top: 87.6%;
-// bottom: 11.04%;
-// font-family: 'Roboto';
-// font-style: normal;
-// font-weight: 400;
-// font-size: 20px;
-// line-height: 14px;
-// }
-.drop-down-margin{
+.pagination-active {
+  background: #65b230;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  width: 26px;
+  color: white;
+  height: 26px;
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center;
+  border-radius: 20px !important;
+  text-decoration: none;
+}
+
+.drop-down-margin {
   margin-left: 0.423rem;
-  margin-right:0.238rem
+  margin-right: 0.238rem;
+}
+.drop-down-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+.vv {
+  box-sizing: border-box;
+
+  //position: absolute;
+  width: 51.85px;
+  height: 23px;
+  left: 474.51px;
+  top: 892px;
+
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
 }
