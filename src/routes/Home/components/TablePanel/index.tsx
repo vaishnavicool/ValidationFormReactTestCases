@@ -5,7 +5,6 @@ import Loading from "shared/Loading"
 import Pagination from "./pagination"
 import { useDetectClickOutside } from "react-detect-click-outside"
 
-
 function WorkOrder(props: any) {
   let {
     defaultSortFieldId,
@@ -46,11 +45,12 @@ function WorkOrder(props: any) {
                 fixedHeaderScrollHeight="500px"
                 defaultSortFieldId={defaultSortFieldId}
                 onSelectedRowsChange={updateSelectedData}
-              />             
+              />
             </div>
 
             {tableData?.length > 0 && (
-              <div ref={activityMenuClick}
+              <div
+                ref={activityMenuClick}
                 className="dot-img"
                 onClick={() => setShowActivity(!showActivity)}
               >

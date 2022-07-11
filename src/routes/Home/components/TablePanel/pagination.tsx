@@ -7,9 +7,8 @@ const Pagination = ({
   onChangePage,
   onChangeRowsPerPage,
   currentPage: pageNo,
-  paginationRowsPerPageOptions = [],  
+  paginationRowsPerPageOptions = [],
 }) => {
-
   const onChangeRowsPerPageT = ({ target }) =>
     onChangeRowsPerPage(Number(target.value))
   const handleFirstPageButtonClick = () => {
@@ -32,29 +31,29 @@ const Pagination = ({
   let toSize = pageNo * rowsPerPage
   if (toSize > total) toSize = total
 
-    let maxPages = 5
+  let maxPages = 5
 
-    let startPage, endPage
-    if (lastPage <= maxPages) {
+  let startPage, endPage
+  if (lastPage <= maxPages) {
+    startPage = 1
+    endPage = lastPage
+  } else {
+    let maxPagesBeforepageNo = Math.floor(maxPages / 2)
+    let maxPagesAfterpageNo = Math.ceil(maxPages / 2) - 1
+    if (pageNo <= maxPagesBeforepageNo) {
       startPage = 1
+      endPage = maxPages
+    } else if (pageNo + maxPagesAfterpageNo >= lastPage) {
+      startPage = lastPage - maxPages + 1
       endPage = lastPage
     } else {
-      let maxPagesBeforepageNo = Math.floor(maxPages / 2)
-      let maxPagesAfterpageNo = Math.ceil(maxPages / 2) - 1
-      if (pageNo <= maxPagesBeforepageNo) {
-        startPage = 1
-        endPage = maxPages
-      } else if (pageNo + maxPagesAfterpageNo >= lastPage) {
-        startPage = lastPage - maxPages + 1
-        endPage = lastPage
-      } else {
-        startPage = pageNo - maxPagesBeforepageNo
-        endPage = pageNo + maxPagesAfterpageNo
-      }
+      startPage = pageNo - maxPagesBeforepageNo
+      endPage = pageNo + maxPagesAfterpageNo
     }
-    let pages = Array.from(Array(endPage + 1 - startPage).keys()).map(
-      (i) => startPage + i
-    )
+  }
+  let pages = Array.from(Array(endPage + 1 - startPage).keys()).map(
+    (i) => startPage + i
+  )
 
   return (
     <div className={"row justify-content-between mt-3 mx-5"}>
@@ -64,15 +63,13 @@ const Pagination = ({
         }  to ${toSize}  of ${total} entries`}
       </div>
       <div className="col-4">
-       <span className="drop-down-text">Show</span>      
-        <select 
-        className="dropdown-pagination"
-        onClick={onChangeRowsPerPageT}>
+        <span className="drop-down-text">Show</span>
+        <select className="dropdown-pagination" onClick={onChangeRowsPerPageT}>
           {paginationRowsPerPageOptions.map((d) => (
             <option key={d}>{d}</option>
           ))}
         </select>
-        <span className="drop-down-text">entries</span>       
+        <span className="drop-down-text">entries</span>
       </div>
       {total >= rowsPerPage + 1 && (
         <div className="float-right col-4">
@@ -97,7 +94,9 @@ const Pagination = ({
               <li
                 key={d}
                 onClick={handleNextButtonClick}
-                className={classnames("pagination-active", { active: d == pageNo })}
+                className={classnames("pagination-active", {
+                  active: d == pageNo,
+                })}
               >
                 <a className="pagination-link"> {d} </a>
               </li>
@@ -106,12 +105,10 @@ const Pagination = ({
               onClick={handleNextButtonClick}
               className={classnames("page-item", { disabled: hasNextPage })}
             >
-               <span className="mx-3">Next</span>
+              <span className="mx-3">Next</span>
             </li>
 
-            <li 
-            
-            className={classnames("page-item", { disabled: hasNextPage })}>
+            <li className={classnames("page-item", { disabled: hasNextPage })}>
               <span className="">Last</span>
             </li>
           </ul>
