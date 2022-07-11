@@ -52,11 +52,13 @@
   font-weight: 600;
   font-size: 13px;
   line-height: 15px;
+  border-bottom: 1px solid #65B230 !important;
 }
 
 .rdt_TableCell {
   font-weight: 400;
   font-size: 11px;
+  border-right:1px solid #ADABAB;
 }
 
 .dropdown-item {
@@ -70,6 +72,7 @@
   border: 1px solid #e6e5e5;
   padding: 0 !important;
   width: 15rem;
+  margin-left: 1rem !important;
 }
 .clear-icon {
   height: 20px;
@@ -89,13 +92,19 @@
 }
 .label {
   font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
   float: left;
   align-self: flex-start;
-  color: #000000;
+  color: #49454F;
   margin-bottom: 4px;
+  position: absolute;
+  margin-left: 16px;
+  margin-top: -8px;
+  background-color: #ffffff;
+  z-index: 8000;
 }
 .inputs {
   align-items: center;
@@ -103,34 +112,33 @@
 div.input {
   background-image: linear-gradient(45deg, transparent 50%, #999 50%),
     linear-gradient(135deg, #999 50%, transparent 50%), linear-gradient(to right, #fff, #fff);
-  background-position: calc(100% - 13px) calc(1em + 1px), calc(100% - 8px) calc(0.8em + 4px), 100% 0;
+  // background-position: calc(100% - 13px) calc(1em + 1px), calc(100% - 8px) calc(0.8em + 4px), 100% 0;
+  background-position: calc(100% - 13px) calc(1em + 10px), calc(100% - 8px) calc(0.8em + 13px), 100% 0;
   background-size: 5px 5px, 5px 5px, 2.5em 23.5em;
   background-repeat: no-repeat;
   -webkit-appearance: none;
   ::-ms-expand {
     display: none;
   }
-  padding-top: 0px;
+  padding-top: 12px;
   padding-left: 10px;
   text-align: left;
 }
 .input {
-  color: #000;
-  background: #ffffff;
-  border: 1px solid #bbbbbb;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-
+  color: #616161;
+    background: #ffffff;
+    border: 1px solid #bbbbbb;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 16px 10px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
   :after {
     content: attr(data-value) " ";
     visibility: hidden;
@@ -141,10 +149,15 @@ div.input {
     border: none;
     font-style: normal;
   }
-  :active {
-    border: 1px solid #bbbbbb;
-  }
+ 
 }
+.input:active{
+  outline: none;
+}
+.input:focus-visible,.input:active{
+  outline: none;
+}
+
 .input::placeholder {
   color: #a7a3a3;
 }
@@ -333,6 +346,7 @@ div.input {
 .custom-group {
   flex-direction: column;
   display: flex;
+  position: relative;
 }
 
 #dropdown-action {
