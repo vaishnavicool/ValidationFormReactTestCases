@@ -1,8 +1,10 @@
 import "./style.scss"
 import { FormattedMessage } from "react-intl"
+import { useNavigate } from "react-router-dom"
 
 function TopSection(props: any) {
-  let { setModalType, setShow } = props
+  // let { setModalType, setShow } = props
+  let navigate = useNavigate()
   return (
     <>
       <div className="mainContainer">
@@ -15,8 +17,7 @@ function TopSection(props: any) {
             value="+ Add Workorder"
             type="button"
             onClick={() => {
-              setModalType("add")
-              setShow(true)
+              navigate("/AddWorkorder")
             }}
           />
         </div>

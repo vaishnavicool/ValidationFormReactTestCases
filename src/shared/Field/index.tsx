@@ -1,16 +1,17 @@
+import { filter } from "lodash"
 import { FormattedMessage, useIntl } from "react-intl"
 import Select from "react-select"
-
+import "./style.scss"
 function Field(props: any) {
-  const { name, type = "text", updateFilters, filters, allDropdownOpts } = props
+  const { name, type = "text", updateFilters, filters, allDropdownOpts,width='col-6',infoKey } = props
   let intl = useIntl()
   let aName = intl.formatMessage({
     defaultMessage: `leftpanel.${name}`,
     id: `leftpanel.${name}`,
   })
   let value = ""
-  if (type == "dropdown") {
-    value = allDropdownOpts[name]?.find((d) => d.value == filters[name])
+  if (type == "dropdown" && allDropdownOpts) {
+    value = allDropdownOpts[name]?.find((d:any) => d.value == filters[name])
     if (!value) value = ""
     return (
       <div className="mb-3 custom-group col-6">
@@ -29,10 +30,11 @@ function Field(props: any) {
     )
   }
 
-  value = filters[name]
+  if(filters)
+    value = filters[name]
   if (!value) value = ""
   return (
-    <div className="mb-3 custom-group col-6">
+    <div className={`mb-3 custom-group ${width}`}>
       <label htmlFor="disabledTextInput" className="label">
         <FormattedMessage id={`leftpanel.${name}`} />
       </label>
@@ -42,9 +44,10 @@ function Field(props: any) {
         className="input"
         placeholder={`Enter ${aName}`}
         name={name}
-        onChange={updateFilters(name)}
+        // onChange={updateFilters(name)}
         value={value}
       />
+      {infoKey && <div className="info-txt"><FormattedMessage id={infoKey} /></div>}
     </div>
   )
 }
