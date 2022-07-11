@@ -66,8 +66,7 @@ const Pagination = ({
       <div className="col-4">
        <span className="drop-down-text">Show</span>      
         <select 
-        className="drop-down-margin
-        vv"
+        className="dropdown-pagination"
         onClick={onChangeRowsPerPageT}>
           {paginationRowsPerPageOptions.map((d) => (
             <option key={d}>{d}</option>
