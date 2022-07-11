@@ -7,20 +7,23 @@ const Footer: React.FunctionComponent = (props: any) => {
   return (
     <Fragment>
       <footer className="row">
-        <p className=" col-auto " style={{marginRight:"50px",marginLeft:"6px"}}>
-         <FormattedMessage id="footer.message" />
+        <p
+          className=" col-auto "
+          style={{ marginRight: "50px", marginLeft: "6px" }}
+        >
+          <FormattedMessage id="footer.message" />
         </p>
         <a className="text-decoration-none footer-link col-auto p-0" href="#a">
-        <FormattedMessage id="footer.link-setpage" />
+          <FormattedMessage id="footer.link-setpage" />
         </a>
         <a className="text-decoration-none footer-link col-auto p-0" href="#a">
-        <FormattedMessage id="footer.link-setcontrol" />
+          <FormattedMessage id="footer.link-setcontrol" />
         </a>
         <a className="text-decoration-none footer-link col-auto p-0" href="#a">
-        <FormattedMessage id="footer.link-technical" />
+          <FormattedMessage id="footer.link-technical" />
         </a>
         <a className="text-decoration-none footer-link col-auto p-0" href="#a">
-        <FormattedMessage id="footer.link-user" />
+          <FormattedMessage id="footer.link-user" />
         </a>
       </footer>
     </Fragment>

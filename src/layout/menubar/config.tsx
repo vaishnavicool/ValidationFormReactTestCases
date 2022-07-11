@@ -109,17 +109,17 @@ const menuConfig = [
   {
     title: "menubar.reporting",
     path: "/reporting",
-    icon:"ic_reporting",
+    icon: "ic_reporting",
   },
   {
     title: "menubar.printing",
     path: "/printing",
-    icon:"ic_printing",
+    icon: "ic_printing",
   },
   {
     title: "menubar.manage",
     path: "/manage",
-    icon:"ic_manage",
+    icon: "ic_manage",
   },
 ]
 

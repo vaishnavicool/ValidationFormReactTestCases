@@ -48,17 +48,7 @@ function Field(props: any) {
 }
 
 function AddWorkOrder(props: any) {
-  let {
-    inactive,
-    handleFilterCollapse,
-    updateFilters,
-    filters,
-    allDropdownOpts,
-    setCollapse,
-    collapse,
-    clearFilters,
-    pageOpts,
-  } = props
+  let { updateFilters, filters, allDropdownOpts, pageOpts } = props
 
   return (
     <div>
@@ -77,11 +67,7 @@ function AddWorkOrder(props: any) {
           </div>
         </div>
         <div className="button-container py-3">
-          <input
-            type="button"
-            className=" btn-reset"
-            value={"Cancel"}
-          />
+          <input type="button" className=" btn-reset" value={"Cancel"} />
           <input type="button" className=" btn-apply" value={"Add"} />
         </div>
       </>

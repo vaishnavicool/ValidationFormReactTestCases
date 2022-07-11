@@ -11,7 +11,7 @@ Object.keys(urls).forEach((d: any) => {
     let res
     if (d.startsWith("g_"))
       res = await axios.get(url, {
-        loading_key
+        loading_key,
       })
     if (d.startsWith("p_"))
       res = await axios.post(

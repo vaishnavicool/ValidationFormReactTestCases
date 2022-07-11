@@ -2,10 +2,7 @@ import "./style.scss"
 import { FormattedMessage } from "react-intl"
 
 function TopSection(props: any) {
-  let {
-    setModalType,
-    setShow,
-  } = props
+  let { setModalType, setShow } = props
   return (
     <>
       <div className="mainContainer">

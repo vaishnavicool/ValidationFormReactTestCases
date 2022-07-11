@@ -1,11 +1,9 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react"
 
-let enhancer = (Component: FunctionComponent) => ({ ...props }) => {
-    return (
-        <Component
-            {...props}
-        />
-    );
-}
+let enhancer =
+  (Component: FunctionComponent) =>
+  ({ ...props }) => {
+    return <Component {...props} />
+  }
 
-export default enhancer;
+export default enhancer

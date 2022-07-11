@@ -12,17 +12,16 @@ toast.configure({
   closeOnClick: true,
   pauseOnHover: true,
   draggable: true,
-  limit: 1
+  limit: 1,
 })
 
-
-declare module 'axios' {
+declare module "axios" {
   interface AxiosRequestConfig {
-    loading_key?: string;
+    loading_key?: string
   }
 }
 
-axios.defaults.headers.common['Accept'] = "application/json"
+axios.defaults.headers.common["Accept"] = "application/json"
 
 axios.interceptors.request.use(
   function (config: any) {

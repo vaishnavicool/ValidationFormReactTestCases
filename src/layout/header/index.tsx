@@ -10,17 +10,23 @@ function Header(props: any) {
       </div>
       <div className="col-10 row ">
         <div className="details">
-        <div className="mx-4">
-          <Image src="cube.png" alt="coreLogo" className='question-icon' />
+          <div className="mx-4">
+            <Image src="cube.png" alt="coreLogo" className="question-icon" />
           </div>
           <div className="mx-4">
-          <Image src="question.png" alt="coreLogo" className='question-icon' />
+            <Image
+              src="question.png"
+              alt="coreLogo"
+              className="question-icon"
+            />
           </div>
           <div className="mx-4">
-          <Image src="bell.png" alt="coreLogo" className='bell-icon' />
+            <Image src="bell.png" alt="coreLogo" className="bell-icon" />
           </div>
           <div className="profile-info mx-4">
-            <div className="profile-img"><Image src="profile-image.png"/></div>
+            <div className="profile-img">
+              <Image src="profile-image.png" />
+            </div>
             <div className="profile-detail">
               <div className="username">Mohan Patcha</div>
               <div className="role">Admin</div>
