@@ -138,7 +138,7 @@ div.input {
     display: flex;
     align-items: center;
     letter-spacing: 0.5px;
-    text-transform: capitalize;
+    // text-transform: capitalize;
   :after {
     content: attr(data-value) " ";
     visibility: hidden;

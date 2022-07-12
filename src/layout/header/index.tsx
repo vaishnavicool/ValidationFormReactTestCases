@@ -23,7 +23,7 @@ function Header(props: any) {
           <div className="mx-4">
             <Image src="bell.png" alt="coreLogo" className="bell-icon" />
           </div>
-          <div className="profile-info mx-4">
+          <div className="profile-info">
             <div className="profile-img">
               <Image src="profile-image.png" />
             </div>
