@@ -6,9 +6,19 @@
   font-size: 9px;
   letter-spacing: 0.5px;
   background: #f0f1f2;
-}
+  display: flex;
 
-.footer-link {
-  color: #337ab7;
-  margin-right: 15px;
+  .footer-link {
+    color: #337ab7;
+    margin-right: 15px;
+  }
+ 
+}
+.menu-footer-icon {
+  text-align: center;
+  margin-right: 37px ;
+  display: flex ;
+  align-items: baseline ;
+  justify-content: flex-end ;
+  flex: 1 ;
 }

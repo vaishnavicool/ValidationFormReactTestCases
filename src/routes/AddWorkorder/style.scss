@@ -29,3 +29,33 @@
   letter-spacing: 0.1px;
   color: #616161;
 }
+
+.btn-addworkorder-cancel {
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: none;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #616161;
+  letter-spacing: 0.6px;
+  border: 1px solid #dadada;
+}
+
+.btn-addworkorder-add {
+  padding: 10px 31px;
+  border-radius: 35px;
+  border: none;
+  background-color: #65b230;
+  line-height: 19px;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+  margin-left: 36px;
+}
+.btn-downarrow{
+  margin-right: 69px;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+}

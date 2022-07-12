@@ -2,6 +2,8 @@ import { pageConfig } from "./config"
 import Form from "shared/Form"
 import Topsection from "shared/Topsection"
 import "./style.scss"
+import Image from "shared/Image"
+
 const AddWorkorder = () => {
   return (
     <>
@@ -34,9 +36,12 @@ const AddWorkorder = () => {
             <input
               className="btn-right-panel"
               value="+ Add New Invoice"
-              type="button"
+              type="button"   
             />
           </div>
+          <div className="btn-downarrow">
+        <Image src="ic_down_arrow.png" />
+      </div>
         </div>
       </div>
     </>

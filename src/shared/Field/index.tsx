@@ -6,8 +6,8 @@ function Field(props: any) {
   const { name, type = "text", updateFilters, filters, allDropdownOpts,width='col-6',infoKey } = props
   let intl = useIntl()
   let aName = intl.formatMessage({
-    defaultMessage: `leftpanel.${name}`,
-    id: `leftpanel.${name}`,
+    defaultMessage: `${name}`,
+    id: `${name}`,
   })
   let value = ""
   if (type == "dropdown" && allDropdownOpts) {
@@ -16,7 +16,7 @@ function Field(props: any) {
     return (
       <div className="mb-3 custom-group col-6">
         <label htmlFor="disabledTextInput" className="label">
-          <FormattedMessage id={`leftpanel.${name}`} />
+          <FormattedMessage id={`${name}`} />
         </label>
         <Select
           onChange={updateFilters(name)}
@@ -36,7 +36,7 @@ function Field(props: any) {
   return (
     <div className={`mb-3 custom-group ${width}`}>
       <label htmlFor="disabledTextInput" className="label">
-        <FormattedMessage id={`leftpanel.${name}`} />
+        <FormattedMessage id={`${name}`} />
       </label>
       <input
         type={type}

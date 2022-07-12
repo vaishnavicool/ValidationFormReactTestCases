@@ -75,4 +75,6 @@ body,
 
 .layout .col-10 {
   width: 80% !important;
+  display: flex;
+  justify-content: flex-end;
 }
