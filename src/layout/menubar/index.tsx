@@ -4,10 +4,11 @@ import { Dropdown } from "react-bootstrap"
 import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
 import menuConfig from "./config"
-import {useNavigate } from "react-router-dom"
+import {useLocation, useNavigate } from "react-router-dom"
 
 const Menubar = () => {
   let navigate = useNavigate()
+  let {pathname} = useLocation()
 
   let goTo = (path) => {
     if (path.includes("aspx")) window.location.href = path
@@ -30,7 +31,7 @@ const Menubar = () => {
                   >
                     <Image
                       src={
-                        locationData.pathname === d.path
+                          pathname === d.path
                           ? `${d.icon}_white.png`
                           : `${d.icon}_grey.png`
                       }
@@ -46,7 +47,7 @@ const Menubar = () => {
             ) : (
               <div
                 className={`col menu-item ${
-                  locationData.pathname == d.path ? "active" : ""
+                  pathname == d.path ? "active" : ""
                 }`}
               >
                 <Dropdown drop="end">
@@ -57,7 +58,7 @@ const Menubar = () => {
                   >
                     <Image
                       src={
-                        locationData.pathname === d.path
+                        pathname === d.path
                           ? `${d.icon}_white.png`
                           : `${d.icon}_grey.png`
                       }
@@ -73,7 +74,6 @@ const Menubar = () => {
                     {d.children.map((child) => (
                       <Dropdown.Item
                         key={child.path}
-                        // href={child.path}
                         onClick={() => goTo(child.path)}
                       >
                         <FormattedMessage id={child.title} />
