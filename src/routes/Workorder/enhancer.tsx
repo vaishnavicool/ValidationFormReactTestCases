@@ -47,6 +47,7 @@ const useEnhancer = () => {
     ;(async () => {
       let opts = await getDropdownOpts(pageKey)
       setAllDropdownOpts(opts)
+      updateTable({})
     })()
   }, [])
 
