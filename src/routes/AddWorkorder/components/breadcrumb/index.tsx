@@ -9,8 +9,12 @@ function Breadcrumb() {
           <FormattedMessage id="addworkorder.breadcrumb" />
         </div>
         <div className="button-container">
-          <input className="btn-addworkorder" value="Cancel" type="button" />
-          <input className="btn-addworkorder" value="Add" type="button" />
+          <input
+            className="btn-addworkorder-cancel"
+            value="Cancel"
+            type="button"
+          />
+          <input className="btn-addworkorder-add" value="Add" type="button" />
         </div>
       </div>
     </>

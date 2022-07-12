@@ -11,8 +11,8 @@
     margin-right: 3rem;
     position: relative;
   }
-  .btn-addworkorder {
-    padding: 10px 13px;
+  .btn-addworkorder-add {
+    padding: 10px 31px;
     border-radius: 35px;
     border: none;
     background-color: #65b230;
@@ -21,6 +21,19 @@
     line-height: 19px;
     color: #ffffff;
     letter-spacing: 0.6px;
+    margin-left: 36px;
+  }
+  .btn-addworkorder-cancel {
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: none;
+    background-color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #616161;
+    letter-spacing: 0.6px;
+    border: 1px solid #dadada;
   }
 
   .btn-grp {
