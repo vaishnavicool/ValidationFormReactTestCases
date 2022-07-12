@@ -1,9 +1,16 @@
-import { filter } from "lodash"
 import { FormattedMessage, useIntl } from "react-intl"
 import Select from "react-select"
 import "./style.scss"
 function Field(props: any) {
-  const { name, type = "text", updateFilters, filters, allDropdownOpts,width='col-6',infoKey } = props
+  const {
+    name,
+    type = "text",
+    updateFilters,
+    filters,
+    allDropdownOpts,
+    width = "col-6",
+    infoKey,
+  } = props
   let intl = useIntl()
   let aName = intl.formatMessage({
     defaultMessage: `${name}`,
@@ -11,7 +18,7 @@ function Field(props: any) {
   })
   let value = ""
   if (type == "dropdown" && allDropdownOpts) {
-    value = allDropdownOpts[name]?.find((d:any) => d.value == filters[name])
+    value = allDropdownOpts[name]?.find((d: any) => d.value == filters[name])
     if (!value) value = ""
     return (
       <div className="mb-3 custom-group col-6">
@@ -30,8 +37,7 @@ function Field(props: any) {
     )
   }
 
-  if(filters)
-    value = filters[name]
+  if (filters) value = filters[name]
   if (!value) value = ""
   return (
     <div className={`mb-3 custom-group ${width}`}>
@@ -47,7 +53,11 @@ function Field(props: any) {
         // onChange={updateFilters(name)}
         value={value}
       />
-      {infoKey && <div className="info-txt"><FormattedMessage id={infoKey} /></div>}
+      {infoKey && (
+        <div className="info-txt">
+          <FormattedMessage id={infoKey} />
+        </div>
+      )}
     </div>
   )
 }
