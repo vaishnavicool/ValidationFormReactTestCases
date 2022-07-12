@@ -1,14 +1,13 @@
 import "./style.scss"
-
 import FilterChipPanel from "./components/FilterChipPanel"
 import Image from "shared/Image"
 import ModalForm from "./components/ModalForm"
 import TablePanel from "./components/TablePanel"
-import TopSection from "./components/breadcrumb/index"
+import TopSection from "./components/breadcrumb"
 import { useDetectClickOutside } from "react-detect-click-outside"
 import useEnhancer from "./enhancer"
 
-function Dashboard(props: any) {
+function Workorder(props: any) {
   let extraProps = useEnhancer()
   let { showColumn, setShowColumn, switchVisibleColumns, columns } = extraProps
 
@@ -68,4 +67,4 @@ function Dashboard(props: any) {
     </>
   )
 }
-export default Dashboard
+export default Workorder

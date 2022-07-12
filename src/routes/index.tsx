@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react"
 import { Routes as ReactRoute, Route } from "react-router-dom"
 import ErrorBoundary from "shared/ErrorBoundaries"
-import Workorder from "./Workorder"
+import Workorder from "./WorkOrder"
 import AddWorkorder from "./AddWorkorder"
 import NotFound from "./NotFound"
 
@@ -10,8 +10,8 @@ const Routes: FunctionComponent = (props: any) => {
         <div>
             <ErrorBoundary>
                 <ReactRoute>
-                    <Route path="/" element={<Workorder />} />
-                    <Route path="/AddWorkorder" element={<AddWorkorder />} />
+                    <Route path="/workorder" element={<Workorder />} />
+                    <Route path="/workorder/add" element={<AddWorkorder />} />
                     <Route path="*" element={<NotFound />} />
                 </ReactRoute>
             </ErrorBoundary>

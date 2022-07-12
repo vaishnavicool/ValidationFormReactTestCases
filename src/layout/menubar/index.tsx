@@ -4,10 +4,15 @@ import { Dropdown } from "react-bootstrap"
 import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
 import menuConfig from "./config"
-import { useLocation } from "react-router-dom"
+import {useNavigate } from "react-router-dom"
 
 const Menubar = () => {
-  const location = useLocation()
+  let navigate = useNavigate()
+
+  let goTo = (path) => {
+    if (path.includes("aspx")) window.location.href = path
+    else navigate(path)
+  }
   return (
     <>
       <div className="menu-list">
@@ -21,10 +26,11 @@ const Menubar = () => {
                     id="dropdown-basic"
                     aria-expanded="false"
                     className="bg-transparent border-0 custom-dropdown btn btn-light"
+                    onClick={() => goTo(d.path)}
                   >
                     <Image
                       src={
-                        location.pathname === d.path
+                        locationData.pathname === d.path
                           ? `${d.icon}_white.png`
                           : `${d.icon}_grey.png`
                       }
@@ -40,7 +46,7 @@ const Menubar = () => {
             ) : (
               <div
                 className={`col menu-item ${
-                  location.pathname == d.path ? "active" : ""
+                  locationData.pathname == d.path ? "active" : ""
                 }`}
               >
                 <Dropdown drop="end">
@@ -51,7 +57,7 @@ const Menubar = () => {
                   >
                     <Image
                       src={
-                        location.pathname === d.path
+                        locationData.pathname === d.path
                           ? `${d.icon}_white.png`
                           : `${d.icon}_grey.png`
                       }
@@ -65,7 +71,11 @@ const Menubar = () => {
                   <Dropdown.Menu className="menu">
                     <div className="arrow-left" />
                     {d.children.map((child) => (
-                      <Dropdown.Item key={child.path} href={child.path}>
+                      <Dropdown.Item
+                        key={child.path}
+                        // href={child.path}
+                        onClick={() => goTo(child.path)}
+                      >
                         <FormattedMessage id={child.title} />
                       </Dropdown.Item>
                     ))}
