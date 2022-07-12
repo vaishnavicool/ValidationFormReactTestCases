@@ -3,21 +3,33 @@ import FilterChipPanel from "./components/FilterChipPanel"
 import Image from "shared/Image"
 import ModalForm from "./components/ModalForm"
 import TablePanel from "./components/TablePanel"
-import TopSection from "./components/breadcrumb"
+import Topsection from "shared/Topsection"
 import { useDetectClickOutside } from "react-detect-click-outside"
 import useEnhancer from "./enhancer"
+import { useNavigate } from "react-router-dom"
 
 function Workorder(props: any) {
   let extraProps = useEnhancer()
   let { showColumn, setShowColumn, switchVisibleColumns, columns } = extraProps
-
+  let navigate = useNavigate()
   const columnsBtn = useDetectClickOutside({
     onTriggered: () => setShowColumn(false),
   })
 
   return (
     <>
-      <TopSection {...extraProps} />
+      <Topsection {...extraProps}>
+        <div className="button-container">
+          <input
+            className="btn-addworkorder"
+            value="+ Add Workorder"
+            type="button"
+            onClick={() => {
+              navigate("/workorder/add")
+            }}
+          />
+        </div>
+      </Topsection>
       <div className="filterchip-container">
         <FilterChipPanel {...extraProps} />
       </div>
