@@ -175,10 +175,10 @@
     text-align: left;
     // border: none;
   }
-  // span[class$="indicatorSeparator"],
-  // div[class$="indicatorContainer"] {
-  //   // display: none;
-  // }
+  span[class$="indicatorSeparator"]
+  {
+    display: none;
+  }
 
   div[class$="control"] {
     // border: none;
