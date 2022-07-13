@@ -171,22 +171,23 @@
   }
 
   div[class$="ValueContainer"] {
-    padding: 0;
-    border: none;
+    // padding: 10;
+    text-align: left;
+    // border: none;
   }
-  span[class$="indicatorSeparator"],
-  div[class$="indicatorContainer"] {
-    display: none;
-  }
+  // span[class$="indicatorSeparator"],
+  // div[class$="indicatorContainer"] {
+  //   // display: none;
+  // }
 
   div[class$="control"] {
-    border: none;
+    // border: none;
     box-shadow: none;
-    min-height: 25px;
+    // min-height: 25px;
     margin: 0;
-    padding: 0;
-    max-height: 29px;
-    margin-top: -5px;
+    // padding: 0;
+    // max-height: 29px;
+    // margin-top: -5px;
     background: transparent;
 
     .input :focus-visible {
@@ -195,16 +196,18 @@
     }
   }
   div[class$="IndicatorsContainer"] {
-    display: none;
+    // display: none;
   }
   div[class$="singleValue"] {
     text-align: left;
-    margin-left: 0px;
-    margin-right: 0px;
+    // margin-left: 0.5rem;
+    // margin-right: 0px;
   }
   div[class$="-Input"] {
-    display: block;
-    width: 102%;
+    // display: block;
+    // width: 102%;
+    padding: 10px 0;
+   
   }
   div[class$="-menu"] {
     font-style: normal;
@@ -216,12 +219,12 @@
     text-align: left;
     color: #000;
     background: #ffffff;
-    z-index: 9999;
+    z-index: 9 !important;
     overflow-x: hidden;
     left: 0;
   }
   div[class$="-option"] {
-    background-color: transparent !important;
+    background-color: white !important;
     color: #000 !important;
     padding: 7px 10px;
     overflow-x: hidden;
