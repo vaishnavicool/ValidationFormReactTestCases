@@ -13,7 +13,7 @@ const FilterChipPanel = (props) => {
         <div className="d-flex">
           {Object.keys(aFilters).map((d) => (
             <span key={d} className="badge filter-chip">
-              <FormattedMessage id={`leftpanel.${d}`} />:{aFilters[d]}
+              <FormattedMessage id={`${d}`} />:{aFilters[d]}
               <Image
                 src="cross.png"
                 className="filter-remove"

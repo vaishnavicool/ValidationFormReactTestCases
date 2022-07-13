@@ -54,7 +54,7 @@ function Field(props: any) {
         className="input"
         placeholder={`Enter ${aName}`}
         name={name}
-        // onChange={updateFilters(name)}
+        onChange={updateFilters(name)}
         value={value}
       />
       {infoKey && (
