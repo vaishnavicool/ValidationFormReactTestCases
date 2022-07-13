@@ -1,13 +1,16 @@
-import { FormattedMessage, useIntl } from "react-intl"
-import Select from "react-select"
 import "./style.scss"
+
+import { FormattedMessage, useIntl } from "react-intl"
+
+import Select from "react-select"
+
 function Field(props: any) {
   const {
     name,
     type = "text",
-    updateFilters,
-    filters,
-    allDropdownOpts,
+    updateFilters=()=>{},
+    filters={},
+    allDropdownOpts={name:['a','b']},
     width = "col-6",
     infoKey,
   } = props
@@ -21,7 +24,7 @@ function Field(props: any) {
     value = allDropdownOpts[name]?.find((d: any) => d.value == filters[name])
     if (!value) value = ""
     return (
-      <div className="mb-3 custom-group col-6">
+      <div className={`mb-3 custom-group ${width}`}>
         <label htmlFor="disabledTextInput" className="label">
           <FormattedMessage id={`${name}`} />
         </label>
@@ -29,9 +32,10 @@ function Field(props: any) {
           onChange={updateFilters(name)}
           placeholder={`Select ${aName}`}
           value={value}
-          className="basic-single input"
+          isSearchable={true}
+          className="basic-single"
           options={allDropdownOpts[name]}
-          isLoading={!allDropdownOpts[name]?.[0]}
+          // isLoading={!allDropdownOpts[name]?.[0]}
         />
       </div>
     )
