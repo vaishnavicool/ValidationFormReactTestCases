@@ -1,7 +1,6 @@
-import FilterPanel from "../FilterPanel"
 import { Modal } from "react-bootstrap"
 const ModalForm = (props) => {
-  let { show, setShow, modalType, pageConfig } = props
+  let { show, setShow, modalType, pageConfig,children } = props
 
   return (
     <Modal
@@ -12,11 +11,11 @@ const ModalForm = (props) => {
     >
       <Modal.Header closeButton closeVariant="white">
         <Modal.Title id="example-custom-modal-styling-title">
-          {pageConfig[modalType]?.title}
+          {pageConfig ? pageConfig[modalType]?.title : "test"}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <FilterPanel {...props} />
+        {children}
       </Modal.Body>
     </Modal>
   )

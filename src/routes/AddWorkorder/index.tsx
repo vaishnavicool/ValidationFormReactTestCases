@@ -3,8 +3,13 @@ import Form from "shared/Form"
 import Topsection from "shared/Topsection"
 import "./style.scss"
 import Image from "shared/Image"
-
-const AddWorkorder = () => {
+import ModalForm from "shared/ModalForm"
+import useEnhancer from "./enhancer"
+import CreateManifest from "./components/CreateManifest"
+import { useNavigate } from "react-router-dom"
+const AddWorkorder = (props) => {
+  let { showManifest, setShowManifest } = useEnhancer()
+  let navigate = useNavigate()
   return (
     <>
       <Topsection>
@@ -13,6 +18,7 @@ const AddWorkorder = () => {
             className="btn-addworkorder-cancel"
             value="Cancel"
             type="button"
+            onClick={()=>navigate("/workorder")}
           />
           <input className="btn-addworkorder-add" value="Add" type="button" />
         </div>
@@ -29,6 +35,7 @@ const AddWorkorder = () => {
               className="btn-right-panel"
               value="+ Add New Manifest"
               type="button"
+              onClick={() => setShowManifest(true)}
             />
           </div>
           <div className="invoice-container">
@@ -36,14 +43,17 @@ const AddWorkorder = () => {
             <input
               className="btn-right-panel"
               value="+ Add New Invoice"
-              type="button"   
+              type="button"
             />
           </div>
           <div className="btn-downarrow">
-        <Image src="ic_down_arrow.png" />
-      </div>
+            <Image src="ic_down_arrow.png" />
+          </div>
         </div>
       </div>
+      <ModalForm show={showManifest} setShow={setShowManifest}>
+        <CreateManifest />
+      </ModalForm>
     </>
   )
 }
