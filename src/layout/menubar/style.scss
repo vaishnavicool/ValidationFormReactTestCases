@@ -36,12 +36,13 @@
   text-align: center;
   margin: 2rem 0;
   position: relative;
+  cursor: pointer;
   img{
     margin-bottom: 0.5rem;
     padding: 10px;
   }
   .white{
-    background-color: green;
+    background-color: #65B230;
     border-radius: 50%;
     display: none;
   }

@@ -258,80 +258,33 @@ export const pageConfig = {
       width: "col-4",
     },
   ],
+  ////// addManifestConfig /////////
+
   addManifestConfig: [
     {
-      name: "workoder.add.workorder",
+      name: "addmanifest.manifesttracking",
       numeric: true,
-      width: "col-4",
-      infoKey: "form.info.workOrderId",
+      width: "col-6",
     },
     {
-      name: "workoder.add.statuscode",
+      name: "addmanifest.plantoutbound",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
     },
     {
-      name: "workoder.add.workorderdate",
+      name: "addmanifest.workorder",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
     },
     {
-      name: "workoder.add.customer",
+      name: "addmanifest.job",
       numeric: true,
-      width: "col-4",
-      type: "dropdown",
-      dropdownOpts: {
-        api_key: "p_getSalesRep",
-        labelKey: "name",
-        valueKey: "salesRepid",
-        body: {
-          modeId: true,
-        },
-      },
+      width: "col-6",
     },
     {
-      name: "workoder.add.customersaleschannel",
+      name: "addmanifest.designatedfacility",
       numeric: true,
-      width: "col-4",
-    },
-    {
-      name: "workoder.add.workordertype",
-      numeric: true,
-      width: "col-4",
-      type: "dropdown",
-      dropdownOpts: {
-        api_key: "p_getSalesRep",
-        labelKey: "name",
-        valueKey: "salesRepid",
-        body: {
-          modeId: true,
-        },
-      },
-    },
-    { name: "workoder.add.generator", type: "search", width: "col-4" },
-    {
-      name: "workoder.add.generatorrequirements",
-      numeric: true,
-      width: "col-4",
-    },
-    {
-      name: "workoder.add.scheduletype",
-      width: "col-4",
-      type: "dropdown",
-      numeric: true,
-      dropdownOpts: {
-        api_key: "p_getCSR",
-        labelKey: "name",
-        valueKey: "id",
-        body: {
-          optionalParam: "1",
-        },
-      },
-    },
-    {
-      name: "workoder.add.salesrep",
-      numeric: true,
-      width: "col-4",
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -343,9 +296,15 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.insidesalesrep",
+      name: "addmanifest.generator",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
+      type: "search",
+    },
+    {
+      name: "addmanifest.transporter1",
+      numeric: true,
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -357,9 +316,9 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.csr",
+      name: "addmanifest.transporter2",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -371,9 +330,9 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.job",
+      name: "addmanifest.transporter3",
+      width: "col-6",
       numeric: true,
-      width: "col-4",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -385,44 +344,9 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.workorderstartdate",
+      name: "addmanifest.transporter4",
       numeric: true,
-      width: "col-4",
-      type: "date",
-    },
-    {
-      name: "workoder.add.workorderenddate",
-      numeric: true,
-      width: "col-4",
-      type: "date",
-    },
-    {
-      name: "workoder.add.appointmentrequired",
-      numeric: true,
-      width: "col-4",
-      type: "checkbox",
-    },
-    {
-      name: "workoder.add.servicedate",
-      numeric: true,
-      width: "col-4",
-      type: "date",
-    },
-    {
-      name: "workoder.add.readytobill",
-      numeric: true,
-      width: "col-4",
-      type: "checkbox",
-    },
-    {
-      name: "workoder.add.paymentterms",
-      numeric: true,
-      width: "col-4",
-    },
-    {
-      name: "workoder.add.govcontract",
-      numeric: true,
-      width: "col-4",
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -434,9 +358,9 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.do",
+      name: "addmanifest.equipmenttype",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -448,29 +372,50 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.customerpo",
+      name: "addmanifest.truck",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
+      type: "search",
     },
     {
-      name: "workoder.add.internalpo",
+      name: "addmanifest.truckgross",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
     },
     {
-      name: "workoder.add.estimateddisposalrevenue",
+      name: "addmanifest.trucktace",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
     },
     {
-      name: "workoder.add.estimatedtransportationrevenue",
+      name: "addmanifest.trucknet",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
     },
     {
-      name: "workoder.add.oraclelocation",
+      name: "addmanifest.3rdpartyticket",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
+    },
+  ],
+
+  //// addNewGeneratorConfig ////
+
+  addNewGeneratorConfig: [
+    {
+      name: "addnewgenerator.generatorname",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "addnewgenerator.alternategeneratorname",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "addnewgenerator.sitecountry",
+      numeric: true,
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -482,9 +427,38 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.marketdriver",
+      name: "addnewgenerator.generatorcity",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
+    },
+    {
+      name: "addnewgenerator.addressline1of1",
+      numeric: true,
+      width: "col-12",
+     
+    },
+    {
+      name: "addnewgenerator.addressline2of2",
+      numeric: true,
+      width: "col-12",
+      type: "search",
+    },
+    {
+      name: "addnewgenerator.addressline3of3",
+      numeric: true,
+      width: "col-12",
+     
+    },
+    {
+      name: "addnewgenerator.mailingbilltoname",
+      numeric: true,
+      width: "col-12",
+     
+    },
+    {
+      name: "addnewgenerator.mailingbilltocountry",
+      width: "col-6",
+      numeric: true,
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -496,25 +470,27 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.jobdescription",
+      name: "addnewgenerator.city",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
+     
     },
     {
-      name: "workoder.add.recurrance",
+      name: "addnewgenerator.addressline1",
       numeric: true,
-      width: "col-4",
-      type: "checkbox",
+      width: "col-12",
+     
     },
     {
-      name: "workoder.add.tripticket",
+      name: "addnewgenerator.addressline2",
       numeric: true,
-      width: "col-4",
+      width: "col-12",
+      type: "search",
     },
     {
-      name: "workoder.add.transportationinstructions",
+      name: "addnewgenerator.addressline3",
       numeric: true,
-      width: "col-4",
+      width: "col-12",
     },
   ],
 }
