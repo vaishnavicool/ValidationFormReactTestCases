@@ -79,6 +79,11 @@ const useEnhancer = () => {
     let filters2 = { ...filters }
     Object.keys(filters2).forEach((d) => {
       if (`${filters2[d]}`.trim() == "") delete filters2[d]
+      let field= allDropdownOpts[d]?.find((d1: any) => d1.value == filters2[d])
+      if(field?.label)
+      filters2[d]=field.label
+     
+      
     })
     setShow(false)
     setAFilters(filters2)
