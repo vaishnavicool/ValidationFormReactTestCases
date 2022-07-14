@@ -34,8 +34,26 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding-top: 4.5rem;
+  margin: 2rem 0;
   position: relative;
+  img{
+    margin-bottom: 0.5rem;
+    padding: 10px;
+  }
+  .white{
+    background-color: green;
+    border-radius: 50%;
+    display: none;
+  }
+}
+
+.menu-item:hover {
+  .white{
+    display: block;
+  }
+  .grey{
+    display: none;
+  }
 }
 
 .menu-item:hover .drop-menu {
@@ -67,7 +85,7 @@
   border: 1px solid #e6e5e5;
   width: 15rem;
   right: -15rem;
-  top: 2rem;
+  top: 0;
 }
 
 .drop-item {

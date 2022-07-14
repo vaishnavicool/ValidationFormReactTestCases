@@ -1,16 +1,14 @@
 import "./style.scss"
 import { FormattedMessage } from "react-intl"
+import Breadcrumb from "./breadcrumb"
+
 
 function TopSection(props: any) {
   let {children} = props
   return (
     <>
       <div className="mainContainer">
-        <div className="content">
-          <FormattedMessage id="breadcrumb" />
-        </div>
-        <div className="content contentnxt">workorder /</div>
-      <div className="contentnxt">addworkorder</div>    
+        <Breadcrumb/>
       {children} 
       </div>
     </>

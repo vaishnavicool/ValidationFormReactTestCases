@@ -32,13 +32,18 @@
   line-height: 17px;
   letter-spacing: 1.5%;
   color: #BDBDBD;
+  display: inline;
+  cursor: pointer;
+
+  // &.active{
+  //   font-size: 11px;
+  //   line-height: 17px;
+  //   letter-spacing: 1.5%;
+  //   margin-left: 4px;
+  // }
+
 }
-.contentnxt{
-  font-size: 11px;
-  line-height: 17px;
-  letter-spacing: 1.5%;
-  margin-left: 4px;
-}
+
 
 .columns-div {
   position: absolute;

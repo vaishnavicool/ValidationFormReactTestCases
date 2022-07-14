@@ -19,8 +19,8 @@ const Menubar = () => {
       <div className="menu-list">
         <div className="menubar">
           {menuConfig.map((d, index) => {
-            let imgPath = require("../../assets/icon/" + d.icon + "_grey.png")
-            let imgPathHover = require("../../assets/icon/" +
+            let imgPath = require("assets/icon/" + d.icon + "_grey.png")
+            let imgPathHover = require("assets/icon/" +
               d.icon +
               "_white.png")
             let styledata = {
@@ -32,14 +32,9 @@ const Menubar = () => {
                 <div
                   className="col menu-item"
                   key={index}
-                  // style= {{'--my-image': `url(${imgPath})`, '--hover-image': `url(${imgPathHover})` }
-                  style={{
-                    backgroundImage: `url(${imgPath})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                  }}
                 >
-
+                  <Image src={`${d.icon}_white.png`} className="white"/>
+                  <Image src={`${d.icon}_grey.png`} className="grey"/>
                   {d?.children?.length && <div className="col drop-menu">
                     <div className="arrow-left" />
                     {d?.children?.map((child) => (
