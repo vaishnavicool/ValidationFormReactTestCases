@@ -1,5 +1,4 @@
 import "./style.scss"
-import { FormattedMessage } from "react-intl"
 import Breadcrumb from "./breadcrumb"
 
 

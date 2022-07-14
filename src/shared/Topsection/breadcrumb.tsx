@@ -2,8 +2,7 @@ import React from 'react'
 import { FormattedMessage } from "react-intl"
 
 
-const Breadcrumb = (props: any) => {
-    let {children} = props
+const Breadcrumb = () => {
 
   return (
     <div>
