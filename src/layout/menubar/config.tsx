@@ -6,7 +6,7 @@ const menuConfig = [
   },
   {
     title: "menubar.customer_processing",
-    path: "/",
+    path: "/customer_processing",
     icon: "ic_customer_processing",
     children: [
       {
@@ -15,7 +15,7 @@ const menuConfig = [
       },
       {
         title: "menubar.customer_processing_workOrders",
-        path: "/workorder",
+        path: "customer_processing/workorder",
       },
 
       {
