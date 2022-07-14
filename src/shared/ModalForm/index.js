@@ -11,7 +11,7 @@ const ModalForm = (props) => {
     >
       <Modal.Header closeButton closeVariant="white">
         <Modal.Title id="example-custom-modal-styling-title">
-          {pageConfig ? pageConfig[modalType]?.title : "test"}
+          {pageConfig ? pageConfig[modalType]?.title : "Add New Manifest"}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

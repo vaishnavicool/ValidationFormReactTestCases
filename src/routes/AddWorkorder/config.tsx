@@ -4,7 +4,7 @@ export const pageConfig = {
       name: "workoder.add.workorder",
       numeric: true,
       width: "col-4",
-      infoKey: "form.info.workOrderId",
+      // infoKey: "form.info.workOrderId",
     },
     {
       name: "workoder.add.statuscode",

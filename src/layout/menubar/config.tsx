@@ -55,16 +55,28 @@ const menuConfig = [
 
     children: [
       {
-        title: "One",
-        path: "/one",
+        title: "Inventory",
+        path: "/inventory",
       },
       {
-        title: "Two",
-        path: "/two",
+        title: "Manifests",
+        path: "/manifests",
       },
       {
-        title: "Three",
-        path: "/three",
+        title: "Inbounds",
+        path: "/inbounds",
+      },
+      {
+        title: "Bulk Samples",
+        path: "/bulksamples",
+      },
+      {
+        title: "Outbounds",
+        path: "/outbounds",
+      },
+      {
+        title: "Outbound Profiles",
+        path: "/outboundprofiles",
       },
     ],
   },

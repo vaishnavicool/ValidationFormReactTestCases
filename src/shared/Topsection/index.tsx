@@ -9,7 +9,9 @@ function TopSection(props: any) {
         <div className="content">
           <FormattedMessage id="breadcrumb" />
         </div>
-       {children}
+        <div className="content contentnxt">workorder /</div>
+      <div className="contentnxt">addworkorder</div>    
+      {children} 
       </div>
     </>
   )

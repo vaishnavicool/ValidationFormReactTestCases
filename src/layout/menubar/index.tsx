@@ -4,12 +4,12 @@ import { Dropdown } from "react-bootstrap"
 import { FormattedMessage } from "react-intl"
 import Image from "shared/Image"
 import menuConfig from "./config"
-import {useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
+import { url } from "inspector"
 
 const Menubar = () => {
   let navigate = useNavigate()
-  let {pathname} = useLocation()
-
+  let { pathname } = useLocation()
   let goTo = (path) => {
     if (path.includes("aspx")) window.location.href = path
     else navigate(path)
@@ -18,72 +18,41 @@ const Menubar = () => {
     <>
       <div className="menu-list">
         <div className="menubar">
-          {menuConfig.map((d, index) =>
-            !d.children ? (
-              <div className="col menu-item" key={index}>
-                <div className="custom-dropdown">
-                  <button
-                    type="button"
-                    id="dropdown-basic"
-                    aria-expanded="false"
-                    className="bg-transparent border-0 custom-dropdown btn btn-light"
-                    onClick={() => goTo(d.path)}
-                  >
-                    <Image
-                      src={
-                          pathname === d.path
-                          ? `${d.icon}_white.png`
-                          : `${d.icon}_grey.png`
-                      }
-                      className="menubar-icon"
-                      mouseOver={`${d.icon}_white.png`}
-                    />
-                    <span className="menubar-name">
-                      <FormattedMessage id={d.title} />
-                    </span>
-                  </button>
-                </div>
-              </div>
-            ) : (
-              <div
-                className={`col menu-item ${
-                  pathname == d.path ? "active" : ""
-                }`}
-              >
-                <Dropdown drop="end">
-                  <Dropdown.Toggle
-                    variant="light"
-                    id="dropdown-basic"
-                    className="bg-transparent border-0 custom-dropdown"
-                  >
-                    <Image
-                      src={
-                        pathname === d.path
-                          ? `${d.icon}_white.png`
-                          : `${d.icon}_grey.png`
-                      }
-                      className="menubar-icon"
-                      mouseOver={`${d.icon}_white.png`}
-                    />
-                    <span className="menubar-name">
-                      <FormattedMessage id={d.title} />
-                    </span>
-                  </Dropdown.Toggle>
-                  <Dropdown.Menu className="menu">
+          {menuConfig.map((d, index) => {
+            let imgPath = require("../../assets/icon/" + d.icon + "_grey.png")
+            let imgPathHover = require("../../assets/icon/" +
+              d.icon +
+              "_white.png")
+            let styledata = {
+              "--my-image": `url(${imgPath})`,
+              "--hover-image": `url(${imgPathHover})`,
+            }
+            return (
+              <>
+                <div
+                  className="col menu-item"
+                  key={index}
+                  // style= {{'--my-image': `url(${imgPath})`, '--hover-image': `url(${imgPathHover})` }
+                  style={{
+                    backgroundImage: `url(${imgPath})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                  }}
+                >
+
+                  {d?.children?.length && <div className="col drop-menu">
                     <div className="arrow-left" />
-                    {d.children.map((child) => (
-                      <Dropdown.Item
-                        key={child.path}
-                        onClick={() => goTo(child.path)}
-                      >
+                    {d?.children?.map((child) => (
+                      <div className="drop-item" key={child.path} onClick={() => goTo(child.path)}>
                         <FormattedMessage id={child.title} />
-                      </Dropdown.Item>
+                      </div>
                     ))}
-                  </Dropdown.Menu>
-                </Dropdown>
-              </div>
+                  </div>}
+                  <FormattedMessage id={d.title} />
+                </div>
+              </>
             )
-          )}
+          })}
         </div>
       </div>
     </>
