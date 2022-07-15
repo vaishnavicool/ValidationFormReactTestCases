@@ -6,14 +6,14 @@ import { FormattedMessage } from "react-intl"
 
 const FilterChipPanel = (props) => {
   let { setShow, setModalType, aFilters, removeAFilter, clearFilters } = props
-
+  console.log(aFilters)
   return (
     <>
       <div className="filter-input">
         <div className="d-flex">
           {Object.keys(aFilters).map((d) => (
             <span key={d} className="badge filter-chip">
-              <FormattedMessage id={`${d}`} />:{aFilters[d]}
+              <FormattedMessage id={`form.${d}`} />:{aFilters[d]}
               <Image
                 src="cross.png"
                 className="filter-remove"
