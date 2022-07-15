@@ -6,7 +6,6 @@ import EllipsisText from "react-ellipsis-text"
 
 const FilterChipPanel = (props) => {
   let { setShow, setModalType, aFilters, removeAFilter, clearFilters } = props
-
   return (
     <>
       <div className="filter-input">
@@ -16,7 +15,7 @@ const FilterChipPanel = (props) => {
           .map((d) => (
             <span key={d} className=
             "badge filter-chip">          
-              <FormattedMessage id={`${d}`} />:
+              <FormattedMessage id={`form.${d}`} />:
               <EllipsisText text={aFilters[d]} length={20} />             
               <Image
                 src="cross.png"
