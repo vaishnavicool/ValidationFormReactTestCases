@@ -15,9 +15,9 @@ const FilterChipPanel = (props) => {
            .sort((a, b) => a.localeCompare(b))          
           .map((d) => (
             <span key={d} className=
-            "badge filter-chip">
-               <EllipsisText text={d} length={8} />
-              <FormattedMessage id={`${d}`} />:{aFilters[d]}
+            "badge filter-chip">          
+              <FormattedMessage id={`${d}`} />:
+              <EllipsisText text={aFilters[d]} length={8} />             
               <Image
                 src="cross.png"
                 className="filter-remove"
