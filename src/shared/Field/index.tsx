@@ -13,6 +13,7 @@ function Field(props: any) {
     allDropdownOpts={name:['a','b']},
     width = "col-6",
     infoKey,
+    placeholder
   } = props
   let intl = useIntl()
   let labelKey= `form.${name}`
@@ -31,7 +32,7 @@ function Field(props: any) {
         </label>
         <Select
           onChange={updateFilters(name)}
-          placeholder={`Select ${aName}`}
+          placeholder={`${placeholder ? `${placeholder}`: `Select ${aName}`}`}
           value={value}
           isSearchable={true}
           className="basic-single"

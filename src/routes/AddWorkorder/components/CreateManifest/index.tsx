@@ -3,6 +3,7 @@ import { pageConfig } from "routes/AddWorkorder/config"
 import Image from "shared/Image"
 import Form from "shared/Form"
 import "./style.scss"
+import Field from "shared/Field"
 const CreateManifest = () => {
   return (
     <div className="d-flex col-12">
@@ -26,8 +27,23 @@ const CreateManifest = () => {
             </span>
           </div>
         </div>
-        <div className="grey-container">Hi</div>
-
+        <div className="grey-container">
+          <Field 
+          width= "col-5"
+          type="dropdown"
+          placeholder="Manifest"
+          name={"documenttype"}
+            />
+          <div>
+            <span className="instruction-text">
+              Instructions
+              <br />
+            </span>
+            <span>
+             
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   )

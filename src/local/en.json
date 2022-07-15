@@ -86,6 +86,8 @@
   "menubar.customer_processing_creditMemos": "Credit Memos",
   "form.info.workOrderId": "Generator populates automatically from connected Job. Generator control is disabled because this record is associated with Job 'Chateaux Westgate'",
   "form.workorder": "Workorder #",
+  "form.documenttype":"Document Type",
+  "form.manifest":"Manifest",
   "form.statuscode": "Status Code",
   "form.workorderdate": "Workorder Date",
   "form.customer": "Customer",

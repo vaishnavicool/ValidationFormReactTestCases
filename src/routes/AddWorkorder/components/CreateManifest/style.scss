@@ -1,53 +1,58 @@
-.right-section{
-    border-left:1px solid #E4E3E3;
+.right-section {
+    border-left: 1px solid #e4e3e3;
+    padding: 14px;
     margin-left: 10px;
-.rightitem-container {
-    display: grid;
-    justify-content: flex-end;
-    justify-items: flex-end;
-    margin-right: 19px;
-    .rightitems-text {
-        font-size: 14px;
-        color: #545454;
-        font-weight: 400;
-        line-height: 16px;
-        margin-bottom: 5px;
-    }
-    .rightitem-link {
-        font-size: 8px;
-        font-weight: 700;
-        line-height: 9px;
-        color: #0092bc;
-        cursor: pointer;
-    }
-}
-.rightitem-dots {
-    float: right;
-}
-
-.leftitem-container {
-    margin-left: 14px;
-    .left-text {
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 20px;
-        letter-spacing: 0.1px;
-        margin-bottom: 8px;
-    }
-    .left-textsmall {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-        letter-spacing: 0.1px;
-        .icon-info {
-            margin-left: 8px;
+    .rightitem-container {
+        display: grid;
+        justify-content: flex-end;
+        justify-items: flex-end;
+        margin-right: 19px;
+        .rightitems-text {
+            font-size: 14px;
+            color: #545454;
+            font-weight: 400;
+            line-height: 16px;
+            margin-bottom: 5px;
+        }
+        .rightitem-link {
+            font-size: 8px;
+            font-weight: 700;
+            line-height: 9px;
+            color: #0092bc;
             cursor: pointer;
         }
     }
-}
-.grey-container{
-    background: #F2F9E9;
-    border: 1px dashed #78BE20;
+    .rightitem-dots {
+        float: right;
+    }
 
-}
+    .leftitem-container {
+        .left-text {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: 0.1px;
+            margin-bottom: 8px;
+        }
+        .left-textsmall {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.1px;
+            margin-bottom: 16px;
+            .icon-info {
+                margin-left: 8px;
+                cursor: pointer;
+            }
+        }
+    }
+    .grey-container {
+        background: #f2f9e9;
+        border: 1px dashed #78be20;
+        padding: 23px 0 0 32px;
+    }
+    .instruction-text{
+        color: #78BE20;
+        font-size: 10px;
+    }
 }
