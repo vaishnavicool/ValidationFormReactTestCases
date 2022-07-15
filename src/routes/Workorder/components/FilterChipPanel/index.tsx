@@ -16,7 +16,7 @@ const FilterChipPanel = (props) => {
             <span key={d} className=
             "badge filter-chip">          
               <FormattedMessage id={`form.${d}`} />:
-              <EllipsisText text={aFilters[d]} length={8} />             
+              <EllipsisText text={aFilters[d]} length={20} />             
               <Image
                 src="cross.png"
                 className="filter-remove"
