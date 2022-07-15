@@ -4,11 +4,11 @@ import Form from "shared/Form"
 import "./style.scss"
 const CreateManifest = () => {
   return (
-    <div className="d-flex col-12">
-      <div className="col-6 addmanifeast-container">
-        <Form config={pageConfig?.addManifestConfig} />
+    <div className="d-flex">
+      <div className="col-12 addmanifeast-container">
+        <Form config={pageConfig?.addNewGeneratorConfig} />
       </div>
-      <div className="col-6 addmanifeast-container"> Right Panel </div>
+      {/* <div className="col-6"> Right Panel </div> */}
     </div>
   )
 }

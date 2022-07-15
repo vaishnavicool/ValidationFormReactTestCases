@@ -1,42 +1,23 @@
 export const pageConfig = {
   addWorkOrderConfig: [
     {
-      name: "workoder.add.workorder",
+      name: "workorder",
       numeric: true,
       width: "col-4",
-      // infoKey: "form.info.workOrderId",
+      // infoKey: "info.workOrderId",
     },
     {
-      name: "workoder.add.statuscode",
-      numeric: true,
-      width: "col-4",
-    },
-    {
-      name: "workoder.add.workorderdate",
+      name: "xstatuscode",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "workoder.add.customer",
-      numeric: true,
-      width: "col-4",
-      type: "dropdown",
-      dropdownOpts: {
-        api_key: "p_getSalesRep",
-        labelKey: "name",
-        valueKey: "salesRepid",
-        body: {
-          modeId: true,
-        },
-      },
-    },
-    {
-      name: "workoder.add.customersaleschannel",
+      name: "workorderdate",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "workoder.add.workordertype",
+      name: "customer",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -49,14 +30,33 @@ export const pageConfig = {
         },
       },
     },
-    { name: "workoder.add.generator", type: "search", width: "col-4" },
     {
-      name: "workoder.add.generatorrequirements",
+      name: "customersaleschannel",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "workoder.add.scheduletype",
+      name: "workordertype",
+      numeric: true,
+      width: "col-4",
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getSalesRep",
+        labelKey: "name",
+        valueKey: "salesRepid",
+        body: {
+          modeId: true,
+        },
+      },
+    },
+    { name: "generator", type: "search", width: "col-4" },
+    {
+      name: "generatorrequirements",
+      numeric: true,
+      width: "col-4",
+    },
+    {
+      name: "scheduletype",
       width: "col-4",
       type: "dropdown",
       numeric: true,
@@ -70,7 +70,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.salesrep",
+      name: "salesrep",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -84,7 +84,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.insidesalesrep",
+      name: "insidesalesrep",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -98,7 +98,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.csr",
+      name: "csr",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -112,7 +112,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.job",
+      name: "job",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -126,56 +126,42 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.workorderstartdate",
+      name: "workorderstartdate",
       numeric: true,
       width: "col-4",
       type: "date",
     },
     {
-      name: "workoder.add.workorderenddate",
+      name: "workorderenddate",
       numeric: true,
       width: "col-4",
       type: "date",
     },
     {
-      name: "workoder.add.appointmentrequired",
+      name: "appointmentrequired",
       numeric: true,
       width: "col-4",
       type: "checkbox",
     },
     {
-      name: "workoder.add.servicedate",
+      name: "servicedate",
       numeric: true,
       width: "col-4",
       type: "date",
     },
     {
-      name: "workoder.add.readytobill",
+      name: "readytobill",
       numeric: true,
       width: "col-4",
       type: "checkbox",
     },
     {
-      name: "workoder.add.paymentterms",
+      name: "paymentterms",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "workoder.add.govcontract",
-      numeric: true,
-      width: "col-4",
-      type: "dropdown",
-      dropdownOpts: {
-        api_key: "p_getFacilities",
-        labelKey: "name",
-        valueKey: "id",
-        body: {
-          optionalParam: "0",
-        },
-      },
-    },
-    {
-      name: "workoder.add.do",
+      name: "govcontract",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -189,27 +175,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.customerpo",
-      numeric: true,
-      width: "col-4",
-    },
-    {
-      name: "workoder.add.internalpo",
-      numeric: true,
-      width: "col-4",
-    },
-    {
-      name: "workoder.add.estimateddisposalrevenue",
-      numeric: true,
-      width: "col-4",
-    },
-    {
-      name: "workoder.add.estimatedtransportationrevenue",
-      numeric: true,
-      width: "col-4",
-    },
-    {
-      name: "workoder.add.oraclelocation",
+      name: "do",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -223,7 +189,27 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.marketdriver",
+      name: "customerpo",
+      numeric: true,
+      width: "col-4",
+    },
+    {
+      name: "internalpo",
+      numeric: true,
+      width: "col-4",
+    },
+    {
+      name: "estimateddisposalrevenue",
+      numeric: true,
+      width: "col-4",
+    },
+    {
+      name: "estimatedtransportationrevenue",
+      numeric: true,
+      width: "col-4",
+    },
+    {
+      name: "oraclelocation",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -237,23 +223,37 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.jobdescription",
+      name: "marketdriver",
+      numeric: true,
+      width: "col-4",
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
+    },
+    {
+      name: "jobdescription",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "workoder.add.recurrance",
+      name: "recurrance",
       numeric: true,
       width: "col-4",
       type: "checkbox",
     },
     {
-      name: "workoder.add.tripticket",
+      name: "tripticket",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "workoder.add.transportationinstructions",
+      name: "transportationinstructions",
       numeric: true,
       width: "col-4",
     },
@@ -262,27 +262,27 @@ export const pageConfig = {
 
   addManifestConfig: [
     {
-      name: "addmanifest.manifesttracking",
+      name: "manifesttracking",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addmanifest.plantoutbound",
+      name: "plantoutbound",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addmanifest.workorder",
+      name: "workorder",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addmanifest.job",
+      name: "job",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addmanifest.designatedfacility",
+      name: "designatedfacility",
       numeric: true,
       width: "col-6",
       type: "dropdown",
@@ -296,13 +296,13 @@ export const pageConfig = {
       },
     },
     {
-      name: "addmanifest.generator",
+      name: "generator",
       numeric: true,
       width: "col-6",
       type: "search",
     },
     {
-      name: "addmanifest.transporter1",
+      name: "transporter1",
       numeric: true,
       width: "col-6",
       type: "dropdown",
@@ -316,7 +316,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "addmanifest.transporter2",
+      name: "transporter2",
       numeric: true,
       width: "col-6",
       type: "dropdown",
@@ -330,7 +330,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "addmanifest.transporter3",
+      name: "transporter3",
       width: "col-6",
       numeric: true,
       type: "dropdown",
@@ -344,7 +344,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "addmanifest.transporter4",
+      name: "transporter4",
       numeric: true,
       width: "col-6",
       type: "dropdown",
@@ -358,7 +358,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "addmanifest.equipmenttype",
+      name: "equipmenttype",
       numeric: true,
       width: "col-6",
       type: "dropdown",
@@ -372,28 +372,28 @@ export const pageConfig = {
       },
     },
     {
-      name: "addmanifest.truck",
+      name: "truck",
       numeric: true,
       width: "col-6",
       type: "search",
     },
     {
-      name: "addmanifest.truckgross",
+      name: "truckgross",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addmanifest.trucktace",
+      name: "trucktace",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addmanifest.trucknet",
+      name: "trucknet",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addmanifest.3rdpartyticket",
+      name: "3rdpartyticket",
       numeric: true,
       width: "col-6",
     },
@@ -403,17 +403,17 @@ export const pageConfig = {
 
   addNewGeneratorConfig: [
     {
-      name: "addnewgenerator.generatorname",
+      name: "generatorname",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addnewgenerator.alternategeneratorname",
+      name: "alternategeneratorname",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addnewgenerator.sitecountry",
+      name: "sitecountry",
       numeric: true,
       width: "col-6",
       type: "dropdown",
@@ -427,36 +427,33 @@ export const pageConfig = {
       },
     },
     {
-      name: "addnewgenerator.generatorcity",
+      name: "generatorcity",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addnewgenerator.addressline1of1",
+      name: "addressline1of1",
       numeric: true,
       width: "col-12",
-     
     },
     {
-      name: "addnewgenerator.addressline2of2",
+      name: "addressline2of2",
       numeric: true,
       width: "col-12",
       type: "search",
     },
     {
-      name: "addnewgenerator.addressline3of3",
+      name: "addressline3of3",
       numeric: true,
       width: "col-12",
-     
     },
     {
-      name: "addnewgenerator.mailingbilltoname",
+      name: "mailingbilltoname",
       numeric: true,
       width: "col-12",
-     
     },
     {
-      name: "addnewgenerator.mailingbilltocountry",
+      name: "mailingbilltocountry",
       width: "col-6",
       numeric: true,
       type: "dropdown",
@@ -470,25 +467,23 @@ export const pageConfig = {
       },
     },
     {
-      name: "addnewgenerator.city",
+      name: "city",
       numeric: true,
       width: "col-6",
-     
     },
     {
-      name: "addnewgenerator.addressline1",
+      name: "addressline1",
       numeric: true,
       width: "col-12",
-     
     },
     {
-      name: "addnewgenerator.addressline2",
+      name: "addressline2",
       numeric: true,
       width: "col-12",
       type: "search",
     },
     {
-      name: "addnewgenerator.addressline3",
+      name: "addressline3",
       numeric: true,
       width: "col-12",
     },

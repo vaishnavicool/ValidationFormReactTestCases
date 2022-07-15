@@ -1,12 +1,11 @@
 import { Modal } from "react-bootstrap"
 const ModalForm = (props) => {
-  let { show, setShow, modalType, pageConfig,children } = props
-
+  let { show, setShow, modalType, pageConfig,children,largeModal=false } = props
   return (
     <Modal
       show={show}
       onHide={() => setShow(false)}
-      dialogClassName="modal-90w modal-dialog-centered"
+      dialogClassName={`${largeModal ? 'modal-xl':'modal-90w'} modal-dialog-centered`}
       aria-labelledby="example-custom-modal-styling-title"
     >
       <Modal.Header closeButton closeVariant="white">

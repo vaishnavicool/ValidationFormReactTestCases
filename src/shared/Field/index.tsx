@@ -15,9 +15,10 @@ function Field(props: any) {
     infoKey,
   } = props
   let intl = useIntl()
+  let labelKey= `form.${name}`
   let aName = intl.formatMessage({
-    defaultMessage: `${name}`,
-    id: `${name}`,
+    defaultMessage: labelKey,
+    id: labelKey,
   })
   let value = ""
   if (type == "dropdown" && allDropdownOpts) {
@@ -26,7 +27,7 @@ function Field(props: any) {
     return (
       <div className={`mb-3 custom-group ${width}`}>
         <label htmlFor="disabledTextInput" className="label">
-          <FormattedMessage id={`${name}`} />
+          <FormattedMessage id={labelKey} />
         </label>
         <Select
           onChange={updateFilters(name)}
@@ -46,7 +47,7 @@ function Field(props: any) {
   return (
     <div className={`mb-3 custom-group ${width}`}>
       <label htmlFor="disabledTextInput" className="label">
-        <FormattedMessage id={`${name}`} />
+        <FormattedMessage id={`${aName}`} />
       </label>
       <input
         type={type}
