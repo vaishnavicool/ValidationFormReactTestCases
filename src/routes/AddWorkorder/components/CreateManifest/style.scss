@@ -1,6 +1,6 @@
-.addmanifeast-container {
-    width: 100%;
-}
+.right-section{
+    border-left:1px solid #E4E3E3;
+    margin-left: 10px;
 .rightitem-container {
     display: grid;
     justify-content: flex-end;
@@ -44,4 +44,10 @@
             cursor: pointer;
         }
     }
+}
+.grey-container{
+    background: #F2F9E9;
+    border: 1px dashed #78BE20;
+
+}
 }

@@ -7,7 +7,7 @@ export const pageConfig = {
       // infoKey: "info.workOrderId",
     },
     {
-      name: "xstatuscode",
+      name: "statuscode",
       numeric: true,
       width: "col-4",
     },

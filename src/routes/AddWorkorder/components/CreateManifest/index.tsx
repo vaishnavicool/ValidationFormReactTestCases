@@ -6,10 +6,10 @@ import "./style.scss"
 const CreateManifest = () => {
   return (
     <div className="d-flex col-12">
-      <div className="col-6 addmanifeast-container">
+      <div className="col-6">
         <Form config={pageConfig?.addManifestConfig} />
       </div>
-      <div className="col-6 addmanifeast-container">
+      <div className="col-6 right-section">
         <div className="rightitem-dots">
           <Image src="dots.png" />
         </div>
@@ -26,6 +26,8 @@ const CreateManifest = () => {
             </span>
           </div>
         </div>
+        <div className="grey-container">Hi</div>
+
       </div>
     </div>
   )
