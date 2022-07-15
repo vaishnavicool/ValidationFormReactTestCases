@@ -1,3 +1,26 @@
 .addmanifeast-container{
     width: 100%;
 }
+.rightitem-container{
+    display: grid;
+    justify-content: flex-end;
+    justify-items: flex-end;
+    margin-right: 19px
+}
+.rightitem-dots{
+float: right;
+}
+.rightitems-text{
+font-size: 14px;
+color: #545454;
+font-weight: 400;
+line-height: 16px;
+
+}
+.rightitem-link{
+font-size: 8px;
+font-weight: 700;
+line-height: 9px;
+color: #0092BC;
+cursor: pointer;
+}
