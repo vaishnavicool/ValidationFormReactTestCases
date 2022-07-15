@@ -23,11 +23,11 @@ const pageOptions = {
     },
     filters: [
       {
-        name: "workorder.filter.workOrderId",
+        name: "workOrderId",
         numeric: true,
       },
       {
-        name: "workorder.filter.jobId",
+        name: "jobId",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
@@ -41,7 +41,7 @@ const pageOptions = {
         },
       },
       {
-        name: "workorder.filter.salesrepId",
+        name: "salesrepId",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
@@ -54,11 +54,11 @@ const pageOptions = {
         },
       },
       {
-        name: "workorder.filter.generatorId",
+        name: "generatorId",
         numeric: true,
       },
       {
-        name: "workorder.filter.customerId",
+        name: "customerId",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
@@ -71,11 +71,11 @@ const pageOptions = {
           },
         },
       },
-      { name: "workorder.filter.profileNumber" },
-      { name: "workorder.filter.startDate", type: "date" },
-      { name: "workorder.filter.endDate", type: "date" },
+      { name: "profileNumber" },
+      { name: "startDate", type: "date" },
+      { name: "endDate", type: "date" },
       {
-        name: "workorder.filter.readyToBill",
+        name: "readyToBill",
         numeric: true,
         type: "dropdown",
         dropdownOpts: [
@@ -84,7 +84,7 @@ const pageOptions = {
         ],
       },
       {
-        name: "workorder.filter.icId",
+        name: "icId",
         type: "dropdown",
         numeric: true,
         dropdownOpts: {
@@ -97,7 +97,7 @@ const pageOptions = {
         },
       },
       {
-        name: "workorder.filter.facilityId",
+        name: "facilityId",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {

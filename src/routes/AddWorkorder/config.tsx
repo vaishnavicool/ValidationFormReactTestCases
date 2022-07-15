@@ -1,42 +1,23 @@
 export const pageConfig = {
   addWorkOrderConfig: [
     {
-      name: "workoder.add.workorder",
+      name: "workorder",
       numeric: true,
       width: "col-4",
-      infoKey: "form.info.workOrderId",
+      // infoKey: "info.workOrderId",
     },
     {
-      name: "workoder.add.statuscode",
+      name: "xstatuscode",
       numeric: true,
       width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getJobs",
-      //   labelKey: "jobName",
-      //   valueKey: "jobId",
-      //   body: {
-      //     isOutBoundOnly: true,
-      //     searchValue: 0,
-      //   },
-      // },
     },
     {
-      name: "workoder.add.workorderdate",
+      name: "workorderdate",
       numeric: true,
       width: "col-4",
-      // type: "date",
-      // dropdownOpts: {
-      //   api_key: "p_getSalesRep",
-      //   labelKey: "name",
-      //   valueKey: "salesRepid",
-      //   body: {
-      //     modeId: true,
-      //   },
-      // },
     },
     {
-      name: "workoder.add.customer",
+      name: "customer",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -50,12 +31,12 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.customersaleschannel",
+      name: "customersaleschannel",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "workoder.add.workordertype",
+      name: "workordertype",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -68,19 +49,14 @@ export const pageConfig = {
         },
       },
     },
-    { name: "workoder.add.generator", type: "search", width: "col-4" },
+    { name: "generator", type: "search", width: "col-4" },
     {
-      name: "workoder.add.generatorrequirements",
+      name: "generatorrequirements",
       numeric: true,
       width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: [
-      //   { label: "Yes", value: "0" },
-      //   { label: "No", value: "1" },
-      // ],
     },
     {
-      name: "workoder.add.scheduletype",
+      name: "scheduletype",
       width: "col-4",
       type: "dropdown",
       numeric: true,
@@ -94,7 +70,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.salesrep",
+      name: "salesrep",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -108,7 +84,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.insidesalesrep",
+      name: "insidesalesrep",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -122,7 +98,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.csr",
+      name: "csr",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -136,7 +112,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.job",
+      name: "job",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -150,91 +126,42 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.workorderstartdate",
+      name: "workorderstartdate",
       numeric: true,
       width: "col-4",
       type: "date",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.workorderenddate",
+      name: "workorderenddate",
       numeric: true,
       width: "col-4",
       type: "date",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.appointmentrequired",
+      name: "appointmentrequired",
       numeric: true,
       width: "col-4",
       type: "checkbox",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.servicedate",
+      name: "servicedate",
       numeric: true,
       width: "col-4",
       type: "date",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.readytobill",
+      name: "readytobill",
       numeric: true,
       width: "col-4",
       type: "checkbox",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.paymentterms",
+      name: "paymentterms",
       numeric: true,
       width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.govcontract",
+      name: "govcontract",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -248,7 +175,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.do",
+      name: "do",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -262,63 +189,27 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.customerpo",
+      name: "customerpo",
       numeric: true,
       width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.internalpo",
+      name: "internalpo",
       numeric: true,
       width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.estimateddisposalrevenue",
+      name: "estimateddisposalrevenue",
       numeric: true,
       width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.estimatedtransportationrevenue",
+      name: "estimatedtransportationrevenue",
       numeric: true,
       width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.oraclelocation",
+      name: "oraclelocation",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -332,7 +223,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.marketdriver",
+      name: "marketdriver",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -346,160 +237,54 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.jobdescription",
+      name: "jobdescription",
       numeric: true,
       width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.recurrance",
+      name: "recurrance",
       numeric: true,
       width: "col-4",
       type: "checkbox",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.tripticket",
+      name: "tripticket",
       numeric: true,
       width: "col-4",
-      // type: "checkbox",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
-      name: "workoder.add.transportationinstructions",
+      name: "transportationinstructions",
       numeric: true,
       width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
   ],
+  ////// addManifestConfig /////////
+
   addManifestConfig: [
     {
-      name: "workoder.add.workorder",
+      name: "manifesttracking",
       numeric: true,
-      width: "col-4",
-      infoKey: "form.info.workOrderId",
+      width: "col-6",
     },
     {
-      name: "workoder.add.statuscode",
+      name: "plantoutbound",
       numeric: true,
-      width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getJobs",
-      //   labelKey: "jobName",
-      //   valueKey: "jobId",
-      //   body: {
-      //     isOutBoundOnly: true,
-      //     searchValue: 0,
-      //   },
-      // },
+      width: "col-6",
     },
     {
-      name: "workoder.add.workorderdate",
+      name: "workorder",
       numeric: true,
-      width: "col-4",
-      // type: "date",
-      // dropdownOpts: {
-      //   api_key: "p_getSalesRep",
-      //   labelKey: "name",
-      //   valueKey: "salesRepid",
-      //   body: {
-      //     modeId: true,
-      //   },
-      // },
+      width: "col-6",
     },
     {
-      name: "workoder.add.customer",
+      name: "job",
       numeric: true,
-      width: "col-4",
-      type: "dropdown",
-      dropdownOpts: {
-        api_key: "p_getSalesRep",
-        labelKey: "name",
-        valueKey: "salesRepid",
-        body: {
-          modeId: true,
-        },
-      },
+      width: "col-6",
     },
     {
-      name: "workoder.add.customersaleschannel",
+      name: "designatedfacility",
       numeric: true,
-      width: "col-4",
-    },
-    {
-      name: "workoder.add.workordertype",
-      numeric: true,
-      width: "col-4",
-      type: "dropdown",
-      dropdownOpts: {
-        api_key: "p_getSalesRep",
-        labelKey: "name",
-        valueKey: "salesRepid",
-        body: {
-          modeId: true,
-        },
-      },
-    },
-    { name: "workoder.add.generator", type: "search", width: "col-4" },
-    {
-      name: "workoder.add.generatorrequirements",
-      numeric: true,
-      width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: [
-      //   { label: "Yes", value: "0" },
-      //   { label: "No", value: "1" },
-      // ],
-    },
-    {
-      name: "workoder.add.scheduletype",
-      width: "col-4",
-      type: "dropdown",
-      numeric: true,
-      dropdownOpts: {
-        api_key: "p_getCSR",
-        labelKey: "name",
-        valueKey: "id",
-        body: {
-          optionalParam: "1",
-        },
-      },
-    },
-    {
-      name: "workoder.add.salesrep",
-      numeric: true,
-      width: "col-4",
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -511,9 +296,15 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.insidesalesrep",
+      name: "generator",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
+      type: "search",
+    },
+    {
+      name: "transporter1",
+      numeric: true,
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -525,9 +316,9 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.csr",
+      name: "transporter2",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -539,9 +330,9 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.job",
+      name: "transporter3",
+      width: "col-6",
       numeric: true,
-      width: "col-4",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -553,93 +344,9 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.workorderstartdate",
+      name: "transporter4",
       numeric: true,
-      width: "col-4",
-      type: "date",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
-    },
-    {
-      name: "workoder.add.workorderenddate",
-      numeric: true,
-      width: "col-4",
-      type: "date",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
-    },
-    {
-      name: "workoder.add.appointmentrequired",
-      numeric: true,
-      width: "col-4",
-      type: "checkbox",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
-    },
-    {
-      name: "workoder.add.servicedate",
-      numeric: true,
-      width: "col-4",
-      type: "date",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
-    },
-    {
-      name: "workoder.add.readytobill",
-      numeric: true,
-      width: "col-4",
-      type: "checkbox",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
-    },
-    {
-      name: "workoder.add.paymentterms",
-      numeric: true,
-      width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
-    },
-    {
-      name: "workoder.add.govcontract",
-      numeric: true,
-      width: "col-4",
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -651,9 +358,9 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.do",
+      name: "equipmenttype",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -665,65 +372,50 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.customerpo",
+      name: "truck",
       numeric: true,
-      width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
+      width: "col-6",
+      type: "search",
     },
     {
-      name: "workoder.add.internalpo",
+      name: "truckgross",
       numeric: true,
-      width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
+      width: "col-6",
     },
     {
-      name: "workoder.add.estimateddisposalrevenue",
+      name: "trucktace",
       numeric: true,
-      width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
+      width: "col-6",
     },
     {
-      name: "workoder.add.estimatedtransportationrevenue",
+      name: "trucknet",
       numeric: true,
-      width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
+      width: "col-6",
     },
     {
-      name: "workoder.add.oraclelocation",
+      name: "3rdpartyticket",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
+    },
+  ],
+
+  //// addNewGeneratorConfig ////
+
+  addNewGeneratorConfig: [
+    {
+      name: "generatorname",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "alternategeneratorname",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "sitecountry",
+      numeric: true,
+      width: "col-6",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -735,9 +427,35 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.marketdriver",
+      name: "generatorcity",
       numeric: true,
-      width: "col-4",
+      width: "col-6",
+    },
+    {
+      name: "addressline1of1",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "addressline2of2",
+      numeric: true,
+      width: "col-12",
+      type: "search",
+    },
+    {
+      name: "addressline3of3",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "mailingbilltoname",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "mailingbilltocountry",
+      width: "col-6",
+      numeric: true,
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -749,60 +467,25 @@ export const pageConfig = {
       },
     },
     {
-      name: "workoder.add.jobdescription",
+      name: "city",
       numeric: true,
-      width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
+      width: "col-6",
     },
     {
-      name: "workoder.add.recurrance",
+      name: "addressline1",
       numeric: true,
-      width: "col-4",
-      type: "checkbox",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
+      width: "col-12",
     },
     {
-      name: "workoder.add.tripticket",
+      name: "addressline2",
       numeric: true,
-      width: "col-4",
-      // type: "checkbox",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
+      width: "col-12",
+      type: "search",
     },
     {
-      name: "workoder.add.transportationinstructions",
+      name: "addressline3",
       numeric: true,
-      width: "col-4",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
+      width: "col-12",
     },
   ],
 }

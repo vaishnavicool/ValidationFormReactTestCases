@@ -26,7 +26,7 @@ function Workorder(props: any) {
             value="+ Add Workorder"
             type="button"
             onClick={() => {
-              navigate("/workorder/add")
+              navigate("addworkorder")
             }}
           />
         </div>
