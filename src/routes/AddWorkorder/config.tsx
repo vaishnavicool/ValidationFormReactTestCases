@@ -264,38 +264,44 @@ export const pageConfig = {
     {
       name: "manifest_tracking",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "plant_outbound",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "workorder",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "job",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "designated_facility",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "generator",
       numeric: true,
-      width: "col-6",
-      type: "search",
+      width: "col-45",
+      type: "search"    
+    },
+    {
+      actionIcon:"ic_add.png",
+      actionHandler:"addGenerator",
+      width: "col-1",
+
     },
     {
       name: "transporter1",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -309,7 +315,7 @@ export const pageConfig = {
     {
       name: "transporter2",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -322,7 +328,7 @@ export const pageConfig = {
     },
     {
       name: "transporter3",
-      width: "col-6",
+      width: "col-45",
       numeric: true,
       type: "dropdown",
       dropdownOpts: {
@@ -337,7 +343,7 @@ export const pageConfig = {
     {
       name: "transporter4",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -351,7 +357,7 @@ export const pageConfig = {
     {
       name: "equipment_type",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -365,38 +371,38 @@ export const pageConfig = {
     {
       name: "truck",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "search",
     },
     {
       name: "truck_gross",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "truck_tare",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "truck_net",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "3rd_party_ticket",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "container",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "manifeast_print_style",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -410,84 +416,84 @@ export const pageConfig = {
     {
       name: "spacial_handing_instuctions",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
       name: "plant_instructions",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
       name: "comments",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
       name: "recive_date",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "date",
     },
     {
       name: "ship_date",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"date"
     },
     {
       name: "out_bound_revenue",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"number"
     },
     {
       name: "tsdf_receipt_date",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"date",      
     },
     {
       name: "bolck_14_note",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
       name: "outbound_po_number",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "bin",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "voided",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"checkbox",
     },
     {
       name: "waste_analysis_available",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"checkbox",
     },
     {
       name: "multi_line_format",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"checkbox",
     },
     {
       name: "additional_connected_epa_ids",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
       name: "additional_connected_manifests",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     
   ],

@@ -57,6 +57,7 @@
   "form.manifest": "Manifest",
   "form.status_code": "Status Code",
   "form.workorder_date": "Workorder Date",
+  "form.workorder": "Workorder",
   "form.customer": "Customer",
   "form.customer_sales_channel": "Customer Sales Channel",
   "form.workorder_type": "Workorder Type",
