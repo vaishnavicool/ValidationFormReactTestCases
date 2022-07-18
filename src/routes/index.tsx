@@ -10,8 +10,8 @@ const Routes: FunctionComponent = (props: any) => {
         <div>
             <ErrorBoundary>
                 <ReactRoute>
-                    <Route path="customer_processing/workorder" element={<Workorder />} />
-                    <Route path="customer_processing/workorder/addworkorder" element={<AddWorkorder />} />
+                    <Route path="customer_processing/work_order" element={<Workorder />} />
+                    <Route path="customer_processing/work_order/add_work_order" element={<AddWorkorder />} />
                     <Route path="*" element={<NotFound />} />
                 </ReactRoute>
             </ErrorBoundary>

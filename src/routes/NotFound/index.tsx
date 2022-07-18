@@ -5,9 +5,9 @@ const Notfound: FunctionComponent = () => {
   return (
     <div className="container h-100">
       <div className="row h-100 justify-content-center align-items-center font-weight-bold">
-        <FormattedMessage id="notfound.error.title" />
+        <FormattedMessage id="notfound.error_title" />
         <br />
-        <FormattedMessage id="notfound.error.message" />
+        <FormattedMessage id="notfound.error_message" />
       </div>
     </div>
   )

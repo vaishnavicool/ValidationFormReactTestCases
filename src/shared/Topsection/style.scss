@@ -28,22 +28,22 @@
   }
 }
 .content {
-  font-size: 11px;
-  line-height: 17px;
-  letter-spacing: 1.5%;
-  color: #BDBDBD;
+  font-size: 10px;
+  color: #bdbdbd;
   display: inline;
   cursor: pointer;
-
-  // &.active{
-  //   font-size: 11px;
-  //   line-height: 17px;
-  //   letter-spacing: 1.5%;
-  //   margin-left: 4px;
-  // }
-
 }
-
+.content_text {
+  text-decoration: none;
+  color: #bbbbbb;
+  &.active {
+    font-size: 11px;
+    line-height: 17px;
+    letter-spacing: 1.5%;
+    margin-left: 4px;
+    color: black;
+  }
+}
 
 .columns-div {
   position: absolute;
