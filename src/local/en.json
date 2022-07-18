@@ -63,7 +63,7 @@
   "menubar.credit_memos": "Credit Memos",
   "menubar.add_work_order": "Add Work Order", 
   "menubar.work_order": "Work Order",  
-  "form.info.workOrderId": "Generator populates automatically from connected Job. Generator control is disabled because this record is associated with Job 'Chateaux Westgate'",
+  "form.info_work_Order_Id": "Generator populates automatically from connected Job. Generator control is disabled because this record is associated with Job 'Chateaux Westgate'",
   "form.work_order": "Workorder #",
   "form.documenttype":"Document Type",
   "form.manifest":"Manifest",

@@ -383,11 +383,7 @@ export const pageConfig = {
       width: "col-6",
     },
     {
-<<<<<<< HEAD
       name: "truck_tace",
-=======
-      name: "trucktare",
->>>>>>> 08ae2fd253fdf4079ef4ed0ad91527dca8e2ebbc
       numeric: true,
       width: "col-6",
     },
