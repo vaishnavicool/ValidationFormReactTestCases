@@ -16,7 +16,7 @@ const Menubar = () => {
         <div className="menubar">
           {menuConfig.map((d, index) => {            
             return (
-              <>
+              <div key={index}>
                 <div
                   className="col menu-item"
                   key={index}
@@ -25,7 +25,7 @@ const Menubar = () => {
                   <Image src={`${d.icon}_grey.png`} className="grey"/>
                   {d?.children?.length && <div className="col drop-menu">
                     <div className="arrow-left" />
-                    {d?.children?.map((child) => (
+                    {d?.children?.map((child,index) => (
                       <div className="drop-item" key={child.path} onClick={() => goTo(child.path)}>
                         <FormattedMessage id={child.title} />
                       </div>
@@ -33,7 +33,7 @@ const Menubar = () => {
                   </div>}
                   <FormattedMessage id={d.title} />
                 </div>
-              </>
+              </div>
             )
           })}
         </div>
