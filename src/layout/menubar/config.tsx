@@ -10,40 +10,40 @@ const menuConfig = [
     icon: "ic_customer_processing",
     children: [
       {
-        title: "menubar.customer_processing_profiles",
+        title: "menubar.profiles",
         path: "/profiles",
       },
       {
-        title: "menubar.customer_processing_workOrders",
-        path: "customer_processing/workorder",
+        title: "menubar.work_orders",
+        path: "customer_processing/work_order",
       },
 
       {
-        title: "menubar.customer_processing_jobs",
+        title: "menubar.jobs",
         path: "/jobs",
       },
       {
-        title: "menubar.customer_processing_deliveryOrders",
+        title: "menubar.delivery_Orders",
         path: "/delivery-orders",
       },
       {
-        title: "menubar.customer_processing_invoices",
+        title: "menubar.invoices",
         path: "/invoces",
       },
       {
-        title: "menubar.customer_processing_packageInvoices",
+        title: "menubar.package_Invoices",
         path: "/package-invoices",
       },
       {
-        title: "menubar.customer_processing_approvalLetters",
+        title: "menubar.approval_Letters",
         path: "/approval-letters",
       },
       {
-        title: "menubar.customer_processing_recertLetters",
+        title: "menubar.recert_Letters",
         path: "/recert-letters",
       },
       {
-        title: "menubar.customer_processing_creditMemos",
+        title: "menubar.credit_memos",
         path: "/credit-memos",
       },
     ],

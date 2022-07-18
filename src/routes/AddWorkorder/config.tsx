@@ -1,18 +1,18 @@
 export const pageConfig = {
   addWorkOrderConfig: [
     {
-      name: "workorder",
+      name: "work_order",
       numeric: true,
       width: "col-4",
       // infoKey: "info.workOrderId",
     },
     {
-      name: "statuscode",
+      name: "status_code",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "workorderdate",
+      name: "workorder_date",
       numeric: true,
       width: "col-4",
     },
@@ -31,12 +31,12 @@ export const pageConfig = {
       },
     },
     {
-      name: "customersaleschannel",
+      name: "customer_sales_channel",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "workordertype",
+      name: "workorder_type",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -51,12 +51,12 @@ export const pageConfig = {
     },
     { name: "generator", type: "search", width: "col-4" },
     {
-      name: "generatorrequirements",
+      name: "generator_requirements",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "scheduletype",
+      name: "schedule_type",
       width: "col-4",
       type: "dropdown",
       numeric: true,
@@ -70,7 +70,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "salesrep",
+      name: "sales_rep",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -84,7 +84,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "insidesalesrep",
+      name: "inside_sales_rep",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -126,42 +126,42 @@ export const pageConfig = {
       },
     },
     {
-      name: "workorderstartdate",
+      name: "workorder_start_date",
       numeric: true,
       width: "col-4",
       type: "date",
     },
     {
-      name: "workorderenddate",
+      name: "workorder_end_date",
       numeric: true,
       width: "col-4",
       type: "date",
     },
     {
-      name: "appointmentrequired",
+      name: "appointment_required",
       numeric: true,
       width: "col-4",
       type: "checkbox",
     },
     {
-      name: "servicedate",
+      name: "service_date",
       numeric: true,
       width: "col-4",
       type: "date",
     },
     {
-      name: "readytobill",
+      name: "ready_to_bill",
       numeric: true,
       width: "col-4",
       type: "checkbox",
     },
     {
-      name: "paymentterms",
+      name: "payment_terms",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "govcontract",
+      name: "gov_contract",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -189,41 +189,27 @@ export const pageConfig = {
       },
     },
     {
-      name: "customerpo",
+      name: "customer_po",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "internalpo",
+      name: "internal_po",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "estimateddisposalrevenue",
+      name: "estimated_disposal_revenue",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "estimatedtransportationrevenue",
+      name: "estimated_transportation_revenue",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "oraclelocation",
-      numeric: true,
-      width: "col-4",
-      type: "dropdown",
-      dropdownOpts: {
-        api_key: "p_getFacilities",
-        labelKey: "name",
-        valueKey: "id",
-        body: {
-          optionalParam: "0",
-        },
-      },
-    },
-    {
-      name: "marketdriver",
+      name: "oracle_location",
       numeric: true,
       width: "col-4",
       type: "dropdown",
@@ -237,7 +223,21 @@ export const pageConfig = {
       },
     },
     {
-      name: "jobdescription",
+      name: "market_driver",
+      numeric: true,
+      width: "col-4",
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
+    },
+    {
+      name: "job_description",
       numeric: true,
       width: "col-4",
     },
@@ -248,12 +248,12 @@ export const pageConfig = {
       type: "checkbox",
     },
     {
-      name: "tripticket",
+      name: "trip_ticket",
       numeric: true,
       width: "col-4",
     },
     {
-      name: "transportationinstructions",
+      name: "transportation_instructions",
       numeric: true,
       width: "col-4",
     },
@@ -262,12 +262,12 @@ export const pageConfig = {
 
   addManifestConfig: [
     {
-      name: "manifesttracking",
+      name: "manifest_tracking",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "plantoutbound",
+      name: "plant_outbound",
       numeric: true,
       width: "col-6",
     },
@@ -282,7 +282,7 @@ export const pageConfig = {
       width: "col-6",
     },
     {
-      name: "designatedfacility",
+      name: "designated_facility",
       numeric: true,
       width: "col-6",
       type: "dropdown",
@@ -358,7 +358,7 @@ export const pageConfig = {
       },
     },
     {
-      name: "equipmenttype",
+      name: "equipment_type",
       numeric: true,
       width: "col-6",
       type: "dropdown",
@@ -378,22 +378,22 @@ export const pageConfig = {
       type: "search",
     },
     {
-      name: "truckgross",
+      name: "truck_gross",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "trucktace",
+      name: "truck_tace",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "trucknet",
+      name: "truck_net",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "3rdpartyticket",
+      name: "3rd_party_ticket",
       numeric: true,
       width: "col-6",
     },
@@ -403,17 +403,17 @@ export const pageConfig = {
 
   addNewGeneratorConfig: [
     {
-      name: "generatorname",
+      name: "generator_name",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "alternategeneratorname",
+      name: "alternate_generator_name",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "sitecountry",
+      name: "site_country",
       numeric: true,
       width: "col-6",
       type: "dropdown",
@@ -427,33 +427,33 @@ export const pageConfig = {
       },
     },
     {
-      name: "generatorcity",
+      name: "generator_city",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addressline1of1",
+      name: "address_line_1of1",
       numeric: true,
       width: "col-12",
     },
     {
-      name: "addressline2of2",
+      name: "address_line_2of2",
       numeric: true,
       width: "col-12",
       type: "search",
     },
     {
-      name: "addressline3of3",
+      name: "address_line3of3",
       numeric: true,
       width: "col-12",
     },
     {
-      name: "mailingbilltoname",
+      name: "mailingbill_to_name",
       numeric: true,
       width: "col-12",
     },
     {
-      name: "mailingbilltocountry",
+      name: "mailingbill_to_country",
       width: "col-6",
       numeric: true,
       type: "dropdown",
@@ -472,18 +472,18 @@ export const pageConfig = {
       width: "col-6",
     },
     {
-      name: "addressline1",
+      name: "address_line1",
       numeric: true,
       width: "col-12",
     },
     {
-      name: "addressline2",
+      name: "address_line2",
       numeric: true,
       width: "col-12",
       type: "search",
     },
     {
-      name: "addressline3",
+      name: "address_line3",
       numeric: true,
       width: "col-12",
     },
