@@ -4,8 +4,15 @@ import Image from "shared/Image"
 import Form from "shared/Form"
 import "./style.scss"
 import Field from "shared/Field"
+import useEnhancer from "routes/AddWorkorder/enhancer"
+import { useDetectClickOutside } from "react-detect-click-outside"
 
 const CreateManifest = () => {
+  let { showMoreAction, setShowMoreAction } = useEnhancer()
+  
+  const moreActionMenuClick = useDetectClickOutside({
+    onTriggered: () => setShowMoreAction(false)
+  })
   return (
     <>
       <div className="d-flex col-12 p-3">
@@ -17,24 +24,54 @@ const CreateManifest = () => {
         </div>
         <div className="col-6 right-section">
           <div>
-            <div className="rightitem-dots">
+            <div
+              className="rightitem-dots"
+              ref={moreActionMenuClick}
+              onClick={() => setShowMoreAction(true)}
+            >
               <Image src="dots.png" />
             </div>
             <div className="rightitem-container">
               <div className="rightitems-text">More Actions</div>
               <div className="rightitem-link">All actions open in new tab</div>
+              {showMoreAction && <div className="dots-menu" >
+                <div className="arrow-top"></div>
+                <div className="img-text-dots">
+                  <Image src="ic_details.png" />
+                  <span>Details</span>
+                </div>
+                <div className="img-text-dots">
+                  <Image src="ic_menifes.png" />
+                  <span>Copy Menifes</span>
+                </div>
+                <div className="img-text-dots">
+                  <Image src="ic_reciving_logs.png" />
+                  <span>Receiving Logs</span>
+                </div>
+                <div className="img-text-dots">
+                  <Image src="ic_fixdots.png" />
+                  <span>Fix DOTs</span>
+                </div>
+                <div className="img-text-dots">
+                  <Image src="ic_print.png" />
+                  <span>Print Options</span>
+                </div>
+                <div className="img-text-dots">
+                  <Image src="ic_tracking_report.png" />
+                  <span>Tracking Report</span>
+                </div>
+                <div className="img-text-dots">
+                  <Image src="ic_resend_base.png" />
+                  <span>ReSend to OnBase</span>
+                </div>
+                <div className="img-text-dots">
+                  <Image src="ic_delete.png" />
+                  <span>Delete</span>
+                </div>
+              </div>}
             </div>
           </div>
-          <div>
-            <div>Details</div>
-            <div>Copy Menifes</div>
-            <div>Receiving Logs</div>
-            <div>Fix DOTs</div>
-            <div>Print Options</div>
-            <div>Tracking Report</div>
-            <div>ReSend to OnBase</div>
-            <div>Delete</div>
-          </div>
+
           <div>
             <div className="leftitem-container">
               <div className="left-text">Documents</div>

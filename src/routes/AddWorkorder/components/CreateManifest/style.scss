@@ -7,6 +7,7 @@
     justify-content: flex-end;
     justify-items: flex-end;
     margin-right: 19px;
+    position: relative;
     .rightitems-text {
       font-size: 14px;
       color: #545454;
@@ -24,8 +25,54 @@
   }
   .rightitem-dots {
     float: right;
+    position: relative;
+    padding: 0 1rem;
+    cursor: pointer;
   }
+  .dots-menu {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%) !important;
+    border: 1px solid #e6e5e5;
+    width: 13rem;
+    top: 2.3rem;
+    right: -1.9rem;
+    .arrow-top{
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-bottom: 14px solid #65b230;
+      border-right: 7px solid transparent;
+      position: absolute;
+      top: -14px;
+      right: 5px;
+    }
+    .img-text-dots {
+      display: flex;
+      padding: 10px;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid #dcdbdb;
+      cursor: pointer;
+      &:hover {
+        background: rgba(120, 190, 32, 0.3);
+      }
 
+      img {
+        margin-right: 12px;
+      }
+      span {
+        color: #545454;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
   .leftitem-container {
     .left-text {
       font-size: 14px;
@@ -81,7 +128,7 @@
     .blackbox {
       background-color: #000000;
       padding: 12px;
-      margin: 9px 12px 13px 0px;    
+      margin: 9px 12px 13px 0px;
     }
     .tablefooter-text {
       font-size: 10px;
