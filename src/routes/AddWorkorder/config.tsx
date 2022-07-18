@@ -285,15 +285,6 @@ export const pageConfig = {
       name: "designatedfacility",
       numeric: true,
       width: "col-6",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
     },
     {
       name: "generator",
@@ -510,7 +501,17 @@ export const pageConfig = {
       width: "col-6",
     },
     {
+      name: "mailinginformation",
+      numeric: true,
+      width: "col-6",
+    },
+    {
       name: "alternategeneratorname",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "mailingbillname",
       numeric: true,
       width: "col-6",
     },
@@ -529,10 +530,25 @@ export const pageConfig = {
       },
     },
     {
-      name: "generatorcity",
+      name: "mailingbilltocountry",
       numeric: true,
       width: "col-6",
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
     },
+    {
+      name: "generatoraddress",
+      numeric: true,
+      width: "col-12",
+    },
+
     {
       name: "addressline1of1",
       numeric: true,
@@ -542,17 +558,95 @@ export const pageConfig = {
       name: "addressline2of2",
       numeric: true,
       width: "col-12",
+    },
+    // {
+    //   name: "addressline3of3",
+    //   numeric: true,
+    //   width: "col-12",
+    // },
+    {
+      name: "mailingbilltoaddress",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "addressline1",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "addressline2",
+      numeric: true,
+      width: "col-12",
       type: "search",
     },
+    // {
+    //   name: "addressline3",
+    //   numeric: true,
+    //   width: "col-12",
+    // },
     {
-      name: "addressline3of3",
+      name: "generatorcity",
       numeric: true,
-      width: "col-12",
+      width: "col-6",
     },
     {
-      name: "mailingbilltoname",
+      name: "mailingbilltocity",
       numeric: true,
-      width: "col-12",
+      width: "col-6",
+    },
+    {
+      name: "generatorstate",
+      width: "col-6",
+      numeric: true,
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
+    },
+    {
+      name: "mailingbilltostate",
+      width: "col-6",
+      numeric: true,
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
+    },
+    {
+      name: "generatorzipcode",
+      numeric: true,
+      width: "col-6",
+      type:"number"
+    },
+    {
+      name: "mailingbilltozip",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "generatorcountry",
+      numeric: true,
+      width: "col-6",
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
     },
     {
       name: "mailingbilltocountry",
@@ -569,25 +663,74 @@ export const pageConfig = {
       },
     },
     {
-      name: "city",
+      name: "phonenumber",
+      numeric: true,
+      width: "col-6",
+      type: "number",
+    },
+    {
+      name: "isnonhaz",
+      numeric: true,
+      width: "col-6",
+      type: "checkbox"
+    },
+    {
+      name: "usepaid",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "addressline1",
+      name: "stateepaid",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "faxnumber",
+      numeric: true,
+      width: "col-6",
+      type: "number",
+    },
+    {
+      name: "pickupdirections",
       numeric: true,
       width: "col-12",
     },
     {
-      name: "addressline2",
+      name: "printedmenifestercontact",
       numeric: true,
-      width: "col-12",
-      type: "search",
+      width: "col-6",
     },
     {
-      name: "addressline3",
+      name: "generalcontactemailaddress",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "genericprofilesuffix",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "notes",
       numeric: true,
       width: "col-12",
+    },
+    {
+      name: "isactive",
+      numeric: true,
+      width: "col-6",
+      type: "checkbox"
+    },
+    {
+      name: "istaxexempt",
+      numeric: true,
+      width: "col-6",
+      type: "checkbox"
+    },
+    {
+      name: "disposalrestrictions",
+      numeric: true,
+      width: "col-6",
     },
   ],
 }
