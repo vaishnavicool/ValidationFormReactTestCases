@@ -374,7 +374,7 @@ export const pageConfig = {
       width: "col-6",
     },
     {
-      name: "truck_tace",
+      name: "truck_tare",
       numeric: true,
       width: "col-6",
     },
