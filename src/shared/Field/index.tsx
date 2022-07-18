@@ -42,9 +42,33 @@ function Field(props: any) {
       </div>
     )
   }
-
   if (filters) value = filters[name]
   if (!value) value = ""
+
+  if (type == "checkbox") {
+    return (
+      <div className={`mb-3 custom-group ${width} checkbox-container`}>
+      <label htmlFor="disabledTextInput" className="label checkbox-label">
+        <FormattedMessage id={`${aName}`} />
+      </label>
+      <input
+        type={type}
+        id="disabledTextInput"
+        className="input-checkbox"
+        placeholder={`Enter ${aName}`}
+        name={name}
+        onChange={updateFilters(name)}
+        value={value}
+      />
+      {infoKey && (
+        <div className="info-txt">
+          <FormattedMessage id={infoKey} />
+        </div>
+      )}
+    </div>
+    )
+  }
+
   return (
     <div className={`mb-3 custom-group ${width}`}>
       <label htmlFor="disabledTextInput" className="label">

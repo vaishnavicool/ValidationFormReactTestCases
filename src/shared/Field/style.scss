@@ -5,3 +5,23 @@
     color: #49454F;
     margin: 12px 0;
 }
+.input-checkbox{
+    border: 1px solid #545454;
+    width: 20px;
+    height: 20px;
+}
+.checkbox-label{
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    position: initial;
+    display: flex;
+    margin-right: 0.5rem;
+    align-self: center;
+}
+.checkbox-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

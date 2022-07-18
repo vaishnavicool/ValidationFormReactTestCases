@@ -285,15 +285,15 @@ export const pageConfig = {
       name: "designated_facility",
       numeric: true,
       width: "col-6",
-      type: "dropdown",
-      dropdownOpts: {
-        api_key: "p_getFacilities",
-        labelKey: "name",
-        valueKey: "id",
-        body: {
-          optionalParam: "0",
-        },
-      },
+      // type: "dropdown",
+      // dropdownOpts: {
+      //   api_key: "p_getFacilities",
+      //   labelKey: "name",
+      //   valueKey: "id",
+      //   body: {
+      //     optionalParam: "0",
+      //   },
+      // },
     },
     {
       name: "generator",
@@ -383,7 +383,11 @@ export const pageConfig = {
       width: "col-6",
     },
     {
+<<<<<<< HEAD
       name: "truck_tace",
+=======
+      name: "trucktare",
+>>>>>>> 08ae2fd253fdf4079ef4ed0ad91527dca8e2ebbc
       numeric: true,
       width: "col-6",
     },
@@ -397,6 +401,108 @@ export const pageConfig = {
       numeric: true,
       width: "col-6",
     },
+    {
+      name: "container",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "manifeastprintstyle",
+      numeric: true,
+      width: "col-6",
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
+    },
+    {
+      name: "spacialhandinginstuctions",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "plantinstructions",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "comments",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "recivedate",
+      numeric: true,
+      width: "col-6",
+      type: "date",
+    },
+    {
+      name: "shipdate",
+      numeric: true,
+      width: "col-6",
+      type:"date"
+    },
+    {
+      name: "outboundrevenue",
+      numeric: true,
+      width: "col-6",
+      type:"number"
+    },
+    {
+      name: "tsdfreceiptdate",
+      numeric: true,
+      width: "col-6",
+      type:"date",      
+    },
+    {
+      name: "bolck14note",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "outboundponumber",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "bin",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "voided",
+      numeric: true,
+      width: "col-6",
+      type:"checkbox",
+    },
+    {
+      name: "wasteanalysisavailable",
+      numeric: true,
+      width: "col-6",
+      type:"checkbox",
+    },
+    {
+      name: "multilineformat",
+      numeric: true,
+      width: "col-6",
+      type:"checkbox",
+    },
+    {
+      name: "additionalconnectedepaids",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "additionalconnectedmanifests",
+      numeric: true,
+      width: "col-12",
+    },
+    
   ],
 
   //// addNewGeneratorConfig ////

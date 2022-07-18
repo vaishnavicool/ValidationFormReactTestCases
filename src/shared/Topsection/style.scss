@@ -29,25 +29,20 @@
 }
 .content {
   font-size: 10px;
-  color: #BDBDBD;
+  color: #bdbdbd;
   display: inline;
   cursor: pointer;
-  
-  
-
-
 }
-.content_text{
+.content_text {
   text-decoration: none;
   color: #bbbbbb;
-  &.active{
+  &.active {
     font-size: 11px;
     line-height: 17px;
     letter-spacing: 1.5%;
     margin-left: 4px;
     color: black;
   }
-  
 }
 
 .columns-div {
