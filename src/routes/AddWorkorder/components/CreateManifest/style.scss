@@ -16,9 +16,9 @@
       margin-bottom: 5px;
     }
     .rightitem-link {
-      font-size: 8px;
-      font-weight: 700;
-      line-height: 9px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
       color: #0092bc;
       cursor: pointer;
     }
@@ -41,7 +41,7 @@
     width: 13rem;
     top: 2.3rem;
     right: -1.9rem;
-    .arrow-top{
+    .arrow-top {
       width: 0;
       height: 0;
       border-left: 7px solid transparent;
@@ -122,20 +122,37 @@
   .tablefooter-container {
     border: 1px dashed #79747e;
     margin-top: 14px;
-    padding: 5px 12px;
+    // padding: 5px 12px;
     margin-bottom: 12px;
     margin-left: 0px;
-    .blackbox {
-      background-color: #000000;
-      padding: 12px;
-      margin: 9px 12px 13px 0px;
+    .table {
+      margin-bottom: 0;
     }
-    .tablefooter-text {
-      font-size: 10px;
-      line-height: 15px;
-      display: flex;
-      justify-content: center;
-      padding-bottom: 27px;
+    thead {
+      background: rgba(101, 178, 48, 0.1);
+    }
+    .table > :not(:first-child) {
+      border: 1px solid #bcbfc3;
+    }
+    tr {
+      border: 1px solid #e6e1e5;
+    }
+    th {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    td {
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 13px;
+
+      color: #898989;
+    }
+    .img-meni {
+     display: flex;
+     align-items: center;
+     justify-content:space-around;
     }
   }
   .footer-text {
