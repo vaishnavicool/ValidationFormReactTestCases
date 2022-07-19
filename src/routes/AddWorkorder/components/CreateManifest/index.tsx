@@ -7,18 +7,21 @@ import Field from "shared/Field"
 import useEnhancer from "routes/AddWorkorder/enhancer"
 import { useDetectClickOutside } from "react-detect-click-outside"
 import ReactTooltip from "react-tooltip"
+import Newgenrator from "../Newgenrator"
 
 const CreateManifest = () => {
-  let { showMoreAction, setShowMoreAction } = useEnhancer()
+  let { showMoreAction, setShowMoreAction,addGenerator,showNewGenerator } = useEnhancer()
 
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),
   })
   return (
     <>
+    {!showNewGenerator ? <div>
       <div className="d-flex col-12 p-3">
         <div className="col-6 left-section">
           <Form config={pageConfig?.addManifestConfig} />
+          <Image src="ic_add.png" onClick={()=>addGenerator()}/>
         </div>
         <div className="col-6 right-section">
           <div>
@@ -129,28 +132,13 @@ const CreateManifest = () => {
                   <td></td>
                   <td>
                     <div className="img-meni">
-                    <Image src="ic_delete_meni.png" />
-                    <Image src="ic_download_file.png" />
+                      <Image src="ic_delete_meni.png" />
+                      <Image src="ic_download_file.png" />
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
-            {/* <ul>Document Name</ul>
-
-              <li>No records to display.</li>
-            <ul>Type
-              <li> </li>
-            </ul>
-             <ul>Upload Date
-              <li> </li>
-            </ul>
-            <ul>Actions
-              <li>Two icons </li>
-            </ul> */}
-
-            {/* <div className="blackbox"></div>
-            <div className="tablefooter-text">Table Comes here</div> */}
           </div>
           <div className="footer-text">Note</div>
           <div className="footer-subtext">
@@ -174,6 +162,7 @@ const CreateManifest = () => {
           type="button"
         />
       </div>
+    </div> : <Newgenrator />}
     </>
   )
 }
