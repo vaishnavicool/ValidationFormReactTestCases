@@ -5,13 +5,11 @@ const useEnhancer = () => {
   const [showNewGenerator,setShowNewGenerator] = useState(false)
 
   const addGenerator = () => {
-      console.log("Inside add generator")
       setShowNewGenerator(true)
   }
 
 
 const hideGenerator = () => {
-      console.log("Inside hide generator")
       setShowNewGenerator(false)
   }
 

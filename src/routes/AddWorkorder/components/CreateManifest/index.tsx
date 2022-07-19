@@ -6,7 +6,7 @@ import "./style.scss"
 import Field from "shared/Field"
 import useEnhancer from "routes/AddWorkorder/enhancer"
 import { useDetectClickOutside } from "react-detect-click-outside"
-import ReactTooltip from "react-tooltip"
+// import ReactTooltip from "react-tooltip"
 import Newgenrator from "../Newgenrator"
 
 const CreateManifest = () => {
@@ -127,7 +127,7 @@ const CreateManifest = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td scope="row">No records to display</td>
+                  <td>No records to display</td>
                   <td></td>
                   <td></td>
                   <td>
