@@ -552,28 +552,28 @@ export const pageConfig = {
     {
       name: "generator_address",
       numeric: true,
-      width: "col-12",
+      width: "col-6",
     },
 
     {
-      name: "addressline1of1",
+      name: "addressline_1of_1",
       numeric: true,
       width: "col-12",
     },
     {
-      name: "address_line_2of2",
+      name: "addressline_2of_2",
       numeric: true,
       width: "col-12",
     },
     {
-      name: "addressline3of3",
+      name: "addressline_3of_3",
       numeric: true,
       width: "col-12",
     },
     {
       name: "mailing_bill_to_address",
       numeric: true,
-      width: "col-12",
+      width: "col-6",
     },
     {
       name: "addressline1",

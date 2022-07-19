@@ -26,7 +26,7 @@ function Field(props: any) {
   let value = ""
   if(actionIcon && actionHandler){
     return (
-      <div className={`mb-3  ${width}`}>
+      <div className={`mb-3 ${width}`} onClick={actionHandler} >
             <Image src="ic_add.png" />
           </div>
     )

@@ -1,6 +1,6 @@
 import { Modal } from "react-bootstrap"
 const ModalForm = (props) => {
-  let { show, setShow, modalType, pageConfig,children,largeModal=false } = props
+  let { show, setShow, modalType, pageConfig,children,largeModal=false,pageTitle="" } = props
   return (
     <Modal
       show={show}
@@ -10,7 +10,7 @@ const ModalForm = (props) => {
     >
       <Modal.Header closeButton closeVariant="white">
         <Modal.Title id="example-custom-modal-styling-title">
-          {pageConfig ? pageConfig[modalType]?.title : "Add New Manifest"}
+          {pageConfig ? pageConfig[modalType]?.title : pageTitle}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>

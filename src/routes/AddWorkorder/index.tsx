@@ -51,7 +51,7 @@ const AddWorkorder = (props) => {
           </div>
         </div>
       </div>
-      <ModalForm show={showManifest} setShow={setShowManifest} largeModal={true}>
+      <ModalForm show={showManifest} setShow={setShowManifest} largeModal={true} pageTitle={"Add New Manifest"}>
         <CreateManifest />
       </ModalForm>
     </>
