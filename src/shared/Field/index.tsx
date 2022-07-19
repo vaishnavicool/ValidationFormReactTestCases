@@ -3,7 +3,7 @@ import "./style.scss"
 import { FormattedMessage, useIntl } from "react-intl"
 
 import Select from "react-select"
-
+import Image from "shared/Image"
 function Field(props: any) {
   const {
     name,
@@ -13,7 +13,9 @@ function Field(props: any) {
     allDropdownOpts={name:['a','b']},
     width = "col-6",
     infoKey,
-    placeholder
+    placeholder,
+    actionIcon,
+    actionHandler
   } = props
   let intl = useIntl()
   let labelKey= `form.${name}`
@@ -22,6 +24,13 @@ function Field(props: any) {
     id: labelKey,
   })
   let value = ""
+  if(actionIcon && actionHandler){
+    return (
+      <div className={`mb-3  ${width}`}>
+            <Image src="ic_add.png" />
+          </div>
+    )
+  }
   if (type == "dropdown" && allDropdownOpts) {
     value = allDropdownOpts[name]?.find((d: any) => d.value == filters[name])
     if (!value) value = ""
@@ -88,6 +97,7 @@ function Field(props: any) {
           <FormattedMessage id={infoKey} />
         </div>
       )}
+      
     </div>
   )
 }

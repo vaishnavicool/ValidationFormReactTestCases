@@ -18,9 +18,7 @@ const CreateManifest = () => {
       <div className="d-flex col-12 p-3">
         <div className="col-6 left-section">
           <Form config={pageConfig?.addManifestConfig} />
-          <div>
-            <Image src="ic_add.png" />
-          </div>
+          
         </div>
         <div className="col-6 right-section">
           <div>

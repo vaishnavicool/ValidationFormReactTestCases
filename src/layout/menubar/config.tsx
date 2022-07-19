@@ -55,27 +55,27 @@ const menuConfig = [
 
     children: [
       {
-        title: "Inventory",
+        title: "menubar.inventory",
         path: "/inventory",
       },
       {
-        title: "Manifests",
+        title: "menubar.manifests",
         path: "/manifests",
       },
       {
-        title: "Inbounds",
+        title: "menubar.inbounds",
         path: "/inbounds",
       },
       {
-        title: "Bulk Samples",
+        title: "menubar.bulk_samples",
         path: "/bulksamples",
       },
       {
-        title: "Outbounds",
+        title: "menubar.outbounds",
         path: "/outbounds",
       },
       {
-        title: "Outbound Profiles",
+        title: "menubar.outbound_profiles",
         path: "/outboundprofiles",
       },
     ],
@@ -86,15 +86,15 @@ const menuConfig = [
     icon: "ic_compliance",
     children: [
       {
-        title: "One",
+        title: "menubar.one",
         path: "/one",
       },
       {
-        title: "Two",
+        title: "menubar.two",
         path: "/two",
       },
       {
-        title: "Three",
+        title: "menubar.three",
         path: "/three",
       },
     ],
@@ -105,15 +105,15 @@ const menuConfig = [
     icon: "ic_schedule",
     children: [
       {
-        title: "One",
+        title: "menubar.one",
         path: "/one",
       },
       {
-        title: "Two",
+        title: "menubar.two",
         path: "/two",
       },
       {
-        title: "Three",
+        title: "menubar.three",
         path: "/three",
       },
     ],

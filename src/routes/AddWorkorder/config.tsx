@@ -264,47 +264,44 @@ export const pageConfig = {
     {
       name: "manifest_tracking",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "plant_outbound",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "workorder",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "job",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "designated_facility",
       numeric: true,
-      width: "col-6",
-      // type: "dropdown",
-      // dropdownOpts: {
-      //   api_key: "p_getFacilities",
-      //   labelKey: "name",
-      //   valueKey: "id",
-      //   body: {
-      //     optionalParam: "0",
-      //   },
-      // },
+      width: "col-45",
     },
     {
       name: "generator",
       numeric: true,
-      width: "col-6",
-      type: "search",
+      width: "col-45",
+      type: "search"    
+    },
+    {
+      actionIcon:"ic_add.png",
+      actionHandler:"addGenerator",
+      width: "col-1",
+
     },
     {
       name: "transporter1",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -318,7 +315,7 @@ export const pageConfig = {
     {
       name: "transporter2",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -331,7 +328,7 @@ export const pageConfig = {
     },
     {
       name: "transporter3",
-      width: "col-6",
+      width: "col-45",
       numeric: true,
       type: "dropdown",
       dropdownOpts: {
@@ -346,7 +343,7 @@ export const pageConfig = {
     {
       name: "transporter4",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -360,7 +357,7 @@ export const pageConfig = {
     {
       name: "equipment_type",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -374,38 +371,38 @@ export const pageConfig = {
     {
       name: "truck",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "search",
     },
     {
       name: "truck_gross",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
-      name: "truck_tace",
+      name: "truck_tare",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "truck_net",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "3rd_party_ticket",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "container",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
-      name: "manifeastprintstyle",
+      name: "manifeast_print_style",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "dropdown",
       dropdownOpts: {
         api_key: "p_getFacilities",
@@ -417,86 +414,86 @@ export const pageConfig = {
       },
     },
     {
-      name: "spacialhandinginstuctions",
+      name: "spacial_handing_instuctions",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
-      name: "plantinstructions",
+      name: "plant_instructions",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
       name: "comments",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
-      name: "recivedate",
+      name: "recive_date",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type: "date",
     },
     {
-      name: "shipdate",
+      name: "ship_date",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"date"
     },
     {
-      name: "outboundrevenue",
+      name: "out_bound_revenue",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"number"
     },
     {
-      name: "tsdfreceiptdate",
+      name: "tsdf_receipt_date",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"date",      
     },
     {
-      name: "bolck14note",
+      name: "bolck_14_note",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
-      name: "outboundponumber",
+      name: "outbound_po_number",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "bin",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
     },
     {
       name: "voided",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"checkbox",
     },
     {
-      name: "wasteanalysisavailable",
+      name: "waste_analysis_available",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"checkbox",
     },
     {
-      name: "multilineformat",
+      name: "multi_line_format",
       numeric: true,
-      width: "col-6",
+      width: "col-45",
       type:"checkbox",
     },
     {
-      name: "additionalconnectedepaids",
+      name: "additional_connected_epa_ids",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     {
-      name: "additionalconnectedmanifests",
+      name: "additional_connected_manifests",
       numeric: true,
-      width: "col-12",
+      width: "col-11",
     },
     
   ],
@@ -510,7 +507,17 @@ export const pageConfig = {
       width: "col-6",
     },
     {
+      name: "mailing_information",
+      numeric: true,
+      width: "col-6",
+    },
+    {
       name: "alternate_generator_name",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "mailing_bill_name",
       numeric: true,
       width: "col-6",
     },
@@ -529,12 +536,27 @@ export const pageConfig = {
       },
     },
     {
-      name: "generator_city",
+      name: "mailing_bill_to_country",
       numeric: true,
       width: "col-6",
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
     },
     {
-      name: "address_line_1of1",
+      name: "generator_address",
+      numeric: true,
+      width: "col-12",
+    },
+
+    {
+      name: "addressline1of1",
       numeric: true,
       width: "col-12",
     },
@@ -542,20 +564,45 @@ export const pageConfig = {
       name: "address_line_2of2",
       numeric: true,
       width: "col-12",
+    },
+    {
+      name: "addressline3of3",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "mailing_bill_to_address",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "addressline1",
+      numeric: true,
+      width: "col-12",
+    },
+    {
+      name: "addressline2",
+      numeric: true,
+      width: "col-12",
       type: "search",
     },
     {
-      name: "address_line3of3",
+      name: "addressline3",
       numeric: true,
       width: "col-12",
     },
     {
-      name: "mailingbill_to_name",
+      name: "generator_city",
       numeric: true,
-      width: "col-12",
+      width: "col-6",
     },
     {
-      name: "mailingbill_to_country",
+      name: "mailing_bill_to_city",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "generator_state",
       width: "col-6",
       numeric: true,
       type: "dropdown",
@@ -569,25 +616,127 @@ export const pageConfig = {
       },
     },
     {
-      name: "city",
+      name: "mailing_bill_to_state",
+      width: "col-6",
+      numeric: true,
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
+    },
+    {
+      name: "generator_zip_code",
+      numeric: true,
+      width: "col-6",
+      type:"number"
+    },
+    {
+      name: "mailing_bill_to_zip",
       numeric: true,
       width: "col-6",
     },
     {
-      name: "address_line1",
+      name: "generator_country",
+      numeric: true,
+      width: "col-6",
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
+    },
+    {
+      name: "mailing_bill_to_country",
+      width: "col-6",
+      numeric: true,
+      type: "dropdown",
+      dropdownOpts: {
+        api_key: "p_getFacilities",
+        labelKey: "name",
+        valueKey: "id",
+        body: {
+          optionalParam: "0",
+        },
+      },
+    },
+    {
+      name: "phone_number",
+      numeric: true,
+      width: "col-6",
+      type: "number",
+    },
+    {
+      name: "is_non_haz",
+      numeric: true,
+      width: "col-6",
+      type: "checkbox"
+    },
+    {
+      name: "us_epa_id",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "state_epa_id",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "fax_number",
+      numeric: true,
+      width: "col-6",
+      type: "number",
+    },
+    {
+      name: "pickup_directions",
       numeric: true,
       width: "col-12",
     },
     {
-      name: "address_line2",
+      name: "printed_menifest_er_contact",
       numeric: true,
-      width: "col-12",
-      type: "search",
+      width: "col-6",
     },
     {
-      name: "address_line3",
+      name: "general_contact_email_address",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "generic_profile_suffix",
+      numeric: true,
+      width: "col-6",
+    },
+    {
+      name: "notes",
       numeric: true,
       width: "col-12",
+    },
+    {
+      name: "is_active",
+      numeric: true,
+      width: "col-6",
+      type: "checkbox"
+    },
+    {
+      name: "is_tax_exempt",
+      numeric: true,
+      width: "col-6",
+      type: "checkbox"
+    },
+    {
+      name: "disposal_restrictions",
+      numeric: true,
+      width: "col-6",
     },
   ],
 }
