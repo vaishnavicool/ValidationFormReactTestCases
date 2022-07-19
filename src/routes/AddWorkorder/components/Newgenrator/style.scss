@@ -1,21 +1,27 @@
 .btn-back-to-manifest-panel {
   position: absolute;
   left: 0;
-  padding: 10px 24px;
-  border-radius: 24px;
+  padding: 0.62rem 1.5rem;
+  border-radius: 1.5rem;
   border: 1px solid #dadada;
   background: rgba(120, 190, 32, 0.1);
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.25rem;
   display: flex;
   letter-spacing: 0.1px;
   color: #616161;
   bottom: 0.2rem;
 }
+.left-section-gen{
+  overflow-x: hidden !important;
+  overflow: auto;
+  max-height: 60vh;
+  padding-top: 0.5rem;
+}
 .gen-right-section {
-  border-left: 1px solid #e4e3e3;
+  // border-left: 1px solid #e4e3e3;
   padding: 23px;
-  margin-left: 10px;
+  margin-left: 0.62rem;
   
   .gen-right-container {
     border: 1px dashed #78be20;
@@ -28,14 +34,14 @@
   .right-head{
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 1.25rem;
     letter-spacing: 0.1px;
   }
   .datails-text{
     
     font-weight: 500;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 1.25rem;
     letter-spacing: 0.1px;
     color: #ADABAB;  }
 }

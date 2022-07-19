@@ -10,7 +10,7 @@ const Newgenerator = (props) => {
   return (
     <>
       <div className="d-flex col-12">
-        <div className="col-6 ">
+        <div className="col-6 left-section-gen">
           <Form config={pageConfig?.addNewGeneratorConfig} />
         </div>
         <div className="col-6 gen-right-section">

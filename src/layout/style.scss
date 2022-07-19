@@ -4,7 +4,7 @@
 
 .left-container {
   border-right: 1px solid #dcdcdc;
-  padding: 23px 12px;
+  padding: 23px 0.75rem;
   display: flex;
   flex: 1;
   background: linear-gradient(90deg, #ffffff 93.75%, #e0e0e0 100%);
@@ -40,7 +40,7 @@ body,
 .filterchip-container {
   background-color: rgba(120, 190, 32, 0.1);
   margin-left: 1.5rem;
-  padding: 8px;
+  padding:0.5rem;
   margin-right: 1.5rem;
   border: 1px solid #e2e2e2;
   border-radius: 4px;
@@ -61,7 +61,7 @@ body,
 }
 
 .footer-container {
-  font-size: 10px;
+  font-size: 0.62rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;

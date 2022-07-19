@@ -70,7 +70,6 @@ function Field(props: any) {
         value={value}
        
       />
-       { console.log(  "onChange",  updateFilters(name))}
       {infoKey && (
         <div className="info-txt">
           <FormattedMessage id={infoKey} />
@@ -94,7 +93,6 @@ function Field(props: any) {
         onChange={updateFilters(name)}
         value={value}
       />
-       { console.log(  "onChange2",  updateFilters(name))}
       {infoKey && (
         <div className="info-txt">
           <FormattedMessage id={infoKey} />

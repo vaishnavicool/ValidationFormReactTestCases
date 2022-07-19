@@ -7,7 +7,7 @@ import Field from "shared/Field"
 import useEnhancer from "routes/AddWorkorder/enhancer"
 import { useDetectClickOutside } from "react-detect-click-outside"
 // import ReactTooltip from "react-tooltip"
-import Newgenerator from "../Newgenerator"
+import Newgenerator from "../Newgenrator"
 
 const CreateManifest = () => {
   let { showMoreAction, setShowMoreAction, addGenerator, showNewGenerator } =
