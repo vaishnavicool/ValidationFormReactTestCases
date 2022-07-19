@@ -36,12 +36,13 @@
 .content_text {
   text-decoration: none;
   color: #bbbbbb;
-  &.active {
+  &.isActive {
     font-size: 11px;
     line-height: 17px;
     letter-spacing: 1.5%;
     margin-left: 4px;
-    color: black;
+    color: rgb(9, 9, 9);
+    
   }
 }
 
