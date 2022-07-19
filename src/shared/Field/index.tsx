@@ -1,9 +1,8 @@
 import "./style.scss"
-
 import { FormattedMessage, useIntl } from "react-intl"
-
 import Select from "react-select"
 import Image from "shared/Image"
+
 function Field(props: any) {
   const {
     name,
@@ -17,12 +16,13 @@ function Field(props: any) {
     actionIcon,
     actionHandler
   } = props
+  
   let intl = useIntl()
   let labelKey= `form.${name}`
-  let aName = intl.formatMessage({
-    defaultMessage: labelKey,
-    id: labelKey,
-  })
+  let aName =  intl.formatMessage({
+      id: labelKey
+    })   
+  
   let value = ""
   if(actionIcon && actionHandler){
     return (
@@ -41,13 +41,13 @@ function Field(props: any) {
         </label>
         <Select
           onChange={updateFilters(name)}
-          placeholder={`${placeholder ? `${placeholder}`: `Select ${aName}`}`}
+          placeholder={`${placeholder ? `${placeholder}`: `Select`}`}
           value={value}
           isSearchable={true}
           className="basic-single"
           options={allDropdownOpts[name]}
           // isLoading={!allDropdownOpts[name]?.[0]}
-        />
+        />       
       </div>
     )
   }
@@ -58,7 +58,7 @@ function Field(props: any) {
     return (
       <div className={`mb-3 custom-group ${width} checkbox-container`}>
       <label htmlFor="disabledTextInput" className="label checkbox-label">
-        <FormattedMessage id={`${aName}`} />
+        <FormattedMessage id={`${labelKey}`} />
       </label>
       <input
         type={type}
@@ -68,7 +68,9 @@ function Field(props: any) {
         name={name}
         onChange={updateFilters(name)}
         value={value}
+       
       />
+       { console.log(  "onChange",  updateFilters(name))}
       {infoKey && (
         <div className="info-txt">
           <FormattedMessage id={infoKey} />
@@ -81,7 +83,7 @@ function Field(props: any) {
   return (
     <div className={`mb-3 custom-group ${width}`}>
       <label htmlFor="disabledTextInput" className="label">
-        <FormattedMessage id={`${aName}`} />
+        <FormattedMessage id={`${labelKey}`} />
       </label>
       <input
         type={type}
@@ -92,6 +94,7 @@ function Field(props: any) {
         onChange={updateFilters(name)}
         value={value}
       />
+       { console.log(  "onChange2",  updateFilters(name))}
       {infoKey && (
         <div className="info-txt">
           <FormattedMessage id={infoKey} />
