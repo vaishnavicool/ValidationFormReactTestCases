@@ -13,7 +13,12 @@ const Newgenrator = (props) => {
         <div className="col-6 ">
           <Form config={pageConfig?.addNewGeneratorConfig} />
         </div>
-        <div className="col-6"> Right Panel </div>
+        <div className="col-6 gen-right-section">
+          <div className="right-head">Mailing Information</div>
+          <div className="gen-right-container">
+            <div className="datails-text">Details Comes here</div>
+          </div>
+           </div>
       </div>
       <div className="d-flex justify-content-center g-0 position-relative">
       <input
