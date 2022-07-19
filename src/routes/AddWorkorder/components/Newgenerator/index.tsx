@@ -4,7 +4,7 @@ import useEnhancer from "routes/AddWorkorder/enhancer"
 import Form from "shared/Form"
 import "./style.scss"
 
-const Newgenrator = (props) => {
+const Newgenerator = (props) => {
   let { hideGenerator } = useEnhancer()
 
   return (
@@ -43,4 +43,4 @@ const Newgenrator = (props) => {
   )
 }
 
-export default Newgenrator
+export default Newgenerator
