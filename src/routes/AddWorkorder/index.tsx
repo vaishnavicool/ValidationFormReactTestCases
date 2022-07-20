@@ -7,8 +7,10 @@ import ModalForm from "shared/ModalForm"
 import useEnhancer from "./enhancer"
 import CreateManifest from "./components/CreateManifest"
 import { useNavigate } from "react-router-dom"
-const AddWorkorder = (props) => {
+
+const AddWorkorder = (props: any) => {
   let { showManifest, setShowManifest } = useEnhancer()
+  let {updateWorkOrder} =props
   let navigate = useNavigate()
   return (
     <>
@@ -18,7 +20,7 @@ const AddWorkorder = (props) => {
             className="btn-addworkorder-cancel"
             value="Cancel"
             type="button"
-            onClick={()=>navigate("/workorder")}
+            onClick={()=>navigate("/customer_processing/work_order")}
           />
           <input className="btn-addworkorder-add" value="Add" type="button" />
         </div>
@@ -26,7 +28,8 @@ const AddWorkorder = (props) => {
 
       <div className="d-flex mx-4">
         <div className="col-9 row">
-          <Form config={pageConfig?.addWorkOrderConfig} />
+          <Form config={pageConfig?.addWorkOrderConfig} update={updateWorkOrder}/>
+          
         </div>
         <div className="col-3 d-flex flex-column">
           <div className=" manifest-container">
