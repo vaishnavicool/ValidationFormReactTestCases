@@ -1,16 +1,14 @@
-import React from "react"
-import { pageConfig } from "routes/AddWorkorder/config"
-import Image from "shared/Image"
-import Form from "shared/Form"
 import "./style.scss"
+
 import Field from "shared/Field"
-import useEnhancer from "routes/AddWorkorder/enhancer"
-import { useDetectClickOutside } from "react-detect-click-outside"
+import Form from "shared/Form"
+import Image from "shared/Image"
 // import ReactTooltip from "react-tooltip"
-import NewGenerator from "../NewGenerator"
+import { pageConfig } from "routes/AddWorkorder/config"
+import { useDetectClickOutside } from "react-detect-click-outside"
 
 const CreateManifest = (props) => {
-  let { showMoreAction, setShowMoreAction, addGenerator, showNewGenerator,setPopup,popup } =
+  let { showMoreAction, setShowMoreAction, setPopup } =
     props
 
   const moreActionMenuClick = useDetectClickOutside({
@@ -22,7 +20,7 @@ const CreateManifest = (props) => {
           <div className="d-flex col-12 p-3">
             <div className="col-6 left-section">
               <Form config={pageConfig?.addManifestConfig} update={() => {}} />
-              <Image src="ic_add.png" onClick={() => {setPopup('generator');console.log("here",popup)}} />
+              <Image src="ic_add.png" onClick={() => {setPopup('generator')}} />
             </div>
             <div className="col-6 right-section">
               <div>

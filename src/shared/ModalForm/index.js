@@ -1,7 +1,6 @@
 import { Modal } from "react-bootstrap"
 const ModalForm = (props) => {
   let { show, setShow, modalType, pageConfig,children,largeModal=false,pageTitle="" } = props
-  console.log("Value of show",show)
   return (
     <>
     {show && <Modal

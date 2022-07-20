@@ -1,7 +1,7 @@
-import React, { FunctionComponent } from "react"
-import { FormattedMessage } from "react-intl"
-import Image from "shared/Image"
 import "./style.scss"
+
+import { FunctionComponent } from "react"
+import Image from "shared/Image"
 
 const Notfound: FunctionComponent = () => {
   return (

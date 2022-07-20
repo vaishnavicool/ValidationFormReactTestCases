@@ -1,9 +1,9 @@
-import axios from "axios"
-import _ from "lodash"
-import { toast } from "react-toastify"
-import store from "store"
-import { formatMessage } from "shared"
 import { SET_LOADING_STATUS } from "store/reducer/actionType"
+import _ from "lodash"
+import axios from "axios"
+import { formatMessage } from "shared"
+import store from "store"
+import { toast } from "react-toastify"
 
 toast.configure({
   position: "top-center",

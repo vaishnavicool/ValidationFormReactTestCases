@@ -1,5 +1,7 @@
 import "./style.scss"
+
 import FilterChipPanel from "./components/FilterChipPanel"
+import FilterPanel from "./components/FilterPanel"
 import Image from "shared/Image"
 import ModalForm from "shared/ModalForm"
 import TablePanel from "./components/TablePanel"
@@ -7,11 +9,10 @@ import Topsection from "shared/Topsection"
 import { useDetectClickOutside } from "react-detect-click-outside"
 import useEnhancer from "./enhancer"
 import { useNavigate } from "react-router-dom"
-import FilterPanel from "./components/FilterPanel"
 
 function Workorder(props: any) {
   let extraProps = useEnhancer()
-  let { showColumn, setShowColumn, switchVisibleColumns, columns, tableData } =
+  let { showColumn, setShowColumn, switchVisibleColumns, columns } =
     extraProps
   let navigate = useNavigate()
   const columnsBtn = useDetectClickOutside({

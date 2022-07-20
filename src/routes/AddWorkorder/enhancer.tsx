@@ -1,5 +1,4 @@
 import { useState } from "react"
-import WorkOrder from "routes/Workorder/components/TablePanel"
 const useEnhancer = () => {
   const [showManifest, setShowManifest] = useState(false)
   const [showMoreAction,setShowMoreAction] = useState(false)
@@ -22,7 +21,6 @@ const useEnhancer = () => {
     setShowManifest(false)
 
       setShowNewGenerator(true)
-      console.log(showManifest,showNewGenerator)
   }
 
 
