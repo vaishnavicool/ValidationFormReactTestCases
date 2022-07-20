@@ -20,7 +20,7 @@ const AddWorkorder = (props: any) => {
             className="btn-addworkorder-cancel"
             value="Cancel"
             type="button"
-            onClick={()=>navigate("/workorder")}
+            onClick={()=>navigate("/customer_processing/work_order")}
           />
           <input className="btn-addworkorder-add" value="Add" type="button" />
         </div>
