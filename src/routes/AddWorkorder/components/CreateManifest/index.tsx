@@ -7,7 +7,7 @@ import Field from "shared/Field"
 import useEnhancer from "routes/AddWorkorder/enhancer"
 import { useDetectClickOutside } from "react-detect-click-outside"
 // import ReactTooltip from "react-tooltip"
-import NewGenerator from "../NewGenrator"
+import NewGenerator from "../NewGenerator"
 
 const CreateManifest = () => {
   let { showMoreAction, setShowMoreAction, addGenerator, showNewGenerator } =
@@ -22,7 +22,7 @@ const CreateManifest = () => {
         <div>
           <div className="d-flex col-12 p-3">
             <div className="col-6 left-section">
-              <Form config={pageConfig?.addManifestConfig} update={()=>{}} />
+              <Form config={pageConfig?.addManifestConfig} update={() => {}} />
               <Image src="ic_add.png" onClick={() => addGenerator()} />
             </div>
             <div className="col-6 right-section">
@@ -131,7 +131,9 @@ const CreateManifest = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td colSpan={4} style={{textAlign:'center'}}>No records to display</td>
+                      <td colSpan={4} style={{ textAlign: "center" }}>
+                        No records to display
+                      </td>
                       {/* <td></td>
                       <td></td>
                       <td>
