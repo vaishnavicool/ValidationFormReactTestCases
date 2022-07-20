@@ -1,4 +1,4 @@
-.left-section{
+.left-section {
   overflow-x: hidden !important;
   overflow: auto;
   max-height: 60vh;
@@ -71,7 +71,6 @@
       &:hover {
         background: rgba(120, 190, 32, 0.3);
       }
-
       img {
         margin-right: 0.75rem;
       }
@@ -89,7 +88,7 @@
       font-weight: 600;
       line-height: 1.25rem;
       letter-spacing: 0.1px;
-      margin-bottom:0.5rem;
+      margin-bottom: 0.5rem;
     }
     .left-textsmall {
       font-size: 14px;
@@ -97,11 +96,24 @@
       line-height: 1.25rem;
       letter-spacing: 0.1px;
       margin-bottom: 1rem;
-      .icon-info {
-        margin-left:0.5rem;
-        cursor: pointer;
-      }
     }
+  }
+  .icon-info {
+    margin-left: 0.5rem;
+    cursor: pointer;
+    position: relative;
+  }
+  .tool-tip {
+    // display: none;
+    position: absolute;
+    background-color: #000000;
+    color: #ffff;
+  }
+  .icon-info:hover .tool-tip {
+    display: block;
+  }
+  .icon-info .tool-tip {
+    display: none;
   }
   .grey-container {
     background: #f2f9e9;
@@ -160,9 +172,9 @@
       color: #898989;
     }
     .img-meni {
-     display: flex;
-     align-items: center;
-     justify-content:space-around;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
     }
   }
   .footer-text {

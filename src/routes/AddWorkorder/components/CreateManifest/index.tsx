@@ -83,14 +83,16 @@ const CreateManifest = () => {
                 <div className="leftitem-container">
                   <div className="left-text">Documents</div>
                   <div className="left-textsmall">
-                    What type of files are you uploading?{" "}
+                    What type of files are you uploading?
                     <span className="icon-info">
                       <Image
                         src="ic_info.png"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Tooltip on top"
+                        // data-bs-toggle="tooltip"
+                        // data-bs-placement="top"
+                        // title="Tooltip on top"
                       />
+                                      <div className="tool-tip">Tool tip Comes here</div>
+
                     </span>
                   </div>
                 </div>
