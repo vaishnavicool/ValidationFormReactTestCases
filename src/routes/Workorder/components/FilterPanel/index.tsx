@@ -22,7 +22,7 @@ function FilterPanel(props: any) {
                 <Field
                   key={index}
                   name={d.name}
-                  {...{ updateFilters, filters, allDropdownOpts, ...d }}
+                  {...{ update:updateFilters, filters, allDropdownOpts, ...d }}
                 />
               )
             })}

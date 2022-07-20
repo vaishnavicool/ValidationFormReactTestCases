@@ -7,7 +7,7 @@ function Field(props: any) {
   const {
     name,
     type = "text",
-    updateFilters=()=>{},
+    update=()=>{},
     filters={},
     allDropdownOpts={name:['a','b']},
     width = "col-6",
@@ -40,7 +40,7 @@ function Field(props: any) {
           <FormattedMessage id={labelKey} />
         </label>
         <Select
-          onChange={updateFilters(name)}
+          onChange={update(name)}
           placeholder={`${placeholder ? `${placeholder}`: `Select`}`}
           value={value}
           isSearchable={true}
@@ -66,11 +66,10 @@ function Field(props: any) {
         className="input-checkbox"
         placeholder={`Enter ${aName}`}
         name={name}
-        onChange={updateFilters(name)}
+        onChange={update(name)}
         value={value}
        
       />
-       { console.log(  "onChange",  updateFilters(name))}
       {infoKey && (
         <div className="info-txt">
           <FormattedMessage id={infoKey} />
@@ -91,10 +90,9 @@ function Field(props: any) {
         className="input"
         placeholder={`Enter ${aName}`}
         name={name}
-        onChange={updateFilters(name)}
+        onChange={update(name)}
         value={value}
       />
-       { console.log(  "onChange2",  updateFilters(name))}
       {infoKey && (
         <div className="info-txt">
           <FormattedMessage id={infoKey} />

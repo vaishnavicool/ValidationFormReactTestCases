@@ -4,14 +4,14 @@ import useEnhancer from "routes/AddWorkorder/enhancer"
 import Form from "shared/Form"
 import "./style.scss"
 
-const Newgenerator = (props) => {
+const NewGenerator = (props) => {
   let { hideGenerator } = useEnhancer()
 
   return (
     <>
       <div className="d-flex col-12">
         <div className="col-6 ">
-          <Form config={pageConfig?.addNewGeneratorConfig} />
+          <Form config={pageConfig?.addNewGeneratorConfig} update={()=>{}}/>
         </div>
         <div className="col-6 gen-right-section">
           <div className="right-head">Mailing Information</div>
@@ -43,4 +43,4 @@ const Newgenerator = (props) => {
   )
 }
 
-export default Newgenerator
+export default NewGenerator
