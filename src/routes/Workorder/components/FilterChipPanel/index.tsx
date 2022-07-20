@@ -6,7 +6,6 @@ import EllipsisText from "react-ellipsis-text"
 
 const FilterChipPanel = (props) => {
   let { setShow, setModalType, aFilters, removeAFilter, clearFilters } = props
-  console.log(aFilters)
   return (
     <>
       <div className="filter-input">

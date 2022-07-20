@@ -11,8 +11,8 @@
   color: #000000;
 }
 .navbar-brand {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0.62rem;
+  padding-bottom: 0.62rem;
   padding-left: 29px;
 }
 
@@ -22,13 +22,13 @@
     position: absolute;
     z-index: 9999;
     top: 15px;
-    left: 20px;
+    left: 1.25rem;
   }
   .search-input {
     padding-left: 48px;
     font-size: 14px;
     line-height: 16.41px;
-    border-radius: 8px !important;
+    border-radius:0.5rem !important;
     background-color: #f1f1f1;
     :focus {
       outline: 0;
@@ -54,10 +54,10 @@
   justify-content: flex-end;
 
   .question-icon {
-    height: 20px;
+    height: 1.25rem;
   }
   .bell-icon {
-    height: 20px;
+    height: 1.25rem;
   }
   .profile-info {
     display: flex;
@@ -72,7 +72,7 @@
         font-weight: 500;
       }
       .role {
-        font-size: 12px;
+        font-size: 0.75rem;
         line-height: 15px;
         color: white;
       }

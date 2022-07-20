@@ -1,7 +1,17 @@
+.left-section{
+  overflow-x: hidden !important;
+  overflow: auto;
+  max-height: 60vh;
+  padding-top: 0.5rem;
+}
 .right-section {
-  border-left: 1px solid #e4e3e3;
+  // border-left: 1px solid #e4e3e3;
   padding: 14px;
-  margin-left: 10px;
+  margin-left: 0.62rem;
+  overflow-x: hidden !important;
+  overflow: auto;
+  max-height: 60vh;
+
   .rightitem-container {
     display: grid;
     justify-content: flex-end;
@@ -12,11 +22,11 @@
       font-size: 14px;
       color: #545454;
       font-weight: 400;
-      line-height: 16px;
+      line-height: 1rem;
       margin-bottom: 5px;
     }
     .rightitem-link {
-      font-size: 12px;
+      font-size: 0.75rem;
       font-weight: 400;
       line-height: 14px;
       color: #0092bc;
@@ -53,7 +63,7 @@
     }
     .img-text-dots {
       display: flex;
-      padding: 10px;
+      padding: 0.62rem;
       justify-content: flex-start;
       align-items: center;
       border-bottom: 1px solid #dcdbdb;
@@ -63,13 +73,13 @@
       }
 
       img {
-        margin-right: 12px;
+        margin-right: 0.75rem;
       }
       span {
         color: #545454;
         font-weight: 400;
         font-size: 14px;
-        line-height: 16px;
+        line-height: 1rem;
       }
     }
   }
@@ -77,18 +87,18 @@
     .left-text {
       font-size: 14px;
       font-weight: 600;
-      line-height: 20px;
+      line-height: 1.25rem;
       letter-spacing: 0.1px;
-      margin-bottom: 8px;
+      margin-bottom:0.5rem;
     }
     .left-textsmall {
       font-size: 14px;
       font-weight: 400;
-      line-height: 20px;
+      line-height: 1.25rem;
       letter-spacing: 0.1px;
-      margin-bottom: 16px;
+      margin-bottom: 1rem;
       .icon-info {
-        margin-left: 8px;
+        margin-left:0.5rem;
         cursor: pointer;
       }
     }
@@ -106,24 +116,24 @@
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
-      line-height: 20px;
+      line-height: 1.25rem;
       color: #ffffff;
     }
     .instruction-text {
       color: #78be20;
-      font-size: 10px;
+      font-size: 0.62rem;
     }
     .instruction-sub-text {
       color: #79747e;
-      font-size: 10px;
+      font-size: 0.62rem;
       margin: 0.25rem 0;
     }
   }
   .tablefooter-container {
     border: 1px dashed #79747e;
     margin-top: 14px;
-    // padding: 5px 12px;
-    margin-bottom: 12px;
+    // padding: 5px 0.75rem;
+    margin-bottom: 0.75rem;
     margin-left: 0px;
     .table {
       margin-bottom: 0;
@@ -139,7 +149,7 @@
     }
     th {
       font-weight: 400;
-      font-size: 12px;
+      font-size: 0.75rem;
       line-height: 14px;
     }
     td {
@@ -156,12 +166,12 @@
     }
   }
   .footer-text {
-    font-size: 10px;
+    font-size: 0.62rem;
     color: #78be20;
     margin-left: 27px;
   }
   .footer-subtext {
-    font-size: 10px;
+    font-size: 0.62rem;
     color: #79747e;
     margin-left: 27px;
     margin-bottom: 3rem;

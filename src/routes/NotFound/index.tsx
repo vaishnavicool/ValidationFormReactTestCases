@@ -1,14 +1,13 @@
 import React, { FunctionComponent } from "react"
 import { FormattedMessage } from "react-intl"
+import Image from "shared/Image"
 
 const Notfound: FunctionComponent = () => {
   return (
-    <div className="container h-100">
-      <div className="row h-100 justify-content-center align-items-center font-weight-bold">
-        <FormattedMessage id="notfound.error_title" />
-        <br />
-        <FormattedMessage id="notfound.error_message" />
-      </div>
+    <div className="container" style={{minHeight:"70vh",display:'flex',justifyContent:'center',alignItems:'center'}}>
+      {/* <div className=""> */}
+        <Image src="ic_404.png" />
+      {/* </div> */}
     </div>
   )
 }

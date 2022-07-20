@@ -16,8 +16,8 @@ function MainWrapper(props) {
         <div className="col-1 left-container">
           <Menubar />
         </div>
-        <div className="col-11 g-0">
-          <div className="">
+        <div className="col-11 g-0" >
+          <div className="" style={{minHeight:"70vh"}}>
             <Routes />
           </div>
           <div className="footer-container">
