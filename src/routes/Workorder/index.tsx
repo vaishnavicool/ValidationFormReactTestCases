@@ -11,7 +11,7 @@ import FilterPanel from "./components/FilterPanel"
 
 function Workorder(props: any) {
   let extraProps = useEnhancer()
-  let { showColumn, setShowColumn, switchVisibleColumns, columns } = extraProps
+  let { showColumn, setShowColumn, switchVisibleColumns, columns,tableData } = extraProps
   let navigate = useNavigate()
   const columnsBtn = useDetectClickOutside({
     onTriggered: () => setShowColumn(false),
@@ -19,7 +19,7 @@ function Workorder(props: any) {
 
   return (
     <>
-      <Topsection {...extraProps}>
+      {tableData.length > 0 ? <><Topsection {...extraProps}>
         <div className="button-container">
           <input
             className="btn-addworkorder"
@@ -79,7 +79,7 @@ function Workorder(props: any) {
       <ModalForm {...extraProps} >
       <FilterPanel {...extraProps} />
 
-      </ModalForm>
+      </ModalForm></>: <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'70vh' }}><Image src="NoRecordsFound.png" style={{ objectFit: 'contain',width:200}}/></div>}
     </>
   )
 }

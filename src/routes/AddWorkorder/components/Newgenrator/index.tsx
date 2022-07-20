@@ -3,6 +3,7 @@ import { pageConfig } from "routes/AddWorkorder/config"
 import useEnhancer from "routes/AddWorkorder/enhancer"
 import Form from "shared/Form"
 import "./style.scss"
+import Image from "shared/Image"
 
 const Newgenerator = (props) => {
   let { hideGenerator } = useEnhancer()
@@ -21,13 +22,12 @@ const Newgenerator = (props) => {
            </div>
       </div>
       <div className="d-flex justify-content-center g-0 position-relative">
-      <input
+      <button
           className=" btn-back-to-manifest-panel"
-          value="Back to manifest"
           onClick={()=>hideGenerator()}
-          type="button"
-        />
-     
+          type="button">
+           <Image src="ic_arrow_back.png"/>Back to manifest
+          </button>
         <input
           className="btn-addworkorder-cancel"
           value="Cancel"
