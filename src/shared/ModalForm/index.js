@@ -1,9 +1,11 @@
 import { Modal } from "react-bootstrap"
 const ModalForm = (props) => {
   let { show, setShow, modalType, pageConfig,children,largeModal=false,pageTitle="" } = props
+  console.log("Value of show",show)
   return (
-    <Modal
-      show={show}
+    <>
+    {show && <Modal
+      show={true}
       onHide={() => setShow(false)}
       dialogClassName={`${largeModal ? 'modal-xl':'modal-90w'} modal-dialog-centered`}
       aria-labelledby="example-custom-modal-styling-title"
@@ -16,7 +18,8 @@ const ModalForm = (props) => {
       <Modal.Body>
         {children}
       </Modal.Body>
-    </Modal>
+    </Modal>}
+    </>
   )
 }
 

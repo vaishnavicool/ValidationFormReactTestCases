@@ -9,21 +9,20 @@ import { useDetectClickOutside } from "react-detect-click-outside"
 // import ReactTooltip from "react-tooltip"
 import NewGenerator from "../NewGenerator"
 
-const CreateManifest = () => {
-  let { showMoreAction, setShowMoreAction, addGenerator, showNewGenerator } =
-    useEnhancer()
+const CreateManifest = (props) => {
+  let { showMoreAction, setShowMoreAction, addGenerator, showNewGenerator,setPopup,popup } =
+    props
 
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),
   })
   return (
     <>
-      {!showNewGenerator ? (
         <div>
           <div className="d-flex col-12 p-3">
             <div className="col-6 left-section">
               <Form config={pageConfig?.addManifestConfig} update={() => {}} />
-              <Image src="ic_add.png" onClick={() => addGenerator()} />
+              <Image src="ic_add.png" onClick={() => {setPopup('generator');console.log("here",popup)}} />
             </div>
             <div className="col-6 right-section">
               <div>
@@ -85,13 +84,8 @@ const CreateManifest = () => {
                   <div className="left-textsmall">
                     What type of files are you uploading?
                     <span className="icon-info">
-                      <Image
-                        src="ic_info.png"
-                        // data-bs-toggle="tooltip"
-                        // data-bs-placement="top"
-                        // title="Tooltip on top"
-                      />
-                                      <div className="tool-tip">Tool tip Comes here</div>
+                      <div className="tool-tip">Tool tip Comes here</div>
+                      <Image src="ic_info.png"/>
 
                     </span>
                   </div>
@@ -153,9 +147,6 @@ const CreateManifest = () => {
                 if the file you have selected did not appear, your browser might
                 have a pop up blocker. Please disable that.
               </div>
-              <div className="downarrow-img">
-                <Image src="ic_down_arrow.png" />
-              </div>
             </div>
           </div>
           <div className="d-flex justify-content-center g-0">
@@ -171,9 +162,7 @@ const CreateManifest = () => {
             />
           </div>
         </div>
-      ) : (
-        <NewGenerator />
-      )}
+     
     </>
   )
 }

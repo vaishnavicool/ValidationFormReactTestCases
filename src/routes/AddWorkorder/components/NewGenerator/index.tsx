@@ -6,7 +6,7 @@ import "./style.scss"
 import Image from "shared/Image"
 
 const NewGenerator = (props) => {
-  let { hideGenerator } = useEnhancer()
+  let { hideGenerator } = props
 
   return (
     <>

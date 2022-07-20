@@ -13,6 +13,7 @@ toast.configure({
   pauseOnHover: true,
   draggable: true,
   limit: 1,
+  bodyClassName:"myToastClass"
 })
 
 declare module "axios" {
@@ -91,7 +92,7 @@ axios.interceptors.response.use(
       let sorry = "Sorry something went wrong."
       let msg = `${sorry} \n ${en_msg}`
       if (!navigator.onLine) msg = formatMessage("global.error.notInternet")
-      toast(msg)
+      // toast(msg)
     }
 
     store.dispatch({ type: SET_LOADING_STATUS, loading_key, status: false })

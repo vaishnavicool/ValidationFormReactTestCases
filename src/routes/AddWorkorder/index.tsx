@@ -7,10 +7,11 @@ import ModalForm from "shared/ModalForm"
 import useEnhancer from "./enhancer"
 import CreateManifest from "./components/CreateManifest"
 import { useNavigate } from "react-router-dom"
+import NewGenerator from "./components/NewGenerator"
 
 const AddWorkorder = (props: any) => {
-  let { showManifest, setShowManifest } = useEnhancer()
-  let {updateWorkOrder} =props
+  let allProps = useEnhancer()
+  let { showManifest, setShowManifest,showNewGenerator,setShowNewGenerator,updateWorkOrder,popup,setPopup } = useEnhancer()
   let navigate = useNavigate()
   return (
     <>
@@ -38,7 +39,7 @@ const AddWorkorder = (props: any) => {
               className="btn-right-panel"
               value="+ Add New Manifest"
               type="button"
-              onClick={() => setShowManifest(true)}
+              onClick={() => setPopup('manifest')}
             />
           </div>
           <div className="invoice-container">
@@ -49,13 +50,14 @@ const AddWorkorder = (props: any) => {
               type="button"
             />
           </div>
-          <div className="btn-downarrow">
-            <Image src="ic_down_arrow.png" />
-          </div>
         </div>
       </div>
-      <ModalForm show={showManifest} setShow={setShowManifest} largeModal={true} pageTitle={"Add New Manifest"}>
-        <CreateManifest />
+      {console.log(popup)}
+      <ModalForm show={popup == 'manifest'} setShow={()=> setPopup('manifest')} largeModal={true} pageTitle={"Add New Manifest"} >
+        <CreateManifest {...allProps}/>
+      </ModalForm>
+      <ModalForm show={popup == 'generator'} setShow={()=> setPopup('generator')} largeModal={true} pageTitle={"Add New Generator"}>
+        <NewGenerator {...allProps} />
       </ModalForm>
     </>
   )

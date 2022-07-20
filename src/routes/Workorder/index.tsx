@@ -38,7 +38,7 @@ function Workorder(props: any) {
             <FilterChipPanel {...extraProps} />
           </div>
 
-          {tableData.length > 0 ? (<><div className="container-fluid p-0">
+          <div className="container-fluid p-0">
             <div className="profile-container pt-1 ">
               <div className="main-button-container">
                 <div ref={columnsBtn}>
@@ -80,22 +80,8 @@ function Workorder(props: any) {
             </div>
           </div>
           
-        </>
-      ) : (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "70vh",
-          }}
-        >
-          <Image
-            src="NoRecordsFound.png"
-            style={{ objectFit: "contain", width: 200 }}
-          />
-        </div>
-      )}
+        
+      
       <ModalForm {...extraProps}>
             <FilterPanel {...extraProps} />
           </ModalForm>

@@ -5,7 +5,7 @@ const useEnhancer = () => {
   const [showMoreAction,setShowMoreAction] = useState(false)
   const [showNewGenerator,setShowNewGenerator] = useState(false)
   const [workOrder, setWorkOrder] = useState({})
-
+  const [popup,setPopup] = useState('')
   const updateWorkOrder = (name: string) => (evt: any) => {
     let filters2: any = { ...workOrder }
     if (evt.label) filters2[name] = evt.value
@@ -18,12 +18,17 @@ const useEnhancer = () => {
   }
 
   const addGenerator = () => {
+
+    setShowManifest(false)
+
       setShowNewGenerator(true)
+      console.log(showManifest,showNewGenerator)
   }
 
 
 const hideGenerator = () => {
       setShowNewGenerator(false)
+      setShowManifest(true)
   }
 
   return {
@@ -35,7 +40,9 @@ const hideGenerator = () => {
     showNewGenerator,
     setShowNewGenerator,
     hideGenerator,
-    updateWorkOrder
+    updateWorkOrder,
+    popup,
+    setPopup
   }
 }
 

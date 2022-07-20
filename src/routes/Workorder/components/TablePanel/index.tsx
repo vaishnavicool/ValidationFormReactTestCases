@@ -4,6 +4,7 @@ import Image from "shared/Image"
 import Loading from "shared/Loading"
 import Pagination from "./pagination"
 import { useDetectClickOutside } from "react-detect-click-outside"
+import NoData from "./NoData"
 
 function WorkOrder(props: any) {
   let {
@@ -45,6 +46,8 @@ function WorkOrder(props: any) {
                 fixedHeaderScrollHeight="500px"
                 defaultSortFieldId={defaultSortFieldId}
                 onSelectedRowsChange={updateSelectedData}
+                persistTableHead={true}
+                noDataComponent={<NoData />}
               />
             </div>
 

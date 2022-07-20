@@ -26,6 +26,7 @@ function MainWrapper(props) {
           </div>
         </div>
       </div>
+      
     </div>
   )
 }

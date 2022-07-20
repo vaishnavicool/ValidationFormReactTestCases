@@ -6,7 +6,6 @@ const pageOptions = {
     defaultState: {
       startDate: "2022-04-07",
       endDate: "2022-05-29",
-
       workOrderId: "",
       generatorId: "",
       customerId: "",
@@ -23,11 +22,11 @@ const pageOptions = {
     },
     filters: [
       {
-        name: "work_Order_Id",
+        name: "workOrderId",
         numeric: true,
       },
       {
-        name: "job_Id",
+        name: "jobId",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
@@ -41,7 +40,7 @@ const pageOptions = {
         },
       },
       {
-        name: "sales_rep_Id",
+        name: "salesrepId",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
@@ -54,11 +53,11 @@ const pageOptions = {
         },
       },
       {
-        name: "generator_Id",
+        name: "generatorId",
         numeric: true,
       },
       {
-        name: "customer_Id",
+        name: "customerId",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
@@ -71,11 +70,11 @@ const pageOptions = {
           },
         },
       },
-      { name: "profile_Number" },
-      { name: "start_Date", type: "date" },
-      { name: "end_Date", type: "date" },
+      { name: "profileNumber" },
+      { name: "startDate", type: "date" },
+      { name: "endDate", type: "date" },
       {
-        name: "ready_To_Bill",
+        name: "readyToBill",
         numeric: true,
         type: "dropdown",
         dropdownOpts: [
@@ -97,7 +96,7 @@ const pageOptions = {
         },
       },
       {
-        name: "facility_Id",
+        name: "facilityId",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
