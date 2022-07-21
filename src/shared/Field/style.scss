@@ -63,9 +63,7 @@ input[type="file"] {
     border: 1px solid #79747E;
     border-radius: 4px;
 }
-.inputfile + label svg {
-    width: 1em;
-    height: 1em;
+.inputfile + label img {
     vertical-align: middle;
     fill: currentColor;
     margin-top: -0.25em;
