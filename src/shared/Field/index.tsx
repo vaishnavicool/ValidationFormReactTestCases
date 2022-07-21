@@ -17,6 +17,7 @@ function Field(props: any) {
     placeholder,
     actionIcon,
     actionHandler,
+    handlers,
   } = props
 
   let intl = useIntl()
@@ -25,11 +26,12 @@ function Field(props: any) {
     id: labelKey,
   })
 
+  console.log(handlers?.[actionHandler])
   let value = ""
   if (actionIcon && actionHandler) {
     return (
-      <div className={`mb-3 ${width}`} onClick={actionHandler}>
-        <Image src="ic_add.png" />
+      <div className={`mb-3 ${width}`} onClick={handlers?.[actionHandler]}>
+        <Image src={actionIcon} />
       </div>
     )
   }
@@ -67,7 +69,7 @@ function Field(props: any) {
           multiple={false}
         />
         <label htmlFor="file-1">
-        <Image src="ic_upload.png"/>
+          <Image src="ic_upload.png" />
 
           <span>Select Document</span>
         </label>

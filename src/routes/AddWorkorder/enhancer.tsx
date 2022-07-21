@@ -18,30 +18,20 @@ const useEnhancer = () => {
 
   const onHide = () => setPopup("")
 
-  const addGenerator = () => {
-    setShowManifest(false)
-
-    setShowNewGenerator(true)
-  }
-
-  const hideGenerator = () => {
-    setShowNewGenerator(false)
-    setShowManifest(true)
-  }
+  const handlers = { addGenerator: () => setPopup("generator") }
 
   return {
     showManifest,
     setShowManifest,
     showMoreAction,
     setShowMoreAction,
-    addGenerator,
     showNewGenerator,
     setShowNewGenerator,
-    hideGenerator,
     updateWorkOrder,
     popup,
     setPopup,
     onHide,
+    handlers,
   }
 }
 

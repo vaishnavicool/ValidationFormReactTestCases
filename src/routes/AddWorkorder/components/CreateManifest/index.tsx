@@ -8,7 +8,7 @@ import { pageConfig } from "routes/AddWorkorder/config"
 import { useDetectClickOutside } from "react-detect-click-outside"
 
 const CreateManifest = (props) => {
-  let { showMoreAction, setShowMoreAction, setPopup, onHide } = props
+  let { showMoreAction, setShowMoreAction, setPopup, onHide, handlers } = props
 
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),
@@ -18,12 +18,10 @@ const CreateManifest = (props) => {
       <div>
         <div className="d-flex col-12 p-3">
           <div className="col-6 left-section">
-            <Form config={pageConfig?.addManifestConfig} update={() => {}} />
-            <Image
-              src="ic_add.png"
-              onClick={() => {
-                setPopup("generator")
-              }}
+            <Form
+              config={pageConfig?.addManifestConfig}
+              update={() => {}}
+              handlers={handlers}
             />
           </div>
           <div className="col-6 right-section">
