@@ -80,7 +80,7 @@
 
 .input-field {
   width: 100%;
-  border: 1px solid #bbbbbb;
+  border: 1px solid #79747E;
   font-weight: 400;
   font-size: 0.62rem;
   line-height: 14px;
@@ -166,6 +166,7 @@
 }
 
 .basic-single {
+  background-color: white;
   div[class$="singleValue"] {
     max-width: 90%;
   }
@@ -180,7 +181,7 @@
   div[class$="control"] {
     box-shadow: none;
     margin: 0;
-
+    border: 1px solid #79747E;
     background: transparent;
 
     .input :focus-visible {
