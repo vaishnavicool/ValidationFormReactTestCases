@@ -1,17 +1,17 @@
-import { pageConfig } from "./config"
-import Form from "shared/Form"
-import Topsection from "shared/Topsection"
 import "./style.scss"
-import Image from "shared/Image"
-import ModalForm from "shared/ModalForm"
-import useEnhancer from "./enhancer"
+
 import CreateManifest from "./components/CreateManifest"
-import { useNavigate } from "react-router-dom"
+import Form from "shared/Form"
+import ModalForm from "shared/ModalForm"
 import NewGenerator from "./components/NewGenerator"
+import Topsection from "shared/Topsection"
+import { pageConfig } from "./config"
+import useEnhancer from "./enhancer"
+import { useNavigate } from "react-router-dom"
 
 const AddWorkorder = (props: any) => {
   let allProps = useEnhancer()
-  let { showManifest, setShowManifest,showNewGenerator,setShowNewGenerator,updateWorkOrder,popup,setPopup } = useEnhancer()
+  let {updateWorkOrder,popup,setPopup } = useEnhancer()
   let navigate = useNavigate()
   return (
     <>
@@ -52,7 +52,6 @@ const AddWorkorder = (props: any) => {
           </div>
         </div>
       </div>
-      {console.log(popup)}
       <ModalForm show={popup == 'manifest'} setShow={()=> setPopup('manifest')} largeModal={true} pageTitle={"Add New Manifest"} >
         <CreateManifest {...allProps}/>
       </ModalForm>

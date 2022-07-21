@@ -1,9 +1,9 @@
+import "./style.scss"
+
+import Form from "shared/Form"
+import Image from "shared/Image"
 import React from "react"
 import { pageConfig } from "routes/AddWorkorder/config"
-import useEnhancer from "routes/AddWorkorder/enhancer"
-import Form from "shared/Form"
-import "./style.scss"
-import Image from "shared/Image"
 
 const NewGenerator = (props) => {
   let { hideGenerator } = props

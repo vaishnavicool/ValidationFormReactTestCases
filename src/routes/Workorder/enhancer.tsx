@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
 import { getDropdownOpts, getPageOpts } from "./config"
+import { useEffect, useState } from "react"
 
 import _ from "lodash"
 import api from "api"
@@ -27,7 +27,6 @@ const useEnhancer = () => {
 
   const updateFilters = (name: string) => (evt: any) => {
     let filters2: any = { ...filters }
-    console.log("filters2 name",filters2[name],evt.label)
     if (evt.label) filters2[name] = evt.value
     else {
       let { type, checked, value } = evt.target
