@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom"
 
 const AddWorkorder = (props: any) => {
   let allProps = useEnhancer()
-  let {updateWorkOrder,popup,setPopup } = useEnhancer()
+  let { updateWorkOrder, popup, setPopup, onHide } = allProps
   let navigate = useNavigate()
   return (
     <>
@@ -21,16 +21,18 @@ const AddWorkorder = (props: any) => {
             className="btn-addworkorder-cancel"
             value="Cancel"
             type="button"
-            onClick={()=>navigate("/customer_processing/work_order")}
+            onClick={() => navigate("/customer_processing/work_order")}
           />
-          <input className="btn-addworkorder-add" value="Add" type="button" />
+          <input className="btn-addworkorder-add" value={"Add"} type="button" />
         </div>
       </Topsection>
 
       <div className="d-flex mx-4">
         <div className="col-9 row">
-          <Form config={pageConfig?.addWorkOrderConfig} update={updateWorkOrder}/>
-          
+          <Form
+            config={pageConfig?.addWorkOrderConfig}
+            update={updateWorkOrder}
+          />
         </div>
         <div className="col-3 d-flex flex-column">
           <div className=" manifest-container">
@@ -39,7 +41,7 @@ const AddWorkorder = (props: any) => {
               className="btn-right-panel"
               value="+ Add New Manifest"
               type="button"
-              onClick={() => setPopup('manifest')}
+              onClick={() => setPopup("manifest")}
             />
           </div>
           <div className="invoice-container">
@@ -52,10 +54,22 @@ const AddWorkorder = (props: any) => {
           </div>
         </div>
       </div>
-      <ModalForm show={popup == 'manifest'} setShow={()=> setPopup('manifest')} largeModal={true} pageTitle={"Add New Manifest"} >
-        <CreateManifest {...allProps}/>
+      <ModalForm
+        show={popup == "manifest"}
+        setShow={() => setPopup("manifest")}
+        onHide={onHide}
+        largeModal={true}
+        pageTitle={"Add New Manifest"}
+      >
+        <CreateManifest {...allProps} />
       </ModalForm>
-      <ModalForm show={popup == 'generator'} setShow={()=> setPopup('generator')} largeModal={true} pageTitle={"Add New Generator"}>
+      <ModalForm
+        show={popup == "generator"}
+        setShow={() => setPopup("generator")}
+        onHide={onHide}
+        largeModal={true}
+        pageTitle={"Add New Generator"}
+      >
         <NewGenerator {...allProps} />
       </ModalForm>
     </>

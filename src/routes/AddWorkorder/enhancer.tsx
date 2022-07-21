@@ -1,10 +1,10 @@
 import { useState } from "react"
 const useEnhancer = () => {
   const [showManifest, setShowManifest] = useState(false)
-  const [showMoreAction,setShowMoreAction] = useState(false)
-  const [showNewGenerator,setShowNewGenerator] = useState(false)
+  const [showMoreAction, setShowMoreAction] = useState(false)
+  const [showNewGenerator, setShowNewGenerator] = useState(false)
   const [workOrder, setWorkOrder] = useState({})
-  const [popup,setPopup] = useState('')
+  const [popup, setPopup] = useState("")
   const updateWorkOrder = (name: string) => (evt: any) => {
     let filters2: any = { ...workOrder }
     if (evt.label) filters2[name] = evt.value
@@ -16,17 +16,17 @@ const useEnhancer = () => {
     setWorkOrder(filters2)
   }
 
-  const addGenerator = () => {
+  const onHide = () => setPopup("")
 
+  const addGenerator = () => {
     setShowManifest(false)
 
-      setShowNewGenerator(true)
+    setShowNewGenerator(true)
   }
 
-
-const hideGenerator = () => {
-      setShowNewGenerator(false)
-      setShowManifest(true)
+  const hideGenerator = () => {
+    setShowNewGenerator(false)
+    setShowManifest(true)
   }
 
   return {
@@ -40,7 +40,8 @@ const hideGenerator = () => {
     hideGenerator,
     updateWorkOrder,
     popup,
-    setPopup
+    setPopup,
+    onHide,
   }
 }
 

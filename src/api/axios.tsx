@@ -89,10 +89,15 @@ axios.interceptors.response.use(
       loading_key = message.split(";")[1]
     } else {
       let en_msg = ""
-      let sorry = <div><Image src="ic_sad.png" style={{marginRight:14}}/> Sorry something went wrong.</div>
+      let sorry = (
+        <div>
+          <Image src="ic_sad.png" style={{ marginRight: 14 }} /> Sorry something
+          went wrong.
+        </div>
+      )
       let msg = `${sorry} \n ${en_msg}`
       if (!navigator.onLine) msg = formatMessage("global.error.notInternet")
-      toast(sorry)
+      if (false) toast(msg)
     }
 
     store.dispatch({ type: SET_LOADING_STATUS, loading_key, status: false })
