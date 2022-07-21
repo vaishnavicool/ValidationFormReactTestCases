@@ -4,7 +4,7 @@ import axios from "axios"
 import { formatMessage } from "shared"
 import store from "store"
 import { toast } from "react-toastify"
-
+import Image from "shared/Image"
 toast.configure({
   position: "top-center",
   autoClose: false,
@@ -89,10 +89,10 @@ axios.interceptors.response.use(
       loading_key = message.split(";")[1]
     } else {
       let en_msg = ""
-      let sorry = "Sorry something went wrong."
+      let sorry = <div><Image src="ic_sad.png" style={{marginRight:14}}/> Sorry something went wrong.</div>
       let msg = `${sorry} \n ${en_msg}`
       if (!navigator.onLine) msg = formatMessage("global.error.notInternet")
-      toast(msg)
+      toast(sorry)
     }
 
     store.dispatch({ type: SET_LOADING_STATUS, loading_key, status: false })

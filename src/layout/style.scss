@@ -80,4 +80,20 @@ body,
 }
 .myToastClass{
   background-color: #FCBBBB;
+  color: #272727;
+
+}
+.Toastify__toast {
+  padding: 0;
+  background-color: #FCBBBB !important;
+  border: 1px solid #FF3131;
+  min-height: 64px !important;
+
+}
+.Toastify__toast-container{
+  width: 50% !important;
+}
+.Toastify__close-button{
+  margin-top: auto;
+  margin-bottom: auto;
 }
