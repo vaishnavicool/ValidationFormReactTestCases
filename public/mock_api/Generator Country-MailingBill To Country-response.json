@@ -1,0 +1,283 @@
+{
+  "version": "2.0",
+  "statusCode": 200,
+  "message": "GET Request successful.",
+  "result": [
+    {
+      "countyID": 1,
+      "countyName": null
+    },
+    {
+      "countyID": 709,
+      "countyName": null
+    },
+    {
+      "countyID": 2400,
+      "countyName": null
+    },
+    {
+      "countyID": 2401,
+      "countyName": null
+    },
+    {
+      "countyID": 2402,
+      "countyName": null
+    },
+    {
+      "countyID": 710,
+      "countyName": null
+    },
+    {
+      "countyID": 711,
+      "countyName": null
+    },
+    {
+      "countyID": 2403,
+      "countyName": null
+    },
+    {
+      "countyID": 2404,
+      "countyName": null
+    },
+    {
+      "countyID": 712,
+      "countyName": null
+    },
+    {
+      "countyID": 2405,
+      "countyName": null
+    },
+    {
+      "countyID": 713,
+      "countyName": null
+    },
+    {
+      "countyID": 714,
+      "countyName": null
+    },
+    {
+      "countyID": 2406,
+      "countyName": null
+    },
+    {
+      "countyID": 2407,
+      "countyName": null
+    },
+    {
+      "countyID": 715,
+      "countyName": null
+    },
+    {
+      "countyID": 2408,
+      "countyName": null
+    },
+    {
+      "countyID": 716,
+      "countyName": null
+    },
+    {
+      "countyID": 717,
+      "countyName": null
+    },
+    {
+      "countyID": 718,
+      "countyName": null
+    },
+    {
+      "countyID": 719,
+      "countyName": null
+    },
+    {
+      "countyID": 720,
+      "countyName": null
+    },
+    {
+      "countyID": 721,
+      "countyName": null
+    },
+    {
+      "countyID": 722,
+      "countyName": null
+    },
+    {
+      "countyID": 2409,
+      "countyName": null
+    },
+    {
+      "countyID": 2410,
+      "countyName": null
+    },
+    {
+      "countyID": 723,
+      "countyName": null
+    },
+    {
+      "countyID": 2411,
+      "countyName": null
+    },
+    {
+      "countyID": 2,
+      "countyName": null
+    },
+    {
+      "countyID": 2412,
+      "countyName": null
+    },
+    {
+      "countyID": 2413,
+      "countyName": null
+    },
+    {
+      "countyID": 724,
+      "countyName": null
+    },
+    {
+      "countyID": 2414,
+      "countyName": null
+    },
+    {
+      "countyID": 725,
+      "countyName": null
+    },
+    {
+      "countyID": 2415,
+      "countyName": null
+    },
+    {
+      "countyID": 2416,
+      "countyName": null
+    },
+    {
+      "countyID": 2417,
+      "countyName": null
+    },
+    {
+      "countyID": 2418,
+      "countyName": null
+    },
+    {
+      "countyID": 2419,
+      "countyName": null
+    },
+    {
+      "countyID": 726,
+      "countyName": null
+    },
+    {
+      "countyID": 2420,
+      "countyName": null
+    },
+    {
+      "countyID": 2421,
+      "countyName": null
+    },
+    {
+      "countyID": 727,
+      "countyName": null
+    },
+    {
+      "countyID": 2422,
+      "countyName": null
+    },
+    {
+      "countyID": 2423,
+      "countyName": null
+    },
+    {
+      "countyID": 2424,
+      "countyName": null
+    },
+    {
+      "countyID": 728,
+      "countyName": null
+    },
+    {
+      "countyID": 2425,
+      "countyName": null
+    },
+    {
+      "countyID": 2426,
+      "countyName": null
+    },
+    {
+      "countyID": 729,
+      "countyName": null
+    },
+    {
+      "countyID": 2427,
+      "countyName": null
+    },
+    {
+      "countyID": 2428,
+      "countyName": null
+    },
+    {
+      "countyID": 2429,
+      "countyName": null
+    },
+    {
+      "countyID": 3,
+      "countyName": null
+    },
+    {
+      "countyID": 2430,
+      "countyName": null
+    },
+    {
+      "countyID": 2431,
+      "countyName": null
+    },
+    {
+      "countyID": 2432,
+      "countyName": null
+    },
+    {
+      "countyID": 2433,
+      "countyName": null
+    },
+    {
+      "countyID": 2434,
+      "countyName": null
+    },
+    {
+      "countyID": 2435,
+      "countyName": null
+    },
+    {
+      "countyID": 4,
+      "countyName": null
+    },
+    {
+      "countyID": 2436,
+      "countyName": null
+    },
+    {
+      "countyID": 730,
+      "countyName": null
+    },
+    {
+      "countyID": 731,
+      "countyName": null
+    },
+    {
+      "countyID": 732,
+      "countyName": null
+    },
+    {
+      "countyID": 2437,
+      "countyName": null
+    },
+    {
+      "countyID": 2438,
+      "countyName": null
+    },
+    {
+      "countyID": 2439,
+      "countyName": null
+    },
+    {
+      "countyID": 733,
+      "countyName": null
+    }
+  ]
+}

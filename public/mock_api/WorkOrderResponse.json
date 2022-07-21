@@ -1,0 +1,43 @@
+{
+  "version": "2.0",
+  "statusCode": 200,
+  "message": "GET Request successful.",
+  "result": [
+    {
+      "workOrderTypeId": 1,
+      "workOrderDescription": "T&D"
+    },
+    {
+      "workOrderTypeId": 2,
+      "workOrderDescription": "FS"
+    },
+    {
+      "workOrderTypeId": 3,
+      "workOrderDescription": "DS"
+    },
+    {
+      "workOrderTypeId": 4,
+      "workOrderDescription": "LP"
+    },
+    {
+      "workOrderTypeId": 5,
+      "workOrderDescription": "PS"
+    },
+    {
+      "workOrderTypeId": 6,
+      "workOrderDescription": "OB"
+    },
+    {
+      "workOrderTypeId": 7,
+      "workOrderDescription": "OTHER"
+    },
+    {
+      "workOrderTypeId": 8,
+      "workOrderDescription": "TRANS"
+    },
+    {
+      "workOrderTypeId": 9,
+      "workOrderDescription": "Subcontracting"
+    }
+  ]
+}

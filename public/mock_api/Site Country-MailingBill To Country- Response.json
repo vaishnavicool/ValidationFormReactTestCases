@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "statusCode": 200,
+  "message": "GET Request successful.",
+  "result": [
+    {
+      "countryID": 1,
+      "countryName": "United States of America"
+    },
+    {
+      "countryID": 2,
+      "countryName": "Canada"
+    },
+    {
+      "countryID": 3,
+      "countryName": "Mexico"
+    }
+  ]
+}

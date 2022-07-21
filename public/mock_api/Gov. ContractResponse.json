@@ -1,0 +1,11 @@
+{
+  "version": "2.0",
+  "statusCode": 200,
+  "message": "GET Request successful.",
+  "result": [
+    {
+      "contractNumber": "SP450017D0017-",
+      "contactName": "SP450017D0017- Warner Robbins"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "version": "2.0",
+  "statusCode": 200,
+  "message": "GET Request successful.",
+  "result": [
+    {
+      "stateID": 2,
+      "stateName": "AK"
+    },
+    {
+      "stateID": 1,
+      "stateName": "AL"
+    },
+    {
+      "stateID": 4,
+      "stateName": "AR"
+    },
+    {
+      "stateID": 51,
+      "stateName": "AS"
+    },
+    {
+      "stateID": 3,
+      "stateName": "AZ"
+    },
+    {
+      "stateID": 5,
+      "stateName": "CA"
+    },
+    {
+      "stateID": 6,
+      "stateName": "CO"
+    },
+    {
+      "stateID": 7,
+      "stateName": "CT"
+    },
+    {
+      "stateID": 56,
+      "stateName": "DC"
+    },
+    {
+      "stateID": 8,
+      "stateName": "DE"
+    },
+    {
+      "stateID": 9,
+      "stateName": "FL"
+    },
+    {
+      "stateID": 10,
+      "stateName": "GA"
+    },
+    {
+      "stateID": 52,
+      "stateName": "GU"
+    },
+    {
+      "stateID": 11,
+      "stateName": "HI"
+    },
+    {
+      "stateID": 15,
+      "stateName": "IA"
+    },
+    {
+      "stateID": 12,
+      "stateName": "ID"
+    },
+    {
+      "stateID": 13,
+      "stateName": "IL"
+    },
+    {
+      "stateID": 14,
+      "stateName": "IN"
+    },
+    {
+      "stateID": 16,
+      "stateName": "KS"
+    },
+    {
+      "stateID": 17,
+      "stateName": "KY"
+    },
+    {
+      "stateID": 18,
+      "stateName": "LA"
+    },
+    {
+      "stateID": 21,
+      "stateName": "MA"
+    },
+    {
+      "stateID": 20,
+      "stateName": "MD"
+    },
+    {
+      "stateID": 19,
+      "stateName": "ME"
+    },
+    {
+      "stateID": 22,
+      "stateName": "MI"
+    },
+    {
+      "stateID": 23,
+      "stateName": "MN"
+    },
+    {
+      "stateID": 25,
+      "stateName": "MO"
+    },
+    {
+      "stateID": 53,
+      "stateName": "MP"
+    },
+    {
+      "stateID": 24,
+      "stateName": "MS"
+    },
+    {
+      "stateID": 26,
+      "stateName": "MT"
+    },
+    {
+      "stateID": 33,
+      "stateName": "NC"
+    },
+    {
+      "stateID": 34,
+      "stateName": "ND"
+    },
+    {
+      "stateID": 27,
+      "stateName": "NE"
+    },
+    {
+      "stateID": 29,
+      "stateName": "NH"
+    },
+    {
+      "stateID": 30,
+      "stateName": "NJ"
+    },
+    {
+      "stateID": 31,
+      "stateName": "NM"
+    },
+    {
+      "stateID": 28,
+      "stateName": "NV"
+    },
+    {
+      "stateID": 32,
+      "stateName": "NY"
+    },
+    {
+      "stateID": 35,
+      "stateName": "OH"
+    },
+    {
+      "stateID": 36,
+      "stateName": "OK"
+    },
+    {
+      "stateID": 37,
+      "stateName": "OR"
+    },
+    {
+      "stateID": 38,
+      "stateName": "PA"
+    },
+    {
+      "stateID": 54,
+      "stateName": "PR"
+    },
+    {
+      "stateID": 39,
+      "stateName": "RI"
+    },
+    {
+      "stateID": 40,
+      "stateName": "SC"
+    },
+    {
+      "stateID": 41,
+      "stateName": "SD"
+    },
+    {
+      "stateID": 42,
+      "stateName": "TN"
+    },
+    {
+      "stateID": 43,
+      "stateName": "TX"
+    },
+    {
+      "stateID": 44,
+      "stateName": "UT"
+    },
+    {
+      "stateID": 46,
+      "stateName": "VA"
+    },
+    {
+      "stateID": 55,
+      "stateName": "VI"
+    },
+    {
+      "stateID": 45,
+      "stateName": "VT"
+    },
+    {
+      "stateID": 47,
+      "stateName": "WA"
+    },
+    {
+      "stateID": 49,
+      "stateName": "WI"
+    },
+    {
+      "stateID": 48,
+      "stateName": "WV"
+    },
+    {
+      "stateID": 50,
+      "stateName": "WY"
+    }
+  ]
+}
