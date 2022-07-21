@@ -22,7 +22,7 @@ const pageOptions = {
     },
     filters: [
       {
-        name: "workOrderId",
+        name: "workOrder_Id",
         numeric: true,
       },
       {
@@ -40,7 +40,7 @@ const pageOptions = {
         },
       },
       {
-        name: "salesrepId",
+        name: "sales_rep_Id",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
@@ -53,7 +53,7 @@ const pageOptions = {
         },
       },
       {
-        name: "generatorId",
+        name: "generator_Id",
         numeric: true,
       },
       {
