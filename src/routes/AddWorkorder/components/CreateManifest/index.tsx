@@ -3,12 +3,11 @@ import "./style.scss"
 import Field from "shared/Field"
 import Form from "shared/Form"
 import Image from "shared/Image"
-// import ReactTooltip from "react-tooltip"
 import { pageConfig } from "routes/AddWorkorder/config"
 import { useDetectClickOutside } from "react-detect-click-outside"
 
 const CreateManifest = (props) => {
-  let { showMoreAction, setShowMoreAction, setPopup, onHide, handlers } = props
+  let { showMoreAction, setShowMoreAction, onHide, handlers } = props
 
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),

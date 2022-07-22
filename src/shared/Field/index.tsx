@@ -24,7 +24,6 @@ function Field(props: any) {
     id: labelKey,
   })
 
-  console.log(handlers?.[actionHandler])
   let value = ""
   if (actionIcon && actionHandler) {
     return (

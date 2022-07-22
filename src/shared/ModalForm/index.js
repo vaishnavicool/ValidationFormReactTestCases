@@ -2,7 +2,6 @@ import { Modal } from "react-bootstrap"
 const ModalForm = (props) => {
   let {
     show,
-    setShow,
     modalType,
     pageConfig,
     children,
