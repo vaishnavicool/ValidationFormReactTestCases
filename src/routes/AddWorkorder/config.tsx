@@ -64,7 +64,7 @@ export const pageConfig = {
         type: "dropdown",
         numeric: true,
         dropdownOpts: {
-          api_key: "p_getCSR",
+          api_key: "g_getSchedule_type",
           labelKey: "name",
           valueKey: "id",
           body: {
@@ -106,7 +106,7 @@ export const pageConfig = {
         width: "col-4",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
+          api_key: "p_getCSR",
           labelKey: "name",
           valueKey: "id",
           body: {
@@ -184,7 +184,7 @@ export const pageConfig = {
         width: "col-4",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
+          api_key: "g_getDo",
           labelKey: "name",
           valueKey: "id",
           body: {
