@@ -1,5 +1,7 @@
 import "./style.scss"
+
 import { FormattedMessage, useIntl } from "react-intl"
+
 import Image from "shared/Image"
 import Select from "react-select"
 
@@ -39,6 +41,10 @@ function Field(props: any) {
       <div className={`mb-3 custom-group ${width}`}>
         <label htmlFor="disabledTextInput" className="label">
           <FormattedMessage id={labelKey} />
+          {infoKey && <span className="icon-info">
+            <div className="tool-tip"><FormattedMessage id={infoKey} /></div>
+            <Image src="ic_info.png" />
+          </span>}
         </label>
         <Select
           onChange={update(name)}
@@ -88,11 +94,6 @@ function Field(props: any) {
           onChange={update(name)}
           value={value}
         />
-        {infoKey && (
-          <div className="info-txt">
-            <FormattedMessage id={infoKey} />
-          </div>
-        )}
       </div>
     )
   }
@@ -101,6 +102,10 @@ function Field(props: any) {
     <div className={`mb-3 custom-group ${width}`}>
       <label htmlFor="disabledTextInput" className="label">
         <FormattedMessage id={`${labelKey}`} />
+        {infoKey && <span className="icon-info">
+            <div className="tool-tip"><FormattedMessage id={infoKey} /></div>
+            <Image src="ic_info.png" />
+          </span>}
       </label>
       <input
         type={type}
@@ -111,11 +116,6 @@ function Field(props: any) {
         onChange={update(name)}
         value={value}
       />
-      {infoKey && (
-        <div className="info-txt">
-          <FormattedMessage id={infoKey} />
-        </div>
-      )}
     </div>
   )
 }

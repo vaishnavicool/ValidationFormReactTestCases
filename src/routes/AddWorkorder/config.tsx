@@ -31,6 +31,7 @@ export const pageConfig = {
             modeId: true,
           },
         },
+        infoKey:"form.customer.tooltip"
       },
       {
         name: "customer_sales_channel",
