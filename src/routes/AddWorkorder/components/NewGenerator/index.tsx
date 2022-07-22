@@ -5,7 +5,7 @@ import Image from "shared/Image"
 import { pageConfig } from "routes/AddWorkorder/config"
 
 const NewGenerator = (props) => {
-  let { onHide, setPopup } = props
+  let { onHide, setPopup,  updateGenerator, generator, saveGenerator } = props
 
   return (
     <>
@@ -13,8 +13,9 @@ const NewGenerator = (props) => {
         <div className="col-6 left-section-gen p-3 ">
           <Form
             config={pageConfig?.addNewGeneratorConfig}
-            update={() => {}}
             allDropdownOpts={() => ["a", "b"]}
+            update={updateGenerator}
+              filters={generator}
           />
         </div>
         <div className="col-6 gen-right-section">
@@ -43,6 +44,8 @@ const NewGenerator = (props) => {
           className="btn-addworkorder-add"
           value="Save Generator"
           type="button"
+          onClick={() => saveGenerator()}
+
         />
       </div>
     </>
