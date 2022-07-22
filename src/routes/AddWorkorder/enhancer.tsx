@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import { getDropdownOpts } from "shared"
 
 const useEnhancer = () => {
   const [showManifest, setShowManifest] = useState(false)
@@ -7,11 +6,10 @@ const useEnhancer = () => {
   const [showNewGenerator, setShowNewGenerator] = useState(false)
   const [workOrder, setWorkOrder] = useState({})
   const [popup, setPopup] = useState("")
-  const [allDropdownOpts, setAllDropdownOpts] = useState({})
+  const [allDropdownOpts] = useState({})
   const [show, setShow] = useState(false)
   const [aFilters, setAFilters] = useState({})
 
-  let pageKey = "addWorkOrderConfig"
 
   const updateWorkOrder = (name: string) => (evt: any) => {
     let filters2: any = { ...workOrder }
@@ -42,7 +40,6 @@ const useEnhancer = () => {
     setAFilters(filters2)
   }
 
-  const addGenerator = () => {}
 
   const handlers = { addGenerator: () => setPopup("generator") }
 

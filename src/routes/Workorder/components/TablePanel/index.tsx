@@ -18,7 +18,6 @@ function WorkOrder(props: any) {
     visibleColumns,
     noDataColumns
   } = props
-  console.log(tableData)
   const activityMenuClick = useDetectClickOutside({
     onTriggered: () => setShowActivity(false),
   })
