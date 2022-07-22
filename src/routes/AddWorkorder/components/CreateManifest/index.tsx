@@ -7,7 +7,7 @@ import { pageConfig } from "routes/AddWorkorder/config"
 import { useDetectClickOutside } from "react-detect-click-outside"
 
 const CreateManifest = (props) => {
-  let { showMoreAction, setShowMoreAction, onHide, handlers } = props
+  let { showMoreAction, setShowMoreAction, onHide, handlers,updateManifest,manifest,saveManifest } = props
 
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),
@@ -19,8 +19,9 @@ const CreateManifest = (props) => {
           <div className="col-6 left-section">
             <Form
               config={pageConfig?.addManifestConfig}
-              update={() => {}}
-              handlers={handlers}
+              update={updateManifest}
+              filters={manifest}
+                handlers={handlers}
               allDropdownOpts={() => ["a", "b"]}
             />
           </div>
@@ -159,6 +160,7 @@ const CreateManifest = (props) => {
             className="btn-addworkorder-add"
             value="Save Manifest"
             type="button"
+            onClick={()=>saveManifest()}
           />
         </div>
       </div>

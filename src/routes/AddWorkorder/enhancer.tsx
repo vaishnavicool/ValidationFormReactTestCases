@@ -7,6 +7,8 @@ const useEnhancer = () => {
   const [showMoreAction, setShowMoreAction] = useState(false)
   const [showNewGenerator, setShowNewGenerator] = useState(false)
   const [workOrder, setWorkOrder] = useState({})
+  const [manifest, setManifest] = useState({})
+
   const [popup, setPopup] = useState("")
   const [allDropdownOpts,setAllDropdownOpts] = useState({})
   const [show, setShow] = useState(false)
@@ -20,6 +22,15 @@ const useEnhancer = () => {
       filters2[name] = type === "checkbox" ? checked : value
     }
     setWorkOrder(filters2)
+  }
+  const updateManifest = (name: string) => (evt: any) => {
+    let filters2: any = { ...manifest }
+    if (evt.label) filters2[name] = evt.value
+    else {
+      let { type, checked, value } = evt.target
+      filters2[name] = type === "checkbox" ? checked : value
+    }
+    setManifest(filters2)
   }
 
   const onHide = () => setPopup("")
@@ -44,6 +55,9 @@ const useEnhancer = () => {
   const addWorkOrder = () => {
     console.log("Workorder Form Data",workOrder)
   }
+  const saveManifest = () => {
+    console.log("Save Manifeast Form Data",manifest)
+  }
 
   const handlers = { addGenerator: () => setPopup("generator") }
 
@@ -65,8 +79,12 @@ const useEnhancer = () => {
     aFilters,
     applyFilters,
     allDropdownOpts,
-    addWorkOrder
-  }
+    addWorkOrder,
+    manifest,
+    setManifest,
+    updateManifest,
+    saveManifest
+    }
 }
 
 export default useEnhancer
