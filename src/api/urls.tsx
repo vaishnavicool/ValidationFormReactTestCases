@@ -13,6 +13,9 @@ let urls: any = {
   p_getJobs: () => `${host()}/LookUp/GetJobs`,
   p_getCustomers: () => `${host()}/LookUp/GetCustomers`,
   g_getTransporters: () => `/mock_api/transpoters.json`,
+  g_getMarket_driver: () => `/mock_api/market_driver.json`,
+  g_getInside_sales_rep: () => `/mock_api/inside_sales_rep.json`,
+  g_getGov_contract: () => `/mock_api/Gov_contract.json`,
 }
 
 export default urls

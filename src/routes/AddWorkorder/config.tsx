@@ -21,13 +21,14 @@ export const pageConfig = {
         name: "customer",
         numeric: true,
         width: "col-4",
-        type: "dropdown",
+        type: "dropdown",   
         dropdownOpts: {
-          api_key: "p_getSalesRep",
-          labelKey: "name",
-          valueKey: "salesRepid",
+          api_key: "p_getCustomers",
+          labelKey: "customerName",
+          valueKey: "customerId",
           body: {
-            modeId: true,
+            optionalParam: "string",
+            isShowAll: true,
           },
         },
         infoKey:"form.customer.tooltip"
@@ -42,14 +43,14 @@ export const pageConfig = {
         numeric: true,
         width: "col-4",
         type: "dropdown",
-        dropdownOpts: {
-          api_key: "p_getSalesRep",
-          labelKey: "name",
-          valueKey: "salesRepid",
-          body: {
-            modeId: true,
-          },
-        },
+        // dropdownOpts: {
+        //   api_key: "p_getSalesRep",
+        //   labelKey: "name",
+        //   valueKey: "salesRepid",
+        //   body: {
+        //     modeId: true,
+        //   },
+        // },
       },
       { name: "generator", type: "search", width: "col-4" },
       {
@@ -77,11 +78,11 @@ export const pageConfig = {
         width: "col-4",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
+          api_key: "p_getSalesRep",
           labelKey: "name",
-          valueKey: "id",
+          valueKey: "salesRepid",
           body: {
-            optionalParam: "0",
+            modeId: true,
           },
         },
       },
@@ -91,7 +92,7 @@ export const pageConfig = {
         width: "col-4",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
+          api_key: "g_getInside_sales_rep",
           labelKey: "name",
           valueKey: "id",
           body: {
@@ -118,12 +119,13 @@ export const pageConfig = {
         numeric: true,
         width: "col-4",
         type: "dropdown",
-        dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
+          dropdownOpts: {
+            api_key: "p_getJobs",
+            labelKey: "jobName",
+            valueKey: "jobId",
           body: {
-            optionalParam: "0",
+           isOutBoundOnly: true,
+           isShowAll: true,
           },
         },
       },
@@ -168,7 +170,7 @@ export const pageConfig = {
         width: "col-4",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
+          api_key: "Gov_contract",
           labelKey: "name",
           valueKey: "id",
           body: {
@@ -230,7 +232,7 @@ export const pageConfig = {
         width: "col-4",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
+          api_key: "g_getMarket_driver",
           labelKey: "name",
           valueKey: "id",
           body: {
@@ -307,7 +309,7 @@ export const pageConfig = {
         width: "col-45",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
+          api_key: "g_getTransporters",
           labelKey: "name",
           valueKey: "id",
           body: {
@@ -321,7 +323,7 @@ export const pageConfig = {
         width: "col-45",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
+          api_key: "g_getTransporters",
           labelKey: "name",
           valueKey: "id",
           body: {
@@ -335,7 +337,7 @@ export const pageConfig = {
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
+          api_key: "g_getTransporters",
           labelKey: "name",
           valueKey: "id",
           body: {

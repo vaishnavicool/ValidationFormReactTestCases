@@ -47,9 +47,10 @@ export const getPageOpts = (pageOptions,pageKey) => {
 
 export const getDropdownOpts = async (pageOptions,pageKey) => {
   let dropdownOpts = {}
+console.log( "--",pageOptions["form"]);
 
   let basic = pageOptions[pageKey].form.filter(
-    (d) => d.type == "dropdown" && d.dropdownOpts.api_key
+    (d) => d.type == "dropdown" && d?.dropdownOpts.api_key
   )
 
   let allOptsMeta = [...basic].map((d) => ({

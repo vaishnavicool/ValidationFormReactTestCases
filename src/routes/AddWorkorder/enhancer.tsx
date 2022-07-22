@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react"
-
+import { useState, useEffect } from "react"
+import { getDropdownOpts } from "shared"
+import { pageConfig } from "./config"
 const useEnhancer = () => {
+  let pageKey = "addWorkOrderConfig"
   const [showManifest, setShowManifest] = useState(false)
   const [showMoreAction, setShowMoreAction] = useState(false)
   const [showNewGenerator, setShowNewGenerator] = useState(false)
   const [workOrder, setWorkOrder] = useState({})
   const [popup, setPopup] = useState("")
-  const [allDropdownOpts] = useState({})
+  const [allDropdownOpts,setAllDropdownOpts] = useState({})
   const [show, setShow] = useState(false)
   const [aFilters, setAFilters] = useState({})
 
@@ -23,8 +25,8 @@ const useEnhancer = () => {
   const onHide = () => setPopup("")
   useEffect(() => {
     ;(async () => {
-      // let opts = await getDropdownOpts(p pageKey)
-      // setAllDropdownOpts(opts)
+      let opts = await getDropdownOpts(pageConfig, pageKey)
+      setAllDropdownOpts(opts)
     })()
   }, [])
 
