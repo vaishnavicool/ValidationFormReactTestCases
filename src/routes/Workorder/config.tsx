@@ -1,5 +1,4 @@
-import api from "api"
-const pageOptions = {
+export const pageOptions = {
   workOrders: {
     api_key: "p_workOrders",
     pageTitle: "Workorder",
@@ -128,77 +127,4 @@ const pageOptions = {
       { name: "Generator Name", selector: "generatorName" },
     ],
   },
-}
-
-export const getPageOpts = (pageKey) => {
-  let newPageOpts = {
-    columns: [],
-    api_key: 0,
-    filters: {},
-    defaultState: {},
-    numerics: {},
-    pageTitle: "",
-  }
-
-  newPageOpts.columns = pageOptions[pageKey].tableColumns.map((d) => ({
-    name: d.name,
-    sortable: true,
-    compact: false,
-    key: d.selector,
-    visible: true,
-    cell: (row: any) => {
-      if (!row[d.selector]) return "-"
-      return row[d.selector]
-    },
-    width: `${Math.min(d.name.length * 10 + 70, 200)}px`,
-  }))
-  newPageOpts.api_key = pageOptions[pageKey].api_key
-  newPageOpts.filters = pageOptions[pageKey].filters
-  newPageOpts.pageTitle = pageOptions[pageKey].pageTitle
-
-  pageOptions[pageKey].filters.forEach((d) => {
-    if (d.numeric) newPageOpts.numerics[d.name] = true
-  })
-
-  newPageOpts.defaultState = pageOptions[pageKey].defaultState
-
-  return newPageOpts
-}
-
-export const getDropdownOpts = async (pageKey) => {
-  let dropdownOpts = {}
-
-  let basic = pageOptions[pageKey].filters.filter(
-    (d) => d.type == "dropdown" && d.dropdownOpts.api_key
-  )
-
-  let allOptsMeta = [...basic].map((d) => ({
-    name: d.name,
-    label: d.dropdownOpts.labelKey,
-    value: d.dropdownOpts.valueKey,
-  }))
-
-  let allOpts = [...basic].map((d) =>
-    api[d.dropdownOpts.api_key]({
-      loading_key: d.name,
-      ...d.dropdownOpts.body,
-    })
-  )
-
-  let optsRes = await Promise.all(allOpts)
-
-  allOptsMeta.forEach((d, i) => {
-    dropdownOpts[d.name] = optsRes[i]
-      .map((d2) => ({
-        label: d2[d.label],
-        value: d2[d.value],
-      }))
-      .sort((a, b) => a.label.localeCompare(b.label))
-  })
-
-  pageOptions[pageKey].filters.forEach((d) => {
-    if (d.type == "dropdown" && !d.dropdownOpts.api_key)
-      dropdownOpts[d.name] = d.dropdownOpts
-  })
-  return dropdownOpts
 }

@@ -1,7 +1,5 @@
 import "./style.scss"
-
 import { FormattedMessage, useIntl } from "react-intl"
-
 import Image from "shared/Image"
 import Select from "react-select"
 

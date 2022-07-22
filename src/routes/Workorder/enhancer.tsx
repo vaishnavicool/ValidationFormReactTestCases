@@ -1,6 +1,6 @@
-import { getDropdownOpts, getPageOpts } from "./config"
+import { getDropdownOpts, getPageOpts } from "shared"
 import { useEffect, useState } from "react"
-
+import {pageOptions} from "../Workorder/config"
 import _ from "lodash"
 import api from "api"
 import exportAsXls from "./excel"
@@ -9,7 +9,7 @@ import { toast } from "react-toastify"
 
 const useEnhancer = () => {
   let pageKey = "workOrders"
-  let pageOpts: any = getPageOpts(pageKey)
+  let pageOpts: any = getPageOpts(pageOptions,pageKey)
   let { defaultState } = pageOpts
   const [inactive, setInactive] = useState(true)
   const [tableData, setTableData] = useState([])
@@ -45,7 +45,7 @@ const useEnhancer = () => {
 
   useEffect(() => {
     ;(async () => {
-      let opts = await getDropdownOpts(pageKey)
+      let opts = await getDropdownOpts(pageOptions,pageKey)
       setAllDropdownOpts(opts)
       updateTable({})
     })()
