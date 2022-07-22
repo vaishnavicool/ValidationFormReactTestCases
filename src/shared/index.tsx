@@ -15,7 +15,7 @@ export const getPageOpts = (pageOptions,pageKey) => {
   let newPageOpts = {
     columns: [],
     api_key: 0,
-    filters: {},
+    form: {},
     defaultState: {},
     numerics: {},
     pageTitle: "",
@@ -33,10 +33,10 @@ export const getPageOpts = (pageOptions,pageKey) => {
     width: `${Math.min(d.name.length * 10 + 70, 200)}px`,
   }))
   newPageOpts.api_key = pageOptions[pageKey].api_key
-  newPageOpts.filters = pageOptions[pageKey].filters
+  newPageOpts.form = pageOptions[pageKey].form
   newPageOpts.pageTitle = pageOptions[pageKey].pageTitle
 
-  pageOptions[pageKey].filters.forEach((d) => {
+  pageOptions[pageKey].form.forEach((d) => {
     if (d.numeric) newPageOpts.numerics[d.name] = true
   })
 
@@ -48,7 +48,7 @@ export const getPageOpts = (pageOptions,pageKey) => {
 export const getDropdownOpts = async (pageOptions,pageKey) => {
   let dropdownOpts = {}
 
-  let basic = pageOptions[pageKey].filters.filter(
+  let basic = pageOptions[pageKey].form.filter(
     (d) => d.type == "dropdown" && d.dropdownOpts.api_key
   )
 
@@ -76,7 +76,7 @@ export const getDropdownOpts = async (pageOptions,pageKey) => {
       .sort((a, b) => a.label.localeCompare(b.label))
   })
 
-  pageOptions[pageKey].filters.forEach((d) => {
+  pageOptions[pageKey].form.forEach((d) => {
     if (d.type == "dropdown" && !d.dropdownOpts.api_key)
       dropdownOpts[d.name] = d.dropdownOpts
   })

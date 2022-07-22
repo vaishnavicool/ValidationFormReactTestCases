@@ -17,7 +17,7 @@ function FilterPanel(props: any) {
       <>
         <div className="filter-body">
           <div className="inputs row">
-            {pageOpts.filters.map((d: any, index) => {
+            {pageOpts.form.map((d: any, index) => {
               return (
                 <Field
                   key={index}

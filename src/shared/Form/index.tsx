@@ -3,7 +3,7 @@ import Field from "shared/Field"
 const Form = ({ config, update, handlers = {}, allDropdownOpts}) => {
   return (
     <div className="row">
-      {config.map((d: any, index: any) => {
+      {config.form.map((d: any, index: any) => {
         return (
           <Field
             key={index}

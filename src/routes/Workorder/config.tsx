@@ -19,7 +19,7 @@ export const pageOptions = {
       dbLoginId: 804,
       returnMessage: "string",
     },
-    filters: [
+    form: [
       {
         name: "workOrderId",
         numeric: true,

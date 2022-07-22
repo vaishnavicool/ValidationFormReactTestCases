@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { getDropdownOpts } from "../AddWorkorder/config"
+import { getDropdownOpts } from "shared"
 
 const useEnhancer = () => {
   const [showManifest, setShowManifest] = useState(false)
@@ -26,8 +26,8 @@ const useEnhancer = () => {
   const onHide = () => setPopup("")
   useEffect(() => {
     ;(async () => {
-      let opts = await getDropdownOpts(pageKey)
-      setAllDropdownOpts(opts)
+      // let opts = await getDropdownOpts(p pageKey)
+      // setAllDropdownOpts(opts)
     })()
   }, [])
 
