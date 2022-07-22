@@ -21,6 +21,7 @@ const CreateManifest = (props) => {
               config={pageConfig?.addManifestConfig}
               update={() => {}}
               handlers={handlers}
+              allDropdownOpts={() => ["a", "b"]}
             />
           </div>
           <div className="col-6 right-section">

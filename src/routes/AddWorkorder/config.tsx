@@ -1,3 +1,4 @@
+import api from "api"
 export const pageConfig = {
   addWorkOrderConfig: [
     {
@@ -290,13 +291,12 @@ export const pageConfig = {
       name: "generator",
       numeric: true,
       width: "col-45",
-      type: "search"    
+      type: "search",
     },
     {
-      actionIcon:"ic_add.png",
-      actionHandler:"addGenerator",
+      actionIcon: "ic_add.png",
+      actionHandler: "addGenerator",
       width: "col-1",
-
     },
     {
       name: "transporter1",
@@ -438,19 +438,19 @@ export const pageConfig = {
       name: "ship_date",
       numeric: true,
       width: "col-45",
-      type:"date"
+      type: "date",
     },
     {
       name: "out_bound_revenue",
       numeric: true,
       width: "col-45",
-      type:"number"
+      type: "number",
     },
     {
       name: "tsdf_receipt_date",
       numeric: true,
       width: "col-45",
-      type:"date",      
+      type: "date",
     },
     {
       name: "bolck_14_note",
@@ -471,19 +471,19 @@ export const pageConfig = {
       name: "voided",
       numeric: true,
       width: "col-45",
-      type:"checkbox",
+      type: "checkbox",
     },
     {
       name: "waste_analysis_available",
       numeric: true,
       width: "col-45",
-      type:"checkbox",
+      type: "checkbox",
     },
     {
       name: "multi_line_format",
       numeric: true,
       width: "col-45",
-      type:"checkbox",
+      type: "checkbox",
     },
     {
       name: "additional_connected_epa_ids",
@@ -495,7 +495,6 @@ export const pageConfig = {
       numeric: true,
       width: "col-11",
     },
-    
   ],
 
   //// addNewGeneratorConfig ////
@@ -633,7 +632,7 @@ export const pageConfig = {
       name: "generator_zip_code",
       numeric: true,
       width: "col-6",
-      type:"number"
+      type: "number",
     },
     {
       name: "mailing_bill_to_zip",
@@ -678,7 +677,7 @@ export const pageConfig = {
       name: "is_non_haz",
       numeric: true,
       width: "col-6",
-      type: "checkbox"
+      type: "checkbox",
     },
     {
       name: "us_epa_id",
@@ -725,13 +724,13 @@ export const pageConfig = {
       name: "is_active",
       numeric: true,
       width: "col-6",
-      type: "checkbox"
+      type: "checkbox",
     },
     {
       name: "is_tax_exempt",
       numeric: true,
       width: "col-6",
-      type: "checkbox"
+      type: "checkbox",
     },
     {
       name: "disposal_restrictions",
@@ -739,4 +738,40 @@ export const pageConfig = {
       width: "col-6",
     },
   ],
+}
+let pageKeys = "addWorkOrderConfig"
+export const getDropdownOpts = async (pageKey) => {
+  let dropdownOpts = {}
+  let basic = pageConfig[pageKeys].filter(
+    (d: any) => d.type == "dropdown" && d.dropdownOpts.api_key
+  )
+  let allOptsMeta = [...basic].map((d) => ({
+    name: d.name,
+    label: d.dropdownOpts.labelKey,
+    value: d.dropdownOpts.valueKey,
+  }))
+
+  let allOpts = [...basic].map((d) =>
+    api[d.dropdownOpts.api_key]({
+      loading_key: d.name,
+      ...d.dropdownOpts.body,
+    })
+  )
+
+  let optsRes = await Promise.all(allOpts)
+
+  allOptsMeta.forEach((d, i) => {
+    dropdownOpts[d.name] = optsRes[i]
+      .map((d2) => ({
+        label: d2[d.label],
+        value: d2[d.value],
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label))
+  })
+
+  pageConfig[pageKey].forEach((d) => {
+    if (d.type == "dropdown" && !d.dropdownOpts.api_key)
+      dropdownOpts[d.name] = d.dropdownOpts
+  })
+  return dropdownOpts
 }

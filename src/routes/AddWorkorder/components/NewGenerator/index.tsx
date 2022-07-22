@@ -2,7 +2,6 @@ import "./style.scss"
 
 import Form from "shared/Form"
 import Image from "shared/Image"
-import React from "react"
 import { pageConfig } from "routes/AddWorkorder/config"
 
 const NewGenerator = (props) => {
@@ -12,7 +11,11 @@ const NewGenerator = (props) => {
     <>
       <div className="d-flex col-12">
         <div className="col-6 left-section-gen p-3 ">
-          <Form config={pageConfig?.addNewGeneratorConfig} update={() => {}} />
+          <Form
+            config={pageConfig?.addNewGeneratorConfig}
+            update={() => {}}
+            allDropdownOpts={() => ["a", "b"]}
+          />
         </div>
         <div className="col-6 gen-right-section">
           <div className="right-head">Mailing Information</div>

@@ -1,6 +1,6 @@
 import Field from "shared/Field"
 
-const Form = ({ config, update, handlers = {} }) => {
+const Form = ({ config, update, handlers = {}, allDropdownOpts}) => {
   return (
     <div className="row">
       {config.map((d: any, index: any) => {
@@ -10,11 +10,13 @@ const Form = ({ config, update, handlers = {} }) => {
             name={d.name}
             {...{ ...d }}
             update={update}
+            allDropdownOpts={allDropdownOpts}
             handlers={handlers}
           />
         )
       })}
     </div>
+    
   )
 }
 
