@@ -3,7 +3,6 @@ import "./style.scss"
 import Field from "shared/Field"
 import Form from "shared/Form"
 import Image from "shared/Image"
-// import ReactTooltip from "react-tooltip"
 import { pageConfig } from "routes/AddWorkorder/config"
 import { useDetectClickOutside } from "react-detect-click-outside"
 
@@ -22,6 +21,7 @@ const CreateManifest = (props) => {
               config={pageConfig?.addManifestConfig}
               update={() => {}}
               handlers={handlers}
+              allDropdownOpts={() => ["a", "b"]}
             />
           </div>
           <div className="col-6 right-section">

@@ -11,8 +11,9 @@ import { useNavigate } from "react-router-dom"
 
 const AddWorkorder = (props: any) => {
   let allProps = useEnhancer()
-  let { updateWorkOrder, popup, setPopup, onHide } = allProps
+  let { updateWorkOrder, popup, setPopup, onHide, allDropdownOpts } = allProps
   let navigate = useNavigate()
+
   return (
     <>
       <Topsection>
@@ -31,6 +32,7 @@ const AddWorkorder = (props: any) => {
         <div className="col-9 row">
           <Form
             config={pageConfig?.addWorkOrderConfig}
+            allDropdownOpts={allDropdownOpts}
             update={updateWorkOrder}
           />
         </div>
