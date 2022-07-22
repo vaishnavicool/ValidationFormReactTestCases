@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom"
 
 const AddWorkorder = (props: any) => {
   let allProps = useEnhancer()
-  let { updateWorkOrder, popup, setPopup, onHide, allDropdownOpts } = allProps
+  let { updateWorkOrder, popup, setPopup, onHide, allDropdownOpts,workOrder,addWorkOrder } = allProps
   let navigate = useNavigate()
 
   return (
@@ -24,7 +24,7 @@ const AddWorkorder = (props: any) => {
             type="button"
             onClick={() => navigate("/customer_processing/work_order")}
           />
-          <input className="btn-addworkorder-add" value={"Add"} type="button" />
+          <input className="btn-addworkorder-add" value={"Add"} type="button"  onClick={()=>addWorkOrder()}/>
         </div>
       </Topsection>
 
@@ -34,6 +34,7 @@ const AddWorkorder = (props: any) => {
             config={pageConfig?.addWorkOrderConfig}
             allDropdownOpts={allDropdownOpts}
             update={updateWorkOrder}
+            filters={workOrder}
           />
         </div>
         <div className="col-3 d-flex flex-column">

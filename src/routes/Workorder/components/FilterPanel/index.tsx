@@ -1,5 +1,6 @@
-import Field from "shared/Field"
 import "../style.scss"
+
+import Field from "shared/Field"
 
 function FilterPanel(props: any) {
   let {
@@ -22,7 +23,7 @@ function FilterPanel(props: any) {
                 <Field
                   key={index}
                   name={d.name}
-                  {...{ update:updateFilters, filters, allDropdownOpts, ...d }}
+                  {...{ update:updateFilters, filters:filters, allDropdownOpts, ...d }}
                 />
               )
             })}

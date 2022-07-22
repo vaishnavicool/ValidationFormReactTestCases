@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 
 const useEnhancer = () => {
   const [showManifest, setShowManifest] = useState(false)
@@ -9,7 +9,6 @@ const useEnhancer = () => {
   const [allDropdownOpts] = useState({})
   const [show, setShow] = useState(false)
   const [aFilters, setAFilters] = useState({})
-
 
   const updateWorkOrder = (name: string) => (evt: any) => {
     let filters2: any = { ...workOrder }
@@ -40,6 +39,9 @@ const useEnhancer = () => {
     setAFilters(filters2)
   }
 
+  const addWorkOrder = () => {
+    console.log("Workorder Form Data",workOrder)
+  }
 
   const handlers = { addGenerator: () => setPopup("generator") }
 
@@ -51,6 +53,7 @@ const useEnhancer = () => {
     showNewGenerator,
     setShowNewGenerator,
     updateWorkOrder,
+    workOrder,
     popup,
     setPopup,
     onHide,
@@ -60,6 +63,7 @@ const useEnhancer = () => {
     aFilters,
     applyFilters,
     allDropdownOpts,
+    addWorkOrder
   }
 }
 
