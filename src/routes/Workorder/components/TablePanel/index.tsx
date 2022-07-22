@@ -1,10 +1,11 @@
 import "../style.scss"
+
 import DataTable from "react-data-table-component"
 import Image from "shared/Image"
 import Loading from "shared/Loading"
+import NoData from "./NoData"
 import Pagination from "./pagination"
 import { useDetectClickOutside } from "react-detect-click-outside"
-import NoData from "./NoData"
 
 function WorkOrder(props: any) {
   let {
@@ -15,7 +16,9 @@ function WorkOrder(props: any) {
     showActivity,
     setShowActivity,
     visibleColumns,
+    noDataColumns
   } = props
+  console.log(tableData)
   const activityMenuClick = useDetectClickOutside({
     onTriggered: () => setShowActivity(false),
   })
@@ -37,7 +40,7 @@ function WorkOrder(props: any) {
             )}
             <div>
               <DataTable
-                columns={visibleColumns()}
+                columns={tableData.length ?  visibleColumns() : noDataColumns()}
                 data={tableData}
                 pagination
                 paginationComponent={Pagination}

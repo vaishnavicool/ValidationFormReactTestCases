@@ -8,7 +8,7 @@ const Notfound: FunctionComponent = () => {
     <div
       className="container"
       style={{
-        minHeight: "70vh",
+        minHeight: "65vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

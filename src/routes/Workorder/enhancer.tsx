@@ -1,10 +1,11 @@
 import { getDropdownOpts, getPageOpts } from "shared"
 import { useEffect, useState } from "react"
-import {pageOptions} from "../Workorder/config"
+
 import _ from "lodash"
 import api from "api"
 import exportAsXls from "./excel"
 import { formattedDate } from "shared"
+import {pageOptions} from "../Workorder/config"
 import { toast } from "react-toastify"
 
 const useEnhancer = () => {
@@ -71,6 +72,12 @@ const useEnhancer = () => {
 
   const visibleColumns = () => {
     let vColumns = columns.filter((d) => d.visible)
+    if (vColumns[0]) return vColumns
+    else return columns
+  }
+
+  const noDataColumns = () => {
+    let vColumns = columns.filter((d) => d.visible).slice(0,8)
     if (vColumns[0]) return vColumns
     else return columns
   }
@@ -187,6 +194,7 @@ const useEnhancer = () => {
     visibleColumns,
     removeAFilter,
     aFilters,
+    noDataColumns
   }
 }
 
