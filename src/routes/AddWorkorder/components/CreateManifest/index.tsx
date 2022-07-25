@@ -130,6 +130,15 @@ const CreateManifest = (props) => {
                     <td colSpan={4} style={{ textAlign: "center" }}>
                       No records to display
                     </td>
+                      {/* <td>Helo</td>
+                      <td></td>
+                      <td></td>
+                      <td>
+                        <div className="img-meni">
+                          <Image src="ic_delete_meni.png" />
+                          <Image src="ic_download_file.png" />
+                        </div>
+                      </td> */}
                   </tr>
                 </tbody>
               </table>
