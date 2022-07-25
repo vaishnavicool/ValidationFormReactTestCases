@@ -19,6 +19,8 @@ let urls: any = {
   g_getSchedule_type: () => `/mock_api/Schedule_type.json`,
   g_getDo: () => `/mock_api/Do.json`,
   g_getOracle_location: () => `/mock_api/Oracle_location.json`,
+  g_getSite_country_mailing_bill_to_country: () => `/mock_api/Site_country_mailing_bill_to_country.json`,
+  g_getManifeast_print_style: () => `/mock_api/Manifeast_print_style.json`,
 }
 
 export default urls

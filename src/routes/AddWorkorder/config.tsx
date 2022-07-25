@@ -171,11 +171,8 @@ export const pageConfig = {
         type: "dropdown",
         dropdownOpts: {
           api_key: "g_getGov_contract",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
+          labelKey: "contactName",
+          valueKey: "contractNumber",
         },
       },
       {
@@ -186,10 +183,7 @@ export const pageConfig = {
         dropdownOpts: {
           api_key: "g_getDo",
           labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
+          valueKey: "id",         
         },
       },
       {
@@ -218,12 +212,9 @@ export const pageConfig = {
         width: "col-4",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
+          api_key: "g_getOracle_location",
+          labelKey: "description",
+          valueKey: "oracleLocationId",
         },
       },
       {
@@ -309,12 +300,9 @@ export const pageConfig = {
         width: "col-45",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "g_getTransporters",
+          api_key: " g_getTransporters",
           labelKey: "transportName",
           valueKey: "transportId",
-          body: {
-            optionalParam: "0",
-          },
         },
       },
       {
@@ -326,9 +314,6 @@ export const pageConfig = {
           api_key: "g_getTransporters",
           labelKey: "transportName",
           valueKey: "transportId",
-          body: {
-            optionalParam: "0",
-          },
         },
       },
       {
@@ -340,9 +325,6 @@ export const pageConfig = {
           api_key: "g_getTransporters",
           labelKey: "transportName",
           valueKey: "transportId",
-          body: {
-            optionalParam: "0",
-          },
         },
       },
       {
@@ -354,9 +336,6 @@ export const pageConfig = {
           api_key: "g_getTransporters",
           labelKey: "transportName",
           valueKey: "transportId",
-          body: {
-            optionalParam: "0",
-          },
         },
       },
       {
@@ -410,12 +389,9 @@ export const pageConfig = {
         width: "col-45",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
+          api_key: " g_getManifeast_print_style",
+          labelKey: "manifestStyle",
+          valueKey: "styleId",
         },
       },
       {
@@ -533,12 +509,9 @@ export const pageConfig = {
         width: "col-6",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
+          api_key: "g_getSite_country_mailing_bill_to_country",
+          labelKey: "countryName",
+          valueKey: "countryID",         
         },
       },
       {
