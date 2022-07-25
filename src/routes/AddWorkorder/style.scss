@@ -56,4 +56,7 @@
 .modal-body{
   max-height: 80vh;
   overflow: auto;
+  .ic_add{
+    cursor: pointer;
+  }
 }

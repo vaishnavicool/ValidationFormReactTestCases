@@ -293,6 +293,7 @@ export const pageConfig = {
         actionIcon: "ic_add.png",
         actionHandler: "addGenerator",
         width: "col-1",
+        className: "add-icon",
       },
       {
         name: "transporter1",
