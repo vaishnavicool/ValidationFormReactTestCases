@@ -1,5 +1,25 @@
 export const pageConfig = {
   addWorkOrderConfig: {
+    // defaultState: {
+    //   frequency_in_days: "0",
+    //   internal_coordinator_id: "0",
+    //   designated_revenue_facility_id: "0",
+    //   recurrance_stop_datetime: "2022-07-14T09:18:35.954Z",
+    //   program_id_string: "",
+    //   app_window_start_time: "2022-07-14T09:18:35.954Z",
+    //   app_window_end_time: "2022-07-14T09:18:35.954Z",
+    //   service_type_id: "0",
+    //   createManifestFlag: true,
+    //   availableCredit: "1",
+    //   onCreditHold: "0",
+    //   creditCheckStatus: "0",
+
+    //   searchType: 1,
+    //   profileNumber: "0",
+    //   dbLoginId: 804,
+    //   returnMessage: "string",
+    // },
+
     form: [
       {
         name: "work_order",
@@ -18,7 +38,7 @@ export const pageConfig = {
         width: "col-4",
       },
       {
-        name: "customer",
+        name: "customerID",
         numeric: true,
         width: "col-4",
         type: "dropdown",
@@ -52,14 +72,14 @@ export const pageConfig = {
           },
         },
       },
-      { name: "generator", type: "search", width: "col-4" },
+      { name: "generator_id", type: "search", width: "col-4" },
       {
         name: "generator_requirements",
         numeric: true,
         width: "col-4",
       },
       {
-        name: "schedule_type",
+        name: "schedule_type_id",
         width: "col-4",
         type: "dropdown",
         numeric: true,
@@ -73,7 +93,7 @@ export const pageConfig = {
         },
       },
       {
-        name: "sales_rep",
+        name: "salesrep_id",
         numeric: true,
         width: "col-4",
         type: "dropdown",
@@ -87,7 +107,7 @@ export const pageConfig = {
         },
       },
       {
-        name: "inside_sales_rep",
+        name: "insideSalesRepID",
         numeric: true,
         width: "col-4",
         type: "dropdown",
@@ -115,7 +135,7 @@ export const pageConfig = {
         },
       },
       {
-        name: "job",
+        name: "jobID",
         numeric: true,
         width: "col-4",
         type: "dropdown",
@@ -130,13 +150,13 @@ export const pageConfig = {
         },
       },
       {
-        name: "workorder_start_date",
+        name: "start_date",
         numeric: true,
         width: "col-4",
         type: "date",
       },
       {
-        name: "workorder_end_date",
+        name: "end_date",
         numeric: true,
         width: "col-4",
         type: "date",
@@ -154,7 +174,7 @@ export const pageConfig = {
         type: "date",
       },
       {
-        name: "ready_to_bill",
+        name: "ic_billed",
         numeric: true,
         width: "col-4",
         type: "checkbox",
@@ -165,7 +185,7 @@ export const pageConfig = {
         width: "col-4",
       },
       {
-        name: "gov_contract",
+        name: "contract_id",
         numeric: true,
         width: "col-4",
         type: "dropdown",
@@ -176,7 +196,7 @@ export const pageConfig = {
         },
       },
       {
-        name: "do",
+        name: "do_number",
         numeric: true,
         width: "col-4",
         type: "dropdown",
@@ -192,22 +212,22 @@ export const pageConfig = {
         width: "col-4",
       },
       {
-        name: "internal_po",
+        name: "internal_po_number",
         numeric: true,
         width: "col-4",
       },
       {
-        name: "estimated_disposal_revenue",
+        name: "estimated_revenue",
         numeric: true,
         width: "col-4",
       },
       {
-        name: "estimated_transportation_revenue",
+        name: "estimated_trans_revenue",
         numeric: true,
         width: "col-4",
       },
       {
-        name: "oracle_location",
+        name: "oracleLocationCode",
         numeric: true,
         width: "col-4",
         type: "dropdown",
@@ -218,7 +238,7 @@ export const pageConfig = {
         },
       },
       {
-        name: "market_driver",
+        name: "marketDriverID",
         numeric: true,
         width: "col-4",
         type: "dropdown",
@@ -232,12 +252,12 @@ export const pageConfig = {
         },
       },
       {
-        name: "job_description",
+        name: "description",
         numeric: true,
         width: "col-4",
       },
       {
-        name: "recurrance",
+        name: "is_recurrance_parent",
         numeric: true,
         width: "col-4",
         type: "checkbox",
