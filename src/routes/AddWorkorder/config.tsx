@@ -21,7 +21,7 @@ export const pageConfig = {
         name: "customer",
         numeric: true,
         width: "col-4",
-        type: "dropdown",   
+        type: "dropdown",
         dropdownOpts: {
           api_key: "p_getCustomers",
           labelKey: "customerName",
@@ -31,7 +31,7 @@ export const pageConfig = {
             isShowAll: true,
           },
         },
-        infoKey:"form.customer.tooltip"
+        infoKey: "form.customer.tooltip",
       },
       {
         name: "customer_sales_channel",
@@ -119,13 +119,13 @@ export const pageConfig = {
         numeric: true,
         width: "col-4",
         type: "dropdown",
-          dropdownOpts: {
-            api_key: "p_getJobs",
-            labelKey: "jobName",
-            valueKey: "jobId",
+        dropdownOpts: {
+          api_key: "p_getJobs",
+          labelKey: "jobName",
+          valueKey: "jobId",
           body: {
-           isOutBoundOnly: true,
-           isShowAll: true,
+            isOutBoundOnly: true,
+            isShowAll: true,
           },
         },
       },
@@ -170,7 +170,7 @@ export const pageConfig = {
         width: "col-4",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "Gov_contract",
+          api_key: "g_getGov_contract",
           labelKey: "name",
           valueKey: "id",
           body: {
@@ -747,4 +747,3 @@ export const pageConfig = {
     ],
   },
 }
-

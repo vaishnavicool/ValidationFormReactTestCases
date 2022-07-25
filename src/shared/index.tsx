@@ -11,7 +11,7 @@ export let formatMessage = (id: any) => {
   if (msg == id) return ""
   return msg
 }
-export const getPageOpts = (pageOptions,pageKey) => {
+export const getPageOpts = (pageOptions, pageKey) => {
   let newPageOpts = {
     columns: [],
     api_key: 0,
@@ -45,12 +45,11 @@ export const getPageOpts = (pageOptions,pageKey) => {
   return newPageOpts
 }
 
-export const getDropdownOpts = async (pageOptions,pageKey) => {
+export const getDropdownOpts = async (pageOptions, pageKey) => {
   let dropdownOpts = {}
-console.log( "--",pageOptions["form"]);
 
   let basic = pageOptions[pageKey].form.filter(
-    (d) => d.type == "dropdown" && d?.dropdownOpts.api_key
+    (d) => d.type == "dropdown" && d?.dropdownOpts?.api_key
   )
 
   let allOptsMeta = [...basic].map((d) => ({
@@ -68,6 +67,7 @@ console.log( "--",pageOptions["form"]);
 
   let optsRes = await Promise.all(allOpts)
 
+  console.log(optsRes)
   allOptsMeta.forEach((d, i) => {
     dropdownOpts[d.name] = optsRes[i]
       .map((d2) => ({
@@ -83,7 +83,6 @@ console.log( "--",pageOptions["form"]);
   })
   return dropdownOpts
 }
-
 
 export const weekDays = [
   "Sunday",
