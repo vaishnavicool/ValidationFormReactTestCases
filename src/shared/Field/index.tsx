@@ -21,10 +21,15 @@ function Field(props: any) {
   } = props
 
   let intl = useIntl()
-  let labelKey = `form.${name}`
-  let aName = intl.formatMessage({
-    id: labelKey,
-  })
+  let labelKey = ""
+  let aName = ""
+
+  if (name) {
+    labelKey = `form.${name}`
+    aName = intl.formatMessage({
+      id: labelKey,
+    })
+  }
 
   let value = ""
   if (actionIcon && actionHandler) {
@@ -41,10 +46,14 @@ function Field(props: any) {
       <div className={`mb-3 custom-group ${width}`}>
         <label htmlFor="disabledTextInput" className="label">
           <FormattedMessage id={labelKey} />
-          {infoKey && <span className="icon-info">
-            <div className="tool-tip"><FormattedMessage id={infoKey} /></div>
-            <Image src="ic_info.png" />
-          </span>}
+          {infoKey && (
+            <span className="icon-info">
+              <div className="tool-tip">
+                <FormattedMessage id={infoKey} />
+              </div>
+              <Image src="ic_info.png" />
+            </span>
+          )}
         </label>
         <Select
           onChange={update(name)}
@@ -102,10 +111,14 @@ function Field(props: any) {
     <div className={`mb-3 custom-group ${width}`}>
       <label htmlFor="disabledTextInput" className="label">
         <FormattedMessage id={`${labelKey}`} />
-        {infoKey && <span className="icon-info">
-            <div className="tool-tip"><FormattedMessage id={infoKey} /></div>
+        {infoKey && (
+          <span className="icon-info">
+            <div className="tool-tip">
+              <FormattedMessage id={infoKey} />
+            </div>
             <Image src="ic_info.png" />
-          </span>}
+          </span>
+        )}
       </label>
       <input
         type={type}
