@@ -34,7 +34,7 @@ function Field(props: any) {
   let value = ""
   if (actionIcon && actionHandler) {
     return (
-      <div className={`mb-3 ${width}`} onClick={handlers?.[actionHandler]}>
+      <div className={`mb-3 ${width} ${actionIcon.split('.')[0]}`} onClick={handlers?.[actionHandler]}>
         <Image src={actionIcon} />
       </div>
     )
