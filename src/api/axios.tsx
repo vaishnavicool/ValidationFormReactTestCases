@@ -44,10 +44,11 @@ let loggedOut = false
 
 axios.interceptors.response.use(
   function (response) {
-    let { loading_key }: any = response.config
+    let { loading_key, url }: any = response.config
     if (loading_key) {
       store.dispatch({ type: SET_LOADING_STATUS, loading_key, status: false })
     }
+    if (url.includes("json")) response.data = response.data.result
     return response
   },
   async function (error) {
