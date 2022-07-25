@@ -67,9 +67,7 @@ export const getDropdownOpts = async (pageOptions, pageKey) => {
 
   let optsRes = await Promise.all(allOpts)
 
-  console.log(optsRes)
   allOptsMeta.forEach((d, i) => {
-    console.log(d.name)
     dropdownOpts[d.name] = optsRes[i]
       .map((d2) => ({
         label: d2[d.label],
