@@ -43,14 +43,14 @@ export const pageConfig = {
         numeric: true,
         width: "col-4",
         type: "dropdown",
-        // dropdownOpts: {
-        //   api_key: "p_getSalesRep",
-        //   labelKey: "name",
-        //   valueKey: "salesRepid",
-        //   body: {
-        //     modeId: true,
-        //   },
-        // },
+        dropdownOpts: {
+          api_key: "p_getSalesRep",
+          labelKey: "name",
+          valueKey: "salesRepid",
+          body: {
+            modeId: true,
+          },
+        },
       },
       { name: "generator", type: "search", width: "col-4" },
       {
@@ -65,8 +65,8 @@ export const pageConfig = {
         numeric: true,
         dropdownOpts: {
           api_key: "g_getSchedule_type",
-          labelKey: "name",
-          valueKey: "id",
+          labelKey: "scheduleTypeName",
+          valueKey: "scheduleTypeID",
           body: {
             optionalParam: "1",
           },
@@ -234,7 +234,7 @@ export const pageConfig = {
         dropdownOpts: {
           api_key: "g_getMarket_driver",
           labelKey: "name",
-          valueKey: "id",
+          valueKey: "value",
           body: {
             optionalParam: "0",
           },
@@ -310,8 +310,8 @@ export const pageConfig = {
         type: "dropdown",
         dropdownOpts: {
           api_key: "g_getTransporters",
-          labelKey: "name",
-          valueKey: "id",
+          labelKey: "transportName",
+          valueKey: "transportId",
           body: {
             optionalParam: "0",
           },
@@ -324,8 +324,8 @@ export const pageConfig = {
         type: "dropdown",
         dropdownOpts: {
           api_key: "g_getTransporters",
-          labelKey: "name",
-          valueKey: "id",
+          labelKey: "transportName",
+          valueKey: "transportId",
           body: {
             optionalParam: "0",
           },
@@ -338,8 +338,8 @@ export const pageConfig = {
         type: "dropdown",
         dropdownOpts: {
           api_key: "g_getTransporters",
-          labelKey: "name",
-          valueKey: "id",
+          labelKey: "transportName",
+          valueKey: "transportId",
           body: {
             optionalParam: "0",
           },
@@ -351,9 +351,9 @@ export const pageConfig = {
         width: "col-45",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
+          api_key: "g_getTransporters",
+          labelKey: "transportName",
+          valueKey: "transportId",
           body: {
             optionalParam: "0",
           },
