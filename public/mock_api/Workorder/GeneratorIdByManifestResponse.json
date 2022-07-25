@@ -1,0 +1,8 @@
+{
+  "version": "2.0",
+  "statusCode": 200,
+  "message": "GET Request successful.",
+  "result":  {
+        generatorID": 7
+}
+}
