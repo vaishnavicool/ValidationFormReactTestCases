@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import { getDropdownOpts } from "shared"
 import { pageConfig } from "./config"
+
 const useEnhancer = () => {
-  let pageKey = "addWorkOrderConfig"
   const [showManifest, setShowManifest] = useState(false)
   const [showMoreAction, setShowMoreAction] = useState(false)
   const [showNewGenerator, setShowNewGenerator] = useState(false)
@@ -45,7 +45,10 @@ const useEnhancer = () => {
   const onHide = () => setPopup("")
   useEffect(() => {
     ;(async () => {
-      let opts = await getDropdownOpts(pageConfig, pageKey)
+      let workOrderOpts = await getDropdownOpts(pageConfig, 'addWorkOrderConfig')
+      let manifestOpts = await getDropdownOpts(pageConfig, 'addManifestConfig')
+      let generatorOpts = await getDropdownOpts(pageConfig, 'addNewGeneratorConfig')
+      let opts = {...workOrderOpts,...manifestOpts,...generatorOpts}
       setAllDropdownOpts(opts)
     })()
   }, [])

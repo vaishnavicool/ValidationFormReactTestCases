@@ -59,10 +59,12 @@ export const getDropdownOpts = async (pageOptions, pageKey) => {
   }))
 
   let allOpts = [...basic].map((d) =>
-    api[d.dropdownOpts.api_key]({
+{console.log(d)
+
+    return api[d.dropdownOpts.api_key]({
       loading_key: d.name,
       ...d.dropdownOpts.body,
-    })
+    })}
   )
 
   let optsRes = await Promise.all(allOpts)

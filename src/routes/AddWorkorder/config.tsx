@@ -300,7 +300,7 @@ export const pageConfig = {
         width: "col-45",
         type: "dropdown",
         dropdownOpts: {
-          api_key: " g_getTransporters",
+          api_key: "g_getTransporters",
           labelKey: "transportName",
           valueKey: "transportId",
         },
@@ -343,14 +343,6 @@ export const pageConfig = {
         numeric: true,
         width: "col-45",
         type: "dropdown",
-        dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
-        },
       },
       {
         name: "truck",
@@ -389,7 +381,7 @@ export const pageConfig = {
         width: "col-45",
         type: "dropdown",
         dropdownOpts: {
-          api_key: " g_getManifeast_print_style",
+          api_key: "g_getManifeast_print_style",
           labelKey: "manifestStyle",
           valueKey: "styleId",
         },
@@ -519,14 +511,6 @@ export const pageConfig = {
         numeric: true,
         width: "col-6",
         type: "dropdown",
-        dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
-        },
       },
       {
         name: "generator_address",
@@ -586,12 +570,9 @@ export const pageConfig = {
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
+          api_key: "g_getGenerator_state_mailing_bill_to_state",
+          labelKey: "stateName",
+          valueKey: "stateID",         
         },
       },
       {
@@ -599,14 +580,6 @@ export const pageConfig = {
         width: "col-6",
         numeric: true,
         type: "dropdown",
-        dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
-        },
       },
       {
         name: "generator_zip_code",
@@ -625,12 +598,9 @@ export const pageConfig = {
         width: "col-6",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
+          api_key: " Generator_country_mailing_bill_to_country",
+          labelKey: "countyName",
+          valueKey: "countyID",          
         },
       },
       {
@@ -638,14 +608,6 @@ export const pageConfig = {
         width: "col-6",
         numeric: true,
         type: "dropdown",
-        dropdownOpts: {
-          api_key: "p_getFacilities",
-          labelKey: "name",
-          valueKey: "id",
-          body: {
-            optionalParam: "0",
-          },
-        },
       },
       {
         name: "phone_number",
