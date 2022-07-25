@@ -7,7 +7,7 @@ import { pageConfig } from "routes/AddWorkorder/config"
 import { useDetectClickOutside } from "react-detect-click-outside"
 
 const CreateManifest = (props) => {
-  let { showMoreAction, setShowMoreAction, onHide, handlers,updateManifest,manifest,saveManifest } = props
+  let { showMoreAction, setShowMoreAction, onHide, handlers,updateManifest,manifest,saveManifest,allDropdownOpts } = props
 
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),
@@ -22,7 +22,7 @@ const CreateManifest = (props) => {
               update={updateManifest}
               filters={manifest}
                 handlers={handlers}
-              allDropdownOpts={() => ["a", "b"]}
+              allDropdownOpts={allDropdownOpts}
             />
           </div>
           <div className="col-6 right-section">
