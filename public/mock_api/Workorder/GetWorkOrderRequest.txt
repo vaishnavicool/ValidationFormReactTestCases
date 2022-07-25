@@ -1,0 +1,18 @@
+{
+  "search_type": 0,
+  "workorder_id": 0,
+  "generatorId": 0,
+  "customerId": 0,
+  "salesrep_id": 0,
+  "ic_id": 0,
+  "readyToBill": 0,
+  "facilityID": 0,
+  "start_date": "2022-07-15T09:24:38.637Z",
+  "end_date": "2022-07-15T09:24:38.637Z",
+  "jobID": 0,
+  "profileNumber": "string",
+  "dbLoginId": 0,
+  "pageNumber": 0,
+  "rowsOfPage": 0,
+  "rowsCount": 0
+}
