@@ -183,7 +183,7 @@ export const pageConfig = {
         dropdownOpts: {
           api_key: "g_getDo",
           labelKey: "name",
-          valueKey: "id",         
+          valueKey: "id",
         },
       },
       {
@@ -344,6 +344,11 @@ export const pageConfig = {
         numeric: true,
         width: "col-45",
         type: "dropdown",
+        dropdownOpts: {
+          api_key: "g_getTransporters",
+          labelKey: "transportName",
+          valueKey: "transportId",
+        },
       },
       {
         name: "truck",
@@ -504,7 +509,7 @@ export const pageConfig = {
         dropdownOpts: {
           api_key: "g_getSite_country_mailing_bill_to_country",
           labelKey: "countryName",
-          valueKey: "countryID",         
+          valueKey: "countryID",
         },
       },
       {
@@ -512,6 +517,11 @@ export const pageConfig = {
         numeric: true,
         width: "col-6",
         type: "dropdown",
+        dropdownOpts: {
+          api_key: "g_getSite_country_mailing_bill_to_country",
+          labelKey: "countryName",
+          valueKey: "countryID",
+        },
       },
       {
         name: "generator_address",
@@ -573,7 +583,7 @@ export const pageConfig = {
         dropdownOpts: {
           api_key: "g_getGenerator_state_mailing_bill_to_state",
           labelKey: "stateName",
-          valueKey: "stateID",         
+          valueKey: "stateID",
         },
       },
       {
@@ -581,6 +591,11 @@ export const pageConfig = {
         width: "col-6",
         numeric: true,
         type: "dropdown",
+        dropdownOpts: {
+          api_key: "g_getGenerator_state_mailing_bill_to_state",
+          labelKey: "stateName",
+          valueKey: "stateID",
+        },
       },
       {
         name: "generator_zip_code",
@@ -599,9 +614,9 @@ export const pageConfig = {
         width: "col-6",
         type: "dropdown",
         dropdownOpts: {
-          api_key: " Generator_country_mailing_bill_to_country",
-          labelKey: "countyName",
-          valueKey: "countyID",          
+          api_key: "g_getGenerator_country_mailing_bill_to_country",
+          labelKey: "countyID",
+          valueKey: "countyName",
         },
       },
       {
@@ -609,6 +624,11 @@ export const pageConfig = {
         width: "col-6",
         numeric: true,
         type: "dropdown",
+        dropdownOpts: {
+          api_key: "g_getGenerator_country_mailing_bill_to_country",
+          labelKey: "countyID",
+          valueKey: "countyName",
+        },
       },
       {
         name: "phone_number",

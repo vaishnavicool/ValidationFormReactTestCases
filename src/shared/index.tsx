@@ -59,12 +59,10 @@ export const getDropdownOpts = async (pageOptions, pageKey) => {
   }))
 
   let allOpts = [...basic].map((d) =>
-{console.log(d)
-
-    return api[d.dropdownOpts.api_key]({
+    api[d.dropdownOpts.api_key]({
       loading_key: d.name,
       ...d.dropdownOpts.body,
-    })}
+    })
   )
 
   let optsRes = await Promise.all(allOpts)
@@ -75,12 +73,16 @@ export const getDropdownOpts = async (pageOptions, pageKey) => {
         label: d2[d.label],
         value: d2[d.value],
       }))
-      .sort((a, b) => a.label.localeCompare(b.label))
+      .sort((a, b) => `${a.label}`.localeCompare(b.label))
   })
 
   pageOptions[pageKey].form.forEach((d) => {
-    if (d.type == "dropdown" && !d.dropdownOpts.api_key)
-      dropdownOpts[d.name] = d.dropdownOpts
+    try {
+      if (d.type == "dropdown" && !d.dropdownOpts.api_key)
+        dropdownOpts[d.name] = d.dropdownOpts
+    } catch (e) {
+      console.log(d)
+    }
   })
   return dropdownOpts
 }
