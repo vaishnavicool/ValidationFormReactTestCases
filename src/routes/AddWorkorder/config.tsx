@@ -629,23 +629,23 @@ export const pageConfig = {
         width: "col-6",
       },
       {
-        name: "generator_country",
+        name: "generator_county",
         numeric: true,
         width: "col-6",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "g_getGenerator_country_mailing_bill_to_country",
+          api_key: "g_getGenerator_county_mailing_bill_to_county",
           labelKey: "countyID",
           valueKey: "countyName",
         },
       },
       {
-        name: "mailing_bill_to_country",
+        name: "mailing_bill_to_county",
         width: "col-6",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {
-          api_key: "g_getGenerator_country_mailing_bill_to_country",
+          api_key: "g_getGenerator_county_mailing_bill_to_county",
           labelKey: "countyID",
           valueKey: "countyName",
         },

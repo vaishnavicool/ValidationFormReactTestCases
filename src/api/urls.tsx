@@ -24,7 +24,7 @@ let urls: any = {
   g_getManifeast_print_style: () => `/mock_api/Manifeast_print_style.json`,
   g_getGenerator_state_mailing_bill_to_state: () =>
     `/mock_api/Generator_state_mailing_bill _to_state.json`,
-  g_getGenerator_country_mailing_bill_to_country: () =>
+  g_getGenerator_county_mailing_bill_to_county: () =>
     `/mock_api/Generator_country_mailing_bill_to_country.json`,
 }
 
