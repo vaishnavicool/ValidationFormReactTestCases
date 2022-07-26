@@ -539,3 +539,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #999999;
   cursor: auto;
 }
+.skeleton-table,  .skeleton-table td {
+  border: 1px solid #ADABAB;
+  border-collapse: collapse;
+}
+.skeleton-table th{
+  background-color: #e0e0e0 !important;
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
+  border-radius: 0px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 15px;
+  border-bottom: 1px solid #65b230 !important;
+  height: 40px;
+}
+
+

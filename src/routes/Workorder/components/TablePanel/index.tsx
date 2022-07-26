@@ -1,4 +1,5 @@
 import "../style.scss"
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import DataTable from "react-data-table-component"
 import Image from "shared/Image"
@@ -21,6 +22,8 @@ function WorkOrder(props: any) {
   const activityMenuClick = useDetectClickOutside({
     onTriggered: () => setShowActivity(false),
   })
+  
+  
   return (
     <div
       id="page-content-wrapper"
@@ -28,7 +31,7 @@ function WorkOrder(props: any) {
     >
       <div className="right-panel">
         <div className="table-section">
-          <Loading id="tableData">
+          <Loading id="tableData" component={true} columns={tableData.length ?  visibleColumns() : noDataColumns()}>
             {showActivity && (
               <div className="activity-div">
                 <div className="activity-item" onClick={download}>
@@ -38,6 +41,9 @@ function WorkOrder(props: any) {
               </div>
             )}
             <div>
+            
+            
+            
               <DataTable
                 columns={tableData.length ?  visibleColumns() : noDataColumns()}
                 data={tableData}
