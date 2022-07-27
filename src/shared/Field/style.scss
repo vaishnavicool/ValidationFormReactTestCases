@@ -9,6 +9,9 @@
     border: 1px solid #545454;
     width: 1.25rem;
     height: 1.25rem;
+    align-self: flex-end;
+    display: flex;
+    justify-self: flex-end;
 }
 .checkbox-label{
     margin: 0 !important;
@@ -17,13 +20,18 @@
     line-height: 19px !important;
     position: initial !important;
     display: flex !important;
-    margin-right: 0.5rem !important;
-    align-self: center !important;
+    // margin-right: 0.5rem !important;
+    // align-self: center !important;
 }
 .checkbox-container{
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
+    border: 1px solid #79747E;
+    border-radius: 4px;
+    padding: 12px;
+    justify-content: space-between;
+    flex: 1;
 }
 .col-45{
     width: 45% !important;

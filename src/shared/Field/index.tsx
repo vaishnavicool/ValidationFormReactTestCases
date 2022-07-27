@@ -90,9 +90,21 @@ function Field(props: any) {
   }
   if (type == "checkbox") {
     return (
-      <div className={`mb-3 custom-group ${width} checkbox-container`}>
+      <div className={`mb-3 custom-group ${width}`}>
+      <label htmlFor="disabledTextInput" className="label">
+        <FormattedMessage id={`${labelKey}`} />
+        {infoKey && (
+          <span className="icon-info">
+            <div className="tool-tip">
+              <FormattedMessage id={infoKey} />
+            </div>
+            <Image src="ic_info.png" />
+          </span>
+        )}
+      </label>
+      <div className={`custom-group checkbox-container`}>
         <label htmlFor="disabledTextInput" className="label checkbox-label">
-          <FormattedMessage id={`${labelKey}`} />
+          {value ? "Yes" : "No"}
         </label>
         <input
           type={type}
@@ -104,6 +116,7 @@ function Field(props: any) {
           value={value}
         />
       </div>
+    </div> 
     )
   }
 
