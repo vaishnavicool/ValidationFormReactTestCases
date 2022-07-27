@@ -24,176 +24,177 @@ const Loading = ({
             ))}
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
 
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
-        <tr>
-          {columns.map((element) => (
-            <td>
-              <Skeleton
-                height={13}
-                baseColor={"#e6e6e6"}
-                width="-webkit-fill-available"
-                style={{ margin: 10, width: " -webkit-fill-available" }}
-              />
-            </td>
-          ))}
-        </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+          <tr>
+            {columns.map((element) => (
+              <td>
+                <Skeleton
+                  height={13}
+                  baseColor={"#e6e6e6"}
+                  width="-webkit-fill-available"
+                  style={{ margin: 10, width: " -webkit-fill-available" }}
+                />
+              </td>
+            ))}
+          </tr>
+        </tbody>
       </table>
     )
   return (

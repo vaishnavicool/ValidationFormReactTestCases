@@ -22,3 +22,15 @@
     transform: rotate(360deg);
   }
 }
+.skeleton-table>:not(:first-child){
+  border-top: 0 !important;
+}
+.skeleton-table th{
+  padding-left: 16px !important
+}
+.skeleton-table>:not(caption)>tbody>*>*{
+  padding:0 !important;
+}
+.skeleton-table>thead{
+  vertical-align: middle !important;
+}

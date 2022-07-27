@@ -539,9 +539,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: #999999;
   cursor: auto;
 }
-.skeleton-table,  .skeleton-table td {
-  border: 1px solid #ADABAB;
-  border-collapse: collapse;
+.skeleton-table td {
+  font-weight: 400;
+  font-size: 11px;
+  border-right: 1px solid #adabab;
+}
+.skeleton-table tr{
+  border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0,0,0,.12);
 }
 .skeleton-table th{
   background-color: #e0e0e0 !important;
@@ -552,7 +558,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-size: 13px;
   line-height: 15px;
   border-bottom: 1px solid #65b230 !important;
-  height: 40px;
+  height: 50px;
 }
 
 
