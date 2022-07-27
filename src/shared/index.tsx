@@ -81,7 +81,8 @@ export const getDropdownOpts = async (pageOptions, pageKey) => {
       if (d.type == "dropdown" && !d.dropdownOpts.api_key)
         dropdownOpts[d.name] = d.dropdownOpts
     } catch (e) {
-      console.log(d)
+      // eslint-disable-next-line
+      console.log("error populating dropdown", d)
     }
   })
   return dropdownOpts

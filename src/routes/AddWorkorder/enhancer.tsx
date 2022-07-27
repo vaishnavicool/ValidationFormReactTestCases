@@ -8,9 +8,9 @@ const useEnhancer = () => {
   const [showNewGenerator, setShowNewGenerator] = useState(false)
   const [workOrder, setWorkOrder] = useState({})
   const [manifest, setManifest] = useState({})
-  const [generator, setGenerator] = useState({});
+  const [generator, setGenerator] = useState({})
   const [popup, setPopup] = useState("")
-  const [allDropdownOpts,setAllDropdownOpts] = useState({})
+  const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [show, setShow] = useState(false)
   const [aFilters, setAFilters] = useState({})
 
@@ -45,10 +45,16 @@ const useEnhancer = () => {
   const onHide = () => setPopup("")
   useEffect(() => {
     ;(async () => {
-      let workOrderOpts = await getDropdownOpts(pageConfig, 'addWorkOrderConfig')
-      let manifestOpts = await getDropdownOpts(pageConfig, 'addManifestConfig')
-      let generatorOpts = await getDropdownOpts(pageConfig, 'addNewGeneratorConfig')
-      let opts = {...workOrderOpts,...manifestOpts,...generatorOpts}
+      let workOrderOpts = await getDropdownOpts(
+        pageConfig,
+        "addWorkOrderConfig"
+      )
+      let manifestOpts = await getDropdownOpts(pageConfig, "addManifestConfig")
+      let generatorOpts = await getDropdownOpts(
+        pageConfig,
+        "addNewGeneratorConfig"
+      )
+      let opts = { ...workOrderOpts, ...manifestOpts, ...generatorOpts }
       setAllDropdownOpts(opts)
     })()
   }, [])
@@ -65,13 +71,16 @@ const useEnhancer = () => {
   }
 
   const addWorkOrder = () => {
-    console.log("Workorder Form Data",workOrder)
+    // eslint-disable-next-line
+    console.log("Workorder Form Data", workOrder)
   }
   const saveManifest = () => {
-    console.log("Save Manifeast Form Data",manifest)
+    // eslint-disable-next-line
+    console.log("Save Manifeast Form Data", manifest)
   }
   const saveGenerator = () => {
-    console.log("Save Manifeast Form Data",generator)
+    // eslint-disable-next-line
+    console.log("Save Manifeast Form Data", generator)
   }
   const handlers = { addGenerator: () => setPopup("generator") }
 
@@ -101,8 +110,8 @@ const useEnhancer = () => {
     updateGenerator,
     setGenerator,
     generator,
-    saveGenerator
-    }
+    saveGenerator,
+  }
 }
 
 export default useEnhancer
