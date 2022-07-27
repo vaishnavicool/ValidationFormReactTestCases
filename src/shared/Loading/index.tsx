@@ -14,7 +14,7 @@ const Loading = ({
   const status = useSelector((state: any) => state.loading[id])
   columns = columns.slice(0, 8)
   const n = 10;
-  if (!status) return children
+  if (status === false) return children
   if (component)
     return (
       <table className="table skeleton-table">
