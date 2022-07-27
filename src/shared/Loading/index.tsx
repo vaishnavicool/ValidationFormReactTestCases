@@ -13,21 +13,22 @@ const Loading = ({
 }: any) => {
   const status = useSelector((state: any) => state.loading[id])
   columns = columns.slice(0, 8)
+  const n = 10;
   if (!status) return children
   if (component)
     return (
       <table className="table skeleton-table">
         <thead>
           <tr>
-            {columns.map((element) => (
-              <th>{element.name}</th>
+            {columns.map((element,index) => (
+              <th key={index}>{element.name}</th>
             ))}
           </tr>
         </thead>
         <tbody>
-          <tr>
-            {columns.map((element) => (
-              <td>
+        {[...Array(n)].map((e, i) => <tr key={i}>
+            {columns.map((element,index) => (
+              <td key={index}>
                 <Skeleton
                   height={13}
                   baseColor={"#e6e6e6"}
@@ -36,164 +37,7 @@ const Loading = ({
                 />
               </td>
             ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
-          <tr>
-            {columns.map((element) => (
-              <td>
-                <Skeleton
-                  height={13}
-                  baseColor={"#e6e6e6"}
-                  width="-webkit-fill-available"
-                  style={{ margin: 10, width: " -webkit-fill-available" }}
-                />
-              </td>
-            ))}
-          </tr>
+          </tr>)}          
         </tbody>
       </table>
     )
