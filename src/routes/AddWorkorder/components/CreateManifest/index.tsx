@@ -1,13 +1,28 @@
 import "./style.scss"
-
 import Field from "shared/Field"
 import Form from "shared/Form"
 import Image from "shared/Image"
 import { pageConfig } from "routes/AddWorkorder/config"
 import { useDetectClickOutside } from "react-detect-click-outside"
+import Select from "react-select"
 
 const CreateManifest = (props) => {
-  let { showMoreAction, setShowMoreAction, onHide, handlers,updateManifest,manifest,saveManifest,allDropdownOpts } = props
+  let {
+    onSubmit,
+    showMoreAction,
+    setShowMoreAction,
+    onHide,
+    handlers,
+    updateManifest,
+    manifest,
+    saveManifest,
+    allDropdownOpts,
+    documentType,
+    changeDocumentType,
+    documentTypes,
+    selectDocumentFile,
+    documentToUpload,
+  } = props
 
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),
@@ -21,7 +36,7 @@ const CreateManifest = (props) => {
               config={pageConfig?.addManifestConfig}
               update={updateManifest}
               filters={manifest}
-                handlers={handlers}
+              handlers={handlers}
               allDropdownOpts={allDropdownOpts}
             />
           </div>
@@ -92,22 +107,41 @@ const CreateManifest = (props) => {
               </div>
             </div>
             <div className="grey-container row">
-              <Field
+              {/* <Select
+                className="col-5 gx-2"
+                value={documentType}
+                onChange={changeDocumentType}             
+                {documentTypes.map((d) => (
+                  <option value={d.value}>{d.label}</option>
+                ))}
+              /> */}
+              <select
+                className="dropdown col-5 gx-2"
+                value={documentType}
+                onChange={changeDocumentType}
+              >
+                {documentTypes.map((d) => (
+                  <option value={d.value}>{d.label}</option>
+                ))}
+              </select>
+              {/* <Field
                 type="dropdown"
-                placeholder="Manifest"
+                placeholder="Manifest"              
                 name={"documenttype"}
                 width="col-5 gx-2"
-              />
-              <Field
+              /> */}
+              <input
                 type="file"
                 placeholder="Select Document"
                 name={"documenttype"}
                 width="col-5 gx-2"
+                onChange={selectDocumentFile}
               />
               <input
                 className="btn-upload col-2 mb-3"
                 value="Upload"
                 type="button"
+                onClick={onSubmit}
               />
 
               <div className="instruction-text">Instructions</div>
@@ -126,20 +160,25 @@ const CreateManifest = (props) => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td colSpan={4} style={{ textAlign: "center" }}>
+
+                {!documentToUpload[0]&&<tr>
+                      <td colSpan={4} style={{ textAlign: "center" }}>
                       No records to display
                     </td>
-                      {/* <td>Helo</td>
-                      <td></td>
-                      <td></td>
+                    </tr>}
+                  {documentToUpload.map((d) => (
+                    <tr>
+                      <td>{d.file?.fileName}</td>
+                      <td>{d.documentType}</td>
+                      <td>{d.upload_date}</td>
                       <td>
                         <div className="img-meni">
                           <Image src="ic_delete_meni.png" />
                           <Image src="ic_download_file.png" />
                         </div>
-                      </td> */}
-                  </tr>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
@@ -161,7 +200,7 @@ const CreateManifest = (props) => {
             className="btn-addworkorder-add"
             value="Save Manifest"
             type="button"
-            onClick={()=>saveManifest()}
+            onClick={() => saveManifest()}
           />
         </div>
       </div>

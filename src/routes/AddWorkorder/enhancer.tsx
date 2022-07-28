@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { getDropdownOpts } from "shared"
 import { pageConfig } from "./config"
-
+import { formattedDate } from "shared"
 const useEnhancer = () => {
   const [showManifest, setShowManifest] = useState(false)
   const [showMoreAction, setShowMoreAction] = useState(false)
@@ -13,6 +13,34 @@ const useEnhancer = () => {
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [show, setShow] = useState(false)
   const [aFilters, setAFilters] = useState({})
+  const [file, setFile] = useState({})
+  const [documentToUpload, setDocumentToUpload] = useState([]) //JSON
+  const [documentType, setDocumentType] = useState('')
+let fileName= ""
+  const selectDocumentFile = (event) => {
+    setFile(event.target.files[0])
+   
+    // fileName=JSON.stringify(file.name) 
+    // console.log("file111",  fileName.name);
+  }
+
+  const changeDocumentType = (e)=>{
+  setDocumentType(e.target.value)
+  console.log("DocumentType",documentType);
+  }
+  const onSubmit = () => {
+    let document = {
+      file,
+      upload_date: formattedDate(new Date()), 
+      documentType,
+    }
+    
+    let documents2 = [...documentToUpload, document]
+   //setDocumentToUpload(documents2)
+   console.log("documents",documentToUpload);
+   
+  }
+
 
   const updateWorkOrder = (name: string) => (evt: any) => {
     let filters2: any = { ...workOrder }
@@ -84,6 +112,8 @@ const useEnhancer = () => {
   }
   const handlers = { addGenerator: () => setPopup("generator") }
 
+  let documentTypes= pageConfig.addManifestConfig.form[0].dropdownOpts ||  []
+ 
   return {
     showManifest,
     setShowManifest,
@@ -111,6 +141,14 @@ const useEnhancer = () => {
     setGenerator,
     generator,
     saveGenerator,
+    changeDocumentType,
+    onSubmit,
+    documentType,
+    setDocumentType,
+    documentTypes,
+    selectDocumentFile,
+    documentToUpload,
+   
   }
 }
 

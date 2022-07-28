@@ -279,6 +279,16 @@ export const pageConfig = {
   addManifestConfig: {
     form: [
       {
+        name: "documenttype",
+        numeric: true,
+        type: "dropdown",
+        dropdownOpts: [
+          { label: "Manifests", value: "0" },
+          { label: "Job Sheets", value: "1" },
+          { label: "Bill of Ladings", value: "2" },
+        ],
+      },
+      {
         name: "manifest_tracking",
         numeric: true,
         width: "col-45",
