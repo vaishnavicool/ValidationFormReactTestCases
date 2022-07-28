@@ -26,6 +26,8 @@ let urls: any = {
     `/mock_api/Generator_state_mailing_bill _to_state.json`,
   g_getGenerator_county_mailing_bill_to_county: () =>
     `/mock_api/Generator_county_mailing_bill_to_county.json`,
+    g_getWorkOrder: () =>`/mock_api/WorkOrder.json`,
+    g_getEquipment_Type: () =>`/mock_api/Equipment_Type.json`, 
 }
 
 export default urls
