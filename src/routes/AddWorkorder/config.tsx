@@ -64,12 +64,9 @@ export const pageConfig = {
         width: "col-4",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "p_getSalesRep",
-          labelKey: "name",
-          valueKey: "salesRepid",
-          body: {
-            modeId: true,
-          },
+          api_key: "g_getWorkOrder",
+          labelKey: "workOrderDescription",
+          valueKey: "workOrderTypeId",
         },
       },
       { name: "generator_id", type: "search", width: "col-4" },
@@ -202,8 +199,8 @@ export const pageConfig = {
         type: "dropdown",
         dropdownOpts: {
           api_key: "g_getDo",
-          labelKey: "name",
-          valueKey: "id",
+          labelKey: "deliveryOrderNumber",
+          valueKey: "deliveryOrderId",
         },
       },
       {
@@ -365,9 +362,9 @@ export const pageConfig = {
         width: "col-45",
         type: "dropdown",
         dropdownOpts: {
-          api_key: "g_getTransporters",
-          labelKey: "transportName",
-          valueKey: "transportId",
+          api_key: "g_getEquipment_Type",
+          labelKey: "equipmentTypeDescription",
+          valueKey: "equipmentTypeId",
         },
       },
       {
@@ -635,10 +632,10 @@ export const pageConfig = {
         type: "dropdown",
         dropdownOpts: {
           api_key: "g_getGenerator_county_mailing_bill_to_county",
-          labelKey: "countyID",
-          valueKey: "countyName",
+          labelKey: "countyName",
+          valueKey: "countyID",
         },
-      },
+       },
       {
         name: "mailing_bill_to_county",
         width: "col-6",
@@ -646,8 +643,8 @@ export const pageConfig = {
         type: "dropdown",
         dropdownOpts: {
           api_key: "g_getGenerator_county_mailing_bill_to_county",
-          labelKey: "countyID",
-          valueKey: "countyName",
+          labelKey: "countyName",
+          valueKey: "countyID",
         },
       },
       {
