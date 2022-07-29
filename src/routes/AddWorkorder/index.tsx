@@ -8,6 +8,7 @@ import Topsection from "shared/Topsection"
 import { pageConfig } from "./config"
 import useEnhancer from "./enhancer"
 import { useNavigate } from "react-router-dom"
+import { FormattedMessage } from "react-intl"
 
 const AddWorkorder = (props: any) => {
   let allProps = useEnhancer()
@@ -39,7 +40,7 @@ const AddWorkorder = (props: any) => {
         </div>
         <div className="col-3 d-flex flex-column">
           <div className=" manifest-container">
-            <div className="title">Manifests</div>
+            <div className="title"><FormattedMessage id="manifests" /></div>
             <input
               className="btn-right-panel"
               value="+ Add New Manifest"
@@ -48,7 +49,7 @@ const AddWorkorder = (props: any) => {
             />
           </div>
           <div className="invoice-container">
-            <div className="title">Invoices</div>
+            <div className="title"><FormattedMessage id="invoices"/></div>
             <input
               className="btn-right-panel"
               value="+ Add New Invoice"

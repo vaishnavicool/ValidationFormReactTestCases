@@ -9,6 +9,7 @@ import Topsection from "shared/Topsection"
 import { useDetectClickOutside } from "react-detect-click-outside"
 import useEnhancer from "./enhancer"
 import { useNavigate } from "react-router-dom"
+import { FormattedMessage } from "react-intl"
 
 function Workorder(props: any) {
   let extraProps = useEnhancer()
@@ -46,7 +47,7 @@ function Workorder(props: any) {
                 onClick={() => setShowColumn(!showColumn)}
               >
                 <Image src="icon-columns.png" className="btn-icon" />{" "}
-                <span className="btn-txt"> Columns</span>
+                <span className="btn-txt"><FormattedMessage id="columns" /></span>
               </button>
               {showColumn && (
                 <div className="columns-div">
@@ -69,7 +70,7 @@ function Workorder(props: any) {
             </div>
             <button className="btn btn-grp " type="reset">
               <Image src="icon-reload.png" className="btn-icon" />
-              <span className="btn-txt"> Reload</span>
+              <span className="btn-txt"><FormattedMessage id="reload" /></span>
             </button>
           </div>
           <div className="table-container">

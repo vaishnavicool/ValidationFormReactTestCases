@@ -82,8 +82,7 @@ function Field(props: any) {
         />
         <label htmlFor="file-1">
           <Image src="ic_upload.png" />
-
-          <span>Select Document</span>
+          <span><FormattedMessage id="select_document"/></span>
         </label>
       </div>
     )

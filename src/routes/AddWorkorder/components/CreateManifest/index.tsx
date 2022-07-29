@@ -5,6 +5,7 @@ import Form from "shared/Form"
 import Image from "shared/Image"
 import { pageConfig } from "routes/AddWorkorder/config"
 import { useDetectClickOutside } from "react-detect-click-outside"
+import { FormattedMessage } from "react-intl"
 
 const CreateManifest = (props) => {
   let { showMoreAction, setShowMoreAction, onHide, handlers,updateManifest,manifest,saveManifest,allDropdownOpts } = props
@@ -119,17 +120,16 @@ const CreateManifest = (props) => {
               <table className="table table-bordered">
                 <thead>
                   <tr>
-                    <th scope="col-4">Document Name</th>
-                    <th scope="col-2">Type</th>
-                    <th scope="col-3">Upload Date</th>
-                    <th scope="col-3">Actions</th>
+                    <th scope="col-4"><FormattedMessage id="document_name" /></th>
+                    <th scope="col-2"><FormattedMessage id="type"/></th>
+                    <th scope="col-3"><FormattedMessage id="upload_date" /></th>
+                    <th scope="col-3"><FormattedMessage id="actions"/></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td colSpan={4} style={{ textAlign: "center" }}>
-                      No records to display
-                    </td>
+                    <FormattedMessage id="no_records_to_display"/>                      </td>
                       {/* <td>Helo</td>
                       <td></td>
                       <td></td>
@@ -143,10 +143,9 @@ const CreateManifest = (props) => {
                 </tbody>
               </table>
             </div>
-            <div className="footer-text">Note</div>
+            <div className="footer-text"><FormattedMessage id="note"/></div>
             <div className="footer-subtext">
-              if the file you have selected did not appear, your browser might
-              have a pop up blocker. Please disable that.
+            <FormattedMessage id="subtext_of_footer"/>
             </div>
           </div>
         </div>

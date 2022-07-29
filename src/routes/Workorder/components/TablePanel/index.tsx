@@ -7,6 +7,7 @@ import Loading from "shared/Loading"
 import NoData from "./NoData"
 import Pagination from "./pagination"
 import { useDetectClickOutside } from "react-detect-click-outside"
+import { FormattedMessage } from "react-intl"
 
 function WorkOrder(props: any) {
   let {
@@ -23,7 +24,6 @@ function WorkOrder(props: any) {
     onTriggered: () => setShowActivity(false),
   })
   
-  
   return (
     <div
       id="page-content-wrapper"
@@ -36,14 +36,11 @@ function WorkOrder(props: any) {
               <div className="activity-div">
                 <div className="activity-item" onClick={download}>
                   <Image src="exportToExcel.png" />
-                  <span className="activity-txt">Export to Excel</span>
+                  <span className="activity-txt"><FormattedMessage id="export_to_excel" /></span>
                 </div>
               </div>
             )}
             <div>
-            
-            
-            
               <DataTable
                 columns={tableData.length ?  visibleColumns() : noDataColumns()}
                 data={tableData}
@@ -58,7 +55,6 @@ function WorkOrder(props: any) {
                 noDataComponent={<NoData />}
               />
             </div>
-
             {tableData?.length > 0 && (
               <div
                 ref={activityMenuClick}

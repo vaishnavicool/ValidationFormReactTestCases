@@ -1,6 +1,7 @@
 import "./style.scss"
 import Image from "shared/Image"
 import enhancer from "./enhancer"
+import { FormattedMessage } from "react-intl"
 
 function Header(props: any) {
   return (
@@ -28,8 +29,8 @@ function Header(props: any) {
               <Image src="profile-image.png" />
             </div>
             <div className="profile-detail">
-              <div className="username">Mohan Patcha</div>
-              <div className="role">Admin</div>
+              <div className="username"><FormattedMessage id="mohan_patcha" /></div>
+              <div className="role"><FormattedMessage id="admin" /></div>
             </div>
           </div>
         </div>
