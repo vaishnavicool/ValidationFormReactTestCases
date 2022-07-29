@@ -20,6 +20,8 @@ const CreateManifest = (props) => {
     selectDocumentFile,
     documentToUpload,
     file,
+    changeDocumentType,
+    documentType
   } = props
 
   const moreActionMenuClick = useDetectClickOutside({
@@ -107,10 +109,11 @@ const CreateManifest = (props) => {
             <div className="grey-container row">
               <Field
                 allDropdownOpts={allDropdownOpts}
-                type="dropdown"
-                placeholder="Manifest"
+                type="dropdown"               
                 name={"document_type"}
                 width="col-5 gx-2"
+                onChange={changeDocumentType}
+                selectedOption={documentType}
               />
 
               <Field

@@ -23,8 +23,9 @@ const useEnhancer = () => {
   }
 
   const changeDocumentType = (e) => {
-    setDocumentType(e.target.value)
+    setDocumentType(e.label)
   }
+
   const onSubmit = () => {
     let document = {
       file,
@@ -33,9 +34,9 @@ const useEnhancer = () => {
     }
 
     let documents2: any = [...documentToUpload, document]
-
     setDocumentToUpload(documents2)
     setFile({})
+    setDocumentType("")
   }
 
   const updateWorkOrder = (name: string) => (evt: any) => {
@@ -69,7 +70,10 @@ const useEnhancer = () => {
   const onHide = () => setPopup("")
   useEffect(() => {
     ;(async () => {
-      let documentTypeOpts = await getDropdownOpts(pageConfig, "documentTypeConfig")
+      let documentTypeOpts = await getDropdownOpts(
+        pageConfig,
+        "documentTypeConfig"
+      )
       let workOrderOpts = await getDropdownOpts(
         pageConfig,
         "addWorkOrderConfig"
@@ -79,7 +83,12 @@ const useEnhancer = () => {
         pageConfig,
         "addNewGeneratorConfig"
       )
-      let opts = { ...workOrderOpts, ...manifestOpts, ...generatorOpts, ...documentTypeOpts}
+      let opts = {
+        ...workOrderOpts,
+        ...manifestOpts,
+        ...generatorOpts,
+        ...documentTypeOpts,
+      }
       setAllDropdownOpts(opts)
     })()
   }, [])

@@ -20,8 +20,10 @@ function Field(props: any) {
     actionHandler,
     handlers,
     onChange,
+    selectedOption
+    
   } = props
-console.log(filters);
+
 
   let intl = useIntl()
   let labelKey = ""
@@ -51,7 +53,9 @@ setFile(props.file)
     )
   }
   if (type == "dropdown" && allDropdownOpts) {
-    value = allDropdownOpts[name]?.find((d: any) => d.value == filters[name])
+    let selectedVal=selectedOption?selectedOption:filters[name]
+    let handler= onChange?onChange:update(name)
+    value = allDropdownOpts[name]?.find((d: any) => d.label == selectedVal)
     if (!value) value = ""
     return (
       <div className={`mb-3 custom-group ${width}`}>
@@ -67,7 +71,7 @@ setFile(props.file)
           )}
         </label>
         <Select
-          onChange={update(name)}
+          onChange={handler}
           placeholder={`${placeholder ? `${placeholder}` : `Select`}`}
           value={value}
           isSearchable={true}
