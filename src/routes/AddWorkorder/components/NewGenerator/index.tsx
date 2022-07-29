@@ -3,6 +3,7 @@ import "./style.scss"
 import Form from "shared/Form"
 import Image from "shared/Image"
 import { pageConfig } from "routes/AddWorkorder/config"
+import { FormattedMessage } from "react-intl"
 
 const NewGenerator = (props) => {
   let { onHide, setPopup,  updateGenerator, generator, saveGenerator,allDropdownOpts } = props
@@ -19,9 +20,9 @@ const NewGenerator = (props) => {
           />
         </div>
         <div className="col-6 gen-right-section">
-          <div className="right-head">Mailing Information</div>
+          <div className="right-head"><FormattedMessage id="mailing_information" /></div>
           <div className="gen-right-container">
-            <div className="datails-text">Details Comes here</div>
+            <div className="datails-text"><FormattedMessage id="details_comes_here" /></div>
           </div>
         </div>
       </div>
@@ -32,7 +33,7 @@ const NewGenerator = (props) => {
           type="button"
         >
           <Image src="ic_arrow_back.png" />
-          Back to manifest
+          <FormattedMessage id="back_to_manifest" /> 
         </button>
         <input
           className="btn-addworkorder-cancel"

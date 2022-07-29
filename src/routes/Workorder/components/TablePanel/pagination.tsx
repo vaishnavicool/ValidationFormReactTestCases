@@ -1,4 +1,5 @@
 import classnames from "classnames"
+import { FormattedMessage } from "react-intl"
 import "../style.scss"
 
 const Pagination = ({
@@ -63,13 +64,13 @@ const Pagination = ({
         }  to ${toSize}  of ${total} entries`}
       </div>
       <div className="col-4">
-        <span className="drop-down-text">Show</span>
+        <span className="drop-down-text"><FormattedMessage id="show" /></span>
         <select className="dropdown-pagination" onClick={onChangeRowsPerPageT}>
           {paginationRowsPerPageOptions.map((d) => (
             <option key={d}>{d}</option>
           ))}
         </select>
-        <span className="drop-down-text">entries</span>
+        <span className="drop-down-text"><FormattedMessage id="entries" /></span>
       </div>
       {total >= rowsPerPage + 1 && (
         <div className="float-right col-4">
@@ -80,7 +81,7 @@ const Pagination = ({
                 disabled: hasPreviousPage,
               })}
             >
-              <span className="">First</span>
+              <span className=""><FormattedMessage id="first"/></span>
             </li>
             <li
               onClick={handleBackButtonClick}
@@ -88,7 +89,7 @@ const Pagination = ({
                 disabled: hasPreviousPage,
               })}
             >
-              <span className="mx-3">Previous</span>
+              <span className="mx-3"><FormattedMessage id="previous"/></span>
             </li>
             {pages.map((d) => (
               <li
@@ -105,11 +106,11 @@ const Pagination = ({
               onClick={handleNextButtonClick}
               className={classnames("page-item", { disabled: hasNextPage })}
             >
-              <span className="mx-3">Next</span>
+              <span className="mx-3"><FormattedMessage id="next" /></span>
             </li>
 
             <li className={classnames("page-item", { disabled: hasNextPage })}>
-              <span className="">Last</span>
+              <span className=""><FormattedMessage id="last"/></span>
             </li>
           </ul>
         </div>

@@ -98,7 +98,6 @@ setFile(props.file)
         />
         <label htmlFor="file-1">
           <Image src="ic_upload.png" />
-
           <span>{file?.name?file.name:placeholder}</span>
         </label>
       </div>

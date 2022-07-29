@@ -2,282 +2,282 @@
   "version": "2.0",
   "statusCode": 200,
   "message": "GET Request successful.",
-  "result": [
+ "result": [
     {
       "countyID": 1,
-      "countyName": "1"
+      "countyName": "Alabama"
     },
     {
       "countyID": 709,
-      "countyName": "709"
+      "countyName": "Autauga"
     },
     {
       "countyID": 2400,
-      "countyName": "2400"
+      "countyName": "Baldwin"
     },
     {
       "countyID": 2401,
-      "countyName": "2401"
+      "countyName": "Barbour"
     },
     {
       "countyID": 2402,
-      "countyName": "2402"
+      "countyName": "Bibb"
     },
     {
       "countyID": 710,
-      "countyName": "710"
+      "countyName": "Blount"
     },
     {
       "countyID": 711,
-      "countyName": "711"
+      "countyName": "Bullock"
     },
     {
       "countyID": 2403,
-      "countyName": "2403"
+      "countyName": "Butler"
     },
     {
       "countyID": 2404,
-      "countyName": "2404"
+      "countyName": "Calhoun"
     },
     {
       "countyID": 712,
-      "countyName": "712"
+      "countyName": "Chambers"
     },
     {
       "countyID": 2405,
-      "countyName": "2405"
+      "countyName": "Cherokee"
     },
     {
       "countyID": 713,
-      "countyName": "713"
+      "countyName": "Chilton"
     },
     {
       "countyID": 714,
-      "countyName": "714"
+      "countyName": "Choctaw"
     },
     {
       "countyID": 2406,
-      "countyName": "2406"
+      "countyName": "Clarke"
     },
     {
       "countyID": 2407,
-      "countyName": "2407"
+      "countyName": "Clay"
     },
     {
       "countyID": 715,
-      "countyName": "715"
+      "countyName": "Cleburne"
     },
     {
       "countyID": 2408,
-      "countyName": "2408"
+      "countyName": "Coffee"
     },
     {
       "countyID": 716,
-      "countyName": "716"
+      "countyName": "Colbert"
     },
     {
       "countyID": 717,
-      "countyName": "717"
+      "countyName": "Conecuh"
     },
     {
       "countyID": 718,
-      "countyName": "718"
+      "countyName": "Coosa"
     },
     {
       "countyID": 719,
-      "countyName": "719"
+      "countyName": "Covington"
     },
     {
       "countyID": 720,
-      "countyName": "720"
+      "countyName": "Crenshaw"
     },
     {
       "countyID": 721,
-      "countyName": "721"
+      "countyName": "Cullman"
     },
     {
       "countyID": 722,
-      "countyName": "722"
+      "countyName": "Dale"
     },
     {
       "countyID": 2409,
-      "countyName": "2409"
+      "countyName": "Dallas"
     },
     {
       "countyID": 2410,
-      "countyName": "2410"
+      "countyName": "DeKalb"
     },
     {
       "countyID": 723,
-      "countyName": "723"
+      "countyName": "Elmore"
     },
     {
       "countyID": 2411,
-      "countyName": "2411"
+      "countyName": "Escambia"
     },
     {
       "countyID": 2,
-      "countyName": "2"
+      "countyName": "Etowah"
     },
     {
       "countyID": 2412,
-      "countyName": "2412"
+      "countyName": "Fayette"
     },
     {
       "countyID": 2413,
-      "countyName": "2413"
+      "countyName": "Franklin"
     },
     {
       "countyID": 724,
-      "countyName": "724"
+      "countyName": "Geneva"
     },
     {
       "countyID": 2414,
-      "countyName": "2414"
+      "countyName": "Greene"
     },
     {
       "countyID": 725,
-      "countyName": "725"
+      "countyName": "Hale"
     },
     {
       "countyID": 2415,
-      "countyName": "2415"
+      "countyName": "Henry"
     },
     {
       "countyID": 2416,
-      "countyName": "2416"
+      "countyName": "Houston"
     },
     {
       "countyID": 2417,
-      "countyName": "2417"
+      "countyName": "Jackson"
     },
     {
       "countyID": 2418,
-      "countyName": "2418"
+      "countyName": "Jefferson"
     },
     {
       "countyID": 2419,
-      "countyName": "2419"
+      "countyName": "Lamar"
     },
     {
       "countyID": 726,
-      "countyName": "726"
+      "countyName": "Lauderdale"
     },
     {
       "countyID": 2420,
-      "countyName": "2420"
+      "countyName": "Lawrence"
     },
     {
       "countyID": 2421,
-      "countyName": "2421"
+      "countyName": "Lee"
     },
     {
       "countyID": 727,
-      "countyName": "727"
+      "countyName": "Limestone"
     },
     {
       "countyID": 2422,
-      "countyName": "2422"
+      "countyName": "Lowndes"
     },
     {
       "countyID": 2423,
-      "countyName": "2423"
+      "countyName": "Macon"
     },
     {
       "countyID": 2424,
-      "countyName": "2424"
+      "countyName": "Madison"
     },
     {
       "countyID": 728,
-      "countyName": "728"
+      "countyName": "Marengo"
     },
     {
       "countyID": 2425,
-      "countyName": "2425"
+      "countyName": "Marion"
     },
     {
       "countyID": 2426,
-      "countyName": "2426"
+      "countyName": "Marshall"
     },
     {
       "countyID": 729,
-      "countyName": "729"
+      "countyName": "Mobile"
     },
     {
       "countyID": 2427,
-      "countyName": "2427"
+      "countyName": "Monroe"
     },
     {
       "countyID": 2428,
-      "countyName": "2428"
+      "countyName": "Montgomery"
     },
     {
       "countyID": 2429,
-      "countyName": "2429"
+      "countyName": "Morgan"
     },
     {
       "countyID": 3,
-      "countyName": "3"
+      "countyName": "Pell City"
     },
     {
       "countyID": 2430,
-      "countyName": "2430"
+      "countyName": "Perry"
     },
     {
       "countyID": 2431,
-      "countyName": "2431"
+      "countyName": "Pickens"
     },
     {
       "countyID": 2432,
-      "countyName": "2432"
+      "countyName": "Pike"
     },
     {
       "countyID": 2433,
-      "countyName": "2433"
+      "countyName": "Randolph"
     },
     {
       "countyID": 2434,
-      "countyName": "2434"
+      "countyName": "Russell"
     },
     {
       "countyID": 2435,
-      "countyName": "2435"
+      "countyName": "Shelby"
     },
     {
       "countyID": 4,
-      "countyName": "4"
+      "countyName": "St Clair"
     },
     {
       "countyID": 2436,
-      "countyName": "2436"
+      "countyName": "Sumter"
     },
     {
       "countyID": 730,
-      "countyName": "730"
+      "countyName": "Talladega"
     },
     {
       "countyID": 731,
-      "countyName": "731"
+      "countyName": "Tallapoosa"
     },
     {
       "countyID": 732,
-      "countyName": "732"
+      "countyName": "Tuscaloosa"
     },
     {
       "countyID": 2437,
-      "countyName": "2437"
+      "countyName": "Walker"
     },
     {
       "countyID": 2438,
-      "countyName": "2438"
+      "countyName": "Washington"
     },
     {
       "countyID": 2439,
-      "countyName": "2439"
+      "countyName": "Wilcox"
     },
     {
       "countyID": 733,
-      "countyName": "733"
+      "countyName": "Winston"
     }
   ]
 }

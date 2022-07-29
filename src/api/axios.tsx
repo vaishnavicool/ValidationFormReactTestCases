@@ -5,6 +5,7 @@ import { formatMessage } from "shared"
 import store from "store"
 import { toast } from "react-toastify"
 import Image from "shared/Image"
+import { FormattedMessage } from "react-intl"
 toast.configure({
   position: "top-center",
   autoClose: false,
@@ -92,9 +93,7 @@ axios.interceptors.response.use(
       let en_msg = ""
       let sorry = (
         <div>
-          <Image src="ic_sad.png" style={{ marginRight: 14 }} /> Sorry something
-          went wrong.
-        </div>
+          <Image src="ic_sad.png" style={{ marginRight: 14 }} /> <FormattedMessage id="sorry_something_went_wrong" /></div>
       )
       let msg = `${sorry} \n ${en_msg}`
       if (!navigator.onLine) msg = formatMessage("global.error.notInternet")
