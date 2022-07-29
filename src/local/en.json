@@ -61,7 +61,7 @@
   "form.customerID": "Customer",
   "form.customer_sales_channel": "Customer Sales Channel",
   "form.workorder_type": "Workorder Type",
-  "form.generatorId": "Generator",
+  "form.generator_id": "Generator",
   "form.generator_requirements": "Generator Requirements",
   "form.schedule_type_id": "Schedule Type",
   "form.salesrep_id": "Sales Rep",
