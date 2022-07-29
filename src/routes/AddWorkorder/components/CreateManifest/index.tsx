@@ -4,7 +4,7 @@ import Form from "shared/Form"
 import Image from "shared/Image"
 import { pageConfig } from "routes/AddWorkorder/config"
 import { useDetectClickOutside } from "react-detect-click-outside"
-import Select from "react-select"
+
 
 const CreateManifest = (props) => {
   let {
@@ -17,13 +17,13 @@ const CreateManifest = (props) => {
     manifest,
     saveManifest,
     allDropdownOpts,
-    documentType,
-    changeDocumentType,
-    documentTypes,
     selectDocumentFile,
     documentToUpload,
+    file
   } = props
 
+ console.log("++",file)
+              
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),
   })
@@ -115,24 +115,18 @@ const CreateManifest = (props) => {
                   <option value={d.value}>{d.label}</option>
                 ))}
               /> */}
-              <select
-                className="dropdown col-5 gx-2"
-                value={documentType}
-                onChange={changeDocumentType}
-              >
-                {documentTypes.map((d) => (
-                  <option value={d.value}>{d.label}</option>
-                ))}
-              </select>
-              {/* <Field
+              
+              <Field
                 type="dropdown"
                 placeholder="Manifest"              
                 name={"documenttype"}
                 width="col-5 gx-2"
-              /> */}
-              <input
+               
+              />
+            
+              <Field
                 type="file"
-                placeholder="Select Document"
+                placeholder={"Select Document"}
                 name={"documenttype"}
                 width="col-5 gx-2"
                 onChange={selectDocumentFile}
@@ -168,7 +162,7 @@ const CreateManifest = (props) => {
                     </tr>}
                   {documentToUpload.map((d) => (
                     <tr>
-                      <td>{d.file?.fileName}</td>
+                      <td>{d.file?.name}</td>
                       <td>{d.documentType}</td>
                       <td>{d.upload_date}</td>
                       <td>

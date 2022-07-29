@@ -4,6 +4,7 @@ import { FormattedMessage, useIntl } from "react-intl"
 
 import Image from "shared/Image"
 import Select from "react-select"
+import { useState } from "react"
 
 function Field(props: any) {
   const {
@@ -18,11 +19,13 @@ function Field(props: any) {
     actionIcon,
     actionHandler,
     handlers,
+    onChange,
   } = props
 
   let intl = useIntl()
   let labelKey = ""
   let aName = ""
+let [file,setFile]=useState({name:false})
 
   if (name) {
     labelKey = `form.${name}`
@@ -34,7 +37,10 @@ function Field(props: any) {
   let value = ""
   if (actionIcon && actionHandler) {
     return (
-      <div className={`mb-3 ${width} ${actionIcon.split('.')[0]}`} onClick={handlers?.[actionHandler]}>
+      <div
+        className={`mb-3 ${width} ${actionIcon.split(".")[0]}`}
+        onClick={handlers?.[actionHandler]}
+      >
         <Image src={actionIcon} />
       </div>
     )
@@ -76,6 +82,11 @@ function Field(props: any) {
           type="file"
           name="file-1[]"
           id="file-1"
+          onChange={(e:any)=>{
+            let file=e.target.files[0]
+            setFile(file) 
+            onChange(file)
+          }}
           className="inputfile inputfile-1"
           data-multiple-caption="{count} files selected"
           multiple={false}
@@ -83,7 +94,7 @@ function Field(props: any) {
         <label htmlFor="file-1">
           <Image src="ic_upload.png" />
 
-          <span>Select Document</span>
+          <span>{file?.name?file.name:placeholder}</span>
         </label>
       </div>
     )
@@ -91,32 +102,32 @@ function Field(props: any) {
   if (type == "checkbox") {
     return (
       <div className={`mb-3 custom-group ${width}`}>
-      <label htmlFor="disabledTextInput" className="label">
-        <FormattedMessage id={`${labelKey}`} />
-        {infoKey && (
-          <span className="icon-info">
-            <div className="tool-tip">
-              <FormattedMessage id={infoKey} />
-            </div>
-            <Image src="ic_info.png" />
-          </span>
-        )}
-      </label>
-      <div className={`custom-group checkbox-container`}>
-        <label htmlFor="disabledTextInput" className="label checkbox-label">
-          {value ? "Yes" : "No"}
+        <label htmlFor="disabledTextInput" className="label">
+          <FormattedMessage id={`${labelKey}`} />
+          {infoKey && (
+            <span className="icon-info">
+              <div className="tool-tip">
+                <FormattedMessage id={infoKey} />
+              </div>
+              <Image src="ic_info.png" />
+            </span>
+          )}
         </label>
-        <input
-          type={type}
-          id="disabledTextInput"
-          className="input-checkbox"
-          placeholder={`Enter ${aName}`}
-          name={name}
-          onChange={update(name)}
-          value={value}
-        />
+        <div className={`custom-group checkbox-container`}>
+          <label htmlFor="disabledTextInput" className="label checkbox-label">
+            {value ? "Yes" : "No"}
+          </label>
+          <input
+            type={type}
+            id="disabledTextInput"
+            className="input-checkbox"
+            placeholder={`Enter ${aName}`}
+            name={name}
+            onChange={update(name)}
+            value={value}
+          />
+        </div>
       </div>
-    </div> 
     )
   }
 

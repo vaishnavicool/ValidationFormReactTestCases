@@ -15,32 +15,27 @@ const useEnhancer = () => {
   const [aFilters, setAFilters] = useState({})
   const [file, setFile] = useState({})
   const [documentToUpload, setDocumentToUpload] = useState([]) //JSON
-  const [documentType, setDocumentType] = useState('')
-let fileName= ""
-  const selectDocumentFile = (event) => {
-    setFile(event.target.files[0])
-   
-    // fileName=JSON.stringify(file.name) 
-    // console.log("file111",  fileName.name);
+  const [documentType, setDocumentType] = useState("")
+
+  const selectDocumentFile = (file) => {
+    //console.log("PPP", event.target.files[0])
+    setFile(file)
   }
 
-  const changeDocumentType = (e)=>{
-  setDocumentType(e.target.value)
-  console.log("DocumentType",documentType);
+  const changeDocumentType = (e) => {
+    setDocumentType(e.target.value)
   }
   const onSubmit = () => {
     let document = {
       file,
-      upload_date: formattedDate(new Date()), 
+      upload_date: formattedDate(new Date()),
       documentType,
     }
-    
-    let documents2 = [...documentToUpload, document]
-   //setDocumentToUpload(documents2)
-   console.log("documents",documentToUpload);
-   
-  }
 
+    let documents2: any = [...documentToUpload, document]
+
+    setDocumentToUpload(documents2)
+  }
 
   const updateWorkOrder = (name: string) => (evt: any) => {
     let filters2: any = { ...workOrder }
@@ -112,8 +107,7 @@ let fileName= ""
   }
   const handlers = { addGenerator: () => setPopup("generator") }
 
-  let documentTypes= pageConfig.addManifestConfig.form[0].dropdownOpts ||  []
- 
+  let documentTypes = pageConfig.addManifestConfig.form[0].dropdownOpts || []
   return {
     showManifest,
     setShowManifest,
@@ -148,7 +142,7 @@ let fileName= ""
     documentTypes,
     selectDocumentFile,
     documentToUpload,
-   
+    file,
   }
 }
 
