@@ -105,10 +105,10 @@ const CreateManifest = (props) => {
             </div>
             <div className="grey-container row">
               <Field
-                config={pageConfig?.addManifestConfig[0]}
+                allDropdownOpts={allDropdownOpts}
                 type="dropdown"
                 placeholder="Manifest"
-                name={"documenttype"}
+                name={"document_type"}
                 width="col-5 gx-2"
               />
 

@@ -21,6 +21,7 @@ function Field(props: any) {
     handlers,
     onChange,
   } = props
+console.log(filters);
 
   let intl = useIntl()
   let labelKey = ""

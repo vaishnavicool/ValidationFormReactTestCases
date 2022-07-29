@@ -723,10 +723,10 @@ export const pageConfig = {
     ],
   },
 
-  addDocumentTypeConfig: {
+  documentTypeConfig: {
     form: [
       {
-        name: "documenttype",
+        name: "document_type",
         numeric: true,
         type: "dropdown",
         dropdownOpts: {

@@ -69,6 +69,7 @@ const useEnhancer = () => {
   const onHide = () => setPopup("")
   useEffect(() => {
     ;(async () => {
+      let documentTypeOpts = await getDropdownOpts(pageConfig, "documentTypeConfig")
       let workOrderOpts = await getDropdownOpts(
         pageConfig,
         "addWorkOrderConfig"
@@ -78,7 +79,7 @@ const useEnhancer = () => {
         pageConfig,
         "addNewGeneratorConfig"
       )
-      let opts = { ...workOrderOpts, ...manifestOpts, ...generatorOpts }
+      let opts = { ...workOrderOpts, ...manifestOpts, ...generatorOpts, ...documentTypeOpts}
       setAllDropdownOpts(opts)
     })()
   }, [])
