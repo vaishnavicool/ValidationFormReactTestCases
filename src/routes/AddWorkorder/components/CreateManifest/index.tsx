@@ -119,7 +119,7 @@ const CreateManifest = (props) => {
               <Field
                 type="file"
                 placeholder={"Select Document"}
-                name={"documenttype"}
+                name={"document_type"}
                 width="col-5 gx-2"
                 onChange={selectDocumentFile}
                 file={file}
