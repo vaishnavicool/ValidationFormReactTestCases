@@ -75,8 +75,16 @@ setFile(props.file)
           placeholder={`${placeholder ? `${placeholder}` : `Select`}`}
           value={value}
           isSearchable={true}
-          className="basic-single"
-          options={allDropdownOpts[name]}         
+          className="basic-single"       
+          options={allDropdownOpts[name]}
+          theme={theme => ({
+            ...theme,
+            colors: {
+                ...theme.colors,
+                neutral50: '#c0c0c0',  // Placeholder color
+            },
+        })}
+          // isLoading={!allDropdownOpts[name]?.[0]}
         />
       </div>
     )
@@ -156,7 +164,7 @@ setFile(props.file)
         type={type}
         id="disabledTextInput"
         className="input"
-        placeholder={`Enter ${aName}`}
+        placeholder={`${placeholder ? `${placeholder}` : `Enter`}`} 
         name={name}
         onChange={update(name)}
         value={value}

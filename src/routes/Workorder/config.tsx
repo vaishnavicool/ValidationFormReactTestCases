@@ -52,7 +52,7 @@ export const pageOptions = {
         },
       },
       {
-        name: "generatorId",
+        name: "generator_Id",
         numeric: true,
       },
       {
