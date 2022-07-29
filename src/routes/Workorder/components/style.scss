@@ -103,7 +103,7 @@
   margin-bottom: 4px;
   position: absolute;
   margin-left: 1rem;
-  margin-top: -8px;
+  margin-top: -10px;
   background-color: #ffffff;
   z-index: 1;
 }
@@ -145,8 +145,12 @@
 }
 
 .input::placeholder {
-  color: #616161;
+  color: #c0c0c0;
 }
+// input[type="date"]:valid {
+//   color:#79747E($`{color:#c0c0c0}`);
+//   // border: 2px solid green;
+// }
 
 .filter-icon {
   margin-right: 5px;

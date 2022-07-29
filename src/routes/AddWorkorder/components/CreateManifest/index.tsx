@@ -8,7 +8,16 @@ import { useDetectClickOutside } from "react-detect-click-outside"
 import { FormattedMessage } from "react-intl"
 
 const CreateManifest = (props) => {
-  let { showMoreAction, setShowMoreAction, onHide, handlers,updateManifest,manifest,saveManifest,allDropdownOpts } = props
+  let {
+    showMoreAction,
+    setShowMoreAction,
+    onHide,
+    handlers,
+    updateManifest,
+    manifest,
+    saveManifest,
+    allDropdownOpts,
+  } = props
 
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),
@@ -22,7 +31,7 @@ const CreateManifest = (props) => {
               config={pageConfig?.addManifestConfig}
               update={updateManifest}
               filters={manifest}
-                handlers={handlers}
+              handlers={handlers}
               allDropdownOpts={allDropdownOpts}
             />
           </div>
@@ -86,7 +95,13 @@ const CreateManifest = (props) => {
                 <div className="left-textsmall">
                   What type of files are you uploading?
                   <span className="icon-info">
-                    <div className="tool-tip">Tool tip Comes here</div>
+                    <div className="tool-tip">
+                      {" "}
+                      <div className="instruction-text">Instructions</div>
+                      <div className="instruction-sub-text">{`You must select a file with these extensions: pdf,jpg,jpeg,png,gif`}</div>
+                      <div className="instruction-sub-text">{`After the file is selected, if you see a red dot, it means the file is not accepted. A green dot means the file is uploaded successfully.`}</div>
+                      <div className="instruction-sub-text">{`Any spaces, "&", "." or "+" characters in the file name will be replaced with an "_" character`}</div>
+                    </div>
                     <Image src="ic_info.png" />
                   </span>
                 </div>
@@ -110,27 +125,31 @@ const CreateManifest = (props) => {
                 value="Upload"
                 type="button"
               />
-
-              <div className="instruction-text">Instructions</div>
-              <div className="instruction-sub-text">{`You must select a file with these extensions: pdf,jpg,jpeg,png,gif`}</div>
-              <div className="instruction-sub-text">{`After the file is selected, if you see a red dot, it means the file is not accepted. A green dot means the file is uploaded successfully.`}</div>
-              <div className="instruction-sub-text">{`Any spaces, "&", "." or "+" characters in the file name will be replaced with an "_" character`}</div>
             </div>
             <div className="row tablefooter-container">
               <table className="table table-bordered">
                 <thead>
                   <tr>
-                    <th scope="col-4"><FormattedMessage id="document_name" /></th>
-                    <th scope="col-2"><FormattedMessage id="type"/></th>
-                    <th scope="col-3"><FormattedMessage id="upload_date" /></th>
-                    <th scope="col-3"><FormattedMessage id="actions"/></th>
+                    <th scope="col-4">
+                      <FormattedMessage id="document_name" />
+                    </th>
+                    <th scope="col-2">
+                      <FormattedMessage id="type" />
+                    </th>
+                    <th scope="col-3">
+                      <FormattedMessage id="upload_date" />
+                    </th>
+                    <th scope="col-3">
+                      <FormattedMessage id="actions" />
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td colSpan={4} style={{ textAlign: "center" }}>
-                    <FormattedMessage id="no_records_to_display"/>                      </td>
-                      {/* <td>Helo</td>
+                      <FormattedMessage id="no_records_to_display" />{" "}
+                    </td>
+                    {/* <td>Helo</td>
                       <td></td>
                       <td></td>
                       <td>
@@ -143,9 +162,11 @@ const CreateManifest = (props) => {
                 </tbody>
               </table>
             </div>
-            <div className="footer-text"><FormattedMessage id="note"/></div>
+            <div className="footer-text">
+              <FormattedMessage id="note" />
+            </div>
             <div className="footer-subtext">
-            <FormattedMessage id="subtext_of_footer"/>
+              <FormattedMessage id="subtext_of_footer" />
             </div>
           </div>
         </div>
@@ -160,7 +181,7 @@ const CreateManifest = (props) => {
             className="btn-addworkorder-add"
             value="Save Manifest"
             type="button"
-            onClick={()=>saveManifest()}
+            onClick={() => saveManifest()}
           />
         </div>
       </div>
