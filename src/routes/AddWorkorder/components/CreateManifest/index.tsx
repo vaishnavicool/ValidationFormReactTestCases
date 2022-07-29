@@ -63,7 +63,7 @@ const CreateManifest = (props) => {
                     </div>
                     <div className="img-text-dots">
                       <Image src="ic_menifes.png" />
-                      <span>Copy Menifes</span>
+                      <span>Copy Menifest</span>
                     </div>
                     <div className="img-text-dots">
                       <Image src="ic_reciving_logs.png" />
