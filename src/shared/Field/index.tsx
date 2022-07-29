@@ -4,7 +4,7 @@ import { FormattedMessage, useIntl } from "react-intl"
 
 import Image from "shared/Image"
 import Select from "react-select"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function Field(props: any) {
   const {
@@ -26,6 +26,10 @@ function Field(props: any) {
   let labelKey = ""
   let aName = ""
 let [file,setFile]=useState({name:false})
+
+useEffect(()=>{
+setFile(props.file)
+},[props.file])
 
   if (name) {
     labelKey = `form.${name}`
@@ -67,8 +71,7 @@ let [file,setFile]=useState({name:false})
           value={value}
           isSearchable={true}
           className="basic-single"
-          options={allDropdownOpts[name]}
-          // isLoading={!allDropdownOpts[name]?.[0]}
+          options={allDropdownOpts[name]}         
         />
       </div>
     )
@@ -83,9 +86,10 @@ let [file,setFile]=useState({name:false})
           name="file-1[]"
           id="file-1"
           onChange={(e:any)=>{
-            let file=e.target.files[0]
-            setFile(file) 
-            onChange(file)
+            let file=e.target.files[0]         
+            setFile(file)  
+            onChange(file)        
+           
           }}
           className="inputfile inputfile-1"
           data-multiple-caption="{count} files selected"

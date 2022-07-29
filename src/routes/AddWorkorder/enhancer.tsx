@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { getDropdownOpts } from "shared"
 import { pageConfig } from "./config"
 import { formattedDate } from "shared"
+
 const useEnhancer = () => {
   const [showManifest, setShowManifest] = useState(false)
   const [showMoreAction, setShowMoreAction] = useState(false)
@@ -14,11 +15,10 @@ const useEnhancer = () => {
   const [show, setShow] = useState(false)
   const [aFilters, setAFilters] = useState({})
   const [file, setFile] = useState({})
-  const [documentToUpload, setDocumentToUpload] = useState([]) //JSON
+  const [documentToUpload, setDocumentToUpload] = useState([])
   const [documentType, setDocumentType] = useState("")
 
   const selectDocumentFile = (file) => {
-    //console.log("PPP", event.target.files[0])
     setFile(file)
   }
 
@@ -35,6 +35,7 @@ const useEnhancer = () => {
     let documents2: any = [...documentToUpload, document]
 
     setDocumentToUpload(documents2)
+    setFile({})
   }
 
   const updateWorkOrder = (name: string) => (evt: any) => {

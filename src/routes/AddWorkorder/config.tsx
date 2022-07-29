@@ -279,16 +279,6 @@ export const pageConfig = {
   addManifestConfig: {
     form: [
       {
-        name: "documenttype",
-        numeric: true,
-        type: "dropdown",
-        dropdownOpts: [
-          { label: "Manifests", value: "0" },
-          { label: "Job Sheets", value: "1" },
-          { label: "Bill of Ladings", value: "2" },
-        ],
-      },
-      {
         name: "manifest_tracking",
         numeric: true,
         width: "col-45",
@@ -729,6 +719,21 @@ export const pageConfig = {
         name: "disposal_restrictions",
         numeric: true,
         width: "col-6",
+      },
+    ],
+  },
+
+  addDocumentTypeConfig: {
+    form: [
+      {
+        name: "documenttype",
+        numeric: true,
+        type: "dropdown",
+        dropdownOpts: {
+          api_key: "g_getDocument_Type",
+          labelKey: "documentTypeDescription",
+          valueKey: "id",
+        },
       },
     ],
   },

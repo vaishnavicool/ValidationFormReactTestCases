@@ -1,0 +1,57 @@
+{
+  "version": "2.0",
+  "statusCode": 200,
+  "message": "GET Request successful.",
+  "result": [
+    {
+      "id": 6,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "Credit Memo"
+    },
+    {
+      "id": 2,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "LDR"
+    },
+    {
+      "id": 1,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "Manifest"
+    },
+    {
+      "id": 41,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "Manifest and Ticket Bundle"
+    },
+    {
+      "id": 8,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "Other"
+    },
+    {
+      "id": 4,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "Photo"
+    },
+    {
+      "id": 5,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "QA-QC Sheet"
+    },
+    {
+      "id": 21,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "Waste Process Form"
+    },
+    {
+      "id": 3,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "Weight Ticket"
+    },
+    {
+      "id": 7,
+      "documentTypeEntity": "Manifest",
+      "documentTypeDescription": "Workorder Sheet"
+    }
+  ]
+}

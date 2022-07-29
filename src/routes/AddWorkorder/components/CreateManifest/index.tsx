@@ -5,7 +5,6 @@ import Image from "shared/Image"
 import { pageConfig } from "routes/AddWorkorder/config"
 import { useDetectClickOutside } from "react-detect-click-outside"
 
-
 const CreateManifest = (props) => {
   let {
     onSubmit,
@@ -19,11 +18,9 @@ const CreateManifest = (props) => {
     allDropdownOpts,
     selectDocumentFile,
     documentToUpload,
-    file
+    file,
   } = props
 
- console.log("++",file)
-              
   const moreActionMenuClick = useDetectClickOutside({
     onTriggered: () => setShowMoreAction(false),
   })
@@ -107,29 +104,21 @@ const CreateManifest = (props) => {
               </div>
             </div>
             <div className="grey-container row">
-              {/* <Select
-                className="col-5 gx-2"
-                value={documentType}
-                onChange={changeDocumentType}             
-                {documentTypes.map((d) => (
-                  <option value={d.value}>{d.label}</option>
-                ))}
-              /> */}
-              
               <Field
+                config={pageConfig?.addManifestConfig[0]}
                 type="dropdown"
-                placeholder="Manifest"              
+                placeholder="Manifest"
                 name={"documenttype"}
                 width="col-5 gx-2"
-               
               />
-            
+
               <Field
                 type="file"
                 placeholder={"Select Document"}
                 name={"documenttype"}
                 width="col-5 gx-2"
                 onChange={selectDocumentFile}
+                file={file}
               />
               <input
                 className="btn-upload col-2 mb-3"
@@ -154,12 +143,13 @@ const CreateManifest = (props) => {
                   </tr>
                 </thead>
                 <tbody>
-
-                {!documentToUpload[0]&&<tr>
+                  {!documentToUpload[0] && (
+                    <tr>
                       <td colSpan={4} style={{ textAlign: "center" }}>
-                      No records to display
-                    </td>
-                    </tr>}
+                        No records to display
+                      </td>
+                    </tr>
+                  )}
                   {documentToUpload.map((d) => (
                     <tr>
                       <td>{d.file?.name}</td>
