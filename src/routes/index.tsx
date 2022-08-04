@@ -1,22 +1,29 @@
 import React, { FunctionComponent } from "react"
 import { Routes as ReactRoute, Route } from "react-router-dom"
 import ErrorBoundary from "shared/ErrorBoundaries"
-import Workorder from "./Workorder"
-import AddWorkorder from "./AddWorkorder"
 import NotFound from "./NotFound"
+import About from "./About"
+import Dashboard from "routes/dashboard"
+import AddUser from "./Add"
+import EditUser from "./Edit"
+import View from "./View"
 
 const Routes: FunctionComponent = (props: any) => {
-    return (
-        <div>
-            <ErrorBoundary>
-                <ReactRoute>
-                    <Route path="customer_processing/work_order" element={<Workorder />} />
-                    <Route path="customer_processing/work_order/add_work_order" element={<AddWorkorder />} />
-                    <Route path="*" element={<NotFound />} />
-                </ReactRoute>
-            </ErrorBoundary>
-        </div>
-    )
+  return (
+    <div>
+      <ErrorBoundary>
+        <ReactRoute>
+          
+          <Route path="*" element={<NotFound />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/routes/Add" element={<AddUser />} />
+          <Route path="/routes/Edit/:id" element={<EditUser />} />
+          <Route path="/routes/view/:id" element={<View />} />
+        </ReactRoute>
+      </ErrorBoundary>
+    </div>
+  )
 }
 
 export default Routes

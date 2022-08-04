@@ -1,40 +1,48 @@
 import "./style.scss"
 import Image from "shared/Image"
 import enhancer from "./enhancer"
-import { FormattedMessage } from "react-intl"
-
+import { Link, NavLink } from "react-router-dom"
 function Header(props: any) {
   return (
-    <div className="row">
-      <div className="col-2">
-        <Image src="Logo.png" alt="coreLogo" className="logo-img" />
-      </div>
-      <div className="col-10 row ">
-        <div className="details">
-          <div className="mx-4">
-            <Image src="cube.png" alt="coreLogo" className="question-icon" />
-          </div>
-          <div className="mx-4">
-            <Image
-              src="question.png"
-              alt="coreLogo"
-              className="question-icon"
-            />
-          </div>
-          <div className="mx-4">
-            <Image src="bell.png" alt="coreLogo" className="bell-icon" />
-          </div>
-          <div className="profile-info">
-            <div className="profile-img">
-              <Image src="profile-image.png" />
-            </div>
-            <div className="profile-detail">
-              <div className="username"><FormattedMessage id="mohan_patcha" /></div>
-              <div className="role"><FormattedMessage id="admin" /></div>
-            </div>
-          </div>
+    <div className="row col-12 p-0 m-0">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a className="navbar-brand" href="#">
+          <Image
+            src="swiftwinlogo.png"
+            alt=""
+            width="30"
+            height="24"
+            className="d-inline-block align-text-top"
+          />
+          SwiftWin
+        </a>
+
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/">
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/about">
+                About
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/contact">
+                Contact
+              </NavLink>
+            </li>
+          </ul>
         </div>
-      </div>
+
+        <Link className="btn btn-outline-light m-4" to="/routes/Add">
+          Add User
+        </Link>
+
+        {/* <Image src="swiftwinlogo.png" alt="Swiftwin" className="logo-img" /> */}
+      </nav>
     </div>
   )
 }

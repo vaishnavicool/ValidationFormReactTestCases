@@ -15,21 +15,8 @@ const Footer: React.FunctionComponent = (props: any) => {
         >
           <FormattedMessage id="footer.message" />
         </p>
-        <a className="text-decoration-none footer-link col-auto p-0" href="#a">
-          <FormattedMessage id="footer.link_setpage" />
-        </a>
-        <a className="text-decoration-none footer-link col-auto p-0" href="#a">
-          <FormattedMessage id="footer.link_setcontrol" />
-        </a>
-        <a className="text-decoration-none footer-link col-auto p-0" href="#a">
-          <FormattedMessage id="footer.link_technical" />
-        </a>
-        <a className="text-decoration-none footer-link col-auto p-0" href="#a">
-          <FormattedMessage id="footer.link_user" />
-        </a>
-        <div className="menu-footer-icon">
-        <Image src="ce_logo.png" />
-      </div>
+        
+        
       </footer>
       
     </Fragment>

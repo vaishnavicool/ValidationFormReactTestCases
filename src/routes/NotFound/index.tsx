@@ -1,8 +1,7 @@
 import "./style.scss"
 
 import { FunctionComponent } from "react"
-import Image from "shared/Image"
-import { FormattedMessage } from "react-intl"
+
 
 const Notfound: FunctionComponent = () => {
   return (
@@ -16,10 +15,7 @@ const Notfound: FunctionComponent = () => {
         flexDirection:"column"
       }}
     >
-      {/* <div className=""> */}
-      <Image src="ic_404.png" />
-      <div className="text-404"><FormattedMessage id="page_not_found" /></div>
-      {/* </div> */}
+      Page Not Found
     </div>
   )
 }
