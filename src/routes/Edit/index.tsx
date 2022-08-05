@@ -1,71 +1,100 @@
-import useEnhancer from "./enhancer";
-import React from "react";
+import useEnhancer from "./enhancer"
+import "./style.scss"
 
 const EditUser = () => {
-  let allProps = useEnhancer();
-  let { onInputChange, onSubmit, username, name, phone, email, website } = allProps;
-
+  let allProps = useEnhancer()
+  let { onInputChange, onSubmit, username, name, phone, email, website } =
+    allProps
 
   return (
-    <div className="container">
-      <div className="w-75 mx-auto shadow p-5">
-        <h2 className="text-center mb-4">Edit A User</h2>
+    <div className="container mx-auto m-5">
+      <div className="w-75 mx-auto shadow p-5 subContainer">
         <form onSubmit={(e) => onSubmit(e)}>
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control form-control-lg"
-              placeholder="Enter Your Name"
-              name="name"
-              value={name}
-              onChange={(e) => onInputChange(e)}
-            />
+          <div className="d-flex justify-content-end mb-3 btnBox">
+            <button className="btn btn-outline-primary">Update User</button>
           </div>
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control form-control-lg"
-              placeholder="Enter Your Username"
-              name="username"
-              value={username}
-              onChange={(e) => onInputChange(e)}
-            />
+          <div className="row mb-3">
+            <label htmlFor="inputEmail3" className="col-sm-1 col-form-label">
+              Name:
+            </label>
+            <div className="col-sm-10 mx-auto">
+              <input
+                type="text"
+                className="form-control form-control-lg"
+                placeholder="Enter Your Name"
+                name="name"
+                value={name}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
           </div>
-          <div className="form-group">
-            <input
-              type="email"
-              className="form-control form-control-lg"
-              placeholder="Enter Your E-mail Address"
-              name="email"
-              value={email}
-              onChange={(e) => onInputChange(e)}
-            />
+
+          <div className="row mb-3">
+            <label htmlFor="inputEmail3" className="col-sm-1 col-form-label">
+              Username:
+            </label>
+            <div className="col-sm-10 mx-auto">
+              <input
+                type="text"
+                className="form-control form-control-lg"
+                placeholder="Enter Your Username"
+                name="username"
+                value={username}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
           </div>
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control form-control-lg"
-              placeholder="Enter Your Phone Number"
-              name="phone"
-              value={phone}
-              onChange={(e) => onInputChange(e)}
-            />
+
+          <div className="row mb-3">
+            <label htmlFor="inputEmail3" className="col-sm-1 col-form-label">
+              Email:
+            </label>
+            <div className="col-sm-10 mx-auto">
+              <input
+                type="email"
+                className="form-control form-control-lg"
+                placeholder="Enter Your E-mail Address"
+                name="email"
+                value={email}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
           </div>
-          <div className="form-group">
-            <input
-              type="text"
-              className="form-control form-control-lg"
-              placeholder="Enter Your Website Name"
-              name="website"
-              value={website}
-              onChange={(e) => onInputChange(e)}
-            />
+          <div className="row mb-3">
+            <label htmlFor="inputEmail3" className="col-sm-1 col-form-label">
+              Phone:
+            </label>
+            <div className="col-sm-10 mx-auto">
+              <input
+                type="text"
+                className="form-control form-control-lg"
+                placeholder="Enter Your Phone Number"
+                name="phone"
+                value={phone}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
           </div>
-          <button className="btn btn-warning btn-block">Update User</button>
+
+          <div className="row">
+            <label htmlFor="inputEmail3" className="col-sm-1 col-form-label">
+              Website:
+            </label>
+            <div className="col-sm-10 mx-auto">
+              <input
+                type="text"
+                className="form-control form-control-lg"
+                placeholder="Enter Your Website Name"
+                name="website"
+                value={website}
+                onChange={(e) => onInputChange(e)}
+              />
+            </div>
+          </div>
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default EditUser;
+export default EditUser

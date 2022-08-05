@@ -21,7 +21,27 @@ function Header(props: any) {
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <NavLink className="nav-link" to="/">
-                Home
+                Dashboard
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/routes/Add">
+                AddUser
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/routes/Edit">
+                EditUser
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/routes/View">
+                ViewUser
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/about">
+                DeleteUser
               </NavLink>
             </li>
             <li className="nav-item">
@@ -37,8 +57,8 @@ function Header(props: any) {
           </ul>
         </div>
 
-        <Link className="btn btn-outline-light m-4" to="/routes/Add">
-          Add User
+        <Link className="btn btn-outline-light m-4" to="/">
+         Back
         </Link>
 
         {/* <Image src="swiftwinlogo.png" alt="Swiftwin" className="logo-img" /> */}

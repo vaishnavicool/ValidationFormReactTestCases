@@ -2,8 +2,6 @@ import React, { Fragment } from "react"
 import enhancer from "./enhancer"
 import "./style.scss"
 import { FormattedMessage } from "react-intl"
-import Image from "shared/Image"
-
 
 const Footer: React.FunctionComponent = (props: any) => {
   return (
@@ -15,12 +13,8 @@ const Footer: React.FunctionComponent = (props: any) => {
         >
           <FormattedMessage id="footer.message" />
         </p>
-        
-        
       </footer>
-      
     </Fragment>
-    
   )
 }
 export default enhancer(Footer)

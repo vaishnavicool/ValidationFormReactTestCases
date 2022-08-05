@@ -3,21 +3,12 @@
   "menubar.about": "About",
   "menubar.contact": "contact",
   "menubar.add_users": "Add Users",
-
-
   "notfound.error_title": "404 page not found",
   "notfound.error_message": "We are sorry but the page you are looking for does not exist.",
-  "footer.message": "2022 - CORE - Version 3.1.8130.26032 - RD0004FFA2918B - DB (CORE_UAT_2)  -  ",
-  "header.welcome_message": "Welcome Priya Agarwal",
-  "form.profileNumber": "Profile #",
-  "form.endDate": "End Date",
-  "form.startDate": "Start Date",
+  "footer.message": "2022 - swiftwin technology   ",
   "menubar.dashboard": "Dashboard",
   
-  "footer.link_user": "User Documentation",
-  "footer.link_technical": "Technical Documentation",
-  "footer.link_setcontrol": "Set Control Security",
-  "footer.link_setpage": "Set Page Security",
+  
   "menubar.profiles": "Profiles",
   "menubar.work_orders": "Work Orders",
   "menubar.jobs": "Jobs",

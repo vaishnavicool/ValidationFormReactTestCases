@@ -11,9 +11,9 @@ const Dashboard = (props: any) => {
   return (
     <div className="container">
       <div className="py-4">
-        <h1>Home Page</h1>
-        <table className="table border shadow ">
-          <thead className="thead-dark table-dark">
+        <h3>Welcome To Dashboard</h3>
+        <table className="table">
+          <thead >
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
@@ -22,7 +22,7 @@ const Dashboard = (props: any) => {
               <th>Action</th>
             </tr>
           </thead>
-          <tbody className="table-secondary">
+          <tbody >
             {users.map((user, index) => (
               <tr>
                 <th scope="row">{index + 1}</th>
@@ -32,7 +32,7 @@ const Dashboard = (props: any) => {
                 <td>{user["email"]}</td>
                 <td>
                   <Link
-                    className="btn btn-primary m-2"
+                    className="btn btn-outline-primary m-2"
                     to={`/routes/View/${user["id"]}`}
                   >
                     View
@@ -43,13 +43,12 @@ const Dashboard = (props: any) => {
                   >
                     Edit
                   </Link>
-                  <Link
-                    className="btn btn-danger m-2"
+                  <button
+                    className="btn btn-outline-primary m-2"
                     onClick={() => deleteUser(user["id"])}
-                    to=""
                   >
                     Delete
-                  </Link>
+                  </button>
                 </td>
               </tr>
             ))}
