@@ -59,7 +59,7 @@ setFile(props.file)
     if (!value) value = ""
     return (
       <div className={`mb-3 custom-group ${width}`}>
-        <label htmlFor="disabledTextInput" className="label">
+        <label htmlFor="disabledTextInput " className="label ">
           <FormattedMessage id={labelKey} />
           {infoKey && (
             <span className="icon-info">

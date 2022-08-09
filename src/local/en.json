@@ -7,7 +7,13 @@
   "notfound.error_message": "We are sorry but the page you are looking for does not exist.",
   "footer.message": "2022 - swiftwin technology   ",
   "menubar.dashboard": "Dashboard",
-  
+  "form.name":"Name : ",
+  "form.username":"Username : ",
+  "form.email":"Email : ",
+  "form.phone":"Phone : ",
+  "form.website":"Website : ",
+  "form.select country":"Select Country",
+
   
   "menubar.profiles": "Profiles",
   "menubar.work_orders": "Work Orders",

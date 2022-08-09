@@ -1,7 +1,32 @@
-.subContainer {
-  background: #ced4da;
+
+
+// .btnBox {
+//   margin-right: 58px;
+// }
+.subcontainer{
+  // border: 2px solid;
+   margin-left: 300px;
+   margin-right: 340px;
+    // padding: 30px;
+   padding: 35px 60px 20px 90px;
 }
 
-.btnBox {
-  margin-right: 58px;
+// .label{
+//   columns: 3;
+// }
+
+// .input{
+//   columns: 3;
+// }
+.custom-group{
+  width: max-content;
+}
+
+.label{
+  margin-right: 10px;
+ 
+}
+
+.input{
+  float: right;
 }

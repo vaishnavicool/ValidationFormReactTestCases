@@ -49,8 +49,7 @@ axios.interceptors.response.use(
     if (loading_key) {
       store.dispatch({ type: SET_LOADING_STATUS, loading_key, status: false })
     }
-    if (url.includes("json")) response.data = response.data.result
-    return response
+  return response
   },
   async function (error) {
     if (loggedOut) return

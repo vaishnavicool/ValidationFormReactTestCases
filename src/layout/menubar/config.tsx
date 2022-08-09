@@ -1,31 +1,19 @@
-const menuConfig = [
-  {
-    title: "menubar.dashboard",
-    path: "/",
-    icon: "ic_dashboard",
-  },
-  {
-    title: "menubar.about",
-    path: "/about",
-    icon: "ic_customer_processing",
-  },
-  {
-    title: "menubar.user",
-    path: "/plant-processing",
-    icon: "ic_plant_processing",
-
+const countryConfig = [
+   {
+    title: "country",
     children: [
       {
-        title: "menubar.add",
-        path: "/inventory",
+        title: "INDIA",
+        path: "/",
       },
       {
-        title: "menubar.delete",
-        path: "/manifests",
+        title: "CHINA",
+        path: "/",
       },
       {
-        title: "menubar.view",
-        path: "/inbounds",
+        title: "USA",
+        path: "/"
+        ,
       },
       
     ],
@@ -43,4 +31,4 @@ const menuConfig = [
   },
 ]
 
-export default menuConfig
+export default countryConfig

@@ -1,7 +1,6 @@
 import "./style.scss"
 import { FormattedMessage } from "react-intl"
-import Image from "shared/Image"
-import menuConfig from "./config"
+import countryConfig from "./config"
 import {  useNavigate } from "react-router-dom"
 
 const Menubar = () => {
@@ -14,15 +13,14 @@ const Menubar = () => {
     <>
       <div className="menu-list">
         <div className="menubar">
-          {menuConfig.map((d, index) => {            
+          {countryConfig.map((d, index) => {            
             return (
               <div key={index}>
                 <div
                   className="col menu-item"
                   key={index}
                 >
-                  <Image src={`${d.icon}_white.png`} className="white"/>
-                  <Image src={`${d.icon}_grey.png`} className="grey"/>
+                  
                   {d?.children?.length && <div className="col drop-menu">
                     <div className="arrow-left" />
                     {d?.children?.map((child,index) => (

@@ -7,7 +7,7 @@ const AddUser = () => {
 
   return (
     <div className="container mx-auto m-5 ">
-      <div className="w-75 mx-auto shadow p-5 subContainer">
+      <div className="w-75 mx-auto shadow p-5 ">
         <div className="d-flex justify-content-end mb-3 margin-right-58px">
           <button className="btn btn-outline-primary">Add User</button>
         </div>
