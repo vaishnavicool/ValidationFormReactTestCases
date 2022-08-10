@@ -35,6 +35,7 @@ let urls: any = {
     `/mock_api/Document_Type.json`, 
     g_getWorkOrder: () =>`/mock_api/WorkOrder.json`,
     g_getEquipment_Type: () =>`/mock_api/Equipment_Type.json`, 
+    g_getCountry: () =>`/mock_api/Country.json`,
 }
 
 export default urls

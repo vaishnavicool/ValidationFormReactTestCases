@@ -13,10 +13,10 @@ function MainWrapper(props) {
         <Header />
       </div>
   
-        <div className="col-1 left-container">
+        {/* <div className="col-1 left-container">
           <Menubar />
         </div>
-        
+         */}
           <div className="">
             <Routes />
           </div>

@@ -59,7 +59,7 @@ setFile(props.file)
     if (!value) value = ""
     return (
       <div className={`mb-3 custom-group ${width}`}>
-        <label htmlFor="disabledTextInput " className="label ">
+        <label htmlFor="disabledTextInput" className="label">
           <FormattedMessage id={labelKey} />
           {infoKey && (
             <span className="icon-info">
@@ -148,9 +148,14 @@ setFile(props.file)
   }
 
   return (
+    <div className="row">
+
+    
     <div className={`mb-3 custom-group ${width}`}>
+      <div className="col-3">
       <label htmlFor="disabledTextInput" className="label">
-        <FormattedMessage id={`${labelKey}`} />
+
+        <FormattedMessage id={`${labelKey}`} />:
         {infoKey && (
           <span className="icon-info">
             <div className="tool-tip">
@@ -160,6 +165,8 @@ setFile(props.file)
           </span>
         )}
       </label>
+      </div>
+      <div className="col-9">
       <input
         type={type}
         id="disabledTextInput"
@@ -169,6 +176,8 @@ setFile(props.file)
         onChange={update(name)}
         value={value}
       />
+      </div>
+    </div>
     </div>
   )
 }

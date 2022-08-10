@@ -1,8 +1,0 @@
-{
-    "version": "2.0",
-    "statusCode": 200,
-    "message": "POST Request successful.",
-    "result": {
-        "maniFestId": 2780713
-    }
-}

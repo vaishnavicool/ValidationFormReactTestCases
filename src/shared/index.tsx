@@ -11,7 +11,7 @@ export let formatMessage = (id: any) => {
   if (msg == id) return ""
   return msg
 }
-export const getPageOpts = (pageOptions, pageKey) => {
+export const getPageOpts = (pageOptions) => {
   let newPageOpts = {
     columns: [],
     api_key: 0,
@@ -20,7 +20,7 @@ export const getPageOpts = (pageOptions, pageKey) => {
     numerics: {},
     pageTitle: "",
   }
-  newPageOpts.columns = pageOptions[pageKey].tableColumns.map((d) => ({
+  newPageOpts.columns = pageOptions.tableColumns.map((d) => ({
     name: d.name,
     sortable: true,
     compact: false,
@@ -32,23 +32,23 @@ export const getPageOpts = (pageOptions, pageKey) => {
     },
     width: `${Math.min(d.name.length * 10 + 70, 200)}px`,
   }))
-  newPageOpts.api_key = pageOptions[pageKey].api_key
-  newPageOpts.form = pageOptions[pageKey].form
-  newPageOpts.pageTitle = pageOptions[pageKey].pageTitle
+  newPageOpts.api_key = pageOptions.api_key
+  newPageOpts.form = pageOptions.form
+  newPageOpts.pageTitle = pageOptions.pageTitle
 
-  pageOptions[pageKey].form.forEach((d) => {
+  pageOptions.form.forEach((d) => {
     if (d.numeric) newPageOpts.numerics[d.name] = true
   })
 
-  newPageOpts.defaultState = pageOptions[pageKey].defaultState
+  newPageOpts.defaultState = pageOptions.defaultState
 
   return newPageOpts
 }
 
-export const getDropdownOpts = async (pageOptions, pageKey) => {
+export const getDropdownOpts = async (pageOptions) => {
   let dropdownOpts = {}
 
-  let basic = pageOptions[pageKey].form.filter(
+  let basic = pageOptions.form.filter(
     (d) => d.type == "dropdown" && d?.dropdownOpts?.api_key
   )
 
@@ -76,7 +76,7 @@ export const getDropdownOpts = async (pageOptions, pageKey) => {
       .sort((a, b) => `${a.label}`.localeCompare(b.label))
   })
 
-  pageOptions[pageKey].form.forEach((d) => {
+  pageOptions.form.forEach((d) => {
     try {
       if (d.type == "dropdown" && !d.dropdownOpts.api_key)
         dropdownOpts[d.name] = d.dropdownOpts

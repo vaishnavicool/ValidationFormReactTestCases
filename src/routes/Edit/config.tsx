@@ -1,34 +1,54 @@
-const countryConfig = [
-  {
-   title: "country",
-   children: [
+export const  editUserConfig= {
+    form: [
+      {
+        name: "name",
+        type:"text",
+        width:"col-sm-12 mx-auto",
+        className:"form-control form-control-lg",
+        placeholder:"Enter Your Name ",
+        // onChange:{onInputChange}
+        
+      },
+      {
+        name: "username",
+        type:"text",
+        width:"col-sm-12 mx-auto",
+        className:"form-control form-control-lg",
+        placeholder:"Enter Your Username ",
+      },
+      {
+        name: "email",
+        type:"text",
+        width:"col-sm-12 mx-auto",
+        className:"form-control form-control-lg",
+        placeholder:"Enter Your Username ",
+      },
+      {
+        name: "phone",
+        type:"text",
+        width:"col-sm-12 mx-auto",
+        className:"form-control form-control-lg",
+        placeholder:"Enter Your Username ",
+      },
+      {
+        name: "website",
+        type:"text",
+        width:"col-sm-12 mx-auto",
+        className:"form-control form-control-lg",
+        placeholder:"Enter Your Username ",
+      },
+
      {
-       title: "INDIA",
-       path: "/",
-     },
-     {
-       title: "CHINA",
-       path: "/",
-     },
-     {
-       title: "USA",
-       path: "/"
-       ,
-     },
+        name: "country",
+        width:"col-sm-12 mx-auto",
+        type: "dropdown",
+        dropdownOpts: {
+          api_key: "g_getCountry",
+          labelKey: "countryName",
+          valueKey: "countryID",
+        },
+      },
+      
      
-   ],
- },
-
- {
-   title: "menubar.contact",
-   path: "/contact",
-   icon: "ic_printing",
- },
- {
-   title: "menubar.about",
-   path: "/manage",
-   icon: "ic_manage",
- },
-]
-
-export default countryConfig
+    ],
+  }
