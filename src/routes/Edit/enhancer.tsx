@@ -6,60 +6,6 @@ import { getDropdownOpts } from "shared"
 // import api from "api"
 
 const useEnhancer = () => {
-
- 
-  const [generator, setGenerator] = useState({})
-  const [allDropdownOpts, setAllDropdownOpts] = useState({})
-
-  const editUser = (name: string) => (evt: any) => {
-    let filters2: any = { ...generator }
-    if (evt.label) filters2[name] = evt.value
-    else {
-      let { type, checked, value } = evt.target
-      filters2[name] = type === "checkbox" ? checked : value
-    }
-    setGenerator(filters2)
-  }
-
-  useEffect(() => {
-    ;(async () => {
-      let generatorOpts = await getDropdownOpts(editUserConfig)
-      setAllDropdownOpts(generatorOpts)
-    })()
-  }, [])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   //let history = useHistory();
   const { id } = useParams()
   const [user, setUser] = useState({
@@ -69,17 +15,32 @@ const useEnhancer = () => {
     phone: "",
     website: "",
     id: "",
-   
   })
+  // const [generator, setGenerator] = useState({})
+  const [allDropdownOpts, setAllDropdownOpts] = useState({})
 
-  const { name, username, email, phone, website} = user
-  const onInputChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value })
+  const editUser = (name: string) => (evt: any) => {
+    let filters2: any = { ...user }
+    if (evt.label) filters2[name] = evt.value
+    else {
+      let { type, checked, value } = evt.target
+      filters2[name] = type === "checkbox" ? checked : value
+    }
+    setUser(filters2)
   }
 
   useEffect(() => {
-    loadUser()
+    ;(async () => {
+      let generatorOpts = await getDropdownOpts(editUserConfig)
+      setAllDropdownOpts(generatorOpts)
+      loadUser()
+    })()
   }, [])
+
+  const { name, username, email, phone, website } = user
+  const onInputChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value })
+  }
 
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -108,7 +69,6 @@ const useEnhancer = () => {
     editUser,
     allDropdownOpts,
     editUserConfig,
-   
   }
 }
 export default useEnhancer

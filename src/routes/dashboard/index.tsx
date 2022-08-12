@@ -33,13 +33,13 @@ const Dashboard = (props: any) => {
                 <td>
                   <Link
                     className="btn btn-outline-primary m-2"
-                    to={`/routes/View/${user["id"]}`}
+                    to={`/user/view/${user["id"]}`}
                   >
                     View
                   </Link>
                   <Link
                     className="btn btn-outline-primary m-2"
-                    to={`/routes/Edit/${user["id"]}`}
+                    to={`/user/edit/${user["id"]}`}
                   >
                     Edit
                   </Link>

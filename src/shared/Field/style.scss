@@ -38,59 +38,59 @@
     width: 45% !important;
     flex: 0 0 auto;
 }
-input[type="file"] {
-    appearance: none;
-    background-color: initial;
-    cursor: default;
-    align-items: baseline;
-    color: inherit;
-    text-overflow: ellipsis;
-    white-space: pre;
-    text-align: start !important;
-    padding: initial;
-    border: initial;
-    overflow: hidden !important;
-}
-.js .inputfile {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-.inputfile + label {
-    max-width: 100%;
-    font-size: 14px;
-    font-weight: 500;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
-    display: inline-block;
-    overflow: hidden;
-    padding: 9px 24px;
-    border: 1px solid #79747E;
-    border-radius: 4px;
-}
-.inputfile + label img {
-    vertical-align: middle;
-    fill: currentColor;
-    margin-top: -0.25em;
-    margin-right: 0.5rem;
-}
-.inputfile-1 + label {
-    color: #616161;
-    background-color: white;
-}
+// input[type="file"] {
+//     appearance: none;
+//     background-color: initial;
+//     cursor: default;
+//     align-items: baseline;
+//     color: inherit;
+//     text-overflow: ellipsis;
+//     white-space: pre;
+//     text-align: start !important;
+//     padding: initial;
+//     border: initial;
+//     overflow: hidden !important;
+// }
+// .js .inputfile {
+//     width: 0.1px;
+//     height: 0.1px;
+//     opacity: 0;
+//     overflow: hidden;
+//     position: absolute;
+//     z-index: -1;
+// }
+// .inputfile + label {
+//     max-width: 100%;
+//     font-size: 14px;
+//     font-weight: 500;
+//     text-overflow: ellipsis;
+//     white-space: nowrap;
+//     cursor: pointer;
+//     display: inline-block;
+//     overflow: hidden;
+//     padding: 9px 24px;
+//     border: 1px solid #79747E;
+//     border-radius: 4px;
+// }
+// .inputfile + label img {
+//     vertical-align: middle;
+//     fill: currentColor;
+//     margin-top: -0.25em;
+//     margin-right: 0.5rem;
+// }
+// .inputfile-1 + label {
+//     color: #616161;
+//     background-color: white;
+// }
 
-.inputfile {
-	width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
-}
+// .inputfile {
+// 	width: 0.1px;
+// 	height: 0.1px;
+// 	opacity: 0;
+// 	overflow: hidden;
+// 	position: absolute;
+// 	z-index: -1;
+// }
 .icon-info {
     margin-left: 0.5rem;
     cursor: pointer;

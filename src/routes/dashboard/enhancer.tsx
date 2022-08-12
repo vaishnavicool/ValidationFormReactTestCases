@@ -9,7 +9,8 @@ const useEnhancer = () => {
   }, [])
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:3004/user")
+     const result = await axios.get("http://localhost:3004/user")
+    // const result = await g_getUserData;
     setUser(result.data.reverse())
   }
   const deleteUser = async (id) => {

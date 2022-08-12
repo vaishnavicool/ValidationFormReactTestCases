@@ -7,11 +7,10 @@ export const  editUserConfig= {
         className:"form-control form-control-lg",
         placeholder:"Enter Your Name ",
         // onChange:{onInputChange}
-        
       },
       {
-        name: "username",
-        type:"text",
+        name: "file",
+        type:"file",
         width:"col-sm-12 mx-auto",
         className:"form-control form-control-lg",
         placeholder:"Enter Your Username ",
@@ -48,7 +47,5 @@ export const  editUserConfig= {
           valueKey: "countryID",
         },
       },
-      
-     
     ],
   }
