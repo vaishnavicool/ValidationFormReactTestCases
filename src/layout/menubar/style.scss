@@ -1,32 +1,10 @@
-.logo-img {
-  width: 7.9rem;
-}
-
-.arrow-left {
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-right: 7px solid #65b230;
-  position: absolute;
-  left: -8px;
-  top: 1.5rem;
-}
-
-.menu-list {
-  padding: 0px 0.75rem;
-  display: flex;
-  flex: 1;
-  align-items: flex-start;
-  justify-content: center;
-  margin-bottom: 5rem;
+.row {
+  width: 100%;
 }
 
 .menu-item {
   padding: 0px 0.75rem 0px 0.75rem;
-  font-size: 0.75rem;
   line-height: 15.8px;
-  display: flex;
   align-items: center;
   width: 110%;
   white-space: normal !important;
@@ -37,23 +15,9 @@
   margin: 1rem 0;
   position: relative;
   cursor: pointer;
-  img{
-    // margin-bottom: 0.5rem;
-    padding: 0.62rem;
-  }
-  .white{
-    background-color: #65B230;
-    border-radius: 50%;
-    display: none;
-  }
-}
-
-.menu-item:hover {
-  .white{
-    display: block;
-  }
-  .grey{
-    display: none;
+  a {
+    text-decoration: none;
+    color: #000;
   }
 }
 
@@ -63,18 +27,8 @@
 .menu-item .drop-menu {
   display: none;
 }
-.menu-item {
-  background-image: var(--my-image);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.menu-item:hover {
-  background-image: var(--hover-image);
-}
 .drop-menu {
   position: absolute;
-  z-index: 1000;
-  min-width: 10rem;
   font-size: 1rem;
   color: #212529;
   text-align: left;
@@ -84,18 +38,36 @@
   border-radius: 0.25rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
   border: 1px solid #e6e5e5;
-  width: 15rem;
+  width: 8rem;
   right: -15rem;
-  top: 0;
+  margin-top: 25px;
+  margin-right: 196px;
 }
 
 .drop-item {
-  padding: 15px 23px !important;
+  padding: 0px 26px !important;
   border-bottom: 1px solid #dcdbdb !important;
-  line-height: 19px;
-  font-size: 1rem;
+  line-height: 20px;
+  text-align: center;
   cursor: pointer;
-  &:hover{
-    background:rgba(120, 190, 32, 0.3);
+  &:hover {
+    background: rgba(120, 190, 32, 0.3);
   }
+}
+.logo_img {
+  position: relative;
+  margin-left: 15px;
+  height: 52px;
+  background: transparent;
+}
+.bell-icon {
+  height: 1.1rem;
+  width: 1.1rem;
+  margin-right: 18px;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+.nav_border {
+  border-bottom: 1px solid #dcdbdb !important;
 }

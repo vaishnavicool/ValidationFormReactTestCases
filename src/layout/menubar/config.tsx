@@ -1,34 +1,37 @@
-const countryConfig = [
-   {
-    title: "country",
+const menuConfig = [
+  {
+    title: "menubar.dashboard",
+    path: "/",
+  },
+  {
+    title: "menubar.about",
+    path: "/about",
+  },
+  {
+    title: "menubar.user",
+    path: "/user",
+
     children: [
       {
-        title: "INDIA",
-        path: "/",
+        title: "menubar.addUsers",
+        path: "/add_users",
+      },  
+      {
+        title: "menubar.addUsers",
+        path: "/add_users",
       },
       {
-        title: "CHINA",
-        path: "/",
-      },
-      {
-        title: "USA",
-        path: "/"
-        ,
-      },
-      
+        title: "menubar.addUsers",
+        path: "/add_users",
+      },        
     ],
   },
  
   {
     title: "menubar.contact",
     path: "/contact",
-    icon: "ic_printing",
-  },
-  {
-    title: "menubar.about",
-    path: "/manage",
-    icon: "ic_manage",
+
   },
 ]
 
-export default countryConfig
+export default menuConfig

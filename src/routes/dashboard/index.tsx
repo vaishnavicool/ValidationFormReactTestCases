@@ -45,6 +45,12 @@ const Dashboard = (props: any) => {
                   >
                     Edit
                   </Link>
+                  <Link
+                    className="btn btn-outline-primary m-2"
+                    to={`/user/add`}
+                  >
+                    Add
+                  </Link>
                   <button
                     className="btn btn-outline-primary m-2"
                     onClick={() => deleteUser(user["id"])}
