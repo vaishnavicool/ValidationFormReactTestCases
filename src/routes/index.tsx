@@ -4,7 +4,6 @@ import ErrorBoundary from "shared/ErrorBoundaries"
 import NotFound from "./NotFound"
 import About from "./About"
 import Dashboard from "routes/Dashboard"
-import AddUser from "./Add"
 import EditUser from "./Edit"
 import View from "./View"
 
@@ -17,7 +16,7 @@ const Routes: FunctionComponent = (props: any) => {
           <Route path="*" element={<NotFound />} />
           <Route path="/about" element={<About />} />
           <Route path="/" element={<Dashboard />} />
-          <Route path="/user/add" element={<EditUser />} />
+          <Route path="/user/edit" element={<EditUser />} />
           <Route path="/user/edit/:id" element={<EditUser />} />
           <Route path="/user/view/:id" element={<View />} />
         </ReactRoute>

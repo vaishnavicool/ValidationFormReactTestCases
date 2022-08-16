@@ -48,7 +48,7 @@
     },
     {
       "id": 4,
-      "name": "Patricia ",
+      "name": "Patricia kulkarni",
       "username": "Karianne",
       "email": "Julianne.OConner@kory.org",
       "address": {
@@ -93,12 +93,19 @@
       }
     },
     {
-      "name": "vaishnavi kulkarni",
+      "name": "pranjan bhure",
       "username": "vkk",
       "email": "lkjhgfd@wertyui",
-      "phone": "kjhgfd",
+      "phone": "9604425456",
       "website": "oiuytresxcvbn",
       "id": 7
+    },
+    {
+      "id": 8,
+      "name": "sdfghjk",
+      "email": "iug@fghj",
+      "phone": "1234567890",
+      "website": "zxcvbn"
     }
   ]
 }

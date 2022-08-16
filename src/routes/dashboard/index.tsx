@@ -1,5 +1,6 @@
 import useEnhancer from "./enhancer"
 import { Link } from "react-router-dom"
+import Loading from "shared/Loading"
 
 const Dashboard = (props: any) => {
   let allProps = useEnhancer()
@@ -12,7 +13,8 @@ const Dashboard = (props: any) => {
     <div className="container">
       <div className="py-4">
         <h3>Welcome To Dashboard</h3>
-        <table className="table">
+      <Loading id="users">
+      <table className="table">
           <thead >
             <tr>
               <th scope="col">#</th>
@@ -54,6 +56,7 @@ const Dashboard = (props: any) => {
             ))}
           </tbody>
         </table>
+        </Loading> 
       </div>
     </div>
   )

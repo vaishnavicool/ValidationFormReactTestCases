@@ -6,20 +6,14 @@ import Field from "shared/Field"
 const EditUser = (props: any) => {
   let allProps = useEnhancer()
   let {
-    onInputChange,
-    onSubmit,
-    username,
-    name,
-    phone,
-    email,
-    website,
+    editOnSubmit,
     user,
     allDropdownOpts,
     editUserConfig,
     editUser,
   } = allProps
 
- return (
+  return (
     <div className="container mx-auto m-5">
       <div className="d-flex justify-content-center subcontainer card">
         <Form
@@ -30,7 +24,9 @@ const EditUser = (props: any) => {
         />
 
         <div className="d-flex justify-content-centre mb-3 ">
-          <button className="btn btn-outline-primary">Update User</button>
+          <button className="btn btn-outline-primary" onClick={editOnSubmit}>
+            Save
+          </button>
         </div>
       </div>
     </div>
@@ -38,3 +34,4 @@ const EditUser = (props: any) => {
 }
 
 export default EditUser
+

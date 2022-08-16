@@ -26,11 +26,11 @@ Object.keys(urls).forEach((d: any) => {
       res = await axios.patch(url, _.omit(body, "loading_key"), {
         loading_key,
       })
-    // if (d.startsWith("put_"))
-    //   res = await axios.put(url, _.omit(body, ["loading_key", "cancelToken"]), {
-    //     loading_key,
-    //     cancelToken,
-    //   })
+    if (d.startsWith("put_"))
+      res = await axios.put(url, _.omit(body, ["loading_key", "cancelToken"]), {
+        loading_key,
+        cancelToken,
+      })
     if (res?.data) return res?.data
   }
 })

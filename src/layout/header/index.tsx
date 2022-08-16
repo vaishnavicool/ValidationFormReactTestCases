@@ -57,8 +57,11 @@ function Header(props: any) {
           </ul>
         </div>
 
-        <Link className="btn btn-outline-light m-4" to="/">
+        {/* <Link className="btn btn-outline-light m-4" to="/">
          Back
+        </Link> */}
+        <Link className="btn btn-outline-light m-4" to="/user/edit">
+         Add
         </Link>
 
         {/* <Image src="swiftwinlogo.png" alt="Swiftwin" className="logo-img" /> */}
