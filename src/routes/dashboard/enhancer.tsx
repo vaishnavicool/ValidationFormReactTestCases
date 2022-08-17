@@ -10,7 +10,7 @@ const useEnhancer = () => {
   }, [])
 
   const loadUsers = async () => {
-    const result = await api.g_users({loading_key:'users'});
+    const result = await api.g_users({ loading_key: "users" })
     setUser(result.reverse())
   }
   const deleteUser = async (id) => {

@@ -1,8 +1,6 @@
 import "./style.scss"
-
 import Footer from "./footer"
 import Header from "./header"
-import Menubar from "./menubar"
 import { PreLoad } from "shared/Image"
 import Routes from "routes"
 
@@ -12,21 +10,14 @@ function MainWrapper(props) {
       <div className="header-container">
         <Header />
       </div>
-  
-        {/* <div className="col-1 left-container">
-          <Menubar />
-        </div>
-         */}
-          <div className="">
-            <Routes />
-          </div>
-          <div className="footer-container">
-            <Footer />
-            <PreLoad />
-          </div>
-        </div>
-      
-  
+      <div>
+        <Routes />
+      </div>
+      <div className="footer-container">
+        <Footer />
+        <PreLoad />
+      </div>
+    </div>
   )
 }
 export default MainWrapper

@@ -3,7 +3,6 @@ import { FormattedMessage } from "react-intl"
 import { useLocation, NavLink } from "react-router-dom"
 import "./style.scss"
 
-
 const Breadcrumb = () => {
   const { pathname } = useLocation()
   let paths = pathname.split("/")

@@ -1,17 +1,11 @@
 import useEnhancer from "./enhancer"
 import "./style.scss"
 import Form from "shared/Form"
-import Field from "shared/Field"
 
 const EditUser = (props: any) => {
   let allProps = useEnhancer()
-  let {
-    editOnSubmit,
-    user,
-    allDropdownOpts,
-    editUserConfig,
-    editUser,
-  } = allProps
+  let { editOnSubmit, user, allDropdownOpts, editUserConfig, editUser } =
+    allProps
 
   return (
     <div className="container mx-auto m-5">
@@ -34,4 +28,3 @@ const EditUser = (props: any) => {
 }
 
 export default EditUser
-

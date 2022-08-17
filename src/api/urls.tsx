@@ -5,11 +5,10 @@ let host = () => {
 }
 
 let urls: any = {
-  g_user: ({id}) => `${host()}/user/${id}`,
+  g_user: ({ id }) => `${host()}/user/${id}`,
   p_user: () => `${host()}/user`,
-  put_user: ({id}) => `${host()}/user/${id}`,
-  g_users:()=> `${host()}/user`,
-
+  put_user: ({ id }) => `${host()}/user/${id}`,
+  g_users: () => `${host()}/user`,
 
   p_workOrders: () => `${host()}/WorkOrders/GetAllWorkOrders`,
   p_getFacilities: () => `${host()}/LookUp/GetFacilities`,
@@ -31,12 +30,10 @@ let urls: any = {
     `/mock_api/Generator_state_mailing_bill _to_state.json`,
   g_getGenerator_county_mailing_bill_to_county: () =>
     `/mock_api/Generator_county_mailing_bill_to_county.json`,
-    g_getDocument_Type: () =>
-    `/mock_api/Document_Type.json`, 
-    g_getWorkOrder: () =>`/mock_api/WorkOrder.json`,
-    g_getEquipment_Type: () =>`/mock_api/Equipment_Type.json`, 
-    g_getCountry: () =>`/mock_api/Country.json`,
-  
+  g_getDocument_Type: () => `/mock_api/Document_Type.json`,
+  g_getWorkOrder: () => `/mock_api/WorkOrder.json`,
+  g_getEquipment_Type: () => `/mock_api/Equipment_Type.json`,
+  g_getCountry: () => `/mock_api/Country.json`,
 }
 
 export default urls

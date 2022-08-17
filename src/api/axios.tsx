@@ -49,7 +49,7 @@ axios.interceptors.response.use(
     if (loading_key) {
       store.dispatch({ type: SET_LOADING_STATUS, loading_key, status: false })
     }
-  return response
+    return response
   },
   async function (error) {
     if (loggedOut) return
@@ -92,7 +92,9 @@ axios.interceptors.response.use(
       let en_msg = ""
       let sorry = (
         <div>
-          <Image src="ic_sad.png" style={{ marginRight: 14 }} /> <FormattedMessage id="sorry_something_went_wrong" /></div>
+          <Image src="ic_sad.png" style={{ marginRight: 14 }} />{" "}
+          <FormattedMessage id="sorry_something_went_wrong" />
+        </div>
       )
       let msg = `${sorry} \n ${en_msg}`
       if (!navigator.onLine) msg = formatMessage("global.error.notInternet")
