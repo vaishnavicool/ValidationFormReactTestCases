@@ -14,8 +14,8 @@ const Routes: FunctionComponent = (props: any) => {
         <ReactRoute>
           <Route path="*" element={<NotFound />} />
           <Route path="/about" element={<About />} />
-          <Route path="/" element={<Dashboard />} />
           <Route path="/user" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/user/add" element={<EditUser />} />
           <Route path="/user/edit/:id" element={<EditUser />} />
           <Route path="/user/view/:id" element={<View />} />

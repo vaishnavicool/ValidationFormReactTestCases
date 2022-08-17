@@ -13,21 +13,17 @@ const menuConfig = [
 
     children: [
       {
-        title: "menubar.addUser",
-        path: "/add",
+        title: "menubar.add",
+        path: "user/add",
       },  
       {
-        title: "menubar.editUser",
-        path: "/edit/:id",
+        title: "menubar.edit",
+        path: "user/edit/:id",
       },
       {
-        title: "menubar.viewUser",
-        path: "/view/:id",
-      },    
-      {
-        title: "menubar.deleteUser",
-        path: "/add_users",
-      },      
+        title: "menubar.view",
+        path: "user/view/:id",
+      }
     ]
   },
  

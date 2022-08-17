@@ -10,7 +10,7 @@ const Breadcrumb = () => {
   let path = ""
 
   return (
-    <div>
+    <div className="container px-5">
       {paths.map((d, i) => {
         let isLast = i != paths.length - 1
         path = `${path}/${d}`

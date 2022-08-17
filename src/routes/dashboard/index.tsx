@@ -1,7 +1,7 @@
 import useEnhancer from "./enhancer"
 import { Link } from "react-router-dom"
 import Loading from "shared/Loading"
-import Breadcrumb from "shared/Breadcrum"
+
 
 const Dashboard = (props: any) => {
   let allProps = useEnhancer()
@@ -9,7 +9,7 @@ const Dashboard = (props: any) => {
   return (
     <div className="container">
       <div className="py-4">
-        <Breadcrumb />
+      
         <Loading id="users">
           <table className="table">
             <thead>
