@@ -13,18 +13,22 @@ const menuConfig = [
 
     children: [
       {
-        title: "menubar.addUsers",
-        path: "/add_users",
+        title: "menubar.addUser",
+        path: "/add",
       },  
       {
-        title: "menubar.addUsers",
-        path: "/add_users",
+        title: "menubar.editUser",
+        path: "/edit/:id",
       },
       {
-        title: "menubar.addUsers",
+        title: "menubar.viewUser",
+        path: "/view/:id",
+      },    
+      {
+        title: "menubar.deleteUser",
         path: "/add_users",
-      },        
-    ],
+      },      
+    ]
   },
  
   {
@@ -32,6 +36,7 @@ const menuConfig = [
     path: "/contact",
 
   },
+  
 ]
 
 export default menuConfig
