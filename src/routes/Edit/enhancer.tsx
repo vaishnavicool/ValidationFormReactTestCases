@@ -4,7 +4,7 @@ import { editUserConfig } from "./config"
 import { useParams } from "react-router-dom"
 import { getDropdownOpts } from "shared"
 import api from "api"
-import Breadcrumb from "shared/Topsection/breadcrumb"
+import Breadcrumb from "shared/Breadcrum"
 const useEnhancer = () => {
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [user, setUser] = useState({

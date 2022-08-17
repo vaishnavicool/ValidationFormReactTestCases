@@ -1,18 +1,15 @@
 import useEnhancer from "./enhancer"
 import { Link } from "react-router-dom"
 import Loading from "shared/Loading"
+import Breadcrumb from "shared/Breadcrum"
 
 const Dashboard = (props: any) => {
   let allProps = useEnhancer()
   let { users, deleteUser } = allProps
-
-  console.log(users, "userindex")
-  console.log(allProps, "allprops")
-
   return (
     <div className="container">
       <div className="py-4">
-        <h3>Welcome To Dashboard</h3>
+        <Breadcrumb/>
       <Loading id="users">
       <table className="table">
           <thead >

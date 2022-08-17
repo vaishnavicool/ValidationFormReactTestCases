@@ -12,8 +12,6 @@ const useEnhancer = () => {
   const loadUsers = async () => {
     const result = await api.g_users({loading_key:'users'});
     setUser(result.reverse())
-    console.log(result, 'result');
-      
   }
   const deleteUser = async (id) => {
     await axios.delete(`http://localhost:3004/user/${id}`)
