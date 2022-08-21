@@ -2,14 +2,12 @@ import useEnhancer from "./enhancer"
 import { Link } from "react-router-dom"
 import Loading from "shared/Loading"
 
-
 const Dashboard = (props: any) => {
   let allProps = useEnhancer()
   let { users, deleteUser } = allProps
   return (
     <div className="container">
       <div className="py-4">
-      
         <Loading id="users">
           <table className="table">
             <thead>

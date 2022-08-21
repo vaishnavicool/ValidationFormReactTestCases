@@ -4,7 +4,7 @@ import { editUserConfig } from "./config"
 import { useParams } from "react-router-dom"
 import { getDropdownOpts } from "shared"
 import api from "api"
-import Breadcrumb from "shared/Breadcrum"
+
 const useEnhancer = () => {
   const [allDropdownOpts, setAllDropdownOpts] = useState({})
   const [user, setUser] = useState({
@@ -25,12 +25,12 @@ const useEnhancer = () => {
     let method = "p"
     if (id) method = "put"
     await api[`${method}_user`](user)
-   await axios[method](`http://localhost:3004/user/${user.id}`, user) 
-   await axios[method]("http://localhost:3004/user", user);
+    await axios[method](`http://localhost:3004/user/${user.id}`, user)
+    await axios[method]("http://localhost:3004/user", user)
     //  await api.put_user({id});
-   
+
     setUser(e)
-    alert('user save succesfully');
+    alert("user save succesfully")
   }
 
   useEffect(() => {
@@ -51,8 +51,7 @@ const useEnhancer = () => {
   }, [])
 
   const loadUser = async () => {
-    // const result = await axios.get(`http://localhost:3004/user/${id}`)
-    const result = await api.g_user({id});
+    const result = await api.g_user({ id })
     setUser(result)
   }
 

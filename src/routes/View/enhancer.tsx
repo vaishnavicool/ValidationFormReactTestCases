@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import axios from "axios"
+import api from "api"
 
 const useEnhancer = () => {
   const [user, setUser] = useState({
@@ -16,8 +16,9 @@ const useEnhancer = () => {
     loadUser()
   }, [])
   const loadUser = async () => {
-    const res = await axios.get(`http://localhost:3004/user/${id}`)
-    setUser(res.data)
+    // const res = await axios.get(`http://localhost:3004/user/${id}`)
+    const result = await api.g_user({ id })
+    setUser(result)
   }
 
   return {

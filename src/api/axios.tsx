@@ -6,16 +6,17 @@ import store from "store"
 import { toast } from "react-toastify"
 import Image from "shared/Image"
 import { FormattedMessage } from "react-intl"
-toast.configure({
-  position: "top-center",
-  autoClose: false,
-  hideProgressBar: true,
-  closeOnClick: true,
-  pauseOnHover: true,
-  draggable: true,
-  limit: 1,
-  bodyClassName: "myToastClass",
-})
+
+// toast.configure({
+//   position: "top-center",
+//   autoClose: false,
+//   hideProgressBar: true,
+//   closeOnClick: true,
+//   pauseOnHover: true,
+//   draggable: true,
+//   limit: 1,
+//   bodyClassName: "myToastClass",
+// })
 
 declare module "axios" {
   interface AxiosRequestConfig {
@@ -49,7 +50,7 @@ axios.interceptors.response.use(
     if (loading_key) {
       store.dispatch({ type: SET_LOADING_STATUS, loading_key, status: false })
     }
-  return response
+    return response
   },
   async function (error) {
     if (loggedOut) return
@@ -92,7 +93,9 @@ axios.interceptors.response.use(
       let en_msg = ""
       let sorry = (
         <div>
-          <Image src="ic_sad.png" style={{ marginRight: 14 }} /> <FormattedMessage id="sorry_something_went_wrong" /></div>
+          <Image src="ic_sad.png" style={{ marginRight: 14 }} />{" "}
+          <FormattedMessage id="sorry_something_went_wrong" />
+        </div>
       )
       let msg = `${sorry} \n ${en_msg}`
       if (!navigator.onLine) msg = formatMessage("global.error.notInternet")
