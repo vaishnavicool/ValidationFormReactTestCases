@@ -17,8 +17,6 @@ const useEnhancer = () => {
     await axios.delete(`http://localhost:3004/user/${id}`)
     loadUsers()
   }
-
-  console.log(users, "userenhancer")
   return {
     users,
     deleteUser,

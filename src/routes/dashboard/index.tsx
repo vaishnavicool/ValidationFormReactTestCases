@@ -7,6 +7,7 @@ const Dashboard = (props: any) => {
   let allProps = useEnhancer()
   let { users, deleteUser } = allProps
   return (
+   
     <div className="container">
       <div className="py-4">
       
@@ -62,6 +63,7 @@ const Dashboard = (props: any) => {
         </Loading>
       </div>
     </div>
+  
   )
 }
 

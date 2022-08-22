@@ -1,5 +1,3 @@
-import React from "react"
-
 const importAll = (require: any) =>
   require.keys().reduce((acc: any, next: any) => {
     acc[next.replace("./", "")] = require(next)
