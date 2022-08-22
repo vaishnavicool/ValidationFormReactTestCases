@@ -6,9 +6,13 @@ const importAll = (require: any) =>
     return acc
   }, {})
 
-const images = importAll(
+let images ={}
+
+try{images= importAll(
   require.context("assets/icon", false, /\.(png|jpe?g|svg|jfif)$/)
-)
+)}catch(e){
+ console.log("disabled images")
+}
 
 const Image = ({ src, mouseOver, ...props }: any) => {
   return (

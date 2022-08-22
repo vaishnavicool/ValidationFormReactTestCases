@@ -21,7 +21,10 @@ const config = {
   // TOGGLE_TODO will not be triggered in other tabs
   whitelist: ["SET_USER"],
 }
-const middlewares = [createStateSyncMiddleware(config), logger]
+let middlewares = [ logger]
+
+// middlewares.unshift(createStateSyncMiddleware(config))
+
 
 let store = createStore(persistedReducer, applyMiddleware(...middlewares))
 
