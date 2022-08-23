@@ -15,9 +15,9 @@ const App: React.FunctionComponent = () => {
 
   return (
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
+      <PersistGate loading={null} persistor={persistor} >
         <Router>
-          <IntlProvider locale={language} messages={messages[language]}>
+          <IntlProvider locale={language} messages={messages[language]} >
             <MainWrapper />
           </IntlProvider>
         </Router>
