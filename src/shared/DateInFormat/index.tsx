@@ -1,29 +1,31 @@
 import "./style.scss"
-import {format, parse} from "date-fns"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const DateInFormat = () => {
-  const dateFormat="MMM-dd-yyyy"
-  const orgDateFormat = "yyyy-mm-dd"
-  const [date, setDate] = useState(new Date)
-  const formattedDate  = format(date ,dateFormat)
-  const orgDate  = format(date ,orgDateFormat)
-  console.log(formattedDate);
-  
-     
-  function handleDateUpdate(e ) {
-    const {value} = e.target
-    let parseDate = parse(value, orgDateFormat, new Date )
-    console.log(parseDate, "parseDate");
-    setDate(parseDate)
+  const [date, setDate] = useState<string>()
+
+  useEffect(() => {
+    let todayDate = new Date();
+    handleDateUpdate(`${todayDate.getFullYear()}-0${todayDate.getMonth() + 1}-${todayDate.getDate()}`) // month +1 because 0 represents January
+  }, [])
+
+  function handleDateUpdate(value) {
+    const newFormat = new Date(value).toLocaleDateString('EN-IN', { month: 'short', year: 'numeric', day: '2-digit' })
+    const dateArr = newFormat.split('-')
+    let dummyValue = dateArr[0]
+    dateArr[0] = dateArr[1]
+    dateArr[1] = dummyValue
+    let formattedDate = dateArr.join('-')
+    setDate(formattedDate)
   }
 
   return (
     <div id="parent">
-      <div className="one"></div><input type="date" className="dateInput "  onChange={handleDateUpdate} />
-      <div className="two">{formattedDate}  </div>
+      <div className="one"></div><input type="date" className="dateInput " onChange={(e) => handleDateUpdate(e.target.value)} />
+      <div className="two">{date}</div>
     </div>
   )
 }
 
 export default DateInFormat
+
