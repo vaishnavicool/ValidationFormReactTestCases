@@ -1,0 +1,43 @@
+.container {
+   margin-top: 1rem;
+   
+}
+
+.content {
+  font-size: 13px;
+  color: #bdbdbd;
+  display: inline;
+  cursor: pointer;
+  
+}
+.content_text {
+  text-decoration: none;
+  color: #bbbbbb;
+  &.isActive {
+    font-size: 13px;
+    line-height: 17px;
+    letter-spacing: 1.5%;
+    margin-left: 4px;
+    color: #424242;;
+    
+  }
+}
+
+.dateInput{
+   text-indent: -100px;
+ }
+
+#parent{
+  position: relative;
+}
+.one{
+  width: 150px;
+  height: 30px;
+}
+.two{
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top:32px;
+  left: 10px;
+}

@@ -4,6 +4,7 @@ import Header from "./header"
 import { PreLoad } from "shared/Image"
 import Routes from "routes"
 import Breadcrumb from "shared/Breadcrum"
+import DateInFormat from "shared/DateInFormat"
 
 function MainWrapper(props) {
   return (
@@ -11,6 +12,7 @@ function MainWrapper(props) {
       <div className="header-container">
         <Header />
       </div>
+      <DateInFormat />
       <div className="container">
       <Breadcrumb />
       </div>

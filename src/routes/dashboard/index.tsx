@@ -1,6 +1,7 @@
 import useEnhancer from "./enhancer"
 import { Link } from "react-router-dom"
 import Loading from "shared/Loading"
+import Input from "react-select/dist/declarations/src/components/Input"
 
 
 const Dashboard = (props: any) => {
@@ -10,7 +11,6 @@ const Dashboard = (props: any) => {
    
     <div className="container">
       <div className="py-4">
-      
         <Loading id="users">
           <table className="table">
             <thead>
