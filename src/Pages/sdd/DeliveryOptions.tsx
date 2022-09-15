@@ -7,8 +7,8 @@ export const DeliveryOptions = () => {
   }, []);
 
   return (
-    <>
+    <div>
       
-    </>
+    </div>
   );
 };
