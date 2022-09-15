@@ -1,6 +1,10 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { NearByStore } from "../NearByStore/NearByStore";
 import "./DeliveryOptions.scss";
 
 export const DeliveryOptions = () => {
+  const [nearbyCenters, showNearbyCenters] = useState(false);
   return (
     <>
       <form className="form__radio-group">
@@ -49,15 +53,18 @@ export const DeliveryOptions = () => {
               <span className="form__radio-subtitle form__radio-subtitle-pickup">
                 In-stock and available for pick up within 24 hours
               </span>
-              <a
+              <Link
                 aria-label="show nearby stores"
-                href="#"
+                to="#"
                 className="form__label-title form__label-title--showmore"
+                onClick={() => showNearbyCenters(!nearbyCenters)}
               >
-                Show nearby stores
-              </a>
+                {nearbyCenters ? "Hide" : "Show"} nearby stores
+              </Link>
             </p>
           </label>
+
+          {nearbyCenters && <NearByStore />}
 
           <input
             type="radio"
@@ -73,13 +80,13 @@ export const DeliveryOptions = () => {
               <span className="form__radio-subtitle">
                 Check out by 2 pm for delivery today ($14.99)
               </span>
-              <a
+              <Link
                 aria-label="Shipping and delivery option - Same day delivery"
-                href="#"
+                to="#"
                 className="form__label-title form__label-title--showmore"
               >
                 What is this?
-              </a>
+              </Link>
             </p>
           </label>
         </fieldset>
