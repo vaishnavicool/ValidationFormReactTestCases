@@ -28,13 +28,13 @@ export const NearByStore = () => {
       {propCenterData?.map((center, index) => (
         <div className="center-details" key={index}>
           <div className="center-name">
-            <p>
-              <b>{center?.certerName}</b>
+            <p className="center-name-title">
+              {center?.certerName}
             </p>
             {center?.isSizeAvailable ? (
-              <span>{`Pick up in ${center?.pickupTime}`}</span>
+              <span className="center-name-subtitle">{`Pick up in ${center?.pickupTime}`}</span>
             ) : (
-              <span className="error-icon">
+              <span className="error-icon center-name-subtitle">
                 <img
                   src="https://www.freeiconspng.com/thumbs/error-icon/error-icon-32.png"
                   alt="error-icon"
@@ -45,7 +45,7 @@ export const NearByStore = () => {
           </div>
 
           <div className="center-distance">
-            <p>
+            <p className="center-distance--miles">
               {center?.distance}
               <span>
                 <br />
@@ -61,7 +61,7 @@ export const NearByStore = () => {
           </div>
         </div>
       ))}
-      <Link to="#">More stores</Link>
+      <Link className = "center-show-more-link" to="#">More stores</Link>
     </div>
   );
 };

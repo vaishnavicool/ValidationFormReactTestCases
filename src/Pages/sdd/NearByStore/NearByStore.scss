@@ -1,6 +1,8 @@
+@import "../../settings/colors.scss";
+
 .center-wrapper {
   max-width: 500px;
-  margin: auto;
+  margin: auto auto 32px auto;
 
   .center-details {
     display: flex;
@@ -8,23 +10,36 @@
     align-items: center;
 
     .center-name {
-      p {
+      margin-bottom: 16px;
+      .center-name-title {
         margin-bottom: 0;
+        color: $colors--utility-wood-smoke;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .center-name-subtitle {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 12px;
+        color: $colors--utility-wood-smoke;
       }
       .error-icon {
         img {
           width: 14px;
+          margin-right: 13px;
         }
       }
     }
-
     .center-distance {
       display: flex;
       align-items: center;
       column-gap: 1rem;
 
       input[type="radio"] {
-        accent-color: #000;
+        accent-color: $colors--utility-wood-smoke;
         width: 20px;
         height: 20px;
       }
@@ -43,5 +58,14 @@
         }
       }
     }
+
+  }
+  .center-show-more-link {
+    color: $colors--utility-science-blue;
+    font-size: 12px;
+  }
+
+  .center-distance--miles {
+    font-size: 12px;
   }
 }
