@@ -1,0 +1,47 @@
+.center-wrapper {
+  max-width: 500px;
+  margin: auto;
+
+  .center-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .center-name {
+      p {
+        margin-bottom: 0;
+      }
+      .error-icon {
+        img {
+          width: 14px;
+        }
+      }
+    }
+
+    .center-distance {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+
+      input[type="radio"] {
+        accent-color: #000;
+        width: 20px;
+        height: 20px;
+      }
+
+      input[type="radio"]:disabled {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 10px;
+          height: 100%;
+          width: 1px;
+          background-color: lightgrey;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
