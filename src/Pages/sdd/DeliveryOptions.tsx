@@ -1,14 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export const DeliveryOptions = () => {
+  useEffect(() => {}, []);
 
-  useEffect(() => {
-    
-  }, []);
-
-  return (
-    <div>
-      
-    </div>
-  );
+  return <div></div>;
 };

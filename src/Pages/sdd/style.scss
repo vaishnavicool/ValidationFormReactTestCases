@@ -1,0 +1,27 @@
+.center-wrapper {
+  max-width: 500px;
+  margin: auto;
+
+  .center-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .center-name {
+      p {
+        margin-bottom: 0;
+      }
+      .error-icon {
+        img {
+          width: 14px;
+        }
+      }
+    }
+
+    .center-distance {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+    }
+  }
+}
