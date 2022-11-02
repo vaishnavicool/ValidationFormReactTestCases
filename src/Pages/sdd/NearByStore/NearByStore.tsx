@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./NearByStore.scss";
 
 export const NearByStore = () => {
@@ -61,7 +60,7 @@ export const NearByStore = () => {
           </div>
         </div>
       ))}
-      <Link className = "center-show-more-link" to="#">More stores</Link>
+      <a className = "center-show-more-link" href="#">More stores</a>
     </div>
   );
 };
